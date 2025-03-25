@@ -1,0 +1,5 @@
+# Create a test file
+with open('github_test.txt', 'w') as f:
+    f.write("This is a test file to verify GitHub sync is working.")
+    
+print("Test file created!")
