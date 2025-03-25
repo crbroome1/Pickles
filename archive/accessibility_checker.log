@@ -1,0 +1,16 @@
+2025-03-10 20:10:12,580 - INFO: Attempting to import module directly: missing_focusable_elements
+2025-03-10 20:10:12,587 - ERROR: Could not import module 'missing_focusable_elements': No module named 'IPython'
+2025-03-10 20:10:12,587 - INFO: Attempting to import module directly: missing_focusable_elements
+2025-03-10 20:10:12,588 - ERROR: Could not import module 'missing_focusable_elements': No module named 'IPython'
+2025-03-10 20:10:12,589 - INFO: Attempting to import module directly: generate_accessibility_report
+2025-03-10 20:10:12,598 - ERROR: Could not import module 'generate_accessibility_report': No module named 'IPython'
+2025-03-10 20:10:12,599 - INFO: Attempting to import module directly: generate_accessibility_report
+2025-03-10 20:10:12,601 - ERROR: Could not import module 'generate_accessibility_report': No module named 'IPython'
+2025-03-10 20:14:36,015 - INFO: Attempting to import module directly: missing_focusable_elements
+2025-03-10 20:14:36,020 - ERROR: Could not import module 'missing_focusable_elements': No module named 'IPython'
+2025-03-10 20:14:36,021 - INFO: Attempting to import module directly: missing_focusable_elements
+2025-03-10 20:14:36,022 - ERROR: Could not import module 'missing_focusable_elements': No module named 'IPython'
+2025-03-10 20:14:36,022 - INFO: Attempting to import module directly: generate_accessibility_report
+2025-03-10 20:14:36,032 - ERROR: Could not import module 'generate_accessibility_report': No module named 'IPython'
+2025-03-10 20:14:36,033 - INFO: Attempting to import module directly: generate_accessibility_report
+2025-03-10 20:14:36,034 - ERROR: Could not import module 'generate_accessibility_report': No module named 'IPython'

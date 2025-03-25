@@ -1,0 +1,1451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessibility Report - https://sse.com</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --light-color: #ecf0f1;
+            --dark-color: #34495e;
+            --success-color: #2ecc71;
+            --warning-color: #f39c12;
+            --danger-color: #e74c3c;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--dark-color);
+            margin: 0;
+            padding: 0;
+            background-color: #f5f7fa;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 20px;
+            border-radius: 5px 5px 0 0;
+            margin-bottom: 20px;
+        }
+        
+        h1, h2, h3, h4 {
+            color: var(--primary-color);
+            margin-top: 0;
+        }
+        
+        header h1 {
+            color: white;
+            margin: 0;
+        }
+        
+        .report-meta {
+            margin-top: 10px;
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.8);
+        }
+        
+        .summary-card {
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        
+        .summary-item {
+            flex: 1;
+            min-width: 200px;
+            padding: 15px;
+            margin: 10px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        
+        .critical {
+            background-color: var(--danger-color);
+            color: white;
+        }
+        
+        .warning {
+            background-color: var(--warning-color);
+            color: white;
+        }
+        
+        .passed {
+            background-color: var(--success-color);
+            color: white;
+        }
+        
+        .score {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+        
+        .summary-number {
+            font-size: 32px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        
+        .summary-label {
+            font-size: 14px;
+            text-transform: uppercase;
+        }
+        
+        .issues-section {
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+            padding: 20px;
+        }
+        
+        .issue-card {
+            border-left: 4px solid var(--warning-color);
+            padding: 15px;
+            margin-bottom: 15px;
+            background-color: #f8f9fa;
+            border-radius: 0 5px 5px 0;
+        }
+        
+        .issue-card.critical {
+            border-left-color: var(--danger-color);
+        }
+        
+        .issue-card.warning {
+            border-left-color: var(--warning-color);
+        }
+        
+        .issue-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        
+        .issue-title {
+            font-weight: bold;
+            font-size: 16px;
+            margin: 0;
+        }
+        
+        .issue-type {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-size: 12px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        
+        .issue-type.critical {
+            background-color: var(--danger-color);
+            color: white;
+        }
+        
+        .issue-type.warning {
+            background-color: var(--warning-color);
+            color: white;
+        }
+        
+        .issue-details {
+            margin-bottom: 10px;
+        }
+        
+        .issue-recommendation {
+            font-style: italic;
+            border-left: 2px solid var(--secondary-color);
+            padding-left: 10px;
+            margin-top: 10px;
+        }
+        
+        .issue-meta {
+            display: flex;
+            font-size: 12px;
+            color: #6c757d;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-top: 10px;
+        }
+        
+        .issue-meta-item {
+            margin-right: 15px;
+        }
+        
+        .issue-wcag {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+        
+        .checks-section {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -10px;
+        }
+        
+        .check-card {
+            flex: 1;
+            min-width: 300px;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin: 10px;
+            padding: 15px;
+        }
+        
+        .check-header {
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .check-name {
+            font-size: 18px;
+            font-weight: bold;
+            margin: 0;
+        }
+        
+        .check-status {
+            display: inline-block;
+            padding: 3px 8px;
+            border-radius: 15px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+        
+        .check-status.passed {
+            background-color: var(--success-color);
+            color: white;
+        }
+        
+        .check-status.failed {
+            background-color: var(--danger-color);
+            color: white;
+        }
+        
+        .check-status.warning {
+            background-color: var(--warning-color);
+            color: white;
+        }
+        
+        .check-status.skipped {
+            background-color: #6c757d;
+            color: white;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+            color: #6c757d;
+            font-size: 14px;
+        }
+        
+        /* Toggle button style */
+        .toggle-btn {
+            background-color: #f1f1f1;
+            color: #444;
+            cursor: pointer;
+            padding: 10px 15px;
+            width: 100%;
+            text-align: center;
+            border: none;
+            outline: none;
+            font-size: 16px;
+            margin-top: 10px;
+            border-radius: 5px;
+            position: relative;
+        }
+        
+        .toggle-btn:hover {
+            background-color: #ddd;
+        }
+        
+        .toggle-btn::after {
+            content: '\002B'; /* Unicode character for "plus" sign (+) */
+            position: absolute;
+            right: 15px;
+            font-weight: bold;
+        }
+        
+        .toggle-btn.active::after {
+            content: "\2212"; /* Unicode character for "minus" sign (-) */
+        }
+        
+        /* Content div style */
+        .content {
+            display: none;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border-radius: 0 0 5px 5px;
+            margin-top: 5px;
+        }
+        
+        @media screen and (max-width: 768px) {
+            .summary-item {
+                min-width: 100%;
+                margin: 5px 0;
+            }
+            
+            .check-card {
+                min-width: 100%;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Accessibility Audit Report</h1>
+            <div class="report-meta">
+                <div><strong>URL:</strong> https://sse.com</div>
+                <div><strong>Date:</strong> 2025-03-11 22:25:31</div>
+                <div><strong>Scan Duration:</strong> 1.69 seconds</div>
+            </div>
+        </header>
+        
+        <div class="summary-card">
+            <div class="summary-item critical">
+                <div class="summary-number">53</div>
+                <div class="summary-label">Critical Issues</div>
+            </div>
+            <div class="summary-item warning">
+                <div class="summary-number">26</div>
+                <div class="summary-label">Warnings</div>
+            </div>
+            <div class="summary-item passed">
+                <div class="summary-number">1</div>
+                <div class="summary-label">Checks Passed</div>
+            </div>
+            <div class="summary-item score">
+                <div class="summary-number">0</div>
+                <div class="summary-label">Compliance Score</div>
+            </div>
+        </div>
+        
+        <div class="issues-section">
+            <h2>Identified Accessibility Issues</h2>
+            <p>The following issues were detected and should be addressed to improve accessibility:</p>
+
+            <div class="issue-card warning">
+                <div class="issue-header">
+                    <h3 class="issue-title">Potential keyboard navigation barriers</h3>
+                    <span class="issue-type warning">warning</span>
+                </div>
+                <div class="issue-details">Tab sequence (4 elements) is much shorter than expected (212 potentially focusable elements)</div>
+                <div class="issue-recommendation">Check for elements that should be focusable but aren't</div>
+                <div class="issue-meta">
+            <span class="issue-meta-item"><strong>Check Type:</strong> keyboard_navigation_sequence</span><span class="issue-meta-item"><strong>WCAG:</strong> <span class="issue-wcag">2.1.1</span></span>
+                </div>
+            </div>
+            
+            <div class="issue-card critical">
+                <div class="issue-header">
+                    <h3 class="issue-title">Hidden element contains focusable elements</h3>
+                    <span class="issue-type critical">critical</span>
+                </div>
+                <div class="issue-details">Element with aria-hidden='true' contains 3 focusable children</div>
+                <div class="issue-recommendation">Remove focusable elements from aria-hidden containers or ensure they also have tabindex='-1'</div>
+                <div class="issue-meta">
+            <span class="issue-meta-item"><strong>Check Type:</strong> aria_accessibility</span><span class="issue-meta-item"><strong>WCAG:</strong> <span class="issue-wcag">1.3.1</span></span>
+                </div>
+            </div>
+            
+            <div class="issue-card critical">
+                <div class="issue-header">
+                    <h3 class="issue-title">Hidden element contains focusable elements</h3>
+                    <span class="issue-type critical">critical</span>
+                </div>
+                <div class="issue-details">Element with aria-hidden='true' contains 1 focusable children</div>
+                <div class="issue-recommendation">Remove focusable elements from aria-hidden containers or ensure they also have tabindex='-1'</div>
+                <div class="issue-meta">
+            <span class="issue-meta-item"><strong>Check Type:</strong> aria_accessibility</span><span class="issue-meta-item"><strong>WCAG:</strong> <span class="issue-wcag">1.3.1</span></span>
+                </div>
+            </div>
+            
+            <div class="issue-card critical">
+                <div class="issue-header">
+                    <h3 class="issue-title">Hidden element contains focusable elements</h3>
+                    <span class="issue-type critical">critical</span>
+                </div>
+                <div class="issue-details">Element with aria-hidden='true' contains 1 focusable children</div>
+                <div class="issue-recommendation">Remove focusable elements from aria-hidden containers or ensure they also have tabindex='-1'</div>
+                <div class="issue-meta">
+            <span class="issue-meta-item"><strong>Check Type:</strong> aria_accessibility</span><span class="issue-meta-item"><strong>WCAG:</strong> <span class="issue-wcag">1.3.1</span></span>
+                </div>
+            </div>
+            
+            <div class="issue-card critical">
+                <div class="issue-header">
+                    <h3 class="issue-title">Insufficient color contrast</h3>
+                    <span class="issue-type critical">critical</span>
+                </div>
+                <div class="issue-details">Contrast ratio: 1.00:1 (required: 3.0:1)</div>
+                <div class="issue-recommendation">Increase contrast to at least 3.0:1</div>
+                <div class="issue-meta">
+            <span class="issue-meta-item"><strong>Check Type:</strong> color_contrast</span><span class="issue-meta-item"><strong>WCAG:</strong> <span class="issue-wcag">1.4.3</span></span>
+                </div>
+            </div>
+            
+            <div class="issue-card critical">
+                <div class="issue-header">
+                    <h3 class="issue-title">Insufficient color contrast</h3>
+                    <span class="issue-type critical">critical</span>
+                </div>
+                <div class="issue-details">Contrast ratio: 1.00:1 (required: 3.0:1)</div>
+                <div class="issue-recommendation">Increase contrast to at least 3.0:1</div>
+                <div class="issue-meta">
+            <span class="issue-meta-item"><strong>Check Type:</strong> color_contrast</span><span class="issue-meta-item"><strong>WCAG:</strong> <span class="issue-wcag">1.4.3</span></span>
+                </div>
+            </div>
+            
+            <div class="issue-card critical">
+                <div class="issue-header">
+                    <h3 class="issue-title">Insufficient color contrast</h3>
+                    <span class="issue-type critical">critical</span>
+                </div>
+                <div class="issue-details">Contrast ratio: 1.00:1 (required: 3.0:1)</div>
+                <div class="issue-recommendation">Increase contrast to at least 3.0:1</div>
+                <div class="issue-meta">
+            <span class="issue-meta-item"><strong>Check Type:</strong> color_contrast</span><span class="issue-meta-item"><strong>WCAG:</strong> <span class="issue-wcag">1.4.3</span></span>
+                </div>
+            </div>
+            
+            <div class="issue-card critical">
+                <div class="issue-header">
+                    <h3 class="issue-title">Insufficient color contrast</h3>
+                    <span class="issue-type critical">critical</span>
+                </div>
+                <div class="issue-details">Contrast ratio: 1.00:1 (required: 3.0:1)</div>
+                <div class="issue-recommendation">Increase contrast to at least 3.0:1</div>
+                <div class="issue-meta">
+            <span class="issue-meta-item"><strong>Check Type:</strong> color_contrast</span><span class="issue-meta-item"><strong>WCAG:</strong> <span class="issue-wcag">1.4.3</span></span>
+                </div>
+            </div>
+            
+            <div class="issue-card critical">
+                <div class="issue-header">
+                    <h3 class="issue-title">Insufficient color contrast</h3>
+                    <span class="issue-type critical">critical</span>
+                </div>
+                <div class="issue-details">Contrast ratio: 1.00:1 (required: 3.0:1)</div>
+                <div class="issue-recommendation">Increase contrast to at least 3.0:1</div>
+                <div class="issue-meta">
+            <span class="issue-meta-item"><strong>Check Type:</strong> color_contrast</span><span class="issue-meta-item"><strong>WCAG:</strong> <span class="issue-wcag">1.4.3</span></span>
+                </div>
+            </div>
+            
+            <div class="issue-card critical">
+                <div class="issue-header">
+                    <h3 class="issue-title">Insufficient color contrast</h3>
+                    <span class="issue-type critical">critical</span>
+                </div>
+                <div class="issue-details">Contrast ratio: 1.00:1 (required: 3.0:1)</div>
+                <div class="issue-recommendation">Increase contrast to at least 3.0:1</div>
+                <div class="issue-meta">
+            <span class="issue-meta-item"><strong>Check Type:</strong> color_contrast</span><span class="issue-meta-item"><strong>WCAG:</strong> <span class="issue-wcag">1.4.3</span></span>
+                </div>
+            </div>
+            
+            <div class="issue-card critical">
+                <div class="issue-header">
+                    <h3 class="issue-title">Insufficient color contrast</h3>
+                    <span class="issue-type critical">critical</span>
+                </div>
+                <div class="issue-details">Contrast ratio: 1.00:1 (required: 3.0:1)</div>
+                <div class="issue-recommendation">Increase contrast to at least 3.0:1</div>
+                <div class="issue-meta">
+            <span class="issue-meta-item"><strong>Check Type:</strong> color_contrast</span><span class="issue-meta-item"><strong>WCAG:</strong> <span class="issue-wcag">1.4.3</span></span>
+                </div>
+            </div>
+            
+            <div class="issue-card critical">
+                <div class="issue-header">
+                    <h3 class="issue-title">Insufficient color contrast</h3>
+                    <span class="issue-type critical">critical</span>
+                </div>
+                <div class="issue-details">Contrast ratio: 1.00:1 (required: 4.5:1)</div>
+                <div class="issue-recommendation">Increase contrast to at least 4.5:1</div>
+                <div class="issue-meta">
+            <span class="issue-meta-item"><strong>Check Type:</strong> color_contrast</span><span class="issue-meta-item"><strong>WCAG:</strong> <span class="issue-wcag">1.4.3</span></span>
+                </div>
+            </div>
+            
+            <div class="issue-card critical">
+                <div class="issue-header">
+                    <h3 class="issue-title">Insufficient color contrast</h3>
+                    <span class="issue-type critical">critical</span>
+                </div>
+                <div class="issue-details">Contrast ratio: 1.00:1 (required: 4.5:1)</div>
+                <div class="issue-recommendation">Increase contrast to at least 4.5:1</div>
+                <div class="issue-meta">
+            <span class="issue-meta-item"><strong>Check Type:</strong> color_contrast</span><span class="issue-meta-item"><strong>WCAG:</strong> <span class="issue-wcag">1.4.3</span></span>
+                </div>
+            </div>
+            
+            <div class="issue-card critical">
+                <div class="issue-header">
+                    <h3 class="issue-title">Insufficient color contrast</h3>
+                    <span class="issue-type critical">critical</span>
+                </div>
+                <div class="issue-details">Contrast ratio: 1.00:1 (required: 4.5:1)</div>
+                <div class="issue-recommendation">Increase contrast to at least 4.5:1</div>
+                <div class="issue-meta">
+            <span class="issue-meta-item"><strong>Check Type:</strong> color_contrast</span><span class="issue-meta-item"><strong>WCAG:</strong> <span class="issue-wcag">1.4.3</span></span>
+                </div>
+            </div>
+            
+            <div class="issue-card critical">
+                <div class="issue-header">
+                    <h3 class="issue-title">Insufficient color contrast</h3>
+                    <span class="issue-type critical">critical</span>
+                </div>
+                <div class="issue-details">Contrast ratio: 1.00:1 (required: 4.5:1)</div>
+                <div class="issue-recommendation">Increase contrast to at least 4.5:1</div>
+                <div class="issue-meta">
+            <span class="issue-meta-item"><strong>Check Type:</strong> color_contrast</span><span class="issue-meta-item"><strong>WCAG:</strong> <span class="issue-wcag">1.4.3</span></span>
+                </div>
+            </div>
+            
+            <div class="issue-card critical">
+                <div class="issue-header">
+                    <h3 class="issue-title">Insufficient color contrast</h3>
+                    <span class="issue-type critical">critical</span>
+                </div>
+                <div class="issue-details">Contrast ratio: 1.00:1 (required: 4.5:1)</div>
+                <div class="issue-recommendation">Increase contrast to at least 4.5:1</div>
+                <div class="issue-meta">
+            <span class="issue-meta-item"><strong>Check Type:</strong> color_contrast</span><span class="issue-meta-item"><strong>WCAG:</strong> <span class="issue-wcag">1.4.3</span></span>
+                </div>
+            </div>
+            
+            <div class="issue-card critical">
+                <div class="issue-header">
+                    <h3 class="issue-title">Insufficient color contrast</h3>
+                    <span class="issue-type critical">critical</span>
+                </div>
+                <div class="issue-details">Contrast ratio: 1.00:1 (required: 4.5:1)</div>
+                <div class="issue-recommendation">Increase contrast to at least 4.5:1</div>
+                <div class="issue-meta">
+            <span class="issue-meta-item"><strong>Check Type:</strong> color_contrast</span><span class="issue-meta-item"><strong>WCAG:</strong> <span class="issue-wcag">1.4.3</span></span>
+                </div>
+            </div>
+            
+            <div class="issue-card critical">
+                <div class="issue-header">
+                    <h3 class="issue-title">Insufficient color contrast</h3>
+                    <span class="issue-type critical">critical</span>
+                </div>
+                <div class="issue-details">Contrast ratio: 1.00:1 (required: 4.5:1)</div>
+                <div class="issue-recommendation">Increase contrast to at least 4.5:1</div>
+                <div class="issue-meta">
+            <span class="issue-meta-item"><strong>Check Type:</strong> color_contrast</span><span class="issue-meta-item"><strong>WCAG:</strong> <span class="issue-wcag">1.4.3</span></span>
+                </div>
+            </div>
+            
+            <div class="issue-card critical">
+                <div class="issue-header">
+                    <h3 class="issue-title">Insufficient color contrast</h3>
+                    <span class="issue-type critical">critical</span>
+                </div>
+                <div class="issue-details">Contrast ratio: 1.00:1 (required: 4.5:1)</div>
+                <div class="issue-recommendation">Increase contrast to at least 4.5:1</div>
+                <div class="issue-meta">
+            <span class="issue-meta-item"><strong>Check Type:</strong> color_contrast</span><span class="issue-meta-item"><strong>WCAG:</strong> <span class="issue-wcag">1.4.3</span></span>
+                </div>
+            </div>
+            
+            <div class="issue-card critical">
+                <div class="issue-header">
+                    <h3 class="issue-title">Insufficient color contrast</h3>
+                    <span class="issue-type critical">critical</span>
+                </div>
+                <div class="issue-details">Contrast ratio: 3.50:1 (required: 4.5:1)</div>
+                <div class="issue-recommendation">Increase contrast to at least 4.5:1</div>
+                <div class="issue-meta">
+            <span class="issue-meta-item"><strong>Check Type:</strong> color_contrast</span><span class="issue-meta-item"><strong>WCAG:</strong> <span class="issue-wcag">1.4.3</span></span>
+                </div>
+            </div>
+            
+            <div class="issue-card critical">
+                <div class="issue-header">
+                    <h3 class="issue-title">Insufficient color contrast</h3>
+                    <span class="issue-type critical">critical</span>
+                </div>
+                <div class="issue-details">Contrast ratio: 1.00:1 (required: 4.5:1)</div>
+                <div class="issue-recommendation">Increase contrast to at least 4.5:1</div>
+                <div class="issue-meta">
+            <span class="issue-meta-item"><strong>Check Type:</strong> color_contrast</span><span class="issue-meta-item"><strong>WCAG:</strong> <span class="issue-wcag">1.4.3</span></span>
+                </div>
+            </div>
+            
+            <div class="issue-card critical">
+                <div class="issue-header">
+                    <h3 class="issue-title">Insufficient color contrast</h3>
+                    <span class="issue-type critical">critical</span>
+                </div>
+                <div class="issue-details">Contrast ratio: 3.50:1 (required: 4.5:1)</div>
+                <div class="issue-recommendation">Increase contrast to at least 4.5:1</div>
+                <div class="issue-meta">
+            <span class="issue-meta-item"><strong>Check Type:</strong> color_contrast</span><span class="issue-meta-item"><strong>WCAG:</strong> <span class="issue-wcag">1.4.3</span></span>
+                </div>
+            </div>
+            
+            <div class="issue-card critical">
+                <div class="issue-header">
+                    <h3 class="issue-title">Insufficient color contrast</h3>
+                    <span class="issue-type critical">critical</span>
+                </div>
+                <div class="issue-details">Contrast ratio: 1.00:1 (required: 4.5:1)</div>
+                <div class="issue-recommendation">Increase contrast to at least 4.5:1</div>
+                <div class="issue-meta">
+            <span class="issue-meta-item"><strong>Check Type:</strong> color_contrast</span><span class="issue-meta-item"><strong>WCAG:</strong> <span class="issue-wcag">1.4.3</span></span>
+                </div>
+            </div>
+            
+            <div class="issue-card critical">
+                <div class="issue-header">
+                    <h3 class="issue-title">Insufficient color contrast</h3>
+                    <span class="issue-type critical">critical</span>
+                </div>
+                <div class="issue-details">Contrast ratio: 3.50:1 (required: 4.5:1)</div>
+                <div class="issue-recommendation">Increase contrast to at least 4.5:1</div>
+                <div class="issue-meta">
+            <span class="issue-meta-item"><strong>Check Type:</strong> color_contrast</span><span class="issue-meta-item"><strong>WCAG:</strong> <span class="issue-wcag">1.4.3</span></span>
+                </div>
+            </div>
+            
+            <div class="issue-card critical">
+                <div class="issue-header">
+                    <h3 class="issue-title">Insufficient color contrast</h3>
+                    <span class="issue-type critical">critical</span>
+                </div>
+                <div class="issue-details">Contrast ratio: 1.00:1 (required: 4.5:1)</div>
+                <div class="issue-recommendation">Increase contrast to at least 4.5:1</div>
+                <div class="issue-meta">
+            <span class="issue-meta-item"><strong>Check Type:</strong> color_contrast</span><span class="issue-meta-item"><strong>WCAG:</strong> <span class="issue-wcag">1.4.3</span></span>
+                </div>
+            </div>
+            
+            <div class="issue-card critical">
+                <div class="issue-header">
+                    <h3 class="issue-title">Insufficient color contrast</h3>
+                    <span class="issue-type critical">critical</span>
+                </div>
+                <div class="issue-details">Contrast ratio: 3.50:1 (required: 4.5:1)</div>
+                <div class="issue-recommendation">Increase contrast to at least 4.5:1</div>
+                <div class="issue-meta">
+            <span class="issue-meta-item"><strong>Check Type:</strong> color_contrast</span><span class="issue-meta-item"><strong>WCAG:</strong> <span class="issue-wcag">1.4.3</span></span>
+                </div>
+            </div>
+            
+            <div class="issue-card critical">
+                <div class="issue-header">
+                    <h3 class="issue-title">Insufficient color contrast</h3>
+                    <span class="issue-type critical">critical</span>
+                </div>
+                <div class="issue-details">Contrast ratio: 1.68:1 (required: 4.5:1)</div>
+                <div class="issue-recommendation">Increase contrast to at least 4.5:1</div>
+                <div class="issue-meta">
+            <span class="issue-meta-item"><strong>Check Type:</strong> color_contrast</span><span class="issue-meta-item"><strong>WCAG:</strong> <span class="issue-wcag">1.4.3</span></span>
+                </div>
+            </div>
+            
+            <div class="issue-card critical">
+                <div class="issue-header">
+                    <h3 class="issue-title">Insufficient color contrast</h3>
+                    <span class="issue-type critical">critical</span>
+                </div>
+                <div class="issue-details">Contrast ratio: 1.68:1 (required: 4.5:1)</div>
+                <div class="issue-recommendation">Increase contrast to at least 4.5:1</div>
+                <div class="issue-meta">
+            <span class="issue-meta-item"><strong>Check Type:</strong> color_contrast</span><span class="issue-meta-item"><strong>WCAG:</strong> <span class="issue-wcag">1.4.3</span></span>
+                </div>
+            </div>
+            
+            <div class="issue-card critical">
+                <div class="issue-header">
+                    <h3 class="issue-title">Insufficient color contrast</h3>
+                    <span class="issue-type critical">critical</span>
+                </div>
+                <div class="issue-details">Contrast ratio: 1.68:1 (required: 4.5:1)</div>
+                <div class="issue-recommendation">Increase contrast to at least 4.5:1</div>
+                <div class="issue-meta">
+            <span class="issue-meta-item"><strong>Check Type:</strong> color_contrast</span><span class="issue-meta-item"><strong>WCAG:</strong> <span class="issue-wcag">1.4.3</span></span>
+                </div>
+            </div>
+            
+            <div class="issue-card critical">
+                <div class="issue-header">
+                    <h3 class="issue-title">Insufficient color contrast</h3>
+                    <span class="issue-type critical">critical</span>
+                </div>
+                <div class="issue-details">Contrast ratio: 1.50:1 (required: 4.5:1)</div>
+                <div class="issue-recommendation">Increase contrast to at least 4.5:1</div>
+                <div class="issue-meta">
+            <span class="issue-meta-item"><strong>Check Type:</strong> color_contrast</span><span class="issue-meta-item"><strong>WCAG:</strong> <span class="issue-wcag">1.4.3</span></span>
+                </div>
+            </div>
+            
+            <div class="issue-card critical">
+                <div class="issue-header">
+                    <h3 class="issue-title">Insufficient color contrast</h3>
+                    <span class="issue-type critical">critical</span>
+                </div>
+                <div class="issue-details">Contrast ratio: 1.68:1 (required: 3.0:1)</div>
+                <div class="issue-recommendation">Increase contrast to at least 3.0:1</div>
+                <div class="issue-meta">
+            <span class="issue-meta-item"><strong>Check Type:</strong> color_contrast</span><span class="issue-meta-item"><strong>WCAG:</strong> <span class="issue-wcag">1.4.3</span></span>
+                </div>
+            </div>
+            
+            <div class="issue-card critical">
+                <div class="issue-header">
+                    <h3 class="issue-title">Insufficient color contrast</h3>
+                    <span class="issue-type critical">critical</span>
+                </div>
+                <div class="issue-details">Contrast ratio: 1.69:1 (required: 4.5:1)</div>
+                <div class="issue-recommendation">Increase contrast to at least 4.5:1</div>
+                <div class="issue-meta">
+            <span class="issue-meta-item"><strong>Check Type:</strong> color_contrast</span><span class="issue-meta-item"><strong>WCAG:</strong> <span class="issue-wcag">1.4.3</span></span>
+                </div>
+            </div>
+            
+            <div class="issue-card critical">
+                <div class="issue-header">
+                    <h3 class="issue-title">Insufficient color contrast</h3>
+                    <span class="issue-type critical">critical</span>
+                </div>
+                <div class="issue-details">Contrast ratio: 1.00:1 (required: 4.5:1)</div>
+                <div class="issue-recommendation">Increase contrast to at least 4.5:1</div>
+                <div class="issue-meta">
+            <span class="issue-meta-item"><strong>Check Type:</strong> color_contrast</span><span class="issue-meta-item"><strong>WCAG:</strong> <span class="issue-wcag">1.4.3</span></span>
+                </div>
+            </div>
+            
+            <div class="issue-card critical">
+                <div class="issue-header">
+                    <h3 class="issue-title">Insufficient color contrast</h3>
+                    <span class="issue-type critical">critical</span>
+                </div>
+                <div class="issue-details">Contrast ratio: 1.00:1 (required: 4.5:1)</div>
+                <div class="issue-recommendation">Increase contrast to at least 4.5:1</div>
+                <div class="issue-meta">
+            <span class="issue-meta-item"><strong>Check Type:</strong> color_contrast</span><span class="issue-meta-item"><strong>WCAG:</strong> <span class="issue-wcag">1.4.3</span></span>
+                </div>
+            </div>
+            
+            <div class="issue-card critical">
+                <div class="issue-header">
+                    <h3 class="issue-title">Insufficient color contrast</h3>
+                    <span class="issue-type critical">critical</span>
+                </div>
+                <div class="issue-details">Contrast ratio: 1.00:1 (required: 4.5:1)</div>
+                <div class="issue-recommendation">Increase contrast to at least 4.5:1</div>
+                <div class="issue-meta">
+            <span class="issue-meta-item"><strong>Check Type:</strong> color_contrast</span><span class="issue-meta-item"><strong>WCAG:</strong> <span class="issue-wcag">1.4.3</span></span>
+                </div>
+            </div>
+            
+            <div class="issue-card critical">
+                <div class="issue-header">
+                    <h3 class="issue-title">Insufficient color contrast</h3>
+                    <span class="issue-type critical">critical</span>
+                </div>
+                <div class="issue-details">Contrast ratio: 1.00:1 (required: 4.5:1)</div>
+                <div class="issue-recommendation">Increase contrast to at least 4.5:1</div>
+                <div class="issue-meta">
+            <span class="issue-meta-item"><strong>Check Type:</strong> color_contrast</span><span class="issue-meta-item"><strong>WCAG:</strong> <span class="issue-wcag">1.4.3</span></span>
+                </div>
+            </div>
+            
+            <div class="issue-card critical">
+                <div class="issue-header">
+                    <h3 class="issue-title">Insufficient color contrast</h3>
+                    <span class="issue-type critical">critical</span>
+                </div>
+                <div class="issue-details">Contrast ratio: 1.00:1 (required: 4.5:1)</div>
+                <div class="issue-recommendation">Increase contrast to at least 4.5:1</div>
+                <div class="issue-meta">
+            <span class="issue-meta-item"><strong>Check Type:</strong> color_contrast</span><span class="issue-meta-item"><strong>WCAG:</strong> <span class="issue-wcag">1.4.3</span></span>
+                </div>
+            </div>
+            
+            <div class="issue-card critical">
+                <div class="issue-header">
+                    <h3 class="issue-title">Insufficient color contrast</h3>
+                    <span class="issue-type critical">critical</span>
+                </div>
+                <div class="issue-details">Contrast ratio: 1.00:1 (required: 4.5:1)</div>
+                <div class="issue-recommendation">Increase contrast to at least 4.5:1</div>
+                <div class="issue-meta">
+            <span class="issue-meta-item"><strong>Check Type:</strong> color_contrast</span><span class="issue-meta-item"><strong>WCAG:</strong> <span class="issue-wcag">1.4.3</span></span>
+                </div>
+            </div>
+            
+            <div class="issue-card critical">
+                <div class="issue-header">
+                    <h3 class="issue-title">Insufficient color contrast</h3>
+                    <span class="issue-type critical">critical</span>
+                </div>
+                <div class="issue-details">Contrast ratio: 1.00:1 (required: 4.5:1)</div>
+                <div class="issue-recommendation">Increase contrast to at least 4.5:1</div>
+                <div class="issue-meta">
+            <span class="issue-meta-item"><strong>Check Type:</strong> color_contrast</span><span class="issue-meta-item"><strong>WCAG:</strong> <span class="issue-wcag">1.4.3</span></span>
+                </div>
+            </div>
+            
+            <div class="issue-card critical">
+                <div class="issue-header">
+                    <h3 class="issue-title">Insufficient color contrast</h3>
+                    <span class="issue-type critical">critical</span>
+                </div>
+                <div class="issue-details">Contrast ratio: 1.00:1 (required: 4.5:1)</div>
+                <div class="issue-recommendation">Increase contrast to at least 4.5:1</div>
+                <div class="issue-meta">
+            <span class="issue-meta-item"><strong>Check Type:</strong> color_contrast</span><span class="issue-meta-item"><strong>WCAG:</strong> <span class="issue-wcag">1.4.3</span></span>
+                </div>
+            </div>
+            
+            <div class="issue-card critical">
+                <div class="issue-header">
+                    <h3 class="issue-title">Insufficient color contrast</h3>
+                    <span class="issue-type critical">critical</span>
+                </div>
+                <div class="issue-details">Contrast ratio: 1.00:1 (required: 4.5:1)</div>
+                <div class="issue-recommendation">Increase contrast to at least 4.5:1</div>
+                <div class="issue-meta">
+            <span class="issue-meta-item"><strong>Check Type:</strong> color_contrast</span><span class="issue-meta-item"><strong>WCAG:</strong> <span class="issue-wcag">1.4.3</span></span>
+                </div>
+            </div>
+            
+            <div class="issue-card critical">
+                <div class="issue-header">
+                    <h3 class="issue-title">Insufficient color contrast</h3>
+                    <span class="issue-type critical">critical</span>
+                </div>
+                <div class="issue-details">Contrast ratio: 1.00:1 (required: 4.5:1)</div>
+                <div class="issue-recommendation">Increase contrast to at least 4.5:1</div>
+                <div class="issue-meta">
+            <span class="issue-meta-item"><strong>Check Type:</strong> color_contrast</span><span class="issue-meta-item"><strong>WCAG:</strong> <span class="issue-wcag">1.4.3</span></span>
+                </div>
+            </div>
+            
+            <div class="issue-card critical">
+                <div class="issue-header">
+                    <h3 class="issue-title">Insufficient color contrast</h3>
+                    <span class="issue-type critical">critical</span>
+                </div>
+                <div class="issue-details">Contrast ratio: 1.00:1 (required: 4.5:1)</div>
+                <div class="issue-recommendation">Increase contrast to at least 4.5:1</div>
+                <div class="issue-meta">
+            <span class="issue-meta-item"><strong>Check Type:</strong> color_contrast</span><span class="issue-meta-item"><strong>WCAG:</strong> <span class="issue-wcag">1.4.3</span></span>
+                </div>
+            </div>
+            
+            <div class="issue-card critical">
+                <div class="issue-header">
+                    <h3 class="issue-title">Insufficient UI component contrast</h3>
+                    <span class="issue-type critical">critical</span>
+                </div>
+                <div class="issue-details">Contrast ratio: 1.00:1 (required: 3.0:1)</div>
+                <div class="issue-recommendation">Increase component contrast to at least 3.0:1</div>
+                <div class="issue-meta">
+            <span class="issue-meta-item"><strong>Check Type:</strong> color_contrast</span><span class="issue-meta-item"><strong>WCAG:</strong> <span class="issue-wcag">1.4.11</span></span>
+                </div>
+            </div>
+            
+            <div class="issue-card critical">
+                <div class="issue-header">
+                    <h3 class="issue-title">Insufficient UI component contrast</h3>
+                    <span class="issue-type critical">critical</span>
+                </div>
+                <div class="issue-details">Contrast ratio: 1.00:1 (required: 3.0:1)</div>
+                <div class="issue-recommendation">Increase component contrast to at least 3.0:1</div>
+                <div class="issue-meta">
+            <span class="issue-meta-item"><strong>Check Type:</strong> color_contrast</span><span class="issue-meta-item"><strong>WCAG:</strong> <span class="issue-wcag">1.4.11</span></span>
+                </div>
+            </div>
+            
+            <div class="issue-card critical">
+                <div class="issue-header">
+                    <h3 class="issue-title">Insufficient UI component contrast</h3>
+                    <span class="issue-type critical">critical</span>
+                </div>
+                <div class="issue-details">Contrast ratio: 1.00:1 (required: 3.0:1)</div>
+                <div class="issue-recommendation">Increase component contrast to at least 3.0:1</div>
+                <div class="issue-meta">
+            <span class="issue-meta-item"><strong>Check Type:</strong> color_contrast</span><span class="issue-meta-item"><strong>WCAG:</strong> <span class="issue-wcag">1.4.11</span></span>
+                </div>
+            </div>
+            
+            <div class="issue-card critical">
+                <div class="issue-header">
+                    <h3 class="issue-title">Insufficient UI component contrast</h3>
+                    <span class="issue-type critical">critical</span>
+                </div>
+                <div class="issue-details">Contrast ratio: 1.00:1 (required: 3.0:1)</div>
+                <div class="issue-recommendation">Increase component contrast to at least 3.0:1</div>
+                <div class="issue-meta">
+            <span class="issue-meta-item"><strong>Check Type:</strong> color_contrast</span><span class="issue-meta-item"><strong>WCAG:</strong> <span class="issue-wcag">1.4.11</span></span>
+                </div>
+            </div>
+            
+            <div class="issue-card critical">
+                <div class="issue-header">
+                    <h3 class="issue-title">Insufficient UI component contrast</h3>
+                    <span class="issue-type critical">critical</span>
+                </div>
+                <div class="issue-details">Contrast ratio: 1.00:1 (required: 3.0:1)</div>
+                <div class="issue-recommendation">Increase component contrast to at least 3.0:1</div>
+                <div class="issue-meta">
+            <span class="issue-meta-item"><strong>Check Type:</strong> color_contrast</span><span class="issue-meta-item"><strong>WCAG:</strong> <span class="issue-wcag">1.4.11</span></span>
+                </div>
+            </div>
+            
+            <div class="issue-card critical">
+                <div class="issue-header">
+                    <h3 class="issue-title">Insufficient UI component contrast</h3>
+                    <span class="issue-type critical">critical</span>
+                </div>
+                <div class="issue-details">Contrast ratio: 1.00:1 (required: 3.0:1)</div>
+                <div class="issue-recommendation">Increase component contrast to at least 3.0:1</div>
+                <div class="issue-meta">
+            <span class="issue-meta-item"><strong>Check Type:</strong> color_contrast</span><span class="issue-meta-item"><strong>WCAG:</strong> <span class="issue-wcag">1.4.11</span></span>
+                </div>
+            </div>
+            
+            <div class="issue-card critical">
+                <div class="issue-header">
+                    <h3 class="issue-title">Insufficient UI component contrast</h3>
+                    <span class="issue-type critical">critical</span>
+                </div>
+                <div class="issue-details">Contrast ratio: 1.00:1 (required: 3.0:1)</div>
+                <div class="issue-recommendation">Increase component contrast to at least 3.0:1</div>
+                <div class="issue-meta">
+            <span class="issue-meta-item"><strong>Check Type:</strong> color_contrast</span><span class="issue-meta-item"><strong>WCAG:</strong> <span class="issue-wcag">1.4.11</span></span>
+                </div>
+            </div>
+            
+            <div class="issue-card critical">
+                <div class="issue-header">
+                    <h3 class="issue-title">Insufficient UI component contrast</h3>
+                    <span class="issue-type critical">critical</span>
+                </div>
+                <div class="issue-details">Contrast ratio: 1.00:1 (required: 3.0:1)</div>
+                <div class="issue-recommendation">Increase component contrast to at least 3.0:1</div>
+                <div class="issue-meta">
+            <span class="issue-meta-item"><strong>Check Type:</strong> color_contrast</span><span class="issue-meta-item"><strong>WCAG:</strong> <span class="issue-wcag">1.4.11</span></span>
+                </div>
+            </div>
+            
+            <div class="issue-card critical">
+                <div class="issue-header">
+                    <h3 class="issue-title">Insufficient UI component contrast</h3>
+                    <span class="issue-type critical">critical</span>
+                </div>
+                <div class="issue-details">Contrast ratio: 1.68:1 (required: 3.0:1)</div>
+                <div class="issue-recommendation">Increase component contrast to at least 3.0:1</div>
+                <div class="issue-meta">
+            <span class="issue-meta-item"><strong>Check Type:</strong> color_contrast</span><span class="issue-meta-item"><strong>WCAG:</strong> <span class="issue-wcag">1.4.11</span></span>
+                </div>
+            </div>
+            
+            <div class="issue-card critical">
+                <div class="issue-header">
+                    <h3 class="issue-title">Insufficient UI component contrast</h3>
+                    <span class="issue-type critical">critical</span>
+                </div>
+                <div class="issue-details">Contrast ratio: 1.68:1 (required: 3.0:1)</div>
+                <div class="issue-recommendation">Increase component contrast to at least 3.0:1</div>
+                <div class="issue-meta">
+            <span class="issue-meta-item"><strong>Check Type:</strong> color_contrast</span><span class="issue-meta-item"><strong>WCAG:</strong> <span class="issue-wcag">1.4.11</span></span>
+                </div>
+            </div>
+            
+            <div class="issue-card critical">
+                <div class="issue-header">
+                    <h3 class="issue-title">Insufficient UI component contrast</h3>
+                    <span class="issue-type critical">critical</span>
+                </div>
+                <div class="issue-details">Contrast ratio: 1.68:1 (required: 3.0:1)</div>
+                <div class="issue-recommendation">Increase component contrast to at least 3.0:1</div>
+                <div class="issue-meta">
+            <span class="issue-meta-item"><strong>Check Type:</strong> color_contrast</span><span class="issue-meta-item"><strong>WCAG:</strong> <span class="issue-wcag">1.4.11</span></span>
+                </div>
+            </div>
+            
+            <div class="issue-card warning">
+                <div class="issue-header">
+                    <h3 class="issue-title">Potentially informative image has empty alt text</h3>
+                    <span class="issue-type warning">warning</span>
+                </div>
+                <div class="issue-details">Image appears to convey information but has empty alt text</div>
+                <div class="issue-recommendation">Add descriptive alt text if the image conveys information</div>
+                <div class="issue-meta">
+            <span class="issue-meta-item"><strong>Check Type:</strong> image_accessibility</span><span class="issue-meta-item"><strong>WCAG:</strong> <span class="issue-wcag">1.1.1</span></span>
+                </div>
+            </div>
+            
+            <div class="issue-card warning">
+                <div class="issue-header">
+                    <h3 class="issue-title">Potentially informative image has empty alt text</h3>
+                    <span class="issue-type warning">warning</span>
+                </div>
+                <div class="issue-details">Image appears to convey information but has empty alt text</div>
+                <div class="issue-recommendation">Add descriptive alt text if the image conveys information</div>
+                <div class="issue-meta">
+            <span class="issue-meta-item"><strong>Check Type:</strong> image_accessibility</span><span class="issue-meta-item"><strong>WCAG:</strong> <span class="issue-wcag">1.1.1</span></span>
+                </div>
+            </div>
+            
+            <div class="issue-card warning">
+                <div class="issue-header">
+                    <h3 class="issue-title">Icon lacks text alternative</h3>
+                    <span class="issue-type warning">warning</span>
+                </div>
+                <div class="issue-details">Icon has no accessible name and is not hidden from screen readers</div>
+                <div class="issue-recommendation">Add aria-label or make decorative with aria-hidden='true'</div>
+                <div class="issue-meta">
+            <span class="issue-meta-item"><strong>Check Type:</strong> image_accessibility</span><span class="issue-meta-item"><strong>WCAG:</strong> <span class="issue-wcag">1.1.1</span></span>
+                </div>
+            </div>
+            
+            <div class="issue-card warning">
+                <div class="issue-header">
+                    <h3 class="issue-title">Icon lacks text alternative</h3>
+                    <span class="issue-type warning">warning</span>
+                </div>
+                <div class="issue-details">Icon has no accessible name and is not hidden from screen readers</div>
+                <div class="issue-recommendation">Add aria-label or make decorative with aria-hidden='true'</div>
+                <div class="issue-meta">
+            <span class="issue-meta-item"><strong>Check Type:</strong> image_accessibility</span><span class="issue-meta-item"><strong>WCAG:</strong> <span class="issue-wcag">1.1.1</span></span>
+                </div>
+            </div>
+            
+            <div class="issue-card warning">
+                <div class="issue-header">
+                    <h3 class="issue-title">Icon lacks text alternative</h3>
+                    <span class="issue-type warning">warning</span>
+                </div>
+                <div class="issue-details">Icon has no accessible name and is not hidden from screen readers</div>
+                <div class="issue-recommendation">Add aria-label or make decorative with aria-hidden='true'</div>
+                <div class="issue-meta">
+            <span class="issue-meta-item"><strong>Check Type:</strong> image_accessibility</span><span class="issue-meta-item"><strong>WCAG:</strong> <span class="issue-wcag">1.1.1</span></span>
+                </div>
+            </div>
+            
+            <div class="issue-card warning">
+                <div class="issue-header">
+                    <h3 class="issue-title">Icon lacks text alternative</h3>
+                    <span class="issue-type warning">warning</span>
+                </div>
+                <div class="issue-details">Icon has no accessible name and is not hidden from screen readers</div>
+                <div class="issue-recommendation">Add aria-label or make decorative with aria-hidden='true'</div>
+                <div class="issue-meta">
+            <span class="issue-meta-item"><strong>Check Type:</strong> image_accessibility</span><span class="issue-meta-item"><strong>WCAG:</strong> <span class="issue-wcag">1.1.1</span></span>
+                </div>
+            </div>
+            
+            <div class="issue-card warning">
+                <div class="issue-header">
+                    <h3 class="issue-title">Icon lacks text alternative</h3>
+                    <span class="issue-type warning">warning</span>
+                </div>
+                <div class="issue-details">Icon has no accessible name and is not hidden from screen readers</div>
+                <div class="issue-recommendation">Add aria-label or make decorative with aria-hidden='true'</div>
+                <div class="issue-meta">
+            <span class="issue-meta-item"><strong>Check Type:</strong> image_accessibility</span><span class="issue-meta-item"><strong>WCAG:</strong> <span class="issue-wcag">1.1.1</span></span>
+                </div>
+            </div>
+            
+            <div class="issue-card warning">
+                <div class="issue-header">
+                    <h3 class="issue-title">Icon lacks text alternative</h3>
+                    <span class="issue-type warning">warning</span>
+                </div>
+                <div class="issue-details">Icon has no accessible name and is not hidden from screen readers</div>
+                <div class="issue-recommendation">Add aria-label or make decorative with aria-hidden='true'</div>
+                <div class="issue-meta">
+            <span class="issue-meta-item"><strong>Check Type:</strong> image_accessibility</span><span class="issue-meta-item"><strong>WCAG:</strong> <span class="issue-wcag">1.1.1</span></span>
+                </div>
+            </div>
+            
+            <div class="issue-card warning">
+                <div class="issue-header">
+                    <h3 class="issue-title">Icon lacks text alternative</h3>
+                    <span class="issue-type warning">warning</span>
+                </div>
+                <div class="issue-details">Icon has no accessible name and is not hidden from screen readers</div>
+                <div class="issue-recommendation">Add aria-label or make decorative with aria-hidden='true'</div>
+                <div class="issue-meta">
+            <span class="issue-meta-item"><strong>Check Type:</strong> image_accessibility</span><span class="issue-meta-item"><strong>WCAG:</strong> <span class="issue-wcag">1.1.1</span></span>
+                </div>
+            </div>
+            
+            <div class="issue-card warning">
+                <div class="issue-header">
+                    <h3 class="issue-title">Icon lacks text alternative</h3>
+                    <span class="issue-type warning">warning</span>
+                </div>
+                <div class="issue-details">Icon has no accessible name and is not hidden from screen readers</div>
+                <div class="issue-recommendation">Add aria-label or make decorative with aria-hidden='true'</div>
+                <div class="issue-meta">
+            <span class="issue-meta-item"><strong>Check Type:</strong> image_accessibility</span><span class="issue-meta-item"><strong>WCAG:</strong> <span class="issue-wcag">1.1.1</span></span>
+                </div>
+            </div>
+            
+            <div class="issue-card warning">
+                <div class="issue-header">
+                    <h3 class="issue-title">Icon lacks text alternative</h3>
+                    <span class="issue-type warning">warning</span>
+                </div>
+                <div class="issue-details">Icon has no accessible name and is not hidden from screen readers</div>
+                <div class="issue-recommendation">Add aria-label or make decorative with aria-hidden='true'</div>
+                <div class="issue-meta">
+            <span class="issue-meta-item"><strong>Check Type:</strong> image_accessibility</span><span class="issue-meta-item"><strong>WCAG:</strong> <span class="issue-wcag">1.1.1</span></span>
+                </div>
+            </div>
+            
+            <div class="issue-card warning">
+                <div class="issue-header">
+                    <h3 class="issue-title">Icon lacks text alternative</h3>
+                    <span class="issue-type warning">warning</span>
+                </div>
+                <div class="issue-details">Icon has no accessible name and is not hidden from screen readers</div>
+                <div class="issue-recommendation">Add aria-label or make decorative with aria-hidden='true'</div>
+                <div class="issue-meta">
+            <span class="issue-meta-item"><strong>Check Type:</strong> image_accessibility</span><span class="issue-meta-item"><strong>WCAG:</strong> <span class="issue-wcag">1.1.1</span></span>
+                </div>
+            </div>
+            
+            <div class="issue-card warning">
+                <div class="issue-header">
+                    <h3 class="issue-title">Icon lacks text alternative</h3>
+                    <span class="issue-type warning">warning</span>
+                </div>
+                <div class="issue-details">Icon has no accessible name and is not hidden from screen readers</div>
+                <div class="issue-recommendation">Add aria-label or make decorative with aria-hidden='true'</div>
+                <div class="issue-meta">
+            <span class="issue-meta-item"><strong>Check Type:</strong> image_accessibility</span><span class="issue-meta-item"><strong>WCAG:</strong> <span class="issue-wcag">1.1.1</span></span>
+                </div>
+            </div>
+            
+            <div class="issue-card warning">
+                <div class="issue-header">
+                    <h3 class="issue-title">Decorative icon not hidden from screen readers</h3>
+                    <span class="issue-type warning">warning</span>
+                </div>
+                <div class="issue-details">Icon inside a labeled element should be hidden from screen readers</div>
+                <div class="issue-recommendation">Add aria-hidden='true' to the icon element</div>
+                <div class="issue-meta">
+            <span class="issue-meta-item"><strong>Check Type:</strong> image_accessibility</span><span class="issue-meta-item"><strong>WCAG:</strong> <span class="issue-wcag">1.1.1</span></span>
+                </div>
+            </div>
+            
+            <div class="issue-card warning">
+                <div class="issue-header">
+                    <h3 class="issue-title">Icon lacks text alternative</h3>
+                    <span class="issue-type warning">warning</span>
+                </div>
+                <div class="issue-details">Icon has no accessible name and is not hidden from screen readers</div>
+                <div class="issue-recommendation">Add aria-label or make decorative with aria-hidden='true'</div>
+                <div class="issue-meta">
+            <span class="issue-meta-item"><strong>Check Type:</strong> image_accessibility</span><span class="issue-meta-item"><strong>WCAG:</strong> <span class="issue-wcag">1.1.1</span></span>
+                </div>
+            </div>
+            
+            <div class="issue-card warning">
+                <div class="issue-header">
+                    <h3 class="issue-title">Icon lacks text alternative</h3>
+                    <span class="issue-type warning">warning</span>
+                </div>
+                <div class="issue-details">Icon has no accessible name and is not hidden from screen readers</div>
+                <div class="issue-recommendation">Add aria-label or make decorative with aria-hidden='true'</div>
+                <div class="issue-meta">
+            <span class="issue-meta-item"><strong>Check Type:</strong> image_accessibility</span><span class="issue-meta-item"><strong>WCAG:</strong> <span class="issue-wcag">1.1.1</span></span>
+                </div>
+            </div>
+            
+            <div class="issue-card warning">
+                <div class="issue-header">
+                    <h3 class="issue-title">Icon lacks text alternative</h3>
+                    <span class="issue-type warning">warning</span>
+                </div>
+                <div class="issue-details">Icon has no accessible name and is not hidden from screen readers</div>
+                <div class="issue-recommendation">Add aria-label or make decorative with aria-hidden='true'</div>
+                <div class="issue-meta">
+            <span class="issue-meta-item"><strong>Check Type:</strong> image_accessibility</span><span class="issue-meta-item"><strong>WCAG:</strong> <span class="issue-wcag">1.1.1</span></span>
+                </div>
+            </div>
+            
+            <div class="issue-card warning">
+                <div class="issue-header">
+                    <h3 class="issue-title">Icon lacks text alternative</h3>
+                    <span class="issue-type warning">warning</span>
+                </div>
+                <div class="issue-details">Icon has no accessible name and is not hidden from screen readers</div>
+                <div class="issue-recommendation">Add aria-label or make decorative with aria-hidden='true'</div>
+                <div class="issue-meta">
+            <span class="issue-meta-item"><strong>Check Type:</strong> image_accessibility</span><span class="issue-meta-item"><strong>WCAG:</strong> <span class="issue-wcag">1.1.1</span></span>
+                </div>
+            </div>
+            
+            <div class="issue-card warning">
+                <div class="issue-header">
+                    <h3 class="issue-title">Icon lacks text alternative</h3>
+                    <span class="issue-type warning">warning</span>
+                </div>
+                <div class="issue-details">Icon has no accessible name and is not hidden from screen readers</div>
+                <div class="issue-recommendation">Add aria-label or make decorative with aria-hidden='true'</div>
+                <div class="issue-meta">
+            <span class="issue-meta-item"><strong>Check Type:</strong> image_accessibility</span><span class="issue-meta-item"><strong>WCAG:</strong> <span class="issue-wcag">1.1.1</span></span>
+                </div>
+            </div>
+            
+            <div class="issue-card warning">
+                <div class="issue-header">
+                    <h3 class="issue-title">Icon lacks text alternative</h3>
+                    <span class="issue-type warning">warning</span>
+                </div>
+                <div class="issue-details">Icon has no accessible name and is not hidden from screen readers</div>
+                <div class="issue-recommendation">Add aria-label or make decorative with aria-hidden='true'</div>
+                <div class="issue-meta">
+            <span class="issue-meta-item"><strong>Check Type:</strong> image_accessibility</span><span class="issue-meta-item"><strong>WCAG:</strong> <span class="issue-wcag">1.1.1</span></span>
+                </div>
+            </div>
+            
+            <div class="issue-card warning">
+                <div class="issue-header">
+                    <h3 class="issue-title">Icon lacks text alternative</h3>
+                    <span class="issue-type warning">warning</span>
+                </div>
+                <div class="issue-details">Icon has no accessible name and is not hidden from screen readers</div>
+                <div class="issue-recommendation">Add aria-label or make decorative with aria-hidden='true'</div>
+                <div class="issue-meta">
+            <span class="issue-meta-item"><strong>Check Type:</strong> image_accessibility</span><span class="issue-meta-item"><strong>WCAG:</strong> <span class="issue-wcag">1.1.1</span></span>
+                </div>
+            </div>
+            
+            <div class="issue-card warning">
+                <div class="issue-header">
+                    <h3 class="issue-title">Icon lacks text alternative</h3>
+                    <span class="issue-type warning">warning</span>
+                </div>
+                <div class="issue-details">Icon has no accessible name and is not hidden from screen readers</div>
+                <div class="issue-recommendation">Add aria-label or make decorative with aria-hidden='true'</div>
+                <div class="issue-meta">
+            <span class="issue-meta-item"><strong>Check Type:</strong> image_accessibility</span><span class="issue-meta-item"><strong>WCAG:</strong> <span class="issue-wcag">1.1.1</span></span>
+                </div>
+            </div>
+            
+            <div class="issue-card warning">
+                <div class="issue-header">
+                    <h3 class="issue-title">Icon lacks text alternative</h3>
+                    <span class="issue-type warning">warning</span>
+                </div>
+                <div class="issue-details">Icon has no accessible name and is not hidden from screen readers</div>
+                <div class="issue-recommendation">Add aria-label or make decorative with aria-hidden='true'</div>
+                <div class="issue-meta">
+            <span class="issue-meta-item"><strong>Check Type:</strong> image_accessibility</span><span class="issue-meta-item"><strong>WCAG:</strong> <span class="issue-wcag">1.1.1</span></span>
+                </div>
+            </div>
+            
+            <div class="issue-card warning">
+                <div class="issue-header">
+                    <h3 class="issue-title">Icon lacks text alternative</h3>
+                    <span class="issue-type warning">warning</span>
+                </div>
+                <div class="issue-details">Icon has no accessible name and is not hidden from screen readers</div>
+                <div class="issue-recommendation">Add aria-label or make decorative with aria-hidden='true'</div>
+                <div class="issue-meta">
+            <span class="issue-meta-item"><strong>Check Type:</strong> image_accessibility</span><span class="issue-meta-item"><strong>WCAG:</strong> <span class="issue-wcag">1.1.1</span></span>
+                </div>
+            </div>
+            
+            <div class="issue-card warning">
+                <div class="issue-header">
+                    <h3 class="issue-title">Decorative icon not hidden from screen readers</h3>
+                    <span class="issue-type warning">warning</span>
+                </div>
+                <div class="issue-details">Icon inside a labeled element should be hidden from screen readers</div>
+                <div class="issue-recommendation">Add aria-hidden='true' to the icon element</div>
+                <div class="issue-meta">
+            <span class="issue-meta-item"><strong>Check Type:</strong> image_accessibility</span><span class="issue-meta-item"><strong>WCAG:</strong> <span class="issue-wcag">1.1.1</span></span>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="checks-section">
+    
+        <div class="check-card">
+            <div class="check-header">
+                <h3 class="check-name">Keyboard Navigation Sequence</h3>
+                <span class="check-status failed">Issues Found</span>
+            </div>
+        
+                <p>Found 1 issues.</p>
+                <button class="toggle-btn">View Details</button>
+                <div class="content">
+                    <ul>
+                <li>Potential keyboard navigation barriers</li>
+                    </ul>
+                </div>
+                
+        </div>
+        
+        <div class="check-card">
+            <div class="check-header">
+                <h3 class="check-name">Keyboard Accessibility</h3>
+                <span class="check-status failed">Issues Found</span>
+            </div>
+        
+                <p>Found 1 issues.</p>
+                <button class="toggle-btn">View Details</button>
+                <div class="content">
+                    <ul>
+                <li>Unknown issue</li>
+                    </ul>
+                </div>
+                
+        </div>
+        
+        <div class="check-card">
+            <div class="check-header">
+                <h3 class="check-name">Aria Accessibility</h3>
+                <span class="check-status failed">Issues Found</span>
+            </div>
+        
+                <p>Found 3 issues.</p>
+                <button class="toggle-btn">View Details</button>
+                <div class="content">
+                    <ul>
+                <li>Hidden element contains focusable elements</li><li>Hidden element contains focusable elements</li><li>Hidden element contains focusable elements</li>
+                    </ul>
+                </div>
+                
+        </div>
+        
+        <div class="check-card">
+            <div class="check-header">
+                <h3 class="check-name">Color Contrast</h3>
+                <span class="check-status failed">Issues Found</span>
+            </div>
+        
+                <p>Found 50 issues.</p>
+                <button class="toggle-btn">View Details</button>
+                <div class="content">
+                    <ul>
+                <li>Insufficient color contrast</li><li>Insufficient color contrast</li><li>Insufficient color contrast</li><li>Insufficient color contrast</li><li>Insufficient color contrast</li><li>Insufficient color contrast</li><li>Insufficient color contrast</li><li>Insufficient color contrast</li><li>Insufficient color contrast</li><li>Insufficient color contrast</li><li>Insufficient color contrast</li><li>Insufficient color contrast</li><li>Insufficient color contrast</li><li>Insufficient color contrast</li><li>Insufficient color contrast</li><li>Insufficient color contrast</li><li>Insufficient color contrast</li><li>Insufficient color contrast</li><li>Insufficient color contrast</li><li>Insufficient color contrast</li><li>Insufficient color contrast</li><li>Insufficient color contrast</li><li>Insufficient color contrast</li><li>Insufficient color contrast</li><li>Insufficient color contrast</li><li>Insufficient color contrast</li><li>Insufficient color contrast</li><li>Insufficient color contrast</li><li>Insufficient color contrast</li><li>Insufficient color contrast</li><li>Insufficient color contrast</li><li>Insufficient color contrast</li><li>Insufficient color contrast</li><li>Insufficient color contrast</li><li>Insufficient color contrast</li><li>Insufficient color contrast</li><li>Insufficient color contrast</li><li>Insufficient color contrast</li><li>Insufficient color contrast</li><li>Insufficient UI component contrast</li><li>Insufficient UI component contrast</li><li>Insufficient UI component contrast</li><li>Insufficient UI component contrast</li><li>Insufficient UI component contrast</li><li>Insufficient UI component contrast</li><li>Insufficient UI component contrast</li><li>Insufficient UI component contrast</li><li>Insufficient UI component contrast</li><li>Insufficient UI component contrast</li><li>Insufficient UI component contrast</li>
+                    </ul>
+                </div>
+                
+        </div>
+        
+        <div class="check-card">
+            <div class="check-header">
+                <h3 class="check-name">Image Accessibility</h3>
+                <span class="check-status failed">Issues Found</span>
+            </div>
+        
+                <p>Found 25 issues.</p>
+                <button class="toggle-btn">View Details</button>
+                <div class="content">
+                    <ul>
+                <li>Potentially informative image has empty alt text</li><li>Potentially informative image has empty alt text</li><li>Icon lacks text alternative</li><li>Icon lacks text alternative</li><li>Icon lacks text alternative</li><li>Icon lacks text alternative</li><li>Icon lacks text alternative</li><li>Icon lacks text alternative</li><li>Icon lacks text alternative</li><li>Icon lacks text alternative</li><li>Icon lacks text alternative</li><li>Icon lacks text alternative</li><li>Icon lacks text alternative</li><li>Decorative icon not hidden from screen readers</li><li>Icon lacks text alternative</li><li>Icon lacks text alternative</li><li>Icon lacks text alternative</li><li>Icon lacks text alternative</li><li>Icon lacks text alternative</li><li>Icon lacks text alternative</li><li>Icon lacks text alternative</li><li>Icon lacks text alternative</li><li>Icon lacks text alternative</li><li>Icon lacks text alternative</li><li>Decorative icon not hidden from screen readers</li>
+                    </ul>
+                </div>
+                
+        </div>
+        
+        <div class="check-card">
+            <div class="check-header">
+                <h3 class="check-name">Landmarks And Structure</h3>
+                <span class="check-status skipped">Skipped</span>
+            </div>
+        <p>Check was skipped: Module not available</p>
+        </div>
+        
+        <div class="check-card">
+            <div class="check-header">
+                <h3 class="check-name">Form Accessibility</h3>
+                <span class="check-status skipped">Skipped</span>
+            </div>
+        <p>Check was skipped: Module not available</p>
+        </div>
+        
+        <div class="check-card">
+            <div class="check-header">
+                <h3 class="check-name">Basic Page Attributes</h3>
+                <span class="check-status passed">Passed</span>
+            </div>
+        <p>No issues detected.</p>
+        </div>
+        
+        </div>
+        
+        <footer>
+            <p>Generated by Accessibility Checker on 2025-03-11 22:25:33</p>
+        </footer>
+    </div>
+    
+    <script>
+    // Wait for the DOM to be fully loaded
+    document.addEventListener('DOMContentLoaded', function() {
+        // Find all toggle buttons
+        var toggleButtons = document.querySelectorAll('.toggle-btn');
+        
+        // Add click event listener to each button
+        for (var i = 0; i < toggleButtons.length; i++) {
+            // Remove any existing onclick attributes to avoid conflicts
+            toggleButtons[i].removeAttribute('onclick');
+            
+            // Add event listener
+            toggleButtons[i].addEventListener('click', function(event) {
+                // Prevent default behavior
+                event.preventDefault();
+                
+                // Toggle active class
+                this.classList.toggle('active');
+                
+                // Find the content div (next sibling)
+                var content = this.nextElementSibling;
+                
+                // Set display style directly
+                if (content.style.display === 'block') {
+                    content.style.display = 'none';
+                } else {
+                    content.style.display = 'block';
+                }
+            });
+        }
+        
+        // Ensure all content divs start hidden
+        var contentDivs = document.querySelectorAll('.content');
+        for (var j = 0; j < contentDivs.length; j++) {
+            contentDivs[j].style.display = 'none';
+        }
+    });
+    </script>
+</body>
+</html>

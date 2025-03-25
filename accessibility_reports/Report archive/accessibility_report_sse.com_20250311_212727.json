@@ -1,0 +1,2292 @@
+{
+  "url": "https://sse.com",
+  "timestamp": "2025-03-11 21:27:24",
+  "summary": {
+    "critical_issues": 53,
+    "warnings": 26,
+    "passed_checks": 1,
+    "compliance_score": 0,
+    "total_checks": 8
+  },
+  "checks": {
+    "keyboard_navigation_sequence": {
+      "tab_sequence": [
+        {
+          "tag": "button",
+          "id": "ccc-notify-accept",
+          "class": "ccc-notify-button ccc-link ccc-tabbable ccc-accept-button",
+          "role": "",
+          "tabindex": "auto",
+          "text": "Allow all",
+          "visible": true,
+          "position": {
+            "x": 440.0,
+            "y": 383.0,
+            "width": 115.96665954589844,
+            "height": 40.0
+          },
+          "signature": "buttonccc-notify-acceptAllow all",
+          "tab_index": 1
+        },
+        {
+          "tag": "button",
+          "id": "ccc-notify-reject",
+          "class": "ccc-notify-button ccc-link ccc-tabbable ccc-reject-button",
+          "role": "",
+          "tabindex": "auto",
+          "text": "Disable all",
+          "visible": true,
+          "position": {
+            "x": 563.9666748046875,
+            "y": 383.0,
+            "width": 128.60000610351562,
+            "height": 40.0
+          },
+          "signature": "buttonccc-notify-rejectDisable all",
+          "tab_index": 2
+        },
+        {
+          "tag": "button",
+          "id": "",
+          "class": "ccc-notify-button ccc-link ccc-tabbable ccc-notify-link",
+          "role": "",
+          "tabindex": "auto",
+          "text": "Cookie settings",
+          "visible": true,
+          "position": {
+            "x": 700.566650390625,
+            "y": 377.5,
+            "width": 172.88333129882812,
+            "height": 48.0
+          },
+          "signature": "buttonCookie settings",
+          "tab_index": 3
+        },
+        {
+          "tag": "a",
+          "id": "",
+          "class": "external-link",
+          "role": "",
+          "tabindex": "auto",
+          "text": "Cookie notice",
+          "visible": true,
+          "position": {
+            "x": 673.4833374023438,
+            "y": 335.5,
+            "width": 138.43333435058594,
+            "height": 28.0
+          },
+          "signature": "aCookie notice",
+          "tab_index": 4
+        }
+      ],
+      "issues": [
+        {
+          "type": "warning",
+          "issue": "Potential keyboard navigation barriers",
+          "details": "Tab sequence (4 elements) is much shorter than expected (212 potentially focusable elements)",
+          "recommendation": "Check for elements that should be focusable but aren't",
+          "wcag": "2.1.1",
+          "check_type": "keyboard_navigation_sequence"
+        }
+      ],
+      "potentially_focusable_count": 212
+    },
+    "keyboard_accessibility": {
+      "status": "completed",
+      "issues": [
+        {
+          "error": "Message: TypeError: arguments[0] is undefined\nStacktrace:\n@https://www.sse.com/:7:32\n@https://www.sse.com/:10:30\n@https://www.sse.com/:12:8\n"
+        }
+      ]
+    },
+    "aria_accessibility": {
+      "status": "completed",
+      "issues": [
+        {
+          "element": "div",
+          "text": "[No text]",
+          "issue": "Hidden element contains focusable elements",
+          "details": "Element with aria-hidden='true' contains 3 focusable children",
+          "recommendation": "Remove focusable elements from aria-hidden containers or ensure they also have tabindex='-1'",
+          "wcag": "1.3.1",
+          "severity": "critical",
+          "check_type": "aria_accessibility"
+        },
+        {
+          "element": "div",
+          "text": "Featured News\nSSE has published its Q3 Trading Statement\nSSE has published its Q3 Trading Statement for 2024-25.\nRead More",
+          "issue": "Hidden element contains focusable elements",
+          "details": "Element with aria-hidden='true' contains 1 focusable children",
+          "recommendation": "Remove focusable elements from aria-hidden containers or ensure they also have tabindex='-1'",
+          "wcag": "1.3.1",
+          "severity": "critical",
+          "check_type": "aria_accessibility"
+        },
+        {
+          "element": "div",
+          "text": "[No text]",
+          "issue": "Hidden element contains focusable elements",
+          "details": "Element with aria-hidden='true' contains 1 focusable children",
+          "recommendation": "Remove focusable elements from aria-hidden containers or ensure they also have tabindex='-1'",
+          "wcag": "1.3.1",
+          "severity": "critical",
+          "check_type": "aria_accessibility"
+        }
+      ]
+    },
+    "color_contrast": {
+      "status": "completed",
+      "wcag_criterion": [
+        "1.4.3",
+        "1.4.11"
+      ],
+      "elements_checked": 741,
+      "issues": [
+        {
+          "element": "a",
+          "text": "Home",
+          "issue": "Insufficient color contrast",
+          "details": "Contrast ratio: 1.00:1 (required: 3.0:1)",
+          "colors": {
+            "text": "rgb(255, 255, 255)",
+            "background": "rgb(255, 255, 255)"
+          },
+          "recommendation": "Increase contrast to at least 3.0:1",
+          "wcag": "1.4.3",
+          "severity": "critical",
+          "font_size": "15.0px",
+          "is_large_text": true,
+          "check_type": "color_contrast"
+        },
+        {
+          "element": "a",
+          "text": "About us",
+          "issue": "Insufficient color contrast",
+          "details": "Contrast ratio: 1.00:1 (required: 3.0:1)",
+          "colors": {
+            "text": "rgb(255, 255, 255)",
+            "background": "rgb(255, 255, 255)"
+          },
+          "recommendation": "Increase contrast to at least 3.0:1",
+          "wcag": "1.4.3",
+          "severity": "critical",
+          "font_size": "15.0px",
+          "is_large_text": true,
+          "check_type": "color_contrast"
+        },
+        {
+          "element": "a",
+          "text": "Our technologies",
+          "issue": "Insufficient color contrast",
+          "details": "Contrast ratio: 1.00:1 (required: 3.0:1)",
+          "colors": {
+            "text": "rgb(255, 255, 255)",
+            "background": "rgb(255, 255, 255)"
+          },
+          "recommendation": "Increase contrast to at least 3.0:1",
+          "wcag": "1.4.3",
+          "severity": "critical",
+          "font_size": "15.0px",
+          "is_large_text": true,
+          "check_type": "color_contrast"
+        },
+        {
+          "element": "a",
+          "text": "Investors",
+          "issue": "Insufficient color contrast",
+          "details": "Contrast ratio: 1.00:1 (required: 3.0:1)",
+          "colors": {
+            "text": "rgb(255, 255, 255)",
+            "background": "rgb(255, 255, 255)"
+          },
+          "recommendation": "Increase contrast to at least 3.0:1",
+          "wcag": "1.4.3",
+          "severity": "critical",
+          "font_size": "15.0px",
+          "is_large_text": true,
+          "check_type": "color_contrast"
+        },
+        {
+          "element": "a",
+          "text": "Sustainability",
+          "issue": "Insufficient color contrast",
+          "details": "Contrast ratio: 1.00:1 (required: 3.0:1)",
+          "colors": {
+            "text": "rgb(255, 255, 255)",
+            "background": "rgb(255, 255, 255)"
+          },
+          "recommendation": "Increase contrast to at least 3.0:1",
+          "wcag": "1.4.3",
+          "severity": "critical",
+          "font_size": "15.0px",
+          "is_large_text": true,
+          "check_type": "color_contrast"
+        },
+        {
+          "element": "a",
+          "text": "News and views",
+          "issue": "Insufficient color contrast",
+          "details": "Contrast ratio: 1.00:1 (required: 3.0:1)",
+          "colors": {
+            "text": "rgb(255, 255, 255)",
+            "background": "rgb(255, 255, 255)"
+          },
+          "recommendation": "Increase contrast to at least 3.0:1",
+          "wcag": "1.4.3",
+          "severity": "critical",
+          "font_size": "15.0px",
+          "is_large_text": true,
+          "check_type": "color_contrast"
+        },
+        {
+          "element": "a",
+          "text": "Careers",
+          "issue": "Insufficient color contrast",
+          "details": "Contrast ratio: 1.00:1 (required: 3.0:1)",
+          "colors": {
+            "text": "rgb(255, 255, 255)",
+            "background": "rgb(255, 255, 255)"
+          },
+          "recommendation": "Increase contrast to at least 3.0:1",
+          "wcag": "1.4.3",
+          "severity": "critical",
+          "font_size": "15.0px",
+          "is_large_text": true,
+          "check_type": "color_contrast"
+        },
+        {
+          "element": "button",
+          "text": "Open search form",
+          "issue": "Insufficient color contrast",
+          "details": "Contrast ratio: 1.00:1 (required: 4.5:1)",
+          "colors": {
+            "text": "rgb(255, 255, 255)",
+            "background": "rgb(255, 255, 255)"
+          },
+          "recommendation": "Increase contrast to at least 4.5:1",
+          "wcag": "1.4.3",
+          "severity": "critical",
+          "font_size": "17.0px",
+          "is_large_text": false,
+          "check_type": "color_contrast"
+        },
+        {
+          "element": "span",
+          "text": "Open search form",
+          "issue": "Insufficient color contrast",
+          "details": "Contrast ratio: 1.00:1 (required: 4.5:1)",
+          "colors": {
+            "text": "rgb(255, 255, 255)",
+            "background": "rgb(255, 255, 255)"
+          },
+          "recommendation": "Increase contrast to at least 4.5:1",
+          "wcag": "1.4.3",
+          "severity": "critical",
+          "font_size": "17.0px",
+          "is_large_text": false,
+          "check_type": "color_contrast"
+        },
+        {
+          "element": "span",
+          "text": "Open search form",
+          "issue": "Insufficient color contrast",
+          "details": "Contrast ratio: 1.00:1 (required: 4.5:1)",
+          "colors": {
+            "text": "rgb(255, 255, 255)",
+            "background": "rgb(255, 255, 255)"
+          },
+          "recommendation": "Increase contrast to at least 4.5:1",
+          "wcag": "1.4.3",
+          "severity": "critical",
+          "font_size": "17.0px",
+          "is_large_text": false,
+          "check_type": "color_contrast"
+        },
+        {
+          "element": "div",
+          "text": "Delivering cleaner homegrown energy\nAbout us",
+          "issue": "Insufficient color contrast",
+          "details": "Contrast ratio: 1.00:1 (required: 4.5:1)",
+          "colors": {
+            "text": "rgb(18, 50, 130)",
+            "background": "rgb(18, 50, 130)"
+          },
+          "recommendation": "Increase contrast to at least 4.5:1",
+          "wcag": "1.4.3",
+          "severity": "critical",
+          "font_size": "14.0px",
+          "is_large_text": false,
+          "check_type": "color_contrast"
+        },
+        {
+          "element": "div",
+          "text": "Delivering cleaner homegrown energy\nAbout us",
+          "issue": "Insufficient color contrast",
+          "details": "Contrast ratio: 1.00:1 (required: 4.5:1)",
+          "colors": {
+            "text": "rgb(18, 50, 130)",
+            "background": "rgb(18, 50, 130)"
+          },
+          "recommendation": "Increase contrast to at least 4.5:1",
+          "wcag": "1.4.3",
+          "severity": "critical",
+          "font_size": "14.0px",
+          "is_large_text": false,
+          "check_type": "color_contrast"
+        },
+        {
+          "element": "div",
+          "text": "Delivering cleaner homegrown energy\nAbout us",
+          "issue": "Insufficient color contrast",
+          "details": "Contrast ratio: 1.00:1 (required: 4.5:1)",
+          "colors": {
+            "text": "rgb(18, 50, 130)",
+            "background": "rgb(18, 50, 130)"
+          },
+          "recommendation": "Increase contrast to at least 4.5:1",
+          "wcag": "1.4.3",
+          "severity": "critical",
+          "font_size": "14.0px",
+          "is_large_text": false,
+          "check_type": "color_contrast"
+        },
+        {
+          "element": "div",
+          "text": "About us",
+          "issue": "Insufficient color contrast",
+          "details": "Contrast ratio: 1.00:1 (required: 4.5:1)",
+          "colors": {
+            "text": "rgb(18, 50, 130)",
+            "background": "rgb(18, 50, 130)"
+          },
+          "recommendation": "Increase contrast to at least 4.5:1",
+          "wcag": "1.4.3",
+          "severity": "critical",
+          "font_size": "14.0px",
+          "is_large_text": false,
+          "check_type": "color_contrast"
+        },
+        {
+          "element": "span",
+          "text": "Featured News",
+          "issue": "Insufficient color contrast",
+          "details": "Contrast ratio: 1.00:1 (required: 4.5:1)",
+          "colors": {
+            "text": "rgb(255, 255, 255)",
+            "background": "rgb(255, 255, 255)"
+          },
+          "recommendation": "Increase contrast to at least 4.5:1",
+          "wcag": "1.4.3",
+          "severity": "critical",
+          "font_size": "13.0px",
+          "is_large_text": false,
+          "check_type": "color_contrast"
+        },
+        {
+          "element": "a",
+          "text": "Read More",
+          "issue": "Insufficient color contrast",
+          "details": "Contrast ratio: 3.50:1 (required: 4.5:1)",
+          "colors": {
+            "text": "rgb(0, 151, 169)",
+            "background": "rgb(255, 255, 255)"
+          },
+          "recommendation": "Increase contrast to at least 4.5:1",
+          "wcag": "1.4.3",
+          "severity": "critical",
+          "font_size": "15.0px",
+          "is_large_text": false,
+          "check_type": "color_contrast"
+        },
+        {
+          "element": "span",
+          "text": "Featured News",
+          "issue": "Insufficient color contrast",
+          "details": "Contrast ratio: 1.00:1 (required: 4.5:1)",
+          "colors": {
+            "text": "rgb(255, 255, 255)",
+            "background": "rgb(255, 255, 255)"
+          },
+          "recommendation": "Increase contrast to at least 4.5:1",
+          "wcag": "1.4.3",
+          "severity": "critical",
+          "font_size": "13.0px",
+          "is_large_text": false,
+          "check_type": "color_contrast"
+        },
+        {
+          "element": "a",
+          "text": "Read More",
+          "issue": "Insufficient color contrast",
+          "details": "Contrast ratio: 3.50:1 (required: 4.5:1)",
+          "colors": {
+            "text": "rgb(0, 151, 169)",
+            "background": "rgb(255, 255, 255)"
+          },
+          "recommendation": "Increase contrast to at least 4.5:1",
+          "wcag": "1.4.3",
+          "severity": "critical",
+          "font_size": "15.0px",
+          "is_large_text": false,
+          "check_type": "color_contrast"
+        },
+        {
+          "element": "span",
+          "text": "Featured News",
+          "issue": "Insufficient color contrast",
+          "details": "Contrast ratio: 1.00:1 (required: 4.5:1)",
+          "colors": {
+            "text": "rgb(255, 255, 255)",
+            "background": "rgb(255, 255, 255)"
+          },
+          "recommendation": "Increase contrast to at least 4.5:1",
+          "wcag": "1.4.3",
+          "severity": "critical",
+          "font_size": "13.0px",
+          "is_large_text": false,
+          "check_type": "color_contrast"
+        },
+        {
+          "element": "a",
+          "text": "Read More",
+          "issue": "Insufficient color contrast",
+          "details": "Contrast ratio: 3.50:1 (required: 4.5:1)",
+          "colors": {
+            "text": "rgb(0, 151, 169)",
+            "background": "rgb(255, 255, 255)"
+          },
+          "recommendation": "Increase contrast to at least 4.5:1",
+          "wcag": "1.4.3",
+          "severity": "critical",
+          "font_size": "15.0px",
+          "is_large_text": false,
+          "check_type": "color_contrast"
+        },
+        {
+          "element": "span",
+          "text": "Featured News",
+          "issue": "Insufficient color contrast",
+          "details": "Contrast ratio: 1.00:1 (required: 4.5:1)",
+          "colors": {
+            "text": "rgb(255, 255, 255)",
+            "background": "rgb(255, 255, 255)"
+          },
+          "recommendation": "Increase contrast to at least 4.5:1",
+          "wcag": "1.4.3",
+          "severity": "critical",
+          "font_size": "13.0px",
+          "is_large_text": false,
+          "check_type": "color_contrast"
+        },
+        {
+          "element": "a",
+          "text": "Read More",
+          "issue": "Insufficient color contrast",
+          "details": "Contrast ratio: 3.50:1 (required: 4.5:1)",
+          "colors": {
+            "text": "rgb(0, 151, 169)",
+            "background": "rgb(255, 255, 255)"
+          },
+          "recommendation": "Increase contrast to at least 4.5:1",
+          "wcag": "1.4.3",
+          "severity": "critical",
+          "font_size": "15.0px",
+          "is_large_text": false,
+          "check_type": "color_contrast"
+        },
+        {
+          "element": "div",
+          "text": "01 - 03",
+          "issue": "Insufficient color contrast",
+          "details": "Contrast ratio: 1.68:1 (required: 4.5:1)",
+          "colors": {
+            "text": "rgb(113, 217, 202)",
+            "background": "rgb(255, 255, 255)"
+          },
+          "recommendation": "Increase contrast to at least 4.5:1",
+          "wcag": "1.4.3",
+          "severity": "critical",
+          "font_size": "13.0px",
+          "is_large_text": false,
+          "check_type": "color_contrast"
+        },
+        {
+          "element": "span",
+          "text": "01",
+          "issue": "Insufficient color contrast",
+          "details": "Contrast ratio: 1.68:1 (required: 4.5:1)",
+          "colors": {
+            "text": "rgb(113, 217, 202)",
+            "background": "rgb(255, 255, 255)"
+          },
+          "recommendation": "Increase contrast to at least 4.5:1",
+          "wcag": "1.4.3",
+          "severity": "critical",
+          "font_size": "13.0px",
+          "is_large_text": false,
+          "check_type": "color_contrast"
+        },
+        {
+          "element": "span",
+          "text": "03",
+          "issue": "Insufficient color contrast",
+          "details": "Contrast ratio: 1.68:1 (required: 4.5:1)",
+          "colors": {
+            "text": "rgb(113, 217, 202)",
+            "background": "rgb(255, 255, 255)"
+          },
+          "recommendation": "Increase contrast to at least 4.5:1",
+          "wcag": "1.4.3",
+          "severity": "critical",
+          "font_size": "13.0px",
+          "is_large_text": false,
+          "check_type": "color_contrast"
+        },
+        {
+          "element": "div",
+          "text": "Half-year results 2024/25",
+          "issue": "Insufficient color contrast",
+          "details": "Contrast ratio: 1.50:1 (required: 4.5:1)",
+          "colors": {
+            "text": "rgb(18, 50, 130)",
+            "background": "rgba(66, 85, 99, 0.1)"
+          },
+          "recommendation": "Increase contrast to at least 4.5:1",
+          "wcag": "1.4.3",
+          "severity": "critical",
+          "font_size": "14.0px",
+          "is_large_text": false,
+          "check_type": "color_contrast"
+        },
+        {
+          "element": "h2",
+          "text": "Half-year results 2024/25",
+          "issue": "Insufficient color contrast",
+          "details": "Contrast ratio: 1.68:1 (required: 3.0:1)",
+          "colors": {
+            "text": "rgb(0, 45, 114)",
+            "background": "rgba(66, 85, 99, 0.1)"
+          },
+          "recommendation": "Increase contrast to at least 3.0:1",
+          "wcag": "1.4.3",
+          "severity": "critical",
+          "font_size": "46.0px",
+          "is_large_text": true,
+          "check_type": "color_contrast"
+        },
+        {
+          "element": "div",
+          "text": "SHARE PRICE\n1,493.00 GBX\nThis price is current as ...",
+          "issue": "Insufficient color contrast",
+          "details": "Contrast ratio: 1.69:1 (required: 4.5:1)",
+          "colors": {
+            "text": "rgb(18, 50, 130)",
+            "background": "rgb(0, 0, 61)"
+          },
+          "recommendation": "Increase contrast to at least 4.5:1",
+          "wcag": "1.4.3",
+          "severity": "critical",
+          "font_size": "14.0px",
+          "is_large_text": false,
+          "check_type": "color_contrast"
+        },
+        {
+          "element": "div",
+          "text": "Copyright SSE © 2025. All rights reserved.\nContact...",
+          "issue": "Insufficient color contrast",
+          "details": "Contrast ratio: 1.00:1 (required: 4.5:1)",
+          "colors": {
+            "text": "rgb(18, 50, 130)",
+            "background": "rgb(18, 50, 130)"
+          },
+          "recommendation": "Increase contrast to at least 4.5:1",
+          "wcag": "1.4.3",
+          "severity": "critical",
+          "font_size": "14.0px",
+          "is_large_text": false,
+          "check_type": "color_contrast"
+        },
+        {
+          "element": "div",
+          "text": "Copyright SSE © 2025. All rights reserved.\nContact...",
+          "issue": "Insufficient color contrast",
+          "details": "Contrast ratio: 1.00:1 (required: 4.5:1)",
+          "colors": {
+            "text": "rgb(18, 50, 130)",
+            "background": "rgb(18, 50, 130)"
+          },
+          "recommendation": "Increase contrast to at least 4.5:1",
+          "wcag": "1.4.3",
+          "severity": "critical",
+          "font_size": "14.0px",
+          "is_large_text": false,
+          "check_type": "color_contrast"
+        },
+        {
+          "element": "div",
+          "text": "Copyright SSE © 2025. All rights reserved.\nContact...",
+          "issue": "Insufficient color contrast",
+          "details": "Contrast ratio: 1.00:1 (required: 4.5:1)",
+          "colors": {
+            "text": "rgb(18, 50, 130)",
+            "background": "rgb(18, 50, 130)"
+          },
+          "recommendation": "Increase contrast to at least 4.5:1",
+          "wcag": "1.4.3",
+          "severity": "critical",
+          "font_size": "14.0px",
+          "is_large_text": false,
+          "check_type": "color_contrast"
+        },
+        {
+          "element": "li",
+          "text": "Contact us",
+          "issue": "Insufficient color contrast",
+          "details": "Contrast ratio: 1.00:1 (required: 4.5:1)",
+          "colors": {
+            "text": "rgb(18, 50, 130)",
+            "background": "rgb(18, 50, 130)"
+          },
+          "recommendation": "Increase contrast to at least 4.5:1",
+          "wcag": "1.4.3",
+          "severity": "critical",
+          "font_size": "14.0px",
+          "is_large_text": false,
+          "check_type": "color_contrast"
+        },
+        {
+          "element": "li",
+          "text": "Privacy notice",
+          "issue": "Insufficient color contrast",
+          "details": "Contrast ratio: 1.00:1 (required: 4.5:1)",
+          "colors": {
+            "text": "rgb(18, 50, 130)",
+            "background": "rgb(18, 50, 130)"
+          },
+          "recommendation": "Increase contrast to at least 4.5:1",
+          "wcag": "1.4.3",
+          "severity": "critical",
+          "font_size": "14.0px",
+          "is_large_text": false,
+          "check_type": "color_contrast"
+        },
+        {
+          "element": "li",
+          "text": "Cookie notice",
+          "issue": "Insufficient color contrast",
+          "details": "Contrast ratio: 1.00:1 (required: 4.5:1)",
+          "colors": {
+            "text": "rgb(18, 50, 130)",
+            "background": "rgb(18, 50, 130)"
+          },
+          "recommendation": "Increase contrast to at least 4.5:1",
+          "wcag": "1.4.3",
+          "severity": "critical",
+          "font_size": "14.0px",
+          "is_large_text": false,
+          "check_type": "color_contrast"
+        },
+        {
+          "element": "li",
+          "text": "Potential suppliers",
+          "issue": "Insufficient color contrast",
+          "details": "Contrast ratio: 1.00:1 (required: 4.5:1)",
+          "colors": {
+            "text": "rgb(18, 50, 130)",
+            "background": "rgb(18, 50, 130)"
+          },
+          "recommendation": "Increase contrast to at least 4.5:1",
+          "wcag": "1.4.3",
+          "severity": "critical",
+          "font_size": "14.0px",
+          "is_large_text": false,
+          "check_type": "color_contrast"
+        },
+        {
+          "element": "li",
+          "text": "Sitemap",
+          "issue": "Insufficient color contrast",
+          "details": "Contrast ratio: 1.00:1 (required: 4.5:1)",
+          "colors": {
+            "text": "rgb(18, 50, 130)",
+            "background": "rgb(18, 50, 130)"
+          },
+          "recommendation": "Increase contrast to at least 4.5:1",
+          "wcag": "1.4.3",
+          "severity": "critical",
+          "font_size": "14.0px",
+          "is_large_text": false,
+          "check_type": "color_contrast"
+        },
+        {
+          "element": "li",
+          "text": "Sustainability",
+          "issue": "Insufficient color contrast",
+          "details": "Contrast ratio: 1.00:1 (required: 4.5:1)",
+          "colors": {
+            "text": "rgb(18, 50, 130)",
+            "background": "rgb(18, 50, 130)"
+          },
+          "recommendation": "Increase contrast to at least 4.5:1",
+          "wcag": "1.4.3",
+          "severity": "critical",
+          "font_size": "14.0px",
+          "is_large_text": false,
+          "check_type": "color_contrast"
+        },
+        {
+          "element": "li",
+          "text": "Cookie settings",
+          "issue": "Insufficient color contrast",
+          "details": "Contrast ratio: 1.00:1 (required: 4.5:1)",
+          "colors": {
+            "text": "rgb(18, 50, 130)",
+            "background": "rgb(18, 50, 130)"
+          },
+          "recommendation": "Increase contrast to at least 4.5:1",
+          "wcag": "1.4.3",
+          "severity": "critical",
+          "font_size": "14.0px",
+          "is_large_text": false,
+          "check_type": "color_contrast"
+        },
+        {
+          "element": "li",
+          "text": "REMIT",
+          "issue": "Insufficient color contrast",
+          "details": "Contrast ratio: 1.00:1 (required: 4.5:1)",
+          "colors": {
+            "text": "rgb(18, 50, 130)",
+            "background": "rgb(18, 50, 130)"
+          },
+          "recommendation": "Increase contrast to at least 4.5:1",
+          "wcag": "1.4.3",
+          "severity": "critical",
+          "font_size": "14.0px",
+          "is_large_text": false,
+          "check_type": "color_contrast"
+        },
+        {
+          "element": "a",
+          "type": "a",
+          "text": "Home",
+          "issue": "Insufficient UI component contrast",
+          "details": "Contrast ratio: 1.00:1 (required: 3.0:1)",
+          "colors": {
+            "foreground": "rgb(255, 255, 255)",
+            "background": "rgb(255, 255, 255)"
+          },
+          "recommendation": "Increase component contrast to at least 3.0:1",
+          "wcag": "1.4.11",
+          "severity": "critical",
+          "check_type": "color_contrast"
+        },
+        {
+          "element": "a",
+          "type": "a",
+          "text": "About us",
+          "issue": "Insufficient UI component contrast",
+          "details": "Contrast ratio: 1.00:1 (required: 3.0:1)",
+          "colors": {
+            "foreground": "rgb(255, 255, 255)",
+            "background": "rgb(255, 255, 255)"
+          },
+          "recommendation": "Increase component contrast to at least 3.0:1",
+          "wcag": "1.4.11",
+          "severity": "critical",
+          "check_type": "color_contrast"
+        },
+        {
+          "element": "a",
+          "type": "a",
+          "text": "Our technologies",
+          "issue": "Insufficient UI component contrast",
+          "details": "Contrast ratio: 1.00:1 (required: 3.0:1)",
+          "colors": {
+            "foreground": "rgb(255, 255, 255)",
+            "background": "rgb(255, 255, 255)"
+          },
+          "recommendation": "Increase component contrast to at least 3.0:1",
+          "wcag": "1.4.11",
+          "severity": "critical",
+          "check_type": "color_contrast"
+        },
+        {
+          "element": "a",
+          "type": "a",
+          "text": "Investors",
+          "issue": "Insufficient UI component contrast",
+          "details": "Contrast ratio: 1.00:1 (required: 3.0:1)",
+          "colors": {
+            "foreground": "rgb(255, 255, 255)",
+            "background": "rgb(255, 255, 255)"
+          },
+          "recommendation": "Increase component contrast to at least 3.0:1",
+          "wcag": "1.4.11",
+          "severity": "critical",
+          "check_type": "color_contrast"
+        },
+        {
+          "element": "a",
+          "type": "a",
+          "text": "Sustainability",
+          "issue": "Insufficient UI component contrast",
+          "details": "Contrast ratio: 1.00:1 (required: 3.0:1)",
+          "colors": {
+            "foreground": "rgb(255, 255, 255)",
+            "background": "rgb(255, 255, 255)"
+          },
+          "recommendation": "Increase component contrast to at least 3.0:1",
+          "wcag": "1.4.11",
+          "severity": "critical",
+          "check_type": "color_contrast"
+        },
+        {
+          "element": "a",
+          "type": "a",
+          "text": "News and views",
+          "issue": "Insufficient UI component contrast",
+          "details": "Contrast ratio: 1.00:1 (required: 3.0:1)",
+          "colors": {
+            "foreground": "rgb(255, 255, 255)",
+            "background": "rgb(255, 255, 255)"
+          },
+          "recommendation": "Increase component contrast to at least 3.0:1",
+          "wcag": "1.4.11",
+          "severity": "critical",
+          "check_type": "color_contrast"
+        },
+        {
+          "element": "a",
+          "type": "a",
+          "text": "Careers",
+          "issue": "Insufficient UI component contrast",
+          "details": "Contrast ratio: 1.00:1 (required: 3.0:1)",
+          "colors": {
+            "foreground": "rgb(255, 255, 255)",
+            "background": "rgb(255, 255, 255)"
+          },
+          "recommendation": "Increase component contrast to at least 3.0:1",
+          "wcag": "1.4.11",
+          "severity": "critical",
+          "check_type": "color_contrast"
+        },
+        {
+          "element": "button",
+          "type": "button",
+          "text": "Open search form",
+          "issue": "Insufficient UI component contrast",
+          "details": "Contrast ratio: 1.00:1 (required: 3.0:1)",
+          "colors": {
+            "foreground": "rgb(255, 255, 255)",
+            "background": "rgb(255, 255, 255)"
+          },
+          "recommendation": "Increase component contrast to at least 3.0:1",
+          "wcag": "1.4.11",
+          "severity": "critical",
+          "check_type": "color_contrast"
+        },
+        {
+          "element": "button",
+          "type": "button",
+          "text": "[button]",
+          "issue": "Insufficient UI component contrast",
+          "details": "Contrast ratio: 1.68:1 (required: 3.0:1)",
+          "colors": {
+            "foreground": "rgb(113, 217, 202)",
+            "background": "rgb(255, 255, 255)"
+          },
+          "recommendation": "Increase component contrast to at least 3.0:1",
+          "wcag": "1.4.11",
+          "severity": "critical",
+          "check_type": "color_contrast"
+        },
+        {
+          "element": "button",
+          "type": "button",
+          "text": "Next slide.",
+          "issue": "Insufficient UI component contrast",
+          "details": "Contrast ratio: 1.68:1 (required: 3.0:1)",
+          "colors": {
+            "foreground": "rgb(113, 217, 202)",
+            "background": "rgb(255, 255, 255)"
+          },
+          "recommendation": "Increase component contrast to at least 3.0:1",
+          "wcag": "1.4.11",
+          "severity": "critical",
+          "check_type": "color_contrast"
+        },
+        {
+          "element": "button",
+          "type": "button",
+          "text": "Previus slide.",
+          "issue": "Insufficient UI component contrast",
+          "details": "Contrast ratio: 1.68:1 (required: 3.0:1)",
+          "colors": {
+            "foreground": "rgb(113, 217, 202)",
+            "background": "rgb(255, 255, 255)"
+          },
+          "recommendation": "Increase component contrast to at least 3.0:1",
+          "wcag": "1.4.11",
+          "severity": "critical",
+          "check_type": "color_contrast"
+        }
+      ],
+      "element_count": 741,
+      "pass_rate": 93.25
+    },
+    "image_accessibility": {
+      "status": "completed",
+      "wcag_criterion": "1.1.1",
+      "image_count": 6,
+      "svg_count": 1,
+      "canvas_count": 0,
+      "other_nontext_count": 0,
+      "issues": [
+        {
+          "element": "img",
+          "src": "website-banner-desktop.png",
+          "issue": "Potentially informative image has empty alt text",
+          "details": "Image appears to convey information but has empty alt text",
+          "recommendation": "Add descriptive alt text if the image conveys information",
+          "wcag": "1.1.1",
+          "severity": "warning",
+          "check_type": "image_accessibility"
+        },
+        {
+          "element": "img",
+          "src": "battery_storage_fareham.jpg",
+          "issue": "Potentially informative image has empty alt text",
+          "details": "Image appears to convey information but has empty alt text",
+          "recommendation": "Add descriptive alt text if the image conveys information",
+          "wcag": "1.1.1",
+          "severity": "warning",
+          "check_type": "image_accessibility"
+        },
+        {
+          "element": "span",
+          "class": "arrow icon font-ico-chevron-down main-nav__secondary-arrow",
+          "issue": "Icon lacks text alternative",
+          "details": "Icon has no accessible name and is not hidden from screen readers",
+          "recommendation": "Add aria-label or make decorative with aria-hidden='true'",
+          "wcag": "1.1.1",
+          "severity": "warning",
+          "check_type": "image_accessibility"
+        },
+        {
+          "element": "span",
+          "class": "arrow icon font-ico-chevron-down main-nav__secondary-arrow",
+          "issue": "Icon lacks text alternative",
+          "details": "Icon has no accessible name and is not hidden from screen readers",
+          "recommendation": "Add aria-label or make decorative with aria-hidden='true'",
+          "wcag": "1.1.1",
+          "severity": "warning",
+          "check_type": "image_accessibility"
+        },
+        {
+          "element": "span",
+          "class": "arrow icon font-ico-chevron-down main-nav__secondary-arrow",
+          "issue": "Icon lacks text alternative",
+          "details": "Icon has no accessible name and is not hidden from screen readers",
+          "recommendation": "Add aria-label or make decorative with aria-hidden='true'",
+          "wcag": "1.1.1",
+          "severity": "warning",
+          "check_type": "image_accessibility"
+        },
+        {
+          "element": "span",
+          "class": "arrow icon font-ico-chevron-down main-nav__secondary-arrow",
+          "issue": "Icon lacks text alternative",
+          "details": "Icon has no accessible name and is not hidden from screen readers",
+          "recommendation": "Add aria-label or make decorative with aria-hidden='true'",
+          "wcag": "1.1.1",
+          "severity": "warning",
+          "check_type": "image_accessibility"
+        },
+        {
+          "element": "span",
+          "class": "arrow icon font-ico-chevron-down main-nav__secondary-arrow",
+          "issue": "Icon lacks text alternative",
+          "details": "Icon has no accessible name and is not hidden from screen readers",
+          "recommendation": "Add aria-label or make decorative with aria-hidden='true'",
+          "wcag": "1.1.1",
+          "severity": "warning",
+          "check_type": "image_accessibility"
+        },
+        {
+          "element": "span",
+          "class": "arrow icon font-ico-chevron-down main-nav__secondary-arrow",
+          "issue": "Icon lacks text alternative",
+          "details": "Icon has no accessible name and is not hidden from screen readers",
+          "recommendation": "Add aria-label or make decorative with aria-hidden='true'",
+          "wcag": "1.1.1",
+          "severity": "warning",
+          "check_type": "image_accessibility"
+        },
+        {
+          "element": "span",
+          "class": "arrow icon font-ico-chevron-down main-nav__secondary-arrow",
+          "issue": "Icon lacks text alternative",
+          "details": "Icon has no accessible name and is not hidden from screen readers",
+          "recommendation": "Add aria-label or make decorative with aria-hidden='true'",
+          "wcag": "1.1.1",
+          "severity": "warning",
+          "check_type": "image_accessibility"
+        },
+        {
+          "element": "span",
+          "class": "arrow icon font-ico-chevron-down main-nav__secondary-arrow",
+          "issue": "Icon lacks text alternative",
+          "details": "Icon has no accessible name and is not hidden from screen readers",
+          "recommendation": "Add aria-label or make decorative with aria-hidden='true'",
+          "wcag": "1.1.1",
+          "severity": "warning",
+          "check_type": "image_accessibility"
+        },
+        {
+          "element": "span",
+          "class": "arrow icon font-ico-chevron-down main-nav__secondary-arrow",
+          "issue": "Icon lacks text alternative",
+          "details": "Icon has no accessible name and is not hidden from screen readers",
+          "recommendation": "Add aria-label or make decorative with aria-hidden='true'",
+          "wcag": "1.1.1",
+          "severity": "warning",
+          "check_type": "image_accessibility"
+        },
+        {
+          "element": "span",
+          "class": "arrow icon font-ico-chevron-down main-nav__secondary-arrow",
+          "issue": "Icon lacks text alternative",
+          "details": "Icon has no accessible name and is not hidden from screen readers",
+          "recommendation": "Add aria-label or make decorative with aria-hidden='true'",
+          "wcag": "1.1.1",
+          "severity": "warning",
+          "check_type": "image_accessibility"
+        },
+        {
+          "element": "span",
+          "class": "arrow icon font-ico-chevron-down main-nav__secondary-arrow",
+          "issue": "Icon lacks text alternative",
+          "details": "Icon has no accessible name and is not hidden from screen readers",
+          "recommendation": "Add aria-label or make decorative with aria-hidden='true'",
+          "wcag": "1.1.1",
+          "severity": "warning",
+          "check_type": "image_accessibility"
+        },
+        {
+          "element": "span",
+          "class": "icon font-ico-close",
+          "issue": "Decorative icon not hidden from screen readers",
+          "details": "Icon inside a labeled element should be hidden from screen readers",
+          "recommendation": "Add aria-hidden='true' to the icon element",
+          "wcag": "1.1.1",
+          "severity": "warning",
+          "check_type": "image_accessibility"
+        },
+        {
+          "element": "span",
+          "class": "icon font-ico-close",
+          "issue": "Icon lacks text alternative",
+          "details": "Icon has no accessible name and is not hidden from screen readers",
+          "recommendation": "Add aria-label or make decorative with aria-hidden='true'",
+          "wcag": "1.1.1",
+          "severity": "warning",
+          "check_type": "image_accessibility"
+        },
+        {
+          "element": "span",
+          "class": "icon font-ico-mail",
+          "issue": "Icon lacks text alternative",
+          "details": "Icon has no accessible name and is not hidden from screen readers",
+          "recommendation": "Add aria-label or make decorative with aria-hidden='true'",
+          "wcag": "1.1.1",
+          "severity": "warning",
+          "check_type": "image_accessibility"
+        },
+        {
+          "element": "span",
+          "class": "nav-toggle__menu icon font-ico-hamburger",
+          "issue": "Icon lacks text alternative",
+          "details": "Icon has no accessible name and is not hidden from screen readers",
+          "recommendation": "Add aria-label or make decorative with aria-hidden='true'",
+          "wcag": "1.1.1",
+          "severity": "warning",
+          "check_type": "image_accessibility"
+        },
+        {
+          "element": "span",
+          "class": "nav-toggle__menu-close icon font-ico-close",
+          "issue": "Icon lacks text alternative",
+          "details": "Icon has no accessible name and is not hidden from screen readers",
+          "recommendation": "Add aria-label or make decorative with aria-hidden='true'",
+          "wcag": "1.1.1",
+          "severity": "warning",
+          "check_type": "image_accessibility"
+        },
+        {
+          "element": "span",
+          "class": "icon font-ico-search",
+          "issue": "Icon lacks text alternative",
+          "details": "Icon has no accessible name and is not hidden from screen readers",
+          "recommendation": "Add aria-label or make decorative with aria-hidden='true'",
+          "wcag": "1.1.1",
+          "severity": "warning",
+          "check_type": "image_accessibility"
+        },
+        {
+          "element": "span",
+          "class": "nav-toggle__menu icon font-ico-hamburger",
+          "issue": "Icon lacks text alternative",
+          "details": "Icon has no accessible name and is not hidden from screen readers",
+          "recommendation": "Add aria-label or make decorative with aria-hidden='true'",
+          "wcag": "1.1.1",
+          "severity": "warning",
+          "check_type": "image_accessibility"
+        },
+        {
+          "element": "span",
+          "class": "nav-toggle__menu-close icon font-ico-close",
+          "issue": "Icon lacks text alternative",
+          "details": "Icon has no accessible name and is not hidden from screen readers",
+          "recommendation": "Add aria-label or make decorative with aria-hidden='true'",
+          "wcag": "1.1.1",
+          "severity": "warning",
+          "check_type": "image_accessibility"
+        },
+        {
+          "element": "span",
+          "class": "banner__scroll-icon banner__scroll-icon--first icon font-ico-arrow",
+          "issue": "Icon lacks text alternative",
+          "details": "Icon has no accessible name and is not hidden from screen readers",
+          "recommendation": "Add aria-label or make decorative with aria-hidden='true'",
+          "wcag": "1.1.1",
+          "severity": "warning",
+          "check_type": "image_accessibility"
+        },
+        {
+          "element": "span",
+          "class": "banner__scroll-icon banner__scroll-icon--second icon font-ico-arrow",
+          "issue": "Icon lacks text alternative",
+          "details": "Icon has no accessible name and is not hidden from screen readers",
+          "recommendation": "Add aria-label or make decorative with aria-hidden='true'",
+          "wcag": "1.1.1",
+          "severity": "warning",
+          "check_type": "image_accessibility"
+        },
+        {
+          "element": "span",
+          "class": "icon font-ico-arrow-top",
+          "issue": "Icon lacks text alternative",
+          "details": "Icon has no accessible name and is not hidden from screen readers",
+          "recommendation": "Add aria-label or make decorative with aria-hidden='true'",
+          "wcag": "1.1.1",
+          "severity": "warning",
+          "check_type": "image_accessibility"
+        },
+        {
+          "element": "span",
+          "class": "icon font-ico-extern",
+          "issue": "Decorative icon not hidden from screen readers",
+          "details": "Icon inside a labeled element should be hidden from screen readers",
+          "recommendation": "Add aria-hidden='true' to the icon element",
+          "wcag": "1.1.1",
+          "severity": "warning",
+          "check_type": "image_accessibility"
+        }
+      ]
+    },
+    "landmarks_and_structure": {
+      "status": "skipped",
+      "reason": "Module not available"
+    },
+    "form_accessibility": {
+      "status": "skipped",
+      "reason": "Module not available"
+    },
+    "basic_page_attributes": {
+      "status": "completed",
+      "issues": []
+    }
+  },
+  "issues": [
+    {
+      "type": "warning",
+      "issue": "Potential keyboard navigation barriers",
+      "details": "Tab sequence (4 elements) is much shorter than expected (212 potentially focusable elements)",
+      "recommendation": "Check for elements that should be focusable but aren't",
+      "wcag": "2.1.1",
+      "check_type": "keyboard_navigation_sequence"
+    },
+    {
+      "element": "div",
+      "text": "[No text]",
+      "issue": "Hidden element contains focusable elements",
+      "details": "Element with aria-hidden='true' contains 3 focusable children",
+      "recommendation": "Remove focusable elements from aria-hidden containers or ensure they also have tabindex='-1'",
+      "wcag": "1.3.1",
+      "severity": "critical",
+      "check_type": "aria_accessibility"
+    },
+    {
+      "element": "div",
+      "text": "Featured News\nSSE has published its Q3 Trading Statement\nSSE has published its Q3 Trading Statement for 2024-25.\nRead More",
+      "issue": "Hidden element contains focusable elements",
+      "details": "Element with aria-hidden='true' contains 1 focusable children",
+      "recommendation": "Remove focusable elements from aria-hidden containers or ensure they also have tabindex='-1'",
+      "wcag": "1.3.1",
+      "severity": "critical",
+      "check_type": "aria_accessibility"
+    },
+    {
+      "element": "div",
+      "text": "[No text]",
+      "issue": "Hidden element contains focusable elements",
+      "details": "Element with aria-hidden='true' contains 1 focusable children",
+      "recommendation": "Remove focusable elements from aria-hidden containers or ensure they also have tabindex='-1'",
+      "wcag": "1.3.1",
+      "severity": "critical",
+      "check_type": "aria_accessibility"
+    },
+    {
+      "element": "a",
+      "text": "Home",
+      "issue": "Insufficient color contrast",
+      "details": "Contrast ratio: 1.00:1 (required: 3.0:1)",
+      "colors": {
+        "text": "rgb(255, 255, 255)",
+        "background": "rgb(255, 255, 255)"
+      },
+      "recommendation": "Increase contrast to at least 3.0:1",
+      "wcag": "1.4.3",
+      "severity": "critical",
+      "font_size": "15.0px",
+      "is_large_text": true,
+      "check_type": "color_contrast"
+    },
+    {
+      "element": "a",
+      "text": "About us",
+      "issue": "Insufficient color contrast",
+      "details": "Contrast ratio: 1.00:1 (required: 3.0:1)",
+      "colors": {
+        "text": "rgb(255, 255, 255)",
+        "background": "rgb(255, 255, 255)"
+      },
+      "recommendation": "Increase contrast to at least 3.0:1",
+      "wcag": "1.4.3",
+      "severity": "critical",
+      "font_size": "15.0px",
+      "is_large_text": true,
+      "check_type": "color_contrast"
+    },
+    {
+      "element": "a",
+      "text": "Our technologies",
+      "issue": "Insufficient color contrast",
+      "details": "Contrast ratio: 1.00:1 (required: 3.0:1)",
+      "colors": {
+        "text": "rgb(255, 255, 255)",
+        "background": "rgb(255, 255, 255)"
+      },
+      "recommendation": "Increase contrast to at least 3.0:1",
+      "wcag": "1.4.3",
+      "severity": "critical",
+      "font_size": "15.0px",
+      "is_large_text": true,
+      "check_type": "color_contrast"
+    },
+    {
+      "element": "a",
+      "text": "Investors",
+      "issue": "Insufficient color contrast",
+      "details": "Contrast ratio: 1.00:1 (required: 3.0:1)",
+      "colors": {
+        "text": "rgb(255, 255, 255)",
+        "background": "rgb(255, 255, 255)"
+      },
+      "recommendation": "Increase contrast to at least 3.0:1",
+      "wcag": "1.4.3",
+      "severity": "critical",
+      "font_size": "15.0px",
+      "is_large_text": true,
+      "check_type": "color_contrast"
+    },
+    {
+      "element": "a",
+      "text": "Sustainability",
+      "issue": "Insufficient color contrast",
+      "details": "Contrast ratio: 1.00:1 (required: 3.0:1)",
+      "colors": {
+        "text": "rgb(255, 255, 255)",
+        "background": "rgb(255, 255, 255)"
+      },
+      "recommendation": "Increase contrast to at least 3.0:1",
+      "wcag": "1.4.3",
+      "severity": "critical",
+      "font_size": "15.0px",
+      "is_large_text": true,
+      "check_type": "color_contrast"
+    },
+    {
+      "element": "a",
+      "text": "News and views",
+      "issue": "Insufficient color contrast",
+      "details": "Contrast ratio: 1.00:1 (required: 3.0:1)",
+      "colors": {
+        "text": "rgb(255, 255, 255)",
+        "background": "rgb(255, 255, 255)"
+      },
+      "recommendation": "Increase contrast to at least 3.0:1",
+      "wcag": "1.4.3",
+      "severity": "critical",
+      "font_size": "15.0px",
+      "is_large_text": true,
+      "check_type": "color_contrast"
+    },
+    {
+      "element": "a",
+      "text": "Careers",
+      "issue": "Insufficient color contrast",
+      "details": "Contrast ratio: 1.00:1 (required: 3.0:1)",
+      "colors": {
+        "text": "rgb(255, 255, 255)",
+        "background": "rgb(255, 255, 255)"
+      },
+      "recommendation": "Increase contrast to at least 3.0:1",
+      "wcag": "1.4.3",
+      "severity": "critical",
+      "font_size": "15.0px",
+      "is_large_text": true,
+      "check_type": "color_contrast"
+    },
+    {
+      "element": "button",
+      "text": "Open search form",
+      "issue": "Insufficient color contrast",
+      "details": "Contrast ratio: 1.00:1 (required: 4.5:1)",
+      "colors": {
+        "text": "rgb(255, 255, 255)",
+        "background": "rgb(255, 255, 255)"
+      },
+      "recommendation": "Increase contrast to at least 4.5:1",
+      "wcag": "1.4.3",
+      "severity": "critical",
+      "font_size": "17.0px",
+      "is_large_text": false,
+      "check_type": "color_contrast"
+    },
+    {
+      "element": "span",
+      "text": "Open search form",
+      "issue": "Insufficient color contrast",
+      "details": "Contrast ratio: 1.00:1 (required: 4.5:1)",
+      "colors": {
+        "text": "rgb(255, 255, 255)",
+        "background": "rgb(255, 255, 255)"
+      },
+      "recommendation": "Increase contrast to at least 4.5:1",
+      "wcag": "1.4.3",
+      "severity": "critical",
+      "font_size": "17.0px",
+      "is_large_text": false,
+      "check_type": "color_contrast"
+    },
+    {
+      "element": "span",
+      "text": "Open search form",
+      "issue": "Insufficient color contrast",
+      "details": "Contrast ratio: 1.00:1 (required: 4.5:1)",
+      "colors": {
+        "text": "rgb(255, 255, 255)",
+        "background": "rgb(255, 255, 255)"
+      },
+      "recommendation": "Increase contrast to at least 4.5:1",
+      "wcag": "1.4.3",
+      "severity": "critical",
+      "font_size": "17.0px",
+      "is_large_text": false,
+      "check_type": "color_contrast"
+    },
+    {
+      "element": "div",
+      "text": "Delivering cleaner homegrown energy\nAbout us",
+      "issue": "Insufficient color contrast",
+      "details": "Contrast ratio: 1.00:1 (required: 4.5:1)",
+      "colors": {
+        "text": "rgb(18, 50, 130)",
+        "background": "rgb(18, 50, 130)"
+      },
+      "recommendation": "Increase contrast to at least 4.5:1",
+      "wcag": "1.4.3",
+      "severity": "critical",
+      "font_size": "14.0px",
+      "is_large_text": false,
+      "check_type": "color_contrast"
+    },
+    {
+      "element": "div",
+      "text": "Delivering cleaner homegrown energy\nAbout us",
+      "issue": "Insufficient color contrast",
+      "details": "Contrast ratio: 1.00:1 (required: 4.5:1)",
+      "colors": {
+        "text": "rgb(18, 50, 130)",
+        "background": "rgb(18, 50, 130)"
+      },
+      "recommendation": "Increase contrast to at least 4.5:1",
+      "wcag": "1.4.3",
+      "severity": "critical",
+      "font_size": "14.0px",
+      "is_large_text": false,
+      "check_type": "color_contrast"
+    },
+    {
+      "element": "div",
+      "text": "Delivering cleaner homegrown energy\nAbout us",
+      "issue": "Insufficient color contrast",
+      "details": "Contrast ratio: 1.00:1 (required: 4.5:1)",
+      "colors": {
+        "text": "rgb(18, 50, 130)",
+        "background": "rgb(18, 50, 130)"
+      },
+      "recommendation": "Increase contrast to at least 4.5:1",
+      "wcag": "1.4.3",
+      "severity": "critical",
+      "font_size": "14.0px",
+      "is_large_text": false,
+      "check_type": "color_contrast"
+    },
+    {
+      "element": "div",
+      "text": "About us",
+      "issue": "Insufficient color contrast",
+      "details": "Contrast ratio: 1.00:1 (required: 4.5:1)",
+      "colors": {
+        "text": "rgb(18, 50, 130)",
+        "background": "rgb(18, 50, 130)"
+      },
+      "recommendation": "Increase contrast to at least 4.5:1",
+      "wcag": "1.4.3",
+      "severity": "critical",
+      "font_size": "14.0px",
+      "is_large_text": false,
+      "check_type": "color_contrast"
+    },
+    {
+      "element": "span",
+      "text": "Featured News",
+      "issue": "Insufficient color contrast",
+      "details": "Contrast ratio: 1.00:1 (required: 4.5:1)",
+      "colors": {
+        "text": "rgb(255, 255, 255)",
+        "background": "rgb(255, 255, 255)"
+      },
+      "recommendation": "Increase contrast to at least 4.5:1",
+      "wcag": "1.4.3",
+      "severity": "critical",
+      "font_size": "13.0px",
+      "is_large_text": false,
+      "check_type": "color_contrast"
+    },
+    {
+      "element": "a",
+      "text": "Read More",
+      "issue": "Insufficient color contrast",
+      "details": "Contrast ratio: 3.50:1 (required: 4.5:1)",
+      "colors": {
+        "text": "rgb(0, 151, 169)",
+        "background": "rgb(255, 255, 255)"
+      },
+      "recommendation": "Increase contrast to at least 4.5:1",
+      "wcag": "1.4.3",
+      "severity": "critical",
+      "font_size": "15.0px",
+      "is_large_text": false,
+      "check_type": "color_contrast"
+    },
+    {
+      "element": "span",
+      "text": "Featured News",
+      "issue": "Insufficient color contrast",
+      "details": "Contrast ratio: 1.00:1 (required: 4.5:1)",
+      "colors": {
+        "text": "rgb(255, 255, 255)",
+        "background": "rgb(255, 255, 255)"
+      },
+      "recommendation": "Increase contrast to at least 4.5:1",
+      "wcag": "1.4.3",
+      "severity": "critical",
+      "font_size": "13.0px",
+      "is_large_text": false,
+      "check_type": "color_contrast"
+    },
+    {
+      "element": "a",
+      "text": "Read More",
+      "issue": "Insufficient color contrast",
+      "details": "Contrast ratio: 3.50:1 (required: 4.5:1)",
+      "colors": {
+        "text": "rgb(0, 151, 169)",
+        "background": "rgb(255, 255, 255)"
+      },
+      "recommendation": "Increase contrast to at least 4.5:1",
+      "wcag": "1.4.3",
+      "severity": "critical",
+      "font_size": "15.0px",
+      "is_large_text": false,
+      "check_type": "color_contrast"
+    },
+    {
+      "element": "span",
+      "text": "Featured News",
+      "issue": "Insufficient color contrast",
+      "details": "Contrast ratio: 1.00:1 (required: 4.5:1)",
+      "colors": {
+        "text": "rgb(255, 255, 255)",
+        "background": "rgb(255, 255, 255)"
+      },
+      "recommendation": "Increase contrast to at least 4.5:1",
+      "wcag": "1.4.3",
+      "severity": "critical",
+      "font_size": "13.0px",
+      "is_large_text": false,
+      "check_type": "color_contrast"
+    },
+    {
+      "element": "a",
+      "text": "Read More",
+      "issue": "Insufficient color contrast",
+      "details": "Contrast ratio: 3.50:1 (required: 4.5:1)",
+      "colors": {
+        "text": "rgb(0, 151, 169)",
+        "background": "rgb(255, 255, 255)"
+      },
+      "recommendation": "Increase contrast to at least 4.5:1",
+      "wcag": "1.4.3",
+      "severity": "critical",
+      "font_size": "15.0px",
+      "is_large_text": false,
+      "check_type": "color_contrast"
+    },
+    {
+      "element": "span",
+      "text": "Featured News",
+      "issue": "Insufficient color contrast",
+      "details": "Contrast ratio: 1.00:1 (required: 4.5:1)",
+      "colors": {
+        "text": "rgb(255, 255, 255)",
+        "background": "rgb(255, 255, 255)"
+      },
+      "recommendation": "Increase contrast to at least 4.5:1",
+      "wcag": "1.4.3",
+      "severity": "critical",
+      "font_size": "13.0px",
+      "is_large_text": false,
+      "check_type": "color_contrast"
+    },
+    {
+      "element": "a",
+      "text": "Read More",
+      "issue": "Insufficient color contrast",
+      "details": "Contrast ratio: 3.50:1 (required: 4.5:1)",
+      "colors": {
+        "text": "rgb(0, 151, 169)",
+        "background": "rgb(255, 255, 255)"
+      },
+      "recommendation": "Increase contrast to at least 4.5:1",
+      "wcag": "1.4.3",
+      "severity": "critical",
+      "font_size": "15.0px",
+      "is_large_text": false,
+      "check_type": "color_contrast"
+    },
+    {
+      "element": "div",
+      "text": "01 - 03",
+      "issue": "Insufficient color contrast",
+      "details": "Contrast ratio: 1.68:1 (required: 4.5:1)",
+      "colors": {
+        "text": "rgb(113, 217, 202)",
+        "background": "rgb(255, 255, 255)"
+      },
+      "recommendation": "Increase contrast to at least 4.5:1",
+      "wcag": "1.4.3",
+      "severity": "critical",
+      "font_size": "13.0px",
+      "is_large_text": false,
+      "check_type": "color_contrast"
+    },
+    {
+      "element": "span",
+      "text": "01",
+      "issue": "Insufficient color contrast",
+      "details": "Contrast ratio: 1.68:1 (required: 4.5:1)",
+      "colors": {
+        "text": "rgb(113, 217, 202)",
+        "background": "rgb(255, 255, 255)"
+      },
+      "recommendation": "Increase contrast to at least 4.5:1",
+      "wcag": "1.4.3",
+      "severity": "critical",
+      "font_size": "13.0px",
+      "is_large_text": false,
+      "check_type": "color_contrast"
+    },
+    {
+      "element": "span",
+      "text": "03",
+      "issue": "Insufficient color contrast",
+      "details": "Contrast ratio: 1.68:1 (required: 4.5:1)",
+      "colors": {
+        "text": "rgb(113, 217, 202)",
+        "background": "rgb(255, 255, 255)"
+      },
+      "recommendation": "Increase contrast to at least 4.5:1",
+      "wcag": "1.4.3",
+      "severity": "critical",
+      "font_size": "13.0px",
+      "is_large_text": false,
+      "check_type": "color_contrast"
+    },
+    {
+      "element": "div",
+      "text": "Half-year results 2024/25",
+      "issue": "Insufficient color contrast",
+      "details": "Contrast ratio: 1.50:1 (required: 4.5:1)",
+      "colors": {
+        "text": "rgb(18, 50, 130)",
+        "background": "rgba(66, 85, 99, 0.1)"
+      },
+      "recommendation": "Increase contrast to at least 4.5:1",
+      "wcag": "1.4.3",
+      "severity": "critical",
+      "font_size": "14.0px",
+      "is_large_text": false,
+      "check_type": "color_contrast"
+    },
+    {
+      "element": "h2",
+      "text": "Half-year results 2024/25",
+      "issue": "Insufficient color contrast",
+      "details": "Contrast ratio: 1.68:1 (required: 3.0:1)",
+      "colors": {
+        "text": "rgb(0, 45, 114)",
+        "background": "rgba(66, 85, 99, 0.1)"
+      },
+      "recommendation": "Increase contrast to at least 3.0:1",
+      "wcag": "1.4.3",
+      "severity": "critical",
+      "font_size": "46.0px",
+      "is_large_text": true,
+      "check_type": "color_contrast"
+    },
+    {
+      "element": "div",
+      "text": "SHARE PRICE\n1,493.00 GBX\nThis price is current as ...",
+      "issue": "Insufficient color contrast",
+      "details": "Contrast ratio: 1.69:1 (required: 4.5:1)",
+      "colors": {
+        "text": "rgb(18, 50, 130)",
+        "background": "rgb(0, 0, 61)"
+      },
+      "recommendation": "Increase contrast to at least 4.5:1",
+      "wcag": "1.4.3",
+      "severity": "critical",
+      "font_size": "14.0px",
+      "is_large_text": false,
+      "check_type": "color_contrast"
+    },
+    {
+      "element": "div",
+      "text": "Copyright SSE © 2025. All rights reserved.\nContact...",
+      "issue": "Insufficient color contrast",
+      "details": "Contrast ratio: 1.00:1 (required: 4.5:1)",
+      "colors": {
+        "text": "rgb(18, 50, 130)",
+        "background": "rgb(18, 50, 130)"
+      },
+      "recommendation": "Increase contrast to at least 4.5:1",
+      "wcag": "1.4.3",
+      "severity": "critical",
+      "font_size": "14.0px",
+      "is_large_text": false,
+      "check_type": "color_contrast"
+    },
+    {
+      "element": "div",
+      "text": "Copyright SSE © 2025. All rights reserved.\nContact...",
+      "issue": "Insufficient color contrast",
+      "details": "Contrast ratio: 1.00:1 (required: 4.5:1)",
+      "colors": {
+        "text": "rgb(18, 50, 130)",
+        "background": "rgb(18, 50, 130)"
+      },
+      "recommendation": "Increase contrast to at least 4.5:1",
+      "wcag": "1.4.3",
+      "severity": "critical",
+      "font_size": "14.0px",
+      "is_large_text": false,
+      "check_type": "color_contrast"
+    },
+    {
+      "element": "div",
+      "text": "Copyright SSE © 2025. All rights reserved.\nContact...",
+      "issue": "Insufficient color contrast",
+      "details": "Contrast ratio: 1.00:1 (required: 4.5:1)",
+      "colors": {
+        "text": "rgb(18, 50, 130)",
+        "background": "rgb(18, 50, 130)"
+      },
+      "recommendation": "Increase contrast to at least 4.5:1",
+      "wcag": "1.4.3",
+      "severity": "critical",
+      "font_size": "14.0px",
+      "is_large_text": false,
+      "check_type": "color_contrast"
+    },
+    {
+      "element": "li",
+      "text": "Contact us",
+      "issue": "Insufficient color contrast",
+      "details": "Contrast ratio: 1.00:1 (required: 4.5:1)",
+      "colors": {
+        "text": "rgb(18, 50, 130)",
+        "background": "rgb(18, 50, 130)"
+      },
+      "recommendation": "Increase contrast to at least 4.5:1",
+      "wcag": "1.4.3",
+      "severity": "critical",
+      "font_size": "14.0px",
+      "is_large_text": false,
+      "check_type": "color_contrast"
+    },
+    {
+      "element": "li",
+      "text": "Privacy notice",
+      "issue": "Insufficient color contrast",
+      "details": "Contrast ratio: 1.00:1 (required: 4.5:1)",
+      "colors": {
+        "text": "rgb(18, 50, 130)",
+        "background": "rgb(18, 50, 130)"
+      },
+      "recommendation": "Increase contrast to at least 4.5:1",
+      "wcag": "1.4.3",
+      "severity": "critical",
+      "font_size": "14.0px",
+      "is_large_text": false,
+      "check_type": "color_contrast"
+    },
+    {
+      "element": "li",
+      "text": "Cookie notice",
+      "issue": "Insufficient color contrast",
+      "details": "Contrast ratio: 1.00:1 (required: 4.5:1)",
+      "colors": {
+        "text": "rgb(18, 50, 130)",
+        "background": "rgb(18, 50, 130)"
+      },
+      "recommendation": "Increase contrast to at least 4.5:1",
+      "wcag": "1.4.3",
+      "severity": "critical",
+      "font_size": "14.0px",
+      "is_large_text": false,
+      "check_type": "color_contrast"
+    },
+    {
+      "element": "li",
+      "text": "Potential suppliers",
+      "issue": "Insufficient color contrast",
+      "details": "Contrast ratio: 1.00:1 (required: 4.5:1)",
+      "colors": {
+        "text": "rgb(18, 50, 130)",
+        "background": "rgb(18, 50, 130)"
+      },
+      "recommendation": "Increase contrast to at least 4.5:1",
+      "wcag": "1.4.3",
+      "severity": "critical",
+      "font_size": "14.0px",
+      "is_large_text": false,
+      "check_type": "color_contrast"
+    },
+    {
+      "element": "li",
+      "text": "Sitemap",
+      "issue": "Insufficient color contrast",
+      "details": "Contrast ratio: 1.00:1 (required: 4.5:1)",
+      "colors": {
+        "text": "rgb(18, 50, 130)",
+        "background": "rgb(18, 50, 130)"
+      },
+      "recommendation": "Increase contrast to at least 4.5:1",
+      "wcag": "1.4.3",
+      "severity": "critical",
+      "font_size": "14.0px",
+      "is_large_text": false,
+      "check_type": "color_contrast"
+    },
+    {
+      "element": "li",
+      "text": "Sustainability",
+      "issue": "Insufficient color contrast",
+      "details": "Contrast ratio: 1.00:1 (required: 4.5:1)",
+      "colors": {
+        "text": "rgb(18, 50, 130)",
+        "background": "rgb(18, 50, 130)"
+      },
+      "recommendation": "Increase contrast to at least 4.5:1",
+      "wcag": "1.4.3",
+      "severity": "critical",
+      "font_size": "14.0px",
+      "is_large_text": false,
+      "check_type": "color_contrast"
+    },
+    {
+      "element": "li",
+      "text": "Cookie settings",
+      "issue": "Insufficient color contrast",
+      "details": "Contrast ratio: 1.00:1 (required: 4.5:1)",
+      "colors": {
+        "text": "rgb(18, 50, 130)",
+        "background": "rgb(18, 50, 130)"
+      },
+      "recommendation": "Increase contrast to at least 4.5:1",
+      "wcag": "1.4.3",
+      "severity": "critical",
+      "font_size": "14.0px",
+      "is_large_text": false,
+      "check_type": "color_contrast"
+    },
+    {
+      "element": "li",
+      "text": "REMIT",
+      "issue": "Insufficient color contrast",
+      "details": "Contrast ratio: 1.00:1 (required: 4.5:1)",
+      "colors": {
+        "text": "rgb(18, 50, 130)",
+        "background": "rgb(18, 50, 130)"
+      },
+      "recommendation": "Increase contrast to at least 4.5:1",
+      "wcag": "1.4.3",
+      "severity": "critical",
+      "font_size": "14.0px",
+      "is_large_text": false,
+      "check_type": "color_contrast"
+    },
+    {
+      "element": "a",
+      "type": "a",
+      "text": "Home",
+      "issue": "Insufficient UI component contrast",
+      "details": "Contrast ratio: 1.00:1 (required: 3.0:1)",
+      "colors": {
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgb(255, 255, 255)"
+      },
+      "recommendation": "Increase component contrast to at least 3.0:1",
+      "wcag": "1.4.11",
+      "severity": "critical",
+      "check_type": "color_contrast"
+    },
+    {
+      "element": "a",
+      "type": "a",
+      "text": "About us",
+      "issue": "Insufficient UI component contrast",
+      "details": "Contrast ratio: 1.00:1 (required: 3.0:1)",
+      "colors": {
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgb(255, 255, 255)"
+      },
+      "recommendation": "Increase component contrast to at least 3.0:1",
+      "wcag": "1.4.11",
+      "severity": "critical",
+      "check_type": "color_contrast"
+    },
+    {
+      "element": "a",
+      "type": "a",
+      "text": "Our technologies",
+      "issue": "Insufficient UI component contrast",
+      "details": "Contrast ratio: 1.00:1 (required: 3.0:1)",
+      "colors": {
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgb(255, 255, 255)"
+      },
+      "recommendation": "Increase component contrast to at least 3.0:1",
+      "wcag": "1.4.11",
+      "severity": "critical",
+      "check_type": "color_contrast"
+    },
+    {
+      "element": "a",
+      "type": "a",
+      "text": "Investors",
+      "issue": "Insufficient UI component contrast",
+      "details": "Contrast ratio: 1.00:1 (required: 3.0:1)",
+      "colors": {
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgb(255, 255, 255)"
+      },
+      "recommendation": "Increase component contrast to at least 3.0:1",
+      "wcag": "1.4.11",
+      "severity": "critical",
+      "check_type": "color_contrast"
+    },
+    {
+      "element": "a",
+      "type": "a",
+      "text": "Sustainability",
+      "issue": "Insufficient UI component contrast",
+      "details": "Contrast ratio: 1.00:1 (required: 3.0:1)",
+      "colors": {
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgb(255, 255, 255)"
+      },
+      "recommendation": "Increase component contrast to at least 3.0:1",
+      "wcag": "1.4.11",
+      "severity": "critical",
+      "check_type": "color_contrast"
+    },
+    {
+      "element": "a",
+      "type": "a",
+      "text": "News and views",
+      "issue": "Insufficient UI component contrast",
+      "details": "Contrast ratio: 1.00:1 (required: 3.0:1)",
+      "colors": {
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgb(255, 255, 255)"
+      },
+      "recommendation": "Increase component contrast to at least 3.0:1",
+      "wcag": "1.4.11",
+      "severity": "critical",
+      "check_type": "color_contrast"
+    },
+    {
+      "element": "a",
+      "type": "a",
+      "text": "Careers",
+      "issue": "Insufficient UI component contrast",
+      "details": "Contrast ratio: 1.00:1 (required: 3.0:1)",
+      "colors": {
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgb(255, 255, 255)"
+      },
+      "recommendation": "Increase component contrast to at least 3.0:1",
+      "wcag": "1.4.11",
+      "severity": "critical",
+      "check_type": "color_contrast"
+    },
+    {
+      "element": "button",
+      "type": "button",
+      "text": "Open search form",
+      "issue": "Insufficient UI component contrast",
+      "details": "Contrast ratio: 1.00:1 (required: 3.0:1)",
+      "colors": {
+        "foreground": "rgb(255, 255, 255)",
+        "background": "rgb(255, 255, 255)"
+      },
+      "recommendation": "Increase component contrast to at least 3.0:1",
+      "wcag": "1.4.11",
+      "severity": "critical",
+      "check_type": "color_contrast"
+    },
+    {
+      "element": "button",
+      "type": "button",
+      "text": "[button]",
+      "issue": "Insufficient UI component contrast",
+      "details": "Contrast ratio: 1.68:1 (required: 3.0:1)",
+      "colors": {
+        "foreground": "rgb(113, 217, 202)",
+        "background": "rgb(255, 255, 255)"
+      },
+      "recommendation": "Increase component contrast to at least 3.0:1",
+      "wcag": "1.4.11",
+      "severity": "critical",
+      "check_type": "color_contrast"
+    },
+    {
+      "element": "button",
+      "type": "button",
+      "text": "Next slide.",
+      "issue": "Insufficient UI component contrast",
+      "details": "Contrast ratio: 1.68:1 (required: 3.0:1)",
+      "colors": {
+        "foreground": "rgb(113, 217, 202)",
+        "background": "rgb(255, 255, 255)"
+      },
+      "recommendation": "Increase component contrast to at least 3.0:1",
+      "wcag": "1.4.11",
+      "severity": "critical",
+      "check_type": "color_contrast"
+    },
+    {
+      "element": "button",
+      "type": "button",
+      "text": "Previus slide.",
+      "issue": "Insufficient UI component contrast",
+      "details": "Contrast ratio: 1.68:1 (required: 3.0:1)",
+      "colors": {
+        "foreground": "rgb(113, 217, 202)",
+        "background": "rgb(255, 255, 255)"
+      },
+      "recommendation": "Increase component contrast to at least 3.0:1",
+      "wcag": "1.4.11",
+      "severity": "critical",
+      "check_type": "color_contrast"
+    },
+    {
+      "element": "img",
+      "src": "website-banner-desktop.png",
+      "issue": "Potentially informative image has empty alt text",
+      "details": "Image appears to convey information but has empty alt text",
+      "recommendation": "Add descriptive alt text if the image conveys information",
+      "wcag": "1.1.1",
+      "severity": "warning",
+      "check_type": "image_accessibility"
+    },
+    {
+      "element": "img",
+      "src": "battery_storage_fareham.jpg",
+      "issue": "Potentially informative image has empty alt text",
+      "details": "Image appears to convey information but has empty alt text",
+      "recommendation": "Add descriptive alt text if the image conveys information",
+      "wcag": "1.1.1",
+      "severity": "warning",
+      "check_type": "image_accessibility"
+    },
+    {
+      "element": "span",
+      "class": "arrow icon font-ico-chevron-down main-nav__secondary-arrow",
+      "issue": "Icon lacks text alternative",
+      "details": "Icon has no accessible name and is not hidden from screen readers",
+      "recommendation": "Add aria-label or make decorative with aria-hidden='true'",
+      "wcag": "1.1.1",
+      "severity": "warning",
+      "check_type": "image_accessibility"
+    },
+    {
+      "element": "span",
+      "class": "arrow icon font-ico-chevron-down main-nav__secondary-arrow",
+      "issue": "Icon lacks text alternative",
+      "details": "Icon has no accessible name and is not hidden from screen readers",
+      "recommendation": "Add aria-label or make decorative with aria-hidden='true'",
+      "wcag": "1.1.1",
+      "severity": "warning",
+      "check_type": "image_accessibility"
+    },
+    {
+      "element": "span",
+      "class": "arrow icon font-ico-chevron-down main-nav__secondary-arrow",
+      "issue": "Icon lacks text alternative",
+      "details": "Icon has no accessible name and is not hidden from screen readers",
+      "recommendation": "Add aria-label or make decorative with aria-hidden='true'",
+      "wcag": "1.1.1",
+      "severity": "warning",
+      "check_type": "image_accessibility"
+    },
+    {
+      "element": "span",
+      "class": "arrow icon font-ico-chevron-down main-nav__secondary-arrow",
+      "issue": "Icon lacks text alternative",
+      "details": "Icon has no accessible name and is not hidden from screen readers",
+      "recommendation": "Add aria-label or make decorative with aria-hidden='true'",
+      "wcag": "1.1.1",
+      "severity": "warning",
+      "check_type": "image_accessibility"
+    },
+    {
+      "element": "span",
+      "class": "arrow icon font-ico-chevron-down main-nav__secondary-arrow",
+      "issue": "Icon lacks text alternative",
+      "details": "Icon has no accessible name and is not hidden from screen readers",
+      "recommendation": "Add aria-label or make decorative with aria-hidden='true'",
+      "wcag": "1.1.1",
+      "severity": "warning",
+      "check_type": "image_accessibility"
+    },
+    {
+      "element": "span",
+      "class": "arrow icon font-ico-chevron-down main-nav__secondary-arrow",
+      "issue": "Icon lacks text alternative",
+      "details": "Icon has no accessible name and is not hidden from screen readers",
+      "recommendation": "Add aria-label or make decorative with aria-hidden='true'",
+      "wcag": "1.1.1",
+      "severity": "warning",
+      "check_type": "image_accessibility"
+    },
+    {
+      "element": "span",
+      "class": "arrow icon font-ico-chevron-down main-nav__secondary-arrow",
+      "issue": "Icon lacks text alternative",
+      "details": "Icon has no accessible name and is not hidden from screen readers",
+      "recommendation": "Add aria-label or make decorative with aria-hidden='true'",
+      "wcag": "1.1.1",
+      "severity": "warning",
+      "check_type": "image_accessibility"
+    },
+    {
+      "element": "span",
+      "class": "arrow icon font-ico-chevron-down main-nav__secondary-arrow",
+      "issue": "Icon lacks text alternative",
+      "details": "Icon has no accessible name and is not hidden from screen readers",
+      "recommendation": "Add aria-label or make decorative with aria-hidden='true'",
+      "wcag": "1.1.1",
+      "severity": "warning",
+      "check_type": "image_accessibility"
+    },
+    {
+      "element": "span",
+      "class": "arrow icon font-ico-chevron-down main-nav__secondary-arrow",
+      "issue": "Icon lacks text alternative",
+      "details": "Icon has no accessible name and is not hidden from screen readers",
+      "recommendation": "Add aria-label or make decorative with aria-hidden='true'",
+      "wcag": "1.1.1",
+      "severity": "warning",
+      "check_type": "image_accessibility"
+    },
+    {
+      "element": "span",
+      "class": "arrow icon font-ico-chevron-down main-nav__secondary-arrow",
+      "issue": "Icon lacks text alternative",
+      "details": "Icon has no accessible name and is not hidden from screen readers",
+      "recommendation": "Add aria-label or make decorative with aria-hidden='true'",
+      "wcag": "1.1.1",
+      "severity": "warning",
+      "check_type": "image_accessibility"
+    },
+    {
+      "element": "span",
+      "class": "arrow icon font-ico-chevron-down main-nav__secondary-arrow",
+      "issue": "Icon lacks text alternative",
+      "details": "Icon has no accessible name and is not hidden from screen readers",
+      "recommendation": "Add aria-label or make decorative with aria-hidden='true'",
+      "wcag": "1.1.1",
+      "severity": "warning",
+      "check_type": "image_accessibility"
+    },
+    {
+      "element": "span",
+      "class": "icon font-ico-close",
+      "issue": "Decorative icon not hidden from screen readers",
+      "details": "Icon inside a labeled element should be hidden from screen readers",
+      "recommendation": "Add aria-hidden='true' to the icon element",
+      "wcag": "1.1.1",
+      "severity": "warning",
+      "check_type": "image_accessibility"
+    },
+    {
+      "element": "span",
+      "class": "icon font-ico-close",
+      "issue": "Icon lacks text alternative",
+      "details": "Icon has no accessible name and is not hidden from screen readers",
+      "recommendation": "Add aria-label or make decorative with aria-hidden='true'",
+      "wcag": "1.1.1",
+      "severity": "warning",
+      "check_type": "image_accessibility"
+    },
+    {
+      "element": "span",
+      "class": "icon font-ico-mail",
+      "issue": "Icon lacks text alternative",
+      "details": "Icon has no accessible name and is not hidden from screen readers",
+      "recommendation": "Add aria-label or make decorative with aria-hidden='true'",
+      "wcag": "1.1.1",
+      "severity": "warning",
+      "check_type": "image_accessibility"
+    },
+    {
+      "element": "span",
+      "class": "nav-toggle__menu icon font-ico-hamburger",
+      "issue": "Icon lacks text alternative",
+      "details": "Icon has no accessible name and is not hidden from screen readers",
+      "recommendation": "Add aria-label or make decorative with aria-hidden='true'",
+      "wcag": "1.1.1",
+      "severity": "warning",
+      "check_type": "image_accessibility"
+    },
+    {
+      "element": "span",
+      "class": "nav-toggle__menu-close icon font-ico-close",
+      "issue": "Icon lacks text alternative",
+      "details": "Icon has no accessible name and is not hidden from screen readers",
+      "recommendation": "Add aria-label or make decorative with aria-hidden='true'",
+      "wcag": "1.1.1",
+      "severity": "warning",
+      "check_type": "image_accessibility"
+    },
+    {
+      "element": "span",
+      "class": "icon font-ico-search",
+      "issue": "Icon lacks text alternative",
+      "details": "Icon has no accessible name and is not hidden from screen readers",
+      "recommendation": "Add aria-label or make decorative with aria-hidden='true'",
+      "wcag": "1.1.1",
+      "severity": "warning",
+      "check_type": "image_accessibility"
+    },
+    {
+      "element": "span",
+      "class": "nav-toggle__menu icon font-ico-hamburger",
+      "issue": "Icon lacks text alternative",
+      "details": "Icon has no accessible name and is not hidden from screen readers",
+      "recommendation": "Add aria-label or make decorative with aria-hidden='true'",
+      "wcag": "1.1.1",
+      "severity": "warning",
+      "check_type": "image_accessibility"
+    },
+    {
+      "element": "span",
+      "class": "nav-toggle__menu-close icon font-ico-close",
+      "issue": "Icon lacks text alternative",
+      "details": "Icon has no accessible name and is not hidden from screen readers",
+      "recommendation": "Add aria-label or make decorative with aria-hidden='true'",
+      "wcag": "1.1.1",
+      "severity": "warning",
+      "check_type": "image_accessibility"
+    },
+    {
+      "element": "span",
+      "class": "banner__scroll-icon banner__scroll-icon--first icon font-ico-arrow",
+      "issue": "Icon lacks text alternative",
+      "details": "Icon has no accessible name and is not hidden from screen readers",
+      "recommendation": "Add aria-label or make decorative with aria-hidden='true'",
+      "wcag": "1.1.1",
+      "severity": "warning",
+      "check_type": "image_accessibility"
+    },
+    {
+      "element": "span",
+      "class": "banner__scroll-icon banner__scroll-icon--second icon font-ico-arrow",
+      "issue": "Icon lacks text alternative",
+      "details": "Icon has no accessible name and is not hidden from screen readers",
+      "recommendation": "Add aria-label or make decorative with aria-hidden='true'",
+      "wcag": "1.1.1",
+      "severity": "warning",
+      "check_type": "image_accessibility"
+    },
+    {
+      "element": "span",
+      "class": "icon font-ico-arrow-top",
+      "issue": "Icon lacks text alternative",
+      "details": "Icon has no accessible name and is not hidden from screen readers",
+      "recommendation": "Add aria-label or make decorative with aria-hidden='true'",
+      "wcag": "1.1.1",
+      "severity": "warning",
+      "check_type": "image_accessibility"
+    },
+    {
+      "element": "span",
+      "class": "icon font-ico-extern",
+      "issue": "Decorative icon not hidden from screen readers",
+      "details": "Icon inside a labeled element should be hidden from screen readers",
+      "recommendation": "Add aria-hidden='true' to the icon element",
+      "wcag": "1.1.1",
+      "severity": "warning",
+      "check_type": "image_accessibility"
+    }
+  ],
+  "elapsed_time": "3.34 seconds"
+}

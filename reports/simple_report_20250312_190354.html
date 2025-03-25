@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minimal Accessibility Report</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .accordion-section {
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        
+        .accordion-button {
+            background-color: #f1f1f1;
+            color: #444;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            text-align: left;
+            border: none;
+            outline: none;
+            font-size: 16px;
+            transition: 0.4s;
+        }
+
+        .active, .accordion-button:hover {
+            background-color: #ddd;
+        }
+
+        .accordion-content {
+            padding: 0 18px;
+            background-color: white;
+            display: none;
+            overflow: hidden;
+        }
+        
+        /* CSS-only accordion approach */
+        .css-accordion {
+            margin-bottom: 10px;
+        }
+        .css-accordion input {
+            display: none;
+        }
+        .css-accordion label {
+            background-color: #f1f1f1;
+            color: #444;
+            cursor: pointer;
+            padding: 18px;
+            display: block;
+            width: 100%;
+            text-align: left;
+            border: none;
+            outline: none;
+            font-size: 16px;
+            transition: 0.4s;
+            box-sizing: border-box;
+        }
+        .css-accordion label:hover {
+            background-color: #ddd;
+        }
+        .css-content {
+            padding: 0 18px;
+            background-color: white;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+        }
+        .css-accordion input:checked ~ .css-content {
+            max-height: 500px; /* Set a value large enough for your content */
+        }
+    </style>
+</head>
+<body>
+    <h1>Minimal Accessibility Report</h1>
+    <p>This report demonstrates three different accordion implementations.</p>
+    
+    <h2>JavaScript Toggle Method 1</h2>
+
+    <div class="accordion-section">
+        <button class="accordion-button" onclick="toggleContent('js-content-1')">View Issues (JavaScript Method 1)</button>
+        <div id="js-content-1" class="accordion-content">
+            <ul>
+<li>Keyboard navigation barrier: Button not focusable</li>
+<li>Missing text alternative: Image has no alt text</li>
+<li>Insufficient color contrast: 2.3:1 (needs 4.5:1)</li>
+
+            </ul>
+        </div>
+    </div>
+    
+    <h2>JavaScript Toggle Method 2</h2>
+    
+    <div class="accordion-section">
+        <button class="accordion-button" onclick="toggleContent2('js-content-2', this)">View Issues (JavaScript Method 2)</button>
+        <div id="js-content-2" class="accordion-content">
+            <ul>
+<li>Keyboard navigation barrier: Button not focusable</li>
+<li>Missing text alternative: Image has no alt text</li>
+<li>Insufficient color contrast: 2.3:1 (needs 4.5:1)</li>
+
+            </ul>
+        </div>
+    </div>
+    
+    <h2>Pure CSS Method (No JavaScript)</h2>
+    
+    <div class="css-accordion">
+        <input type="checkbox" id="css-check">
+        <label for="css-check">View Issues (CSS-Only Method)</label>
+        <div class="css-content">
+            <ul>
+<li>Keyboard navigation barrier: Button not focusable</li>
+<li>Missing text alternative: Image has no alt text</li>
+<li>Insufficient color contrast: 2.3:1 (needs 4.5:1)</li>
+
+            </ul>
+        </div>
+    </div>
+    
+    <footer>
+        <p>Generated on 2025-03-12 19:03:54</p>
+    </footer>
+    
+    <script>
+        // Method 1: Simple toggle function
+        function toggleContent(id) {
+            var content = document.getElementById(id);
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        }
+        
+        // Method 2: Toggle with active class
+        function toggleContent2(id, button) {
+            var content = document.getElementById(id);
+            button.classList.toggle("active");
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>

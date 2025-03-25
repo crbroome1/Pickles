@@ -1,0 +1,3033 @@
+{
+  "url": "http://sse.com",
+  "timestamp": "20250324_170929",
+  "browser": "firefox",
+  "checks": {
+    "tab_order": {
+      "tab_sequence": [
+        {
+          "tag": "a",
+          "id": "",
+          "class": "external-link",
+          "role": "",
+          "tabindex": "auto",
+          "text": "Cookie notice",
+          "visible": true,
+          "position": {
+            "x": 673.4833374023438,
+            "y": 335.5,
+            "width": 138.43333435058594,
+            "height": 28.0
+          },
+          "signature": "a:class=external-link:href=www.sse.com",
+          "tab_index": 1
+        },
+        {
+          "tag": "button",
+          "id": "ccc-notify-accept",
+          "class": "ccc-notify-button ccc-link ccc-tabbable ccc-accept-button",
+          "role": "",
+          "tabindex": "auto",
+          "text": "Allow all",
+          "visible": true,
+          "position": {
+            "x": 440.0,
+            "y": 383.0,
+            "width": 115.96665954589844,
+            "height": 40.0
+          },
+          "signature": "button:id=ccc-notify-accept:class=ccc-notify-button ccc-link ccc-tabbable ccc-accept-button",
+          "tab_index": 2
+        },
+        {
+          "tag": "button",
+          "id": "ccc-notify-reject",
+          "class": "ccc-notify-button ccc-link ccc-tabbable ccc-reject-button",
+          "role": "",
+          "tabindex": "auto",
+          "text": "Disable all",
+          "visible": true,
+          "position": {
+            "x": 563.9666748046875,
+            "y": 383.0,
+            "width": 128.60000610351562,
+            "height": 40.0
+          },
+          "signature": "button:id=ccc-notify-reject:class=ccc-notify-button ccc-link ccc-tabbable ccc-reject-button",
+          "tab_index": 3
+        },
+        {
+          "tag": "button",
+          "id": "",
+          "class": "ccc-notify-button ccc-link ccc-tabbable ccc-notify-link",
+          "role": "",
+          "tabindex": "auto",
+          "text": "Cookie settings",
+          "visible": true,
+          "position": {
+            "x": 700.566650390625,
+            "y": 377.5,
+            "width": 172.88333129882812,
+            "height": 48.0
+          },
+          "signature": "button:class=ccc-notify-button ccc-link ccc-tabbable ccc-notify-link",
+          "tab_index": 4
+        },
+        {
+          "tag": "a",
+          "id": "",
+          "class": "logo",
+          "role": "",
+          "tabindex": "auto",
+          "text": "[No text]",
+          "visible": true,
+          "position": {
+            "x": 17.0,
+            "y": 25.0,
+            "width": 180.0,
+            "height": 86.0
+          },
+          "signature": "a:class=logo:href=www.sse.com",
+          "tab_index": 5
+        },
+        {
+          "tag": "li",
+          "id": "",
+          "class": "main-nav__item",
+          "role": "menuitem",
+          "tabindex": "auto",
+          "text": "Home",
+          "visible": true,
+          "position": {
+            "x": 517.933349609375,
+            "y": 65.5,
+            "width": 42.850006103515625,
+            "height": 35.0
+          },
+          "signature": "li:class=main-nav__item",
+          "tab_index": 6
+        },
+        {
+          "tag": "a",
+          "id": "",
+          "class": "main-nav__link js-main-nav-open-dropdown",
+          "role": "",
+          "tabindex": "auto",
+          "text": "Home",
+          "visible": true,
+          "position": {
+            "x": 517.933349609375,
+            "y": 65.5,
+            "width": 42.850006103515625,
+            "height": 35.0
+          },
+          "signature": "a:class=main-nav__link js-main-nav-open-dropdown:href=www.sse.com",
+          "tab_index": 7
+        },
+        {
+          "tag": "li",
+          "id": "",
+          "class": "main-nav__item main-nav__has-children main-nav__item--active",
+          "role": "menuitem",
+          "tabindex": "auto",
+          "text": "About us",
+          "visible": true,
+          "position": {
+            "x": 575.7833251953125,
+            "y": 65.5,
+            "width": 82.44999694824219,
+            "height": 35.0
+          },
+          "signature": "li:class=main-nav__item main-nav__has-children main-nav__item--active",
+          "tab_index": 8
+        },
+        {
+          "tag": "a",
+          "id": "",
+          "class": "main-nav__link js-main-nav-open-dropdown",
+          "role": "",
+          "tabindex": "auto",
+          "text": "About us",
+          "visible": true,
+          "position": {
+            "x": 575.7833251953125,
+            "y": 65.5,
+            "width": 62.44999694824219,
+            "height": 35.0
+          },
+          "signature": "a:class=main-nav__link js-main-nav-open-dropdown:href=www.sse.com",
+          "tab_index": 9
+        },
+        {
+          "tag": "li",
+          "id": "",
+          "class": "main-nav__item main-nav__has-children main-nav__item--active",
+          "role": "menuitem",
+          "tabindex": "auto",
+          "text": "Our technologies",
+          "visible": true,
+          "position": {
+            "x": 673.2333374023438,
+            "y": 65.5,
+            "width": 142.64999389648438,
+            "height": 35.0
+          },
+          "signature": "li:class=main-nav__item main-nav__has-children main-nav__item--active",
+          "tab_index": 10
+        },
+        {
+          "tag": "a",
+          "id": "",
+          "class": "main-nav__link js-main-nav-open-dropdown",
+          "role": "",
+          "tabindex": "auto",
+          "text": "Our technologies",
+          "visible": true,
+          "position": {
+            "x": 673.2333374023438,
+            "y": 65.5,
+            "width": 122.64999389648438,
+            "height": 35.0
+          },
+          "signature": "a:class=main-nav__link js-main-nav-open-dropdown:href=www.sse.com",
+          "tab_index": 11
+        },
+        {
+          "tag": "li",
+          "id": "",
+          "class": "main-nav__item main-nav__has-children main-nav__item--active",
+          "role": "menuitem",
+          "tabindex": "auto",
+          "text": "Investors",
+          "visible": true,
+          "position": {
+            "x": 830.88330078125,
+            "y": 65.5,
+            "width": 84.43333435058594,
+            "height": 35.0
+          },
+          "signature": "li:class=main-nav__item main-nav__has-children main-nav__item--active",
+          "tab_index": 12
+        },
+        {
+          "tag": "a",
+          "id": "",
+          "class": "main-nav__link js-main-nav-open-dropdown",
+          "role": "",
+          "tabindex": "auto",
+          "text": "Investors",
+          "visible": true,
+          "position": {
+            "x": 830.88330078125,
+            "y": 65.5,
+            "width": 64.43333435058594,
+            "height": 35.0
+          },
+          "signature": "a:class=main-nav__link js-main-nav-open-dropdown:href=www.sse.com",
+          "tab_index": 13
+        },
+        {
+          "tag": "li",
+          "id": "",
+          "class": "main-nav__item main-nav__has-children main-nav__item--active",
+          "role": "menuitem",
+          "tabindex": "auto",
+          "text": "Sustainability",
+          "visible": true,
+          "position": {
+            "x": 930.316650390625,
+            "y": 65.5,
+            "width": 114.01666259765624,
+            "height": 35.0
+          },
+          "signature": "li:class=main-nav__item main-nav__has-children main-nav__item--active",
+          "tab_index": 14
+        },
+        {
+          "tag": "a",
+          "id": "",
+          "class": "main-nav__link js-main-nav-open-dropdown",
+          "role": "",
+          "tabindex": "auto",
+          "text": "Sustainability",
+          "visible": true,
+          "position": {
+            "x": 930.316650390625,
+            "y": 65.5,
+            "width": 94.01666259765624,
+            "height": 35.0
+          },
+          "signature": "a:class=main-nav__link js-main-nav-open-dropdown:href=www.sse.com",
+          "tab_index": 15
+        },
+        {
+          "tag": "li",
+          "id": "",
+          "class": "main-nav__item main-nav__has-children main-nav__item--active",
+          "role": "menuitem",
+          "tabindex": "auto",
+          "text": "News and views",
+          "visible": true,
+          "position": {
+            "x": 1059.3333740234375,
+            "y": 65.5,
+            "width": 131.70001220703125,
+            "height": 35.0
+          },
+          "signature": "li:class=main-nav__item main-nav__has-children main-nav__item--active",
+          "tab_index": 16
+        },
+        {
+          "tag": "a",
+          "id": "",
+          "class": "main-nav__link js-main-nav-open-dropdown",
+          "role": "",
+          "tabindex": "auto",
+          "text": "News and views",
+          "visible": true,
+          "position": {
+            "x": 1059.3333740234375,
+            "y": 65.5,
+            "width": 111.70001220703124,
+            "height": 35.0
+          },
+          "signature": "a:class=main-nav__link js-main-nav-open-dropdown:href=www.sse.com",
+          "tab_index": 17
+        },
+        {
+          "tag": "li",
+          "id": "",
+          "class": "main-nav__item main-nav__has-children main-nav__item--active",
+          "role": "menuitem",
+          "tabindex": "auto",
+          "text": "Careers",
+          "visible": true,
+          "position": {
+            "x": 1206.0333251953125,
+            "y": 65.5,
+            "width": 73.96665954589844,
+            "height": 35.0
+          },
+          "signature": "li:class=main-nav__item main-nav__has-children main-nav__item--active",
+          "tab_index": 18
+        },
+        {
+          "tag": "a",
+          "id": "",
+          "class": "main-nav__link js-main-nav-open-dropdown",
+          "role": "",
+          "tabindex": "auto",
+          "text": "Careers",
+          "visible": true,
+          "position": {
+            "x": 1206.0333251953125,
+            "y": 65.5,
+            "width": 53.96665954589844,
+            "height": 35.0
+          },
+          "signature": "a:class=main-nav__link js-main-nav-open-dropdown:href=www.sse.com",
+          "tab_index": 19
+        },
+        {
+          "tag": "button",
+          "id": "",
+          "class": "search__open-btn js-open-search",
+          "role": "",
+          "tabindex": "auto",
+          "text": "Open search form",
+          "visible": true,
+          "position": {
+            "x": 1315.0,
+            "y": 57.5,
+            "width": 34.0,
+            "height": 34.0
+          },
+          "signature": "button:class=search__open-btn js-open-search",
+          "tab_index": 20
+        },
+        {
+          "tag": "a",
+          "id": "",
+          "class": "btn btn--home",
+          "role": "",
+          "tabindex": "auto",
+          "text": "About us",
+          "visible": true,
+          "position": {
+            "x": 17.0,
+            "y": 549.75,
+            "width": 150.0,
+            "height": 40.25
+          },
+          "signature": "a:class=btn btn--home:href=www.sse.com",
+          "tab_index": 21
+        },
+        {
+          "tag": "button",
+          "id": "",
+          "class": "banner__scroll js-scroll-down",
+          "role": "",
+          "tabindex": "auto",
+          "text": "[No text]",
+          "visible": true,
+          "position": {
+            "x": 17.0,
+            "y": 685.0,
+            "width": 38.0,
+            "height": 38.0
+          },
+          "signature": "button:class=banner__scroll js-scroll-down",
+          "tab_index": 22
+        },
+        {
+          "tag": "a",
+          "id": "",
+          "class": "link",
+          "role": "",
+          "tabindex": "0",
+          "text": "Read More",
+          "visible": true,
+          "position": {
+            "x": 155.9499969482422,
+            "y": 2247.75,
+            "width": 100.7166748046875,
+            "height": 27.0
+          },
+          "signature": "a:class=link:href=www.sse.com",
+          "tab_index": 23
+        },
+        {
+          "tag": "a",
+          "id": "",
+          "class": "link",
+          "role": "",
+          "tabindex": "0",
+          "text": "Read More",
+          "visible": true,
+          "position": {
+            "x": 501.9500122070313,
+            "y": 2247.75,
+            "width": 100.7166748046875,
+            "height": 27.0
+          },
+          "signature": "a:class=link:href=www.sse.com",
+          "tab_index": 24
+        },
+        {
+          "tag": "a",
+          "id": "",
+          "class": "link",
+          "role": "",
+          "tabindex": "0",
+          "text": "Read More",
+          "visible": true,
+          "position": {
+            "x": 847.9500122070312,
+            "y": 2247.75,
+            "width": 100.7166748046875,
+            "height": 27.0
+          },
+          "signature": "a:class=link:href=www.sse.com",
+          "tab_index": 25
+        },
+        {
+          "tag": "button",
+          "id": "",
+          "class": "slider__btn slider__btn--prev js-out-prev slick-arrow slick-disabled",
+          "role": "",
+          "tabindex": "auto",
+          "text": "Next slide.",
+          "visible": true,
+          "position": {
+            "x": 127.9499969482422,
+            "y": 2380.75,
+            "width": 40.0,
+            "height": 40.0
+          },
+          "signature": "button:class=slider__btn slider__btn--prev js-out-prev slick-arrow slick-disabled",
+          "tab_index": 26
+        },
+        {
+          "tag": "button",
+          "id": "",
+          "class": "slider__btn slider__btn--next js-out-next slick-arrow",
+          "role": "",
+          "tabindex": "auto",
+          "text": "Previus slide.",
+          "visible": true,
+          "position": {
+            "x": 171.71665954589844,
+            "y": 2380.75,
+            "width": 40.0,
+            "height": 40.0
+          },
+          "signature": "button:class=slider__btn slider__btn--next js-out-next slick-arrow",
+          "tab_index": 27
+        },
+        {
+          "tag": "a",
+          "id": "",
+          "class": "link",
+          "role": "",
+          "tabindex": "auto",
+          "text": "Detailed share price",
+          "visible": true,
+          "position": {
+            "x": 838.0,
+            "y": 3128.35009765625,
+            "width": 160.89999389648438,
+            "height": 25.0
+          },
+          "signature": "a:class=link:href=www.sse.com",
+          "tab_index": 28
+        },
+        {
+          "tag": "a",
+          "id": "",
+          "class": "footer__link footer__link--has-children js-footer-link",
+          "role": "",
+          "tabindex": "auto",
+          "text": "Sustainability",
+          "visible": true,
+          "position": {
+            "x": 132.0,
+            "y": 6499.85009765625,
+            "width": 100.13333129882812,
+            "height": 20.0
+          },
+          "signature": "a:class=footer__link footer__link--has-children js-footer-link:href=www.sse.com",
+          "tab_index": 29
+        },
+        {
+          "tag": "a",
+          "id": "",
+          "class": "footer__secondary-link",
+          "role": "",
+          "tabindex": "auto",
+          "text": "Our 2030 Goals",
+          "visible": true,
+          "position": {
+            "x": 132.0,
+            "y": 6525.85009765625,
+            "width": 109.83332824707033,
+            "height": 20.0
+          },
+          "signature": "a:class=footer__secondary-link:href=www.sse.com",
+          "tab_index": 30
+        },
+        {
+          "tag": "a",
+          "id": "",
+          "class": "footer__secondary-link",
+          "role": "",
+          "tabindex": "auto",
+          "text": "Modern Slavery Statement",
+          "visible": true,
+          "position": {
+            "x": 132.0,
+            "y": 6551.85009765625,
+            "width": 182.8999938964844,
+            "height": 20.0
+          },
+          "signature": "a:class=footer__secondary-link:href=www.sse.com",
+          "tab_index": 31
+        },
+        {
+          "tag": "a",
+          "id": "",
+          "class": "footer__link footer__link--has-children js-footer-link",
+          "role": "",
+          "tabindex": "auto",
+          "text": "News and views",
+          "visible": true,
+          "position": {
+            "x": 132.0,
+            "y": 6609.85009765625,
+            "width": 115.11666870117188,
+            "height": 20.0
+          },
+          "signature": "a:class=footer__link footer__link--has-children js-footer-link:href=www.sse.com",
+          "tab_index": 32
+        },
+        {
+          "tag": "a",
+          "id": "",
+          "class": "footer__secondary-link",
+          "role": "",
+          "tabindex": "auto",
+          "text": "Media Contacts",
+          "visible": true,
+          "position": {
+            "x": 132.0,
+            "y": 6635.85009765625,
+            "width": 108.63333129882812,
+            "height": 20.0
+          },
+          "signature": "a:class=footer__secondary-link:href=www.sse.com",
+          "tab_index": 33
+        },
+        {
+          "tag": "a",
+          "id": "",
+          "class": "footer__secondary-link",
+          "role": "",
+          "tabindex": "auto",
+          "text": "Media bank",
+          "visible": true,
+          "position": {
+            "x": 132.0,
+            "y": 6661.85009765625,
+            "width": 79.66667175292969,
+            "height": 20.0
+          },
+          "signature": "a:class=footer__secondary-link:href=sse.brandmaster.com",
+          "tab_index": 34
+        },
+        {
+          "tag": "a",
+          "id": "",
+          "class": "footer__link footer__link--has-children js-footer-link",
+          "role": "",
+          "tabindex": "auto",
+          "text": "Careers",
+          "visible": true,
+          "position": {
+            "x": 693.0,
+            "y": 6499.85009765625,
+            "width": 56.06666564941406,
+            "height": 20.0
+          },
+          "signature": "a:class=footer__link footer__link--has-children js-footer-link:href=www.sse.com",
+          "tab_index": 35
+        },
+        {
+          "tag": "a",
+          "id": "",
+          "class": "footer__secondary-link",
+          "role": "",
+          "tabindex": "auto",
+          "text": "Life at SSE",
+          "visible": true,
+          "position": {
+            "x": 693.0,
+            "y": 6525.85009765625,
+            "width": 70.93333435058594,
+            "height": 20.0
+          },
+          "signature": "a:class=footer__secondary-link:href=www.sse.com",
+          "tab_index": 36
+        },
+        {
+          "tag": "a",
+          "id": "",
+          "class": "footer__secondary-link",
+          "role": "",
+          "tabindex": "auto",
+          "text": "Specialisms",
+          "visible": true,
+          "position": {
+            "x": 693.0,
+            "y": 6551.85009765625,
+            "width": 80.19999694824219,
+            "height": 20.0
+          },
+          "signature": "a:class=footer__secondary-link:href=www.sse.com",
+          "tab_index": 37
+        },
+        {
+          "tag": "a",
+          "id": "",
+          "class": "footer__secondary-link",
+          "role": "",
+          "tabindex": "auto",
+          "text": "Inclusion",
+          "visible": true,
+          "position": {
+            "x": 693.0,
+            "y": 6577.85009765625,
+            "width": 63.41667175292969,
+            "height": 20.0
+          },
+          "signature": "a:class=footer__secondary-link:href=www.sse.com",
+          "tab_index": 38
+        },
+        {
+          "tag": "a",
+          "id": "",
+          "class": "footer__secondary-link",
+          "role": "",
+          "tabindex": "auto",
+          "text": "Early Careers",
+          "visible": true,
+          "position": {
+            "x": 693.0,
+            "y": 6603.85009765625,
+            "width": 90.93333435058594,
+            "height": 20.0
+          },
+          "signature": "a:class=footer__secondary-link:href=www.sse.com",
+          "tab_index": 39
+        },
+        {
+          "tag": "a",
+          "id": "",
+          "class": "footer__secondary-link",
+          "role": "",
+          "tabindex": "auto",
+          "text": "Thinking of applying?",
+          "visible": true,
+          "position": {
+            "x": 693.0,
+            "y": 6629.85009765625,
+            "width": 148.89999389648438,
+            "height": 20.0
+          },
+          "signature": "a:class=footer__secondary-link:href=www.sse.com",
+          "tab_index": 40
+        },
+        {
+          "tag": "a",
+          "id": "",
+          "class": "copyright__link",
+          "role": "",
+          "tabindex": "auto",
+          "text": "Contact us",
+          "visible": true,
+          "position": {
+            "x": 391.4500122070313,
+            "y": 6819.85009765625,
+            "width": 75.63333129882812,
+            "height": 18.0
+          },
+          "signature": "a:class=copyright__link:href=www.sse.com",
+          "tab_index": 41
+        },
+        {
+          "tag": "a",
+          "id": "",
+          "class": "copyright__link",
+          "role": "",
+          "tabindex": "auto",
+          "text": "Privacy notice",
+          "visible": true,
+          "position": {
+            "x": 517.0833129882812,
+            "y": 6819.85009765625,
+            "width": 97.65000915527344,
+            "height": 18.0
+          },
+          "signature": "a:class=copyright__link:href=www.sse.com",
+          "tab_index": 42
+        },
+        {
+          "tag": "a",
+          "id": "",
+          "class": "copyright__link",
+          "role": "",
+          "tabindex": "auto",
+          "text": "Cookie notice",
+          "visible": true,
+          "position": {
+            "x": 664.7333374023438,
+            "y": 6819.85009765625,
+            "width": 97.38333129882812,
+            "height": 18.0
+          },
+          "signature": "a:class=copyright__link:href=www.sse.com",
+          "tab_index": 43
+        },
+        {
+          "tag": "a",
+          "id": "",
+          "class": "copyright__link",
+          "role": "",
+          "tabindex": "auto",
+          "text": "Potential suppliers",
+          "visible": true,
+          "position": {
+            "x": 812.11669921875,
+            "y": 6819.85009765625,
+            "width": 128.0833282470703,
+            "height": 18.0
+          },
+          "signature": "a:class=copyright__link:href=www.sse.com",
+          "tab_index": 44
+        },
+        {
+          "tag": "a",
+          "id": "",
+          "class": "copyright__link",
+          "role": "",
+          "tabindex": "auto",
+          "text": "Sitemap",
+          "visible": true,
+          "position": {
+            "x": 990.2000122070312,
+            "y": 6819.85009765625,
+            "width": 56.23333740234375,
+            "height": 18.0
+          },
+          "signature": "a:class=copyright__link:href=www.sse.com",
+          "tab_index": 45
+        },
+        {
+          "tag": "a",
+          "id": "",
+          "class": "copyright__link",
+          "role": "",
+          "tabindex": "auto",
+          "text": "Sustainability",
+          "visible": true,
+          "position": {
+            "x": 1096.433349609375,
+            "y": 6819.85009765625,
+            "width": 91.3000030517578,
+            "height": 18.0
+          },
+          "signature": "a:class=copyright__link:href=www.sse.com",
+          "tab_index": 46
+        },
+        {
+          "tag": "a",
+          "id": "",
+          "class": "copyright__link js-open-cookie",
+          "role": "",
+          "tabindex": "auto",
+          "text": "Cookie settings",
+          "visible": true,
+          "position": {
+            "x": 391.4500122070313,
+            "y": 6839.85009765625,
+            "width": 107.51666259765624,
+            "height": 18.0
+          },
+          "signature": "a:class=copyright__link js-open-cookie:href=",
+          "tab_index": 47
+        },
+        {
+          "tag": "a",
+          "id": "",
+          "class": "copyright__link",
+          "role": "",
+          "tabindex": "auto",
+          "text": "REMIT",
+          "visible": true,
+          "position": {
+            "x": 548.9666748046875,
+            "y": 6839.85009765625,
+            "width": 61.316680908203125,
+            "height": 18.0
+          },
+          "signature": "a:class=copyright__link:href=remit.sse.com",
+          "tab_index": 48
+        }
+      ],
+      "issues": [],
+      "potentially_focusable_count": 48
+    },
+    "focusable_elements": [
+      {
+        "text": "Home",
+        "location": "class='main-nav__item'",
+        "issue": "Keyboard navigation barrier",
+        "details": "Element appears interactive but isn't keyboard accessible",
+        "recommendation": "Add proper keyboard accessibility (tabindex='0' and keyboard event handlers)",
+        "wcag": "2.1.1"
+      },
+      {
+        "text": "About us",
+        "location": "class='main-nav__item main-nav__has-children main-nav__item--active'",
+        "issue": "Keyboard navigation barrier",
+        "details": "Element appears interactive but isn't keyboard accessible",
+        "recommendation": "Add proper keyboard accessibility (tabindex='0' and keyboard event handlers)",
+        "wcag": "2.1.1"
+      },
+      {
+        "text": "Allow allDisable allCookie settings",
+        "location": "class='ccc-notify-buttons'",
+        "issue": "Keyboard navigation barrier",
+        "details": "Element appears interactive but isn't keyboard accessible",
+        "recommendation": "Add proper keyboard accessibility (tabindex='0' and keyboard event handlers)",
+        "wcag": "2.1.1"
+      },
+      {
+        "text": "Next slide.\nPrevius slide.",
+        "location": "class='slider__buttons'",
+        "issue": "Keyboard navigation barrier",
+        "details": "Element appears interactive but isn't keyboard accessible",
+        "recommendation": "Add proper keyboard accessibility (tabindex='0' and keyboard event handlers)",
+        "wcag": "2.1.1"
+      },
+      {
+        "text": "About us",
+        "location": "class='banner__btns-wrapper'",
+        "issue": "Keyboard navigation barrier",
+        "details": "Element appears interactive but isn't keyboard accessible",
+        "recommendation": "Add proper keyboard accessibility (tabindex='0' and keyboard event handlers)",
+        "wcag": "2.1.1"
+      }
+    ],
+    "aria_accessibility": {
+      "status": "completed",
+      "issues": [
+        {
+          "text": "[No text]",
+          "issue": "Hidden element contains focusable elements",
+          "details": "Element with aria-hidden='true' contains 3 focusable children",
+          "recommendation": "Remove focusable elements from aria-hidden containers or ensure they also have tabindex='-1'",
+          "wcag": "1.3.1",
+          "severity": "critical"
+        },
+        {
+          "text": "Featured News\nWe need a laser focus on delivering clean power, not a postcode lottery for energy prices\nThe fiscal outlook in the UK may be gloomy, but there’s one beacon of light — we’re on the cusp of the greatest transformation since the Industrial Revolution as we rewire and rebuild our energy system to achieve clean power by 2030.\nRead More",
+          "issue": "Hidden element contains focusable elements",
+          "details": "Element with aria-hidden='true' contains 1 focusable children",
+          "recommendation": "Remove focusable elements from aria-hidden containers or ensure they also have tabindex='-1'",
+          "wcag": "1.3.1",
+          "severity": "critical"
+        },
+        {
+          "text": "[No text]",
+          "issue": "Hidden element contains focusable elements",
+          "details": "Element with aria-hidden='true' contains 1 focusable children",
+          "recommendation": "Remove focusable elements from aria-hidden containers or ensure they also have tabindex='-1'",
+          "wcag": "1.3.1",
+          "severity": "critical"
+        }
+      ]
+    },
+    "color_contrast": {
+      "status": "completed",
+      "wcag_criterion": [
+        "1.4.3",
+        "1.4.11"
+      ],
+      "elements_checked": 741,
+      "issues": [
+        {
+          "text": "Home",
+          "issue": "Insufficient color contrast",
+          "details": "Contrast ratio: 1.00:1 (required: 3.0:1)",
+          "colors": {
+            "text": "rgb(255, 255, 255)",
+            "background": "rgb(255, 255, 255)"
+          },
+          "recommendation": "Increase contrast to at least 3.0:1",
+          "wcag": "1.4.3",
+          "severity": "critical",
+          "font_size": "15.0px",
+          "is_large_text": true
+        },
+        {
+          "text": "About us",
+          "issue": "Insufficient color contrast",
+          "details": "Contrast ratio: 1.00:1 (required: 3.0:1)",
+          "colors": {
+            "text": "rgb(255, 255, 255)",
+            "background": "rgb(255, 255, 255)"
+          },
+          "recommendation": "Increase contrast to at least 3.0:1",
+          "wcag": "1.4.3",
+          "severity": "critical",
+          "font_size": "15.0px",
+          "is_large_text": true
+        },
+        {
+          "text": "Our technologies",
+          "issue": "Insufficient color contrast",
+          "details": "Contrast ratio: 1.00:1 (required: 3.0:1)",
+          "colors": {
+            "text": "rgb(255, 255, 255)",
+            "background": "rgb(255, 255, 255)"
+          },
+          "recommendation": "Increase contrast to at least 3.0:1",
+          "wcag": "1.4.3",
+          "severity": "critical",
+          "font_size": "15.0px",
+          "is_large_text": true
+        },
+        {
+          "text": "Investors",
+          "issue": "Insufficient color contrast",
+          "details": "Contrast ratio: 1.00:1 (required: 3.0:1)",
+          "colors": {
+            "text": "rgb(255, 255, 255)",
+            "background": "rgb(255, 255, 255)"
+          },
+          "recommendation": "Increase contrast to at least 3.0:1",
+          "wcag": "1.4.3",
+          "severity": "critical",
+          "font_size": "15.0px",
+          "is_large_text": true
+        },
+        {
+          "text": "Sustainability",
+          "issue": "Insufficient color contrast",
+          "details": "Contrast ratio: 1.00:1 (required: 3.0:1)",
+          "colors": {
+            "text": "rgb(255, 255, 255)",
+            "background": "rgb(255, 255, 255)"
+          },
+          "recommendation": "Increase contrast to at least 3.0:1",
+          "wcag": "1.4.3",
+          "severity": "critical",
+          "font_size": "15.0px",
+          "is_large_text": true
+        },
+        {
+          "text": "News and views",
+          "issue": "Insufficient color contrast",
+          "details": "Contrast ratio: 1.00:1 (required: 3.0:1)",
+          "colors": {
+            "text": "rgb(255, 255, 255)",
+            "background": "rgb(255, 255, 255)"
+          },
+          "recommendation": "Increase contrast to at least 3.0:1",
+          "wcag": "1.4.3",
+          "severity": "critical",
+          "font_size": "15.0px",
+          "is_large_text": true
+        },
+        {
+          "text": "Careers",
+          "issue": "Insufficient color contrast",
+          "details": "Contrast ratio: 1.00:1 (required: 3.0:1)",
+          "colors": {
+            "text": "rgb(255, 255, 255)",
+            "background": "rgb(255, 255, 255)"
+          },
+          "recommendation": "Increase contrast to at least 3.0:1",
+          "wcag": "1.4.3",
+          "severity": "critical",
+          "font_size": "15.0px",
+          "is_large_text": true
+        },
+        {
+          "text": "Open search form",
+          "issue": "Insufficient color contrast",
+          "details": "Contrast ratio: 1.00:1 (required: 4.5:1)",
+          "colors": {
+            "text": "rgb(255, 255, 255)",
+            "background": "rgb(255, 255, 255)"
+          },
+          "recommendation": "Increase contrast to at least 4.5:1",
+          "wcag": "1.4.3",
+          "severity": "critical",
+          "font_size": "17.0px",
+          "is_large_text": false
+        },
+        {
+          "text": "Open search form",
+          "issue": "Insufficient color contrast",
+          "details": "Contrast ratio: 1.00:1 (required: 4.5:1)",
+          "colors": {
+            "text": "rgb(255, 255, 255)",
+            "background": "rgb(255, 255, 255)"
+          },
+          "recommendation": "Increase contrast to at least 4.5:1",
+          "wcag": "1.4.3",
+          "severity": "critical",
+          "font_size": "17.0px",
+          "is_large_text": false
+        },
+        {
+          "text": "Open search form",
+          "issue": "Insufficient color contrast",
+          "details": "Contrast ratio: 1.00:1 (required: 4.5:1)",
+          "colors": {
+            "text": "rgb(255, 255, 255)",
+            "background": "rgb(255, 255, 255)"
+          },
+          "recommendation": "Increase contrast to at least 4.5:1",
+          "wcag": "1.4.3",
+          "severity": "critical",
+          "font_size": "17.0px",
+          "is_large_text": false
+        },
+        {
+          "text": "Delivering cleaner homegrown energy\nAbout us",
+          "issue": "Insufficient color contrast",
+          "details": "Contrast ratio: 1.00:1 (required: 4.5:1)",
+          "colors": {
+            "text": "rgb(18, 50, 130)",
+            "background": "rgb(18, 50, 130)"
+          },
+          "recommendation": "Increase contrast to at least 4.5:1",
+          "wcag": "1.4.3",
+          "severity": "critical",
+          "font_size": "14.0px",
+          "is_large_text": false
+        },
+        {
+          "text": "Delivering cleaner homegrown energy\nAbout us",
+          "issue": "Insufficient color contrast",
+          "details": "Contrast ratio: 1.00:1 (required: 4.5:1)",
+          "colors": {
+            "text": "rgb(18, 50, 130)",
+            "background": "rgb(18, 50, 130)"
+          },
+          "recommendation": "Increase contrast to at least 4.5:1",
+          "wcag": "1.4.3",
+          "severity": "critical",
+          "font_size": "14.0px",
+          "is_large_text": false
+        },
+        {
+          "text": "Delivering cleaner homegrown energy\nAbout us",
+          "issue": "Insufficient color contrast",
+          "details": "Contrast ratio: 1.00:1 (required: 4.5:1)",
+          "colors": {
+            "text": "rgb(18, 50, 130)",
+            "background": "rgb(18, 50, 130)"
+          },
+          "recommendation": "Increase contrast to at least 4.5:1",
+          "wcag": "1.4.3",
+          "severity": "critical",
+          "font_size": "14.0px",
+          "is_large_text": false
+        },
+        {
+          "text": "About us",
+          "issue": "Insufficient color contrast",
+          "details": "Contrast ratio: 1.00:1 (required: 4.5:1)",
+          "colors": {
+            "text": "rgb(18, 50, 130)",
+            "background": "rgb(18, 50, 130)"
+          },
+          "recommendation": "Increase contrast to at least 4.5:1",
+          "wcag": "1.4.3",
+          "severity": "critical",
+          "font_size": "14.0px",
+          "is_large_text": false
+        },
+        {
+          "text": "Featured News",
+          "issue": "Insufficient color contrast",
+          "details": "Contrast ratio: 1.00:1 (required: 4.5:1)",
+          "colors": {
+            "text": "rgb(255, 255, 255)",
+            "background": "rgb(255, 255, 255)"
+          },
+          "recommendation": "Increase contrast to at least 4.5:1",
+          "wcag": "1.4.3",
+          "severity": "critical",
+          "font_size": "13.0px",
+          "is_large_text": false
+        },
+        {
+          "text": "Read More",
+          "issue": "Insufficient color contrast",
+          "details": "Contrast ratio: 3.50:1 (required: 4.5:1)",
+          "colors": {
+            "text": "rgb(0, 151, 169)",
+            "background": "rgb(255, 255, 255)"
+          },
+          "recommendation": "Increase contrast to at least 4.5:1",
+          "wcag": "1.4.3",
+          "severity": "critical",
+          "font_size": "15.0px",
+          "is_large_text": false
+        },
+        {
+          "text": "Featured News",
+          "issue": "Insufficient color contrast",
+          "details": "Contrast ratio: 1.00:1 (required: 4.5:1)",
+          "colors": {
+            "text": "rgb(255, 255, 255)",
+            "background": "rgb(255, 255, 255)"
+          },
+          "recommendation": "Increase contrast to at least 4.5:1",
+          "wcag": "1.4.3",
+          "severity": "critical",
+          "font_size": "13.0px",
+          "is_large_text": false
+        },
+        {
+          "text": "Read More",
+          "issue": "Insufficient color contrast",
+          "details": "Contrast ratio: 3.50:1 (required: 4.5:1)",
+          "colors": {
+            "text": "rgb(0, 151, 169)",
+            "background": "rgb(255, 255, 255)"
+          },
+          "recommendation": "Increase contrast to at least 4.5:1",
+          "wcag": "1.4.3",
+          "severity": "critical",
+          "font_size": "15.0px",
+          "is_large_text": false
+        },
+        {
+          "text": "Featured News",
+          "issue": "Insufficient color contrast",
+          "details": "Contrast ratio: 1.00:1 (required: 4.5:1)",
+          "colors": {
+            "text": "rgb(255, 255, 255)",
+            "background": "rgb(255, 255, 255)"
+          },
+          "recommendation": "Increase contrast to at least 4.5:1",
+          "wcag": "1.4.3",
+          "severity": "critical",
+          "font_size": "13.0px",
+          "is_large_text": false
+        },
+        {
+          "text": "Read More",
+          "issue": "Insufficient color contrast",
+          "details": "Contrast ratio: 3.50:1 (required: 4.5:1)",
+          "colors": {
+            "text": "rgb(0, 151, 169)",
+            "background": "rgb(255, 255, 255)"
+          },
+          "recommendation": "Increase contrast to at least 4.5:1",
+          "wcag": "1.4.3",
+          "severity": "critical",
+          "font_size": "15.0px",
+          "is_large_text": false
+        },
+        {
+          "text": "Featured News",
+          "issue": "Insufficient color contrast",
+          "details": "Contrast ratio: 1.00:1 (required: 4.5:1)",
+          "colors": {
+            "text": "rgb(255, 255, 255)",
+            "background": "rgb(255, 255, 255)"
+          },
+          "recommendation": "Increase contrast to at least 4.5:1",
+          "wcag": "1.4.3",
+          "severity": "critical",
+          "font_size": "13.0px",
+          "is_large_text": false
+        },
+        {
+          "text": "Read More",
+          "issue": "Insufficient color contrast",
+          "details": "Contrast ratio: 3.50:1 (required: 4.5:1)",
+          "colors": {
+            "text": "rgb(0, 151, 169)",
+            "background": "rgb(255, 255, 255)"
+          },
+          "recommendation": "Increase contrast to at least 4.5:1",
+          "wcag": "1.4.3",
+          "severity": "critical",
+          "font_size": "15.0px",
+          "is_large_text": false
+        },
+        {
+          "text": "01 - 03",
+          "issue": "Insufficient color contrast",
+          "details": "Contrast ratio: 1.68:1 (required: 4.5:1)",
+          "colors": {
+            "text": "rgb(113, 217, 202)",
+            "background": "rgb(255, 255, 255)"
+          },
+          "recommendation": "Increase contrast to at least 4.5:1",
+          "wcag": "1.4.3",
+          "severity": "critical",
+          "font_size": "13.0px",
+          "is_large_text": false
+        },
+        {
+          "text": "01",
+          "issue": "Insufficient color contrast",
+          "details": "Contrast ratio: 1.68:1 (required: 4.5:1)",
+          "colors": {
+            "text": "rgb(113, 217, 202)",
+            "background": "rgb(255, 255, 255)"
+          },
+          "recommendation": "Increase contrast to at least 4.5:1",
+          "wcag": "1.4.3",
+          "severity": "critical",
+          "font_size": "13.0px",
+          "is_large_text": false
+        },
+        {
+          "text": "03",
+          "issue": "Insufficient color contrast",
+          "details": "Contrast ratio: 1.68:1 (required: 4.5:1)",
+          "colors": {
+            "text": "rgb(113, 217, 202)",
+            "background": "rgb(255, 255, 255)"
+          },
+          "recommendation": "Increase contrast to at least 4.5:1",
+          "wcag": "1.4.3",
+          "severity": "critical",
+          "font_size": "13.0px",
+          "is_large_text": false
+        },
+        {
+          "text": "Half-year results 2024/25",
+          "issue": "Insufficient color contrast",
+          "details": "Contrast ratio: 1.50:1 (required: 4.5:1)",
+          "colors": {
+            "text": "rgb(18, 50, 130)",
+            "background": "rgba(66, 85, 99, 0.1)"
+          },
+          "recommendation": "Increase contrast to at least 4.5:1",
+          "wcag": "1.4.3",
+          "severity": "critical",
+          "font_size": "14.0px",
+          "is_large_text": false
+        },
+        {
+          "text": "Half-year results 2024/25",
+          "issue": "Insufficient color contrast",
+          "details": "Contrast ratio: 1.68:1 (required: 3.0:1)",
+          "colors": {
+            "text": "rgb(0, 45, 114)",
+            "background": "rgba(66, 85, 99, 0.1)"
+          },
+          "recommendation": "Increase contrast to at least 3.0:1",
+          "wcag": "1.4.3",
+          "severity": "critical",
+          "font_size": "46.0px",
+          "is_large_text": true
+        },
+        {
+          "text": "SHARE PRICE\n1,537.50 GBX\nThis price is current as ...",
+          "issue": "Insufficient color contrast",
+          "details": "Contrast ratio: 1.69:1 (required: 4.5:1)",
+          "colors": {
+            "text": "rgb(18, 50, 130)",
+            "background": "rgb(0, 0, 61)"
+          },
+          "recommendation": "Increase contrast to at least 4.5:1",
+          "wcag": "1.4.3",
+          "severity": "critical",
+          "font_size": "14.0px",
+          "is_large_text": false
+        },
+        {
+          "text": "Copyright SSE © 2025. All rights reserved.\nContact...",
+          "issue": "Insufficient color contrast",
+          "details": "Contrast ratio: 1.00:1 (required: 4.5:1)",
+          "colors": {
+            "text": "rgb(18, 50, 130)",
+            "background": "rgb(18, 50, 130)"
+          },
+          "recommendation": "Increase contrast to at least 4.5:1",
+          "wcag": "1.4.3",
+          "severity": "critical",
+          "font_size": "14.0px",
+          "is_large_text": false
+        },
+        {
+          "text": "Copyright SSE © 2025. All rights reserved.\nContact...",
+          "issue": "Insufficient color contrast",
+          "details": "Contrast ratio: 1.00:1 (required: 4.5:1)",
+          "colors": {
+            "text": "rgb(18, 50, 130)",
+            "background": "rgb(18, 50, 130)"
+          },
+          "recommendation": "Increase contrast to at least 4.5:1",
+          "wcag": "1.4.3",
+          "severity": "critical",
+          "font_size": "14.0px",
+          "is_large_text": false
+        },
+        {
+          "text": "Copyright SSE © 2025. All rights reserved.\nContact...",
+          "issue": "Insufficient color contrast",
+          "details": "Contrast ratio: 1.00:1 (required: 4.5:1)",
+          "colors": {
+            "text": "rgb(18, 50, 130)",
+            "background": "rgb(18, 50, 130)"
+          },
+          "recommendation": "Increase contrast to at least 4.5:1",
+          "wcag": "1.4.3",
+          "severity": "critical",
+          "font_size": "14.0px",
+          "is_large_text": false
+        },
+        {
+          "text": "Contact us",
+          "issue": "Insufficient color contrast",
+          "details": "Contrast ratio: 1.00:1 (required: 4.5:1)",
+          "colors": {
+            "text": "rgb(18, 50, 130)",
+            "background": "rgb(18, 50, 130)"
+          },
+          "recommendation": "Increase contrast to at least 4.5:1",
+          "wcag": "1.4.3",
+          "severity": "critical",
+          "font_size": "14.0px",
+          "is_large_text": false
+        },
+        {
+          "text": "Privacy notice",
+          "issue": "Insufficient color contrast",
+          "details": "Contrast ratio: 1.00:1 (required: 4.5:1)",
+          "colors": {
+            "text": "rgb(18, 50, 130)",
+            "background": "rgb(18, 50, 130)"
+          },
+          "recommendation": "Increase contrast to at least 4.5:1",
+          "wcag": "1.4.3",
+          "severity": "critical",
+          "font_size": "14.0px",
+          "is_large_text": false
+        },
+        {
+          "text": "Cookie notice",
+          "issue": "Insufficient color contrast",
+          "details": "Contrast ratio: 1.00:1 (required: 4.5:1)",
+          "colors": {
+            "text": "rgb(18, 50, 130)",
+            "background": "rgb(18, 50, 130)"
+          },
+          "recommendation": "Increase contrast to at least 4.5:1",
+          "wcag": "1.4.3",
+          "severity": "critical",
+          "font_size": "14.0px",
+          "is_large_text": false
+        },
+        {
+          "text": "Potential suppliers",
+          "issue": "Insufficient color contrast",
+          "details": "Contrast ratio: 1.00:1 (required: 4.5:1)",
+          "colors": {
+            "text": "rgb(18, 50, 130)",
+            "background": "rgb(18, 50, 130)"
+          },
+          "recommendation": "Increase contrast to at least 4.5:1",
+          "wcag": "1.4.3",
+          "severity": "critical",
+          "font_size": "14.0px",
+          "is_large_text": false
+        },
+        {
+          "text": "Sitemap",
+          "issue": "Insufficient color contrast",
+          "details": "Contrast ratio: 1.00:1 (required: 4.5:1)",
+          "colors": {
+            "text": "rgb(18, 50, 130)",
+            "background": "rgb(18, 50, 130)"
+          },
+          "recommendation": "Increase contrast to at least 4.5:1",
+          "wcag": "1.4.3",
+          "severity": "critical",
+          "font_size": "14.0px",
+          "is_large_text": false
+        },
+        {
+          "text": "Sustainability",
+          "issue": "Insufficient color contrast",
+          "details": "Contrast ratio: 1.00:1 (required: 4.5:1)",
+          "colors": {
+            "text": "rgb(18, 50, 130)",
+            "background": "rgb(18, 50, 130)"
+          },
+          "recommendation": "Increase contrast to at least 4.5:1",
+          "wcag": "1.4.3",
+          "severity": "critical",
+          "font_size": "14.0px",
+          "is_large_text": false
+        },
+        {
+          "text": "Cookie settings",
+          "issue": "Insufficient color contrast",
+          "details": "Contrast ratio: 1.00:1 (required: 4.5:1)",
+          "colors": {
+            "text": "rgb(18, 50, 130)",
+            "background": "rgb(18, 50, 130)"
+          },
+          "recommendation": "Increase contrast to at least 4.5:1",
+          "wcag": "1.4.3",
+          "severity": "critical",
+          "font_size": "14.0px",
+          "is_large_text": false
+        },
+        {
+          "text": "REMIT",
+          "issue": "Insufficient color contrast",
+          "details": "Contrast ratio: 1.00:1 (required: 4.5:1)",
+          "colors": {
+            "text": "rgb(18, 50, 130)",
+            "background": "rgb(18, 50, 130)"
+          },
+          "recommendation": "Increase contrast to at least 4.5:1",
+          "wcag": "1.4.3",
+          "severity": "critical",
+          "font_size": "14.0px",
+          "is_large_text": false
+        },
+        {
+          "type": "a",
+          "text": "Home",
+          "issue": "Insufficient UI component contrast",
+          "details": "Contrast ratio: 1.00:1 (required: 3.0:1)",
+          "colors": {
+            "foreground": "rgb(255, 255, 255)",
+            "background": "rgb(255, 255, 255)"
+          },
+          "recommendation": "Increase component contrast to at least 3.0:1",
+          "wcag": "1.4.11",
+          "severity": "critical"
+        },
+        {
+          "type": "a",
+          "text": "About us",
+          "issue": "Insufficient UI component contrast",
+          "details": "Contrast ratio: 1.00:1 (required: 3.0:1)",
+          "colors": {
+            "foreground": "rgb(255, 255, 255)",
+            "background": "rgb(255, 255, 255)"
+          },
+          "recommendation": "Increase component contrast to at least 3.0:1",
+          "wcag": "1.4.11",
+          "severity": "critical"
+        },
+        {
+          "type": "a",
+          "text": "Our technologies",
+          "issue": "Insufficient UI component contrast",
+          "details": "Contrast ratio: 1.00:1 (required: 3.0:1)",
+          "colors": {
+            "foreground": "rgb(255, 255, 255)",
+            "background": "rgb(255, 255, 255)"
+          },
+          "recommendation": "Increase component contrast to at least 3.0:1",
+          "wcag": "1.4.11",
+          "severity": "critical"
+        },
+        {
+          "type": "a",
+          "text": "Investors",
+          "issue": "Insufficient UI component contrast",
+          "details": "Contrast ratio: 1.00:1 (required: 3.0:1)",
+          "colors": {
+            "foreground": "rgb(255, 255, 255)",
+            "background": "rgb(255, 255, 255)"
+          },
+          "recommendation": "Increase component contrast to at least 3.0:1",
+          "wcag": "1.4.11",
+          "severity": "critical"
+        },
+        {
+          "type": "a",
+          "text": "Sustainability",
+          "issue": "Insufficient UI component contrast",
+          "details": "Contrast ratio: 1.00:1 (required: 3.0:1)",
+          "colors": {
+            "foreground": "rgb(255, 255, 255)",
+            "background": "rgb(255, 255, 255)"
+          },
+          "recommendation": "Increase component contrast to at least 3.0:1",
+          "wcag": "1.4.11",
+          "severity": "critical"
+        },
+        {
+          "type": "a",
+          "text": "News and views",
+          "issue": "Insufficient UI component contrast",
+          "details": "Contrast ratio: 1.00:1 (required: 3.0:1)",
+          "colors": {
+            "foreground": "rgb(255, 255, 255)",
+            "background": "rgb(255, 255, 255)"
+          },
+          "recommendation": "Increase component contrast to at least 3.0:1",
+          "wcag": "1.4.11",
+          "severity": "critical"
+        },
+        {
+          "type": "a",
+          "text": "Careers",
+          "issue": "Insufficient UI component contrast",
+          "details": "Contrast ratio: 1.00:1 (required: 3.0:1)",
+          "colors": {
+            "foreground": "rgb(255, 255, 255)",
+            "background": "rgb(255, 255, 255)"
+          },
+          "recommendation": "Increase component contrast to at least 3.0:1",
+          "wcag": "1.4.11",
+          "severity": "critical"
+        },
+        {
+          "type": "button",
+          "text": "Open search form",
+          "issue": "Insufficient UI component contrast",
+          "details": "Contrast ratio: 1.00:1 (required: 3.0:1)",
+          "colors": {
+            "foreground": "rgb(255, 255, 255)",
+            "background": "rgb(255, 255, 255)"
+          },
+          "recommendation": "Increase component contrast to at least 3.0:1",
+          "wcag": "1.4.11",
+          "severity": "critical"
+        },
+        {
+          "type": "button",
+          "text": "[button]",
+          "issue": "Insufficient UI component contrast",
+          "details": "Contrast ratio: 1.68:1 (required: 3.0:1)",
+          "colors": {
+            "foreground": "rgb(113, 217, 202)",
+            "background": "rgb(255, 255, 255)"
+          },
+          "recommendation": "Increase component contrast to at least 3.0:1",
+          "wcag": "1.4.11",
+          "severity": "critical"
+        },
+        {
+          "type": "button",
+          "text": "Next slide.",
+          "issue": "Insufficient UI component contrast",
+          "details": "Contrast ratio: 1.68:1 (required: 3.0:1)",
+          "colors": {
+            "foreground": "rgb(113, 217, 202)",
+            "background": "rgb(255, 255, 255)"
+          },
+          "recommendation": "Increase component contrast to at least 3.0:1",
+          "wcag": "1.4.11",
+          "severity": "critical"
+        },
+        {
+          "type": "button",
+          "text": "Previus slide.",
+          "issue": "Insufficient UI component contrast",
+          "details": "Contrast ratio: 1.68:1 (required: 3.0:1)",
+          "colors": {
+            "foreground": "rgb(113, 217, 202)",
+            "background": "rgb(255, 255, 255)"
+          },
+          "recommendation": "Increase component contrast to at least 3.0:1",
+          "wcag": "1.4.11",
+          "severity": "critical"
+        }
+      ],
+      "element_count": 741,
+      "pass_rate": 93.25
+    },
+    "image_accessibility": {
+      "status": "completed",
+      "wcag_criterion": "1.1.1",
+      "image_count": 6,
+      "svg_count": 1,
+      "canvas_count": 0,
+      "other_nontext_count": 0,
+      "issues": [
+        {
+          "element_info": {
+            "unique_id": "f7f853d4",
+            "tag": "img",
+            "id": "",
+            "class": "banner__small-img",
+            "src": "website-banner-desktop.png",
+            "position": {
+              "x": 732.9000244140625,
+              "y": 229.21665954589844,
+              "width": 640.0999755859375,
+              "height": 465.1000061035156
+            },
+            "dom_path": "body/div[2]/main[1]/section[1]/div[1]/div[1]/div[1]/div[1]/div[2]/picture[1]/img[1]",
+            "css_selector": "img.banner__small-img",
+            "visible": true,
+            "attributes": {
+              "alt": "",
+              "class": "banner__small-img",
+              "src": "/media/uatfqlnv/website-banner-desktop.png"
+            }
+          },
+          "issue": "Potentially informative image has empty alt text",
+          "details": "Image appears to convey information but has empty alt text",
+          "recommendation": "Add descriptive alt text if the image conveys information",
+          "wcag": "1.1.1",
+          "severity": "warning"
+        },
+        {
+          "element_info": {
+            "unique_id": "img-5",
+            "tag": "img",
+            "id": "",
+            "class": "",
+            "src": "battery_storage_fareham.jpg",
+            "position": {
+              "x": 17.0,
+              "y": 4572.5,
+              "width": 1332.0,
+              "height": 887.3499755859375
+            },
+            "dom_path": "body/div[2]/main[1]/section[6]/div[1]/div[2]/img[1]",
+            "css_selector": "div.full-image__image > img:nth-child(1)",
+            "visible": true,
+            "attributes": {
+              "alt": "",
+              "src": "/media/2kjpiyrm/battery_storage_fareham.jpg?width=1366&height=910&v=1da335765a5ffc0"
+            }
+          },
+          "issue": "Potentially informative image has empty alt text",
+          "details": "Image appears to convey information but has empty alt text",
+          "recommendation": "Add descriptive alt text if the image conveys information",
+          "wcag": "1.1.1",
+          "severity": "warning"
+        },
+        {
+          "element_info": {
+            "unique_id": "0d896000",
+            "tag": "span",
+            "id": "",
+            "class": "arrow icon font-ico-chevron-down main-nav__secondary-arrow",
+            "src": "",
+            "position": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 0.0,
+              "height": 0.0
+            },
+            "dom_path": "body/div[2]/header[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/nav[1]/ul[1]/li[2]/div[1]/ul[1]/li[2]/div[1]/span[1]",
+            "css_selector": "span.arrow",
+            "visible": false,
+            "attributes": {
+              "class": "arrow icon font-ico-chevron-down main-nav__secondary-arrow"
+            },
+            "parent_tag": "div",
+            "parent_text": "",
+            "parent_role": ""
+          },
+          "issue": "Icon lacks text alternative",
+          "details": "Icon has no accessible name and is not hidden from screen readers",
+          "recommendation": "Add aria-label or make decorative with aria-hidden='true'",
+          "wcag": "1.1.1",
+          "severity": "warning"
+        },
+        {
+          "element_info": {
+            "unique_id": "79f6226a",
+            "tag": "span",
+            "id": "",
+            "class": "arrow icon font-ico-chevron-down main-nav__secondary-arrow",
+            "src": "",
+            "position": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 0.0,
+              "height": 0.0
+            },
+            "dom_path": "body/div[2]/header[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/nav[1]/ul[1]/li[2]/div[1]/ul[1]/li[3]/div[1]/span[1]",
+            "css_selector": "span.arrow",
+            "visible": false,
+            "attributes": {
+              "class": "arrow icon font-ico-chevron-down main-nav__secondary-arrow"
+            },
+            "parent_tag": "div",
+            "parent_text": "",
+            "parent_role": ""
+          },
+          "issue": "Icon lacks text alternative",
+          "details": "Icon has no accessible name and is not hidden from screen readers",
+          "recommendation": "Add aria-label or make decorative with aria-hidden='true'",
+          "wcag": "1.1.1",
+          "severity": "warning"
+        },
+        {
+          "element_info": {
+            "unique_id": "4ece4376",
+            "tag": "span",
+            "id": "",
+            "class": "arrow icon font-ico-chevron-down main-nav__secondary-arrow",
+            "src": "",
+            "position": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 0.0,
+              "height": 0.0
+            },
+            "dom_path": "body/div[2]/header[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/nav[1]/ul[1]/li[2]/div[1]/ul[1]/li[6]/div[1]/span[1]",
+            "css_selector": "span.arrow",
+            "visible": false,
+            "attributes": {
+              "class": "arrow icon font-ico-chevron-down main-nav__secondary-arrow"
+            },
+            "parent_tag": "div",
+            "parent_text": "",
+            "parent_role": ""
+          },
+          "issue": "Icon lacks text alternative",
+          "details": "Icon has no accessible name and is not hidden from screen readers",
+          "recommendation": "Add aria-label or make decorative with aria-hidden='true'",
+          "wcag": "1.1.1",
+          "severity": "warning"
+        },
+        {
+          "element_info": {
+            "unique_id": "310d06d1",
+            "tag": "span",
+            "id": "",
+            "class": "arrow icon font-ico-chevron-down main-nav__secondary-arrow",
+            "src": "",
+            "position": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 0.0,
+              "height": 0.0
+            },
+            "dom_path": "body/div[2]/header[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/nav[1]/ul[1]/li[4]/div[1]/ul[1]/li[3]/div[1]/span[1]",
+            "css_selector": "span.arrow",
+            "visible": false,
+            "attributes": {
+              "class": "arrow icon font-ico-chevron-down main-nav__secondary-arrow"
+            },
+            "parent_tag": "div",
+            "parent_text": "",
+            "parent_role": ""
+          },
+          "issue": "Icon lacks text alternative",
+          "details": "Icon has no accessible name and is not hidden from screen readers",
+          "recommendation": "Add aria-label or make decorative with aria-hidden='true'",
+          "wcag": "1.1.1",
+          "severity": "warning"
+        },
+        {
+          "element_info": {
+            "unique_id": "717c83c8",
+            "tag": "span",
+            "id": "",
+            "class": "arrow icon font-ico-chevron-down main-nav__secondary-arrow",
+            "src": "",
+            "position": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 0.0,
+              "height": 0.0
+            },
+            "dom_path": "body/div[2]/header[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/nav[1]/ul[1]/li[4]/div[1]/ul[1]/li[5]/div[1]/span[1]",
+            "css_selector": "span.arrow",
+            "visible": false,
+            "attributes": {
+              "class": "arrow icon font-ico-chevron-down main-nav__secondary-arrow"
+            },
+            "parent_tag": "div",
+            "parent_text": "",
+            "parent_role": ""
+          },
+          "issue": "Icon lacks text alternative",
+          "details": "Icon has no accessible name and is not hidden from screen readers",
+          "recommendation": "Add aria-label or make decorative with aria-hidden='true'",
+          "wcag": "1.1.1",
+          "severity": "warning"
+        },
+        {
+          "element_info": {
+            "unique_id": "cdf0dcf2",
+            "tag": "span",
+            "id": "",
+            "class": "arrow icon font-ico-chevron-down main-nav__secondary-arrow",
+            "src": "",
+            "position": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 0.0,
+              "height": 0.0
+            },
+            "dom_path": "body/div[2]/header[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/nav[1]/ul[1]/li[4]/div[1]/ul[1]/li[8]/div[1]/span[1]",
+            "css_selector": "span.arrow",
+            "visible": false,
+            "attributes": {
+              "class": "arrow icon font-ico-chevron-down main-nav__secondary-arrow"
+            },
+            "parent_tag": "div",
+            "parent_text": "",
+            "parent_role": ""
+          },
+          "issue": "Icon lacks text alternative",
+          "details": "Icon has no accessible name and is not hidden from screen readers",
+          "recommendation": "Add aria-label or make decorative with aria-hidden='true'",
+          "wcag": "1.1.1",
+          "severity": "warning"
+        },
+        {
+          "element_info": {
+            "unique_id": "527ca6a0",
+            "tag": "span",
+            "id": "",
+            "class": "arrow icon font-ico-chevron-down main-nav__secondary-arrow",
+            "src": "",
+            "position": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 0.0,
+              "height": 0.0
+            },
+            "dom_path": "body/div[2]/header[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/nav[1]/ul[1]/li[4]/div[1]/ul[1]/li[9]/div[1]/span[1]",
+            "css_selector": "span.arrow",
+            "visible": false,
+            "attributes": {
+              "class": "arrow icon font-ico-chevron-down main-nav__secondary-arrow"
+            },
+            "parent_tag": "div",
+            "parent_text": "",
+            "parent_role": ""
+          },
+          "issue": "Icon lacks text alternative",
+          "details": "Icon has no accessible name and is not hidden from screen readers",
+          "recommendation": "Add aria-label or make decorative with aria-hidden='true'",
+          "wcag": "1.1.1",
+          "severity": "warning"
+        },
+        {
+          "element_info": {
+            "unique_id": "c00a5358",
+            "tag": "span",
+            "id": "",
+            "class": "arrow icon font-ico-chevron-down main-nav__secondary-arrow",
+            "src": "",
+            "position": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 0.0,
+              "height": 0.0
+            },
+            "dom_path": "body/div[2]/header[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/nav[1]/ul[1]/li[4]/div[1]/ul[1]/li[10]/div[1]/span[1]",
+            "css_selector": "span.arrow",
+            "visible": false,
+            "attributes": {
+              "class": "arrow icon font-ico-chevron-down main-nav__secondary-arrow"
+            },
+            "parent_tag": "div",
+            "parent_text": "",
+            "parent_role": ""
+          },
+          "issue": "Icon lacks text alternative",
+          "details": "Icon has no accessible name and is not hidden from screen readers",
+          "recommendation": "Add aria-label or make decorative with aria-hidden='true'",
+          "wcag": "1.1.1",
+          "severity": "warning"
+        },
+        {
+          "element_info": {
+            "unique_id": "28d3f003",
+            "tag": "span",
+            "id": "",
+            "class": "arrow icon font-ico-chevron-down main-nav__secondary-arrow",
+            "src": "",
+            "position": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 0.0,
+              "height": 0.0
+            },
+            "dom_path": "body/div[2]/header[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/nav[1]/ul[1]/li[7]/div[1]/ul[1]/li[2]/div[1]/span[1]",
+            "css_selector": "span.arrow",
+            "visible": false,
+            "attributes": {
+              "class": "arrow icon font-ico-chevron-down main-nav__secondary-arrow"
+            },
+            "parent_tag": "div",
+            "parent_text": "",
+            "parent_role": ""
+          },
+          "issue": "Icon lacks text alternative",
+          "details": "Icon has no accessible name and is not hidden from screen readers",
+          "recommendation": "Add aria-label or make decorative with aria-hidden='true'",
+          "wcag": "1.1.1",
+          "severity": "warning"
+        },
+        {
+          "element_info": {
+            "unique_id": "be2ec75b",
+            "tag": "span",
+            "id": "",
+            "class": "arrow icon font-ico-chevron-down main-nav__secondary-arrow",
+            "src": "",
+            "position": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 0.0,
+              "height": 0.0
+            },
+            "dom_path": "body/div[2]/header[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/nav[1]/ul[1]/li[7]/div[1]/ul[1]/li[3]/div[1]/span[1]",
+            "css_selector": "span.arrow",
+            "visible": false,
+            "attributes": {
+              "class": "arrow icon font-ico-chevron-down main-nav__secondary-arrow"
+            },
+            "parent_tag": "div",
+            "parent_text": "",
+            "parent_role": ""
+          },
+          "issue": "Icon lacks text alternative",
+          "details": "Icon has no accessible name and is not hidden from screen readers",
+          "recommendation": "Add aria-label or make decorative with aria-hidden='true'",
+          "wcag": "1.1.1",
+          "severity": "warning"
+        },
+        {
+          "element_info": {
+            "unique_id": "f6130dca",
+            "tag": "span",
+            "id": "",
+            "class": "arrow icon font-ico-chevron-down main-nav__secondary-arrow",
+            "src": "",
+            "position": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 0.0,
+              "height": 0.0
+            },
+            "dom_path": "body/div[2]/header[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/nav[1]/ul[1]/li[7]/div[1]/ul[1]/li[5]/div[1]/span[1]",
+            "css_selector": "span.arrow",
+            "visible": false,
+            "attributes": {
+              "class": "arrow icon font-ico-chevron-down main-nav__secondary-arrow"
+            },
+            "parent_tag": "div",
+            "parent_text": "",
+            "parent_role": ""
+          },
+          "issue": "Icon lacks text alternative",
+          "details": "Icon has no accessible name and is not hidden from screen readers",
+          "recommendation": "Add aria-label or make decorative with aria-hidden='true'",
+          "wcag": "1.1.1",
+          "severity": "warning"
+        },
+        {
+          "element_info": {
+            "unique_id": "11c21c07",
+            "tag": "span",
+            "id": "",
+            "class": "icon font-ico-close",
+            "src": "",
+            "position": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 0.0,
+              "height": 0.0
+            },
+            "dom_path": "body/div[2]/header[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/button[1]/span[2]",
+            "css_selector": "span.icon",
+            "visible": false,
+            "attributes": {
+              "class": "icon font-ico-close"
+            },
+            "parent_tag": "button",
+            "parent_text": "Open search form",
+            "parent_role": ""
+          },
+          "issue": "Decorative icon not hidden from screen readers",
+          "details": "Icon inside a labeled element should be hidden from screen readers",
+          "recommendation": "Add aria-hidden='true' to the icon element",
+          "wcag": "1.1.1",
+          "severity": "warning"
+        },
+        {
+          "element_info": {
+            "unique_id": "70b663df",
+            "tag": "span",
+            "id": "",
+            "class": "icon font-ico-close",
+            "src": "",
+            "position": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 0.0,
+              "height": 0.0
+            },
+            "dom_path": "body/div[2]/header[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/button[1]/span[1]",
+            "css_selector": "span.icon",
+            "visible": false,
+            "attributes": {
+              "class": "icon font-ico-close"
+            },
+            "parent_tag": "button",
+            "parent_text": "",
+            "parent_role": ""
+          },
+          "issue": "Icon lacks text alternative",
+          "details": "Icon has no accessible name and is not hidden from screen readers",
+          "recommendation": "Add aria-label or make decorative with aria-hidden='true'",
+          "wcag": "1.1.1",
+          "severity": "warning"
+        },
+        {
+          "element_info": {
+            "unique_id": "506018cd",
+            "tag": "span",
+            "id": "",
+            "class": "icon font-ico-mail",
+            "src": "",
+            "position": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 0.0,
+              "height": 0.0
+            },
+            "dom_path": "body/div[2]/header[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/a[2]/span[1]",
+            "css_selector": "span.icon",
+            "visible": false,
+            "attributes": {
+              "class": "icon font-ico-mail"
+            },
+            "parent_tag": "a",
+            "parent_text": "",
+            "parent_role": ""
+          },
+          "issue": "Icon lacks text alternative",
+          "details": "Icon has no accessible name and is not hidden from screen readers",
+          "recommendation": "Add aria-label or make decorative with aria-hidden='true'",
+          "wcag": "1.1.1",
+          "severity": "warning"
+        },
+        {
+          "element_info": {
+            "unique_id": "801cb4b1",
+            "tag": "span",
+            "id": "",
+            "class": "nav-toggle__menu icon font-ico-hamburger",
+            "src": "",
+            "position": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 0.0,
+              "height": 0.0
+            },
+            "dom_path": "body/div[2]/header[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/button[2]/span[1]",
+            "css_selector": "span.nav-toggle__menu",
+            "visible": false,
+            "attributes": {
+              "class": "nav-toggle__menu icon font-ico-hamburger"
+            },
+            "parent_tag": "button",
+            "parent_text": "",
+            "parent_role": ""
+          },
+          "issue": "Icon lacks text alternative",
+          "details": "Icon has no accessible name and is not hidden from screen readers",
+          "recommendation": "Add aria-label or make decorative with aria-hidden='true'",
+          "wcag": "1.1.1",
+          "severity": "warning"
+        },
+        {
+          "element_info": {
+            "unique_id": "a67d86d7",
+            "tag": "span",
+            "id": "",
+            "class": "nav-toggle__menu-close icon font-ico-close",
+            "src": "",
+            "position": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 0.0,
+              "height": 0.0
+            },
+            "dom_path": "body/div[2]/header[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/button[2]/span[2]",
+            "css_selector": "span.nav-toggle__menu-close",
+            "visible": false,
+            "attributes": {
+              "class": "nav-toggle__menu-close icon font-ico-close"
+            },
+            "parent_tag": "button",
+            "parent_text": "",
+            "parent_role": ""
+          },
+          "issue": "Icon lacks text alternative",
+          "details": "Icon has no accessible name and is not hidden from screen readers",
+          "recommendation": "Add aria-label or make decorative with aria-hidden='true'",
+          "wcag": "1.1.1",
+          "severity": "warning"
+        },
+        {
+          "element_info": {
+            "unique_id": "f83527cc",
+            "tag": "span",
+            "id": "",
+            "class": "icon font-ico-search",
+            "src": "",
+            "position": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 0.0,
+              "height": 0.0
+            },
+            "dom_path": "body/div[2]/header[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/form[1]/div[1]/button[1]/span[1]",
+            "css_selector": "span.icon",
+            "visible": false,
+            "attributes": {
+              "class": "icon font-ico-search"
+            },
+            "parent_tag": "button",
+            "parent_text": "",
+            "parent_role": ""
+          },
+          "issue": "Icon lacks text alternative",
+          "details": "Icon has no accessible name and is not hidden from screen readers",
+          "recommendation": "Add aria-label or make decorative with aria-hidden='true'",
+          "wcag": "1.1.1",
+          "severity": "warning"
+        },
+        {
+          "element_info": {
+            "unique_id": "b1a37f41",
+            "tag": "span",
+            "id": "",
+            "class": "nav-toggle__menu icon font-ico-hamburger",
+            "src": "",
+            "position": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 0.0,
+              "height": 0.0
+            },
+            "dom_path": "body/div[2]/header[1]/button[1]/span[1]",
+            "css_selector": "span.nav-toggle__menu",
+            "visible": false,
+            "attributes": {
+              "class": "nav-toggle__menu icon font-ico-hamburger"
+            },
+            "parent_tag": "button",
+            "parent_text": "",
+            "parent_role": ""
+          },
+          "issue": "Icon lacks text alternative",
+          "details": "Icon has no accessible name and is not hidden from screen readers",
+          "recommendation": "Add aria-label or make decorative with aria-hidden='true'",
+          "wcag": "1.1.1",
+          "severity": "warning"
+        },
+        {
+          "element_info": {
+            "unique_id": "5cc4a837",
+            "tag": "span",
+            "id": "",
+            "class": "nav-toggle__menu-close icon font-ico-close",
+            "src": "",
+            "position": {
+              "x": 0.0,
+              "y": 0.0,
+              "width": 0.0,
+              "height": 0.0
+            },
+            "dom_path": "body/div[2]/header[1]/button[1]/span[2]",
+            "css_selector": "span.nav-toggle__menu-close",
+            "visible": false,
+            "attributes": {
+              "class": "nav-toggle__menu-close icon font-ico-close"
+            },
+            "parent_tag": "button",
+            "parent_text": "",
+            "parent_role": ""
+          },
+          "issue": "Icon lacks text alternative",
+          "details": "Icon has no accessible name and is not hidden from screen readers",
+          "recommendation": "Add aria-label or make decorative with aria-hidden='true'",
+          "wcag": "1.1.1",
+          "severity": "warning"
+        },
+        {
+          "element_info": {
+            "unique_id": "dfe3d389",
+            "tag": "span",
+            "id": "",
+            "class": "banner__scroll-icon banner__scroll-icon--first icon font-ico-arrow",
+            "src": "",
+            "position": {
+              "x": 26.0,
+              "y": 656.0,
+              "width": 20.0,
+              "height": 20.0
+            },
+            "dom_path": "body/div[2]/main[1]/section[1]/div[1]/button[1]/span[1]",
+            "css_selector": "span.banner__scroll-icon",
+            "visible": false,
+            "attributes": {
+              "class": "banner__scroll-icon banner__scroll-icon--first icon font-ico-arrow"
+            },
+            "parent_tag": "button",
+            "parent_text": "",
+            "parent_role": ""
+          },
+          "issue": "Icon lacks text alternative",
+          "details": "Icon has no accessible name and is not hidden from screen readers",
+          "recommendation": "Add aria-label or make decorative with aria-hidden='true'",
+          "wcag": "1.1.1",
+          "severity": "warning"
+        },
+        {
+          "element_info": {
+            "unique_id": "de986a9a",
+            "tag": "span",
+            "id": "",
+            "class": "banner__scroll-icon banner__scroll-icon--second icon font-ico-arrow",
+            "src": "",
+            "position": {
+              "x": 26.0,
+              "y": 695.0,
+              "width": 20.0,
+              "height": 20.0
+            },
+            "dom_path": "body/div[2]/main[1]/section[1]/div[1]/button[1]/span[2]",
+            "css_selector": "span.banner__scroll-icon",
+            "visible": true,
+            "attributes": {
+              "class": "banner__scroll-icon banner__scroll-icon--second icon font-ico-arrow"
+            },
+            "parent_tag": "button",
+            "parent_text": "",
+            "parent_role": ""
+          },
+          "issue": "Icon lacks text alternative",
+          "details": "Icon has no accessible name and is not hidden from screen readers",
+          "recommendation": "Add aria-label or make decorative with aria-hidden='true'",
+          "wcag": "1.1.1",
+          "severity": "warning"
+        },
+        {
+          "element_info": {
+            "unique_id": "f5d31b02",
+            "tag": "span",
+            "id": "",
+            "class": "icon font-ico-arrow-top",
+            "src": "",
+            "position": {
+              "x": 1319.9833984375,
+              "y": 536.0,
+              "width": 14.050003051757812,
+              "height": 16.0
+            },
+            "dom_path": "body/div[2]/footer[1]/div[1]/div[1]/button[1]/span[2]",
+            "css_selector": "span.icon",
+            "visible": false,
+            "attributes": {
+              "class": "icon font-ico-arrow-top"
+            },
+            "parent_tag": "button",
+            "parent_text": "",
+            "parent_role": ""
+          },
+          "issue": "Icon lacks text alternative",
+          "details": "Icon has no accessible name and is not hidden from screen readers",
+          "recommendation": "Add aria-label or make decorative with aria-hidden='true'",
+          "wcag": "1.1.1",
+          "severity": "warning"
+        },
+        {
+          "element_info": {
+            "unique_id": "10af5edd",
+            "tag": "span",
+            "id": "",
+            "class": "icon font-ico-extern",
+            "src": "",
+            "position": {
+              "x": 597.2833251953125,
+              "y": 6841.85009765625,
+              "width": 13.0,
+              "height": 13.0
+            },
+            "dom_path": "body/div[2]/footer[1]/div[2]/div[1]/div[1]/ul[1]/li[8]/a[1]/span[1]",
+            "css_selector": "span.icon",
+            "visible": true,
+            "attributes": {
+              "class": "icon font-ico-extern"
+            },
+            "parent_tag": "a",
+            "parent_text": "REMIT",
+            "parent_role": ""
+          },
+          "issue": "Decorative icon not hidden from screen readers",
+          "details": "Icon inside a labeled element should be hidden from screen readers",
+          "recommendation": "Add aria-hidden='true' to the icon element",
+          "wcag": "1.1.1",
+          "severity": "warning"
+        }
+      ],
+      "grouped_issues": {
+        "Potentially informative image has empty alt text": {
+          "count": 2,
+          "instances": [
+            {
+              "element_info": {
+                "unique_id": "f7f853d4",
+                "tag": "img",
+                "id": "",
+                "class": "banner__small-img",
+                "src": "website-banner-desktop.png",
+                "position": {
+                  "x": 732.9000244140625,
+                  "y": 229.21665954589844,
+                  "width": 640.0999755859375,
+                  "height": 465.1000061035156
+                },
+                "dom_path": "body/div[2]/main[1]/section[1]/div[1]/div[1]/div[1]/div[1]/div[2]/picture[1]/img[1]",
+                "css_selector": "img.banner__small-img",
+                "visible": true,
+                "attributes": {
+                  "alt": "",
+                  "class": "banner__small-img",
+                  "src": "/media/uatfqlnv/website-banner-desktop.png"
+                }
+              },
+              "details": "Image appears to convey information but has empty alt text"
+            },
+            {
+              "element_info": {
+                "unique_id": "img-5",
+                "tag": "img",
+                "id": "",
+                "class": "",
+                "src": "battery_storage_fareham.jpg",
+                "position": {
+                  "x": 17.0,
+                  "y": 4572.5,
+                  "width": 1332.0,
+                  "height": 887.3499755859375
+                },
+                "dom_path": "body/div[2]/main[1]/section[6]/div[1]/div[2]/img[1]",
+                "css_selector": "div.full-image__image > img:nth-child(1)",
+                "visible": true,
+                "attributes": {
+                  "alt": "",
+                  "src": "/media/2kjpiyrm/battery_storage_fareham.jpg?width=1366&height=910&v=1da335765a5ffc0"
+                }
+              },
+              "details": "Image appears to convey information but has empty alt text"
+            }
+          ],
+          "severity": "warning",
+          "recommendation": "Add descriptive alt text if the image conveys information",
+          "wcag": "1.1.1"
+        },
+        "Icon lacks text alternative": {
+          "count": 21,
+          "instances": [
+            {
+              "element_info": {
+                "unique_id": "0d896000",
+                "tag": "span",
+                "id": "",
+                "class": "arrow icon font-ico-chevron-down main-nav__secondary-arrow",
+                "src": "",
+                "position": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "width": 0.0,
+                  "height": 0.0
+                },
+                "dom_path": "body/div[2]/header[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/nav[1]/ul[1]/li[2]/div[1]/ul[1]/li[2]/div[1]/span[1]",
+                "css_selector": "span.arrow",
+                "visible": false,
+                "attributes": {
+                  "class": "arrow icon font-ico-chevron-down main-nav__secondary-arrow"
+                },
+                "parent_tag": "div",
+                "parent_text": "",
+                "parent_role": ""
+              },
+              "details": "Icon has no accessible name and is not hidden from screen readers"
+            },
+            {
+              "element_info": {
+                "unique_id": "79f6226a",
+                "tag": "span",
+                "id": "",
+                "class": "arrow icon font-ico-chevron-down main-nav__secondary-arrow",
+                "src": "",
+                "position": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "width": 0.0,
+                  "height": 0.0
+                },
+                "dom_path": "body/div[2]/header[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/nav[1]/ul[1]/li[2]/div[1]/ul[1]/li[3]/div[1]/span[1]",
+                "css_selector": "span.arrow",
+                "visible": false,
+                "attributes": {
+                  "class": "arrow icon font-ico-chevron-down main-nav__secondary-arrow"
+                },
+                "parent_tag": "div",
+                "parent_text": "",
+                "parent_role": ""
+              },
+              "details": "Icon has no accessible name and is not hidden from screen readers"
+            },
+            {
+              "element_info": {
+                "unique_id": "4ece4376",
+                "tag": "span",
+                "id": "",
+                "class": "arrow icon font-ico-chevron-down main-nav__secondary-arrow",
+                "src": "",
+                "position": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "width": 0.0,
+                  "height": 0.0
+                },
+                "dom_path": "body/div[2]/header[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/nav[1]/ul[1]/li[2]/div[1]/ul[1]/li[6]/div[1]/span[1]",
+                "css_selector": "span.arrow",
+                "visible": false,
+                "attributes": {
+                  "class": "arrow icon font-ico-chevron-down main-nav__secondary-arrow"
+                },
+                "parent_tag": "div",
+                "parent_text": "",
+                "parent_role": ""
+              },
+              "details": "Icon has no accessible name and is not hidden from screen readers"
+            },
+            {
+              "element_info": {
+                "unique_id": "310d06d1",
+                "tag": "span",
+                "id": "",
+                "class": "arrow icon font-ico-chevron-down main-nav__secondary-arrow",
+                "src": "",
+                "position": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "width": 0.0,
+                  "height": 0.0
+                },
+                "dom_path": "body/div[2]/header[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/nav[1]/ul[1]/li[4]/div[1]/ul[1]/li[3]/div[1]/span[1]",
+                "css_selector": "span.arrow",
+                "visible": false,
+                "attributes": {
+                  "class": "arrow icon font-ico-chevron-down main-nav__secondary-arrow"
+                },
+                "parent_tag": "div",
+                "parent_text": "",
+                "parent_role": ""
+              },
+              "details": "Icon has no accessible name and is not hidden from screen readers"
+            },
+            {
+              "element_info": {
+                "unique_id": "717c83c8",
+                "tag": "span",
+                "id": "",
+                "class": "arrow icon font-ico-chevron-down main-nav__secondary-arrow",
+                "src": "",
+                "position": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "width": 0.0,
+                  "height": 0.0
+                },
+                "dom_path": "body/div[2]/header[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/nav[1]/ul[1]/li[4]/div[1]/ul[1]/li[5]/div[1]/span[1]",
+                "css_selector": "span.arrow",
+                "visible": false,
+                "attributes": {
+                  "class": "arrow icon font-ico-chevron-down main-nav__secondary-arrow"
+                },
+                "parent_tag": "div",
+                "parent_text": "",
+                "parent_role": ""
+              },
+              "details": "Icon has no accessible name and is not hidden from screen readers"
+            },
+            {
+              "element_info": {
+                "unique_id": "cdf0dcf2",
+                "tag": "span",
+                "id": "",
+                "class": "arrow icon font-ico-chevron-down main-nav__secondary-arrow",
+                "src": "",
+                "position": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "width": 0.0,
+                  "height": 0.0
+                },
+                "dom_path": "body/div[2]/header[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/nav[1]/ul[1]/li[4]/div[1]/ul[1]/li[8]/div[1]/span[1]",
+                "css_selector": "span.arrow",
+                "visible": false,
+                "attributes": {
+                  "class": "arrow icon font-ico-chevron-down main-nav__secondary-arrow"
+                },
+                "parent_tag": "div",
+                "parent_text": "",
+                "parent_role": ""
+              },
+              "details": "Icon has no accessible name and is not hidden from screen readers"
+            },
+            {
+              "element_info": {
+                "unique_id": "527ca6a0",
+                "tag": "span",
+                "id": "",
+                "class": "arrow icon font-ico-chevron-down main-nav__secondary-arrow",
+                "src": "",
+                "position": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "width": 0.0,
+                  "height": 0.0
+                },
+                "dom_path": "body/div[2]/header[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/nav[1]/ul[1]/li[4]/div[1]/ul[1]/li[9]/div[1]/span[1]",
+                "css_selector": "span.arrow",
+                "visible": false,
+                "attributes": {
+                  "class": "arrow icon font-ico-chevron-down main-nav__secondary-arrow"
+                },
+                "parent_tag": "div",
+                "parent_text": "",
+                "parent_role": ""
+              },
+              "details": "Icon has no accessible name and is not hidden from screen readers"
+            },
+            {
+              "element_info": {
+                "unique_id": "c00a5358",
+                "tag": "span",
+                "id": "",
+                "class": "arrow icon font-ico-chevron-down main-nav__secondary-arrow",
+                "src": "",
+                "position": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "width": 0.0,
+                  "height": 0.0
+                },
+                "dom_path": "body/div[2]/header[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/nav[1]/ul[1]/li[4]/div[1]/ul[1]/li[10]/div[1]/span[1]",
+                "css_selector": "span.arrow",
+                "visible": false,
+                "attributes": {
+                  "class": "arrow icon font-ico-chevron-down main-nav__secondary-arrow"
+                },
+                "parent_tag": "div",
+                "parent_text": "",
+                "parent_role": ""
+              },
+              "details": "Icon has no accessible name and is not hidden from screen readers"
+            },
+            {
+              "element_info": {
+                "unique_id": "28d3f003",
+                "tag": "span",
+                "id": "",
+                "class": "arrow icon font-ico-chevron-down main-nav__secondary-arrow",
+                "src": "",
+                "position": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "width": 0.0,
+                  "height": 0.0
+                },
+                "dom_path": "body/div[2]/header[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/nav[1]/ul[1]/li[7]/div[1]/ul[1]/li[2]/div[1]/span[1]",
+                "css_selector": "span.arrow",
+                "visible": false,
+                "attributes": {
+                  "class": "arrow icon font-ico-chevron-down main-nav__secondary-arrow"
+                },
+                "parent_tag": "div",
+                "parent_text": "",
+                "parent_role": ""
+              },
+              "details": "Icon has no accessible name and is not hidden from screen readers"
+            },
+            {
+              "element_info": {
+                "unique_id": "be2ec75b",
+                "tag": "span",
+                "id": "",
+                "class": "arrow icon font-ico-chevron-down main-nav__secondary-arrow",
+                "src": "",
+                "position": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "width": 0.0,
+                  "height": 0.0
+                },
+                "dom_path": "body/div[2]/header[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/nav[1]/ul[1]/li[7]/div[1]/ul[1]/li[3]/div[1]/span[1]",
+                "css_selector": "span.arrow",
+                "visible": false,
+                "attributes": {
+                  "class": "arrow icon font-ico-chevron-down main-nav__secondary-arrow"
+                },
+                "parent_tag": "div",
+                "parent_text": "",
+                "parent_role": ""
+              },
+              "details": "Icon has no accessible name and is not hidden from screen readers"
+            },
+            {
+              "element_info": {
+                "unique_id": "f6130dca",
+                "tag": "span",
+                "id": "",
+                "class": "arrow icon font-ico-chevron-down main-nav__secondary-arrow",
+                "src": "",
+                "position": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "width": 0.0,
+                  "height": 0.0
+                },
+                "dom_path": "body/div[2]/header[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/nav[1]/ul[1]/li[7]/div[1]/ul[1]/li[5]/div[1]/span[1]",
+                "css_selector": "span.arrow",
+                "visible": false,
+                "attributes": {
+                  "class": "arrow icon font-ico-chevron-down main-nav__secondary-arrow"
+                },
+                "parent_tag": "div",
+                "parent_text": "",
+                "parent_role": ""
+              },
+              "details": "Icon has no accessible name and is not hidden from screen readers"
+            },
+            {
+              "element_info": {
+                "unique_id": "70b663df",
+                "tag": "span",
+                "id": "",
+                "class": "icon font-ico-close",
+                "src": "",
+                "position": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "width": 0.0,
+                  "height": 0.0
+                },
+                "dom_path": "body/div[2]/header[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/button[1]/span[1]",
+                "css_selector": "span.icon",
+                "visible": false,
+                "attributes": {
+                  "class": "icon font-ico-close"
+                },
+                "parent_tag": "button",
+                "parent_text": "",
+                "parent_role": ""
+              },
+              "details": "Icon has no accessible name and is not hidden from screen readers"
+            },
+            {
+              "element_info": {
+                "unique_id": "506018cd",
+                "tag": "span",
+                "id": "",
+                "class": "icon font-ico-mail",
+                "src": "",
+                "position": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "width": 0.0,
+                  "height": 0.0
+                },
+                "dom_path": "body/div[2]/header[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/a[2]/span[1]",
+                "css_selector": "span.icon",
+                "visible": false,
+                "attributes": {
+                  "class": "icon font-ico-mail"
+                },
+                "parent_tag": "a",
+                "parent_text": "",
+                "parent_role": ""
+              },
+              "details": "Icon has no accessible name and is not hidden from screen readers"
+            },
+            {
+              "element_info": {
+                "unique_id": "801cb4b1",
+                "tag": "span",
+                "id": "",
+                "class": "nav-toggle__menu icon font-ico-hamburger",
+                "src": "",
+                "position": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "width": 0.0,
+                  "height": 0.0
+                },
+                "dom_path": "body/div[2]/header[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/button[2]/span[1]",
+                "css_selector": "span.nav-toggle__menu",
+                "visible": false,
+                "attributes": {
+                  "class": "nav-toggle__menu icon font-ico-hamburger"
+                },
+                "parent_tag": "button",
+                "parent_text": "",
+                "parent_role": ""
+              },
+              "details": "Icon has no accessible name and is not hidden from screen readers"
+            },
+            {
+              "element_info": {
+                "unique_id": "a67d86d7",
+                "tag": "span",
+                "id": "",
+                "class": "nav-toggle__menu-close icon font-ico-close",
+                "src": "",
+                "position": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "width": 0.0,
+                  "height": 0.0
+                },
+                "dom_path": "body/div[2]/header[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/button[2]/span[2]",
+                "css_selector": "span.nav-toggle__menu-close",
+                "visible": false,
+                "attributes": {
+                  "class": "nav-toggle__menu-close icon font-ico-close"
+                },
+                "parent_tag": "button",
+                "parent_text": "",
+                "parent_role": ""
+              },
+              "details": "Icon has no accessible name and is not hidden from screen readers"
+            },
+            {
+              "element_info": {
+                "unique_id": "f83527cc",
+                "tag": "span",
+                "id": "",
+                "class": "icon font-ico-search",
+                "src": "",
+                "position": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "width": 0.0,
+                  "height": 0.0
+                },
+                "dom_path": "body/div[2]/header[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/form[1]/div[1]/button[1]/span[1]",
+                "css_selector": "span.icon",
+                "visible": false,
+                "attributes": {
+                  "class": "icon font-ico-search"
+                },
+                "parent_tag": "button",
+                "parent_text": "",
+                "parent_role": ""
+              },
+              "details": "Icon has no accessible name and is not hidden from screen readers"
+            },
+            {
+              "element_info": {
+                "unique_id": "b1a37f41",
+                "tag": "span",
+                "id": "",
+                "class": "nav-toggle__menu icon font-ico-hamburger",
+                "src": "",
+                "position": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "width": 0.0,
+                  "height": 0.0
+                },
+                "dom_path": "body/div[2]/header[1]/button[1]/span[1]",
+                "css_selector": "span.nav-toggle__menu",
+                "visible": false,
+                "attributes": {
+                  "class": "nav-toggle__menu icon font-ico-hamburger"
+                },
+                "parent_tag": "button",
+                "parent_text": "",
+                "parent_role": ""
+              },
+              "details": "Icon has no accessible name and is not hidden from screen readers"
+            },
+            {
+              "element_info": {
+                "unique_id": "5cc4a837",
+                "tag": "span",
+                "id": "",
+                "class": "nav-toggle__menu-close icon font-ico-close",
+                "src": "",
+                "position": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "width": 0.0,
+                  "height": 0.0
+                },
+                "dom_path": "body/div[2]/header[1]/button[1]/span[2]",
+                "css_selector": "span.nav-toggle__menu-close",
+                "visible": false,
+                "attributes": {
+                  "class": "nav-toggle__menu-close icon font-ico-close"
+                },
+                "parent_tag": "button",
+                "parent_text": "",
+                "parent_role": ""
+              },
+              "details": "Icon has no accessible name and is not hidden from screen readers"
+            },
+            {
+              "element_info": {
+                "unique_id": "dfe3d389",
+                "tag": "span",
+                "id": "",
+                "class": "banner__scroll-icon banner__scroll-icon--first icon font-ico-arrow",
+                "src": "",
+                "position": {
+                  "x": 26.0,
+                  "y": 656.0,
+                  "width": 20.0,
+                  "height": 20.0
+                },
+                "dom_path": "body/div[2]/main[1]/section[1]/div[1]/button[1]/span[1]",
+                "css_selector": "span.banner__scroll-icon",
+                "visible": false,
+                "attributes": {
+                  "class": "banner__scroll-icon banner__scroll-icon--first icon font-ico-arrow"
+                },
+                "parent_tag": "button",
+                "parent_text": "",
+                "parent_role": ""
+              },
+              "details": "Icon has no accessible name and is not hidden from screen readers"
+            },
+            {
+              "element_info": {
+                "unique_id": "de986a9a",
+                "tag": "span",
+                "id": "",
+                "class": "banner__scroll-icon banner__scroll-icon--second icon font-ico-arrow",
+                "src": "",
+                "position": {
+                  "x": 26.0,
+                  "y": 695.0,
+                  "width": 20.0,
+                  "height": 20.0
+                },
+                "dom_path": "body/div[2]/main[1]/section[1]/div[1]/button[1]/span[2]",
+                "css_selector": "span.banner__scroll-icon",
+                "visible": true,
+                "attributes": {
+                  "class": "banner__scroll-icon banner__scroll-icon--second icon font-ico-arrow"
+                },
+                "parent_tag": "button",
+                "parent_text": "",
+                "parent_role": ""
+              },
+              "details": "Icon has no accessible name and is not hidden from screen readers"
+            },
+            {
+              "element_info": {
+                "unique_id": "f5d31b02",
+                "tag": "span",
+                "id": "",
+                "class": "icon font-ico-arrow-top",
+                "src": "",
+                "position": {
+                  "x": 1319.9833984375,
+                  "y": 536.0,
+                  "width": 14.050003051757812,
+                  "height": 16.0
+                },
+                "dom_path": "body/div[2]/footer[1]/div[1]/div[1]/button[1]/span[2]",
+                "css_selector": "span.icon",
+                "visible": false,
+                "attributes": {
+                  "class": "icon font-ico-arrow-top"
+                },
+                "parent_tag": "button",
+                "parent_text": "",
+                "parent_role": ""
+              },
+              "details": "Icon has no accessible name and is not hidden from screen readers"
+            }
+          ],
+          "severity": "warning",
+          "recommendation": "Add aria-label or make decorative with aria-hidden='true'",
+          "wcag": "1.1.1"
+        },
+        "Decorative icon not hidden from screen readers": {
+          "count": 2,
+          "instances": [
+            {
+              "element_info": {
+                "unique_id": "11c21c07",
+                "tag": "span",
+                "id": "",
+                "class": "icon font-ico-close",
+                "src": "",
+                "position": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "width": 0.0,
+                  "height": 0.0
+                },
+                "dom_path": "body/div[2]/header[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/button[1]/span[2]",
+                "css_selector": "span.icon",
+                "visible": false,
+                "attributes": {
+                  "class": "icon font-ico-close"
+                },
+                "parent_tag": "button",
+                "parent_text": "Open search form",
+                "parent_role": ""
+              },
+              "details": "Icon inside a labeled element should be hidden from screen readers"
+            },
+            {
+              "element_info": {
+                "unique_id": "10af5edd",
+                "tag": "span",
+                "id": "",
+                "class": "icon font-ico-extern",
+                "src": "",
+                "position": {
+                  "x": 597.2833251953125,
+                  "y": 6841.85009765625,
+                  "width": 13.0,
+                  "height": 13.0
+                },
+                "dom_path": "body/div[2]/footer[1]/div[2]/div[1]/div[1]/ul[1]/li[8]/a[1]/span[1]",
+                "css_selector": "span.icon",
+                "visible": true,
+                "attributes": {
+                  "class": "icon font-ico-extern"
+                },
+                "parent_tag": "a",
+                "parent_text": "REMIT",
+                "parent_role": ""
+              },
+              "details": "Icon inside a labeled element should be hidden from screen readers"
+            }
+          ],
+          "severity": "warning",
+          "recommendation": "Add aria-hidden='true' to the icon element",
+          "wcag": "1.1.1"
+        }
+      }
+    }
+  },
+  "dynamic_content": {
+    "summary": {
+      "total_components_tested": 1,
+      "components_with_issues": 1,
+      "issue_types": {
+        "missing_label": 1
+      },
+      "accessibility_score": 0
+    },
+    "detailed_results": {
+      "sliders": [
+        {
+          "type": "missing_label",
+          "component_type": "slider",
+          "component_id": ".slider_0",
+          "details": "Slider has no accessible label",
+          "recommendation": "Add an aria-label or aria-labelledby attribute",
+          "severity": "warning"
+        }
+      ],
+      "carousels": [],
+      "modals": [],
+      "accordions": [],
+      "dropdowns": [],
+      "tabs": [],
+      "state_tracking": {
+        "component_states": {
+          "slider": {
+            ".slider_0": [
+              {
+                "timestamp": 1742836196.9333627,
+                "state": {
+                  "value": "",
+                  "min": "",
+                  "max": ""
+                }
+              }
+            ]
+          }
+        },
+        "interaction_log": []
+      }
+    }
+  },
+  "summary": {
+    "critical_issues": 53,
+    "warnings": 25,
+    "passed_checks": 1,
+    "total_checks": 5,
+    "accessibility_score": 0.0,
+    "dynamic_content_issues": 1
+  }
+}

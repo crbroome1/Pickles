@@ -1,0 +1,1086 @@
+{
+    "url": "https://sse.com",
+    "timestamp": "2025-03-03T18:04:24.620797",
+    "browser": "firefox",
+    "missing_elements": [
+        {
+            "tag": "a",
+            "id": "",
+            "class": "footer__link footer__link--has-children js-footer-link",
+            "type": "",
+            "text": "News and views",
+            "xpath": "/html/body/div[2]/footer[1]/div[1]/div[1]/div[1]/div[1]/a[2]",
+            "reasons": [
+                "is a <a> element",
+                "has cursor:pointer style"
+            ],
+            "role": ""
+        },
+        {
+            "tag": "a",
+            "id": "",
+            "class": "btn btn--home",
+            "type": "",
+            "text": "About us",
+            "xpath": "/html/body/div[2]/main[1]/section[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/a[1]",
+            "reasons": [
+                "is a <a> element",
+                "has button-like class",
+                "has cursor:pointer style"
+            ],
+            "role": ""
+        },
+        {
+            "tag": "li",
+            "id": "",
+            "class": "main-nav__item main-nav__has-children main-nav__item--active",
+            "type": "",
+            "text": "Investors",
+            "xpath": "/html/body/div[2]/header[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/nav[1]/ul[1]/li[4]",
+            "reasons": [
+                "has role=\"menuitem\"",
+                "has cursor:pointer style"
+            ],
+            "role": "menuitem"
+        },
+        {
+            "tag": "a",
+            "id": "",
+            "class": "link",
+            "type": "",
+            "text": "",
+            "xpath": "/html/body/div[2]/main[1]/section[3]/div[1]/div[2]/div[1]/div[1]/div[1]/div[5]/div[1]/article[1]/div[2]/a[1]",
+            "reasons": [
+                "is a <a> element",
+                "has cursor:pointer style"
+            ],
+            "role": ""
+        },
+        {
+            "tag": "a",
+            "id": "",
+            "class": "main-nav__link js-main-nav-open-dropdown",
+            "type": "",
+            "text": "About us",
+            "xpath": "/html/body/div[2]/header[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/nav[1]/ul[1]/li[2]/a[1]",
+            "reasons": [
+                "is a <a> element",
+                "has cursor:pointer style"
+            ],
+            "role": ""
+        },
+        {
+            "tag": "button",
+            "id": "",
+            "class": "slider__btn slider__btn--next js-out-next slick-arrow",
+            "type": "button",
+            "text": "Previus slide.",
+            "xpath": "/html/body/div[2]/main[1]/section[3]/div[1]/div[2]/div[2]/div[2]/button[2]",
+            "reasons": [
+                "is a <button> element",
+                "has button-like class",
+                "has cursor:pointer style"
+            ],
+            "role": ""
+        },
+        {
+            "tag": "a",
+            "id": "",
+            "class": "copyright__link",
+            "type": "",
+            "text": "REMIT",
+            "xpath": "/html/body/div[2]/footer[1]/div[2]/div[1]/div[1]/ul[1]/li[8]/a[1]",
+            "reasons": [
+                "is a <a> element",
+                "has cursor:pointer style"
+            ],
+            "role": ""
+        },
+        {
+            "tag": "a",
+            "id": "",
+            "class": "link",
+            "type": "",
+            "text": "",
+            "xpath": "/html/body/div[2]/main[1]/section[7]/div[1]/div[1]/div[1]/div[2]/a[4]",
+            "reasons": [
+                "is a <a> element",
+                "has cursor:pointer style"
+            ],
+            "role": ""
+        },
+        {
+            "tag": "a",
+            "id": "",
+            "class": "btn btn--outline",
+            "type": "",
+            "text": "",
+            "xpath": "/html/body/div[2]/main[1]/section[6]/div[1]/div[1]/div[1]/a[1]",
+            "reasons": [
+                "is a <a> element",
+                "has button-like class",
+                "has cursor:pointer style"
+            ],
+            "role": ""
+        },
+        {
+            "tag": "a",
+            "id": "",
+            "class": "footer__secondary-link",
+            "type": "",
+            "text": "Our 2030 Goals",
+            "xpath": "/html/body/div[2]/footer[1]/div[1]/div[1]/div[1]/div[1]/ul[1]/li[2]/a[1]",
+            "reasons": [
+                "is a <a> element",
+                "has cursor:pointer style"
+            ],
+            "role": ""
+        },
+        {
+            "tag": "a",
+            "id": "",
+            "class": "copyright__link",
+            "type": "",
+            "text": "Potential suppliers",
+            "xpath": "/html/body/div[2]/footer[1]/div[2]/div[1]/div[1]/ul[1]/li[4]/a[1]",
+            "reasons": [
+                "is a <a> element",
+                "has cursor:pointer style"
+            ],
+            "role": ""
+        },
+        {
+            "tag": "li",
+            "id": "",
+            "class": "main-nav__item main-nav__has-children main-nav__item--active",
+            "type": "",
+            "text": "Careers",
+            "xpath": "/html/body/div[2]/header[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/nav[1]/ul[1]/li[7]",
+            "reasons": [
+                "has role=\"menuitem\"",
+                "has cursor:pointer style"
+            ],
+            "role": "menuitem"
+        },
+        {
+            "tag": "a",
+            "id": "",
+            "class": "btn btn--outline",
+            "type": "",
+            "text": "",
+            "xpath": "/html/body/div[2]/main[1]/section[4]/div[1]/div[1]/div[1]/a[1]",
+            "reasons": [
+                "is a <a> element",
+                "has button-like class",
+                "has cursor:pointer style"
+            ],
+            "role": ""
+        },
+        {
+            "tag": "a",
+            "id": "",
+            "class": "copyright__link",
+            "type": "",
+            "text": "Contact us",
+            "xpath": "/html/body/div[2]/footer[1]/div[2]/div[1]/div[1]/ul[1]/li[1]/a[1]",
+            "reasons": [
+                "is a <a> element",
+                "has cursor:pointer style"
+            ],
+            "role": ""
+        },
+        {
+            "tag": "a",
+            "id": "",
+            "class": "btn btn--outline",
+            "type": "",
+            "text": "",
+            "xpath": "/html/body/div[2]/main[1]/section[3]/div[1]/div[1]/div[2]/a[1]",
+            "reasons": [
+                "is a <a> element",
+                "has button-like class",
+                "has cursor:pointer style"
+            ],
+            "role": ""
+        },
+        {
+            "tag": "a",
+            "id": "",
+            "class": "external-link",
+            "type": "",
+            "text": "Cookie notice",
+            "xpath": "//*[@id=\"ccc-notify\"]/div[1]/div[2]/p[1]/a[1]",
+            "reasons": [
+                "is a <a> element",
+                "has cursor:pointer style",
+                "has hover effect"
+            ],
+            "role": ""
+        },
+        {
+            "tag": "a",
+            "id": "",
+            "class": "link",
+            "type": "",
+            "text": "",
+            "xpath": "/html/body/div[2]/main[1]/section[7]/div[1]/div[1]/div[1]/div[2]/a[3]",
+            "reasons": [
+                "is a <a> element",
+                "has cursor:pointer style"
+            ],
+            "role": ""
+        },
+        {
+            "tag": "a",
+            "id": "",
+            "class": "link",
+            "type": "",
+            "text": "Detailed share price",
+            "xpath": "/html/body/div[2]/main[1]/section[4]/div[1]/div[1]/div[2]/a[1]",
+            "reasons": [
+                "is a <a> element",
+                "has cursor:pointer style"
+            ],
+            "role": ""
+        },
+        {
+            "tag": "li",
+            "id": "",
+            "class": "main-nav__item main-nav__has-children main-nav__item--active",
+            "type": "",
+            "text": "Our technologies",
+            "xpath": "/html/body/div[2]/header[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/nav[1]/ul[1]/li[3]",
+            "reasons": [
+                "has role=\"menuitem\"",
+                "has cursor:pointer style"
+            ],
+            "role": "menuitem"
+        },
+        {
+            "tag": "a",
+            "id": "",
+            "class": "main-nav__link js-main-nav-open-dropdown",
+            "type": "",
+            "text": "Careers",
+            "xpath": "/html/body/div[2]/header[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/nav[1]/ul[1]/li[7]/a[1]",
+            "reasons": [
+                "is a <a> element",
+                "has cursor:pointer style"
+            ],
+            "role": ""
+        },
+        {
+            "tag": "a",
+            "id": "",
+            "class": "main-nav__link js-main-nav-open-dropdown",
+            "type": "",
+            "text": "Sustainability",
+            "xpath": "/html/body/div[2]/header[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/nav[1]/ul[1]/li[5]/a[1]",
+            "reasons": [
+                "is a <a> element",
+                "has cursor:pointer style"
+            ],
+            "role": ""
+        },
+        {
+            "tag": "a",
+            "id": "",
+            "class": "footer__secondary-link",
+            "type": "",
+            "text": "Media bank",
+            "xpath": "/html/body/div[2]/footer[1]/div[1]/div[1]/div[1]/div[1]/ul[2]/li[3]/a[1]",
+            "reasons": [
+                "is a <a> element",
+                "has cursor:pointer style"
+            ],
+            "role": ""
+        },
+        {
+            "tag": "button",
+            "id": "",
+            "class": "slider__btn slider__btn--prev js-out-prev slick-arrow slick-disabled",
+            "type": "button",
+            "text": "Next slide.",
+            "xpath": "/html/body/div[2]/main[1]/section[3]/div[1]/div[2]/div[2]/div[2]/button[1]",
+            "reasons": [
+                "is a <button> element",
+                "has button-like class",
+                "has cursor:pointer style"
+            ],
+            "role": ""
+        },
+        {
+            "tag": "li",
+            "id": "",
+            "class": "main-nav__item main-nav__has-children main-nav__item--active",
+            "type": "",
+            "text": "Sustainability",
+            "xpath": "/html/body/div[2]/header[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/nav[1]/ul[1]/li[5]",
+            "reasons": [
+                "has role=\"menuitem\"",
+                "has cursor:pointer style"
+            ],
+            "role": "menuitem"
+        },
+        {
+            "tag": "a",
+            "id": "",
+            "class": "link",
+            "type": "",
+            "text": "Read More",
+            "xpath": "/html/body/div[2]/main[1]/section[3]/div[1]/div[2]/div[1]/div[1]/div[1]/div[4]/div[1]/article[1]/div[2]/a[1]",
+            "reasons": [
+                "is a <a> element",
+                "has cursor:pointer style"
+            ],
+            "role": ""
+        },
+        {
+            "tag": "a",
+            "id": "",
+            "class": "link",
+            "type": "",
+            "text": "",
+            "xpath": "/html/body/div[2]/main[1]/section[7]/div[1]/div[1]/div[1]/div[2]/a[5]",
+            "reasons": [
+                "is a <a> element",
+                "has cursor:pointer style"
+            ],
+            "role": ""
+        },
+        {
+            "tag": "a",
+            "id": "",
+            "class": "copyright__link",
+            "type": "",
+            "text": "Sitemap",
+            "xpath": "/html/body/div[2]/footer[1]/div[2]/div[1]/div[1]/ul[1]/li[5]/a[1]",
+            "reasons": [
+                "is a <a> element",
+                "has cursor:pointer style"
+            ],
+            "role": ""
+        },
+        {
+            "tag": "a",
+            "id": "",
+            "class": "footer__secondary-link",
+            "type": "",
+            "text": "Inclusion",
+            "xpath": "/html/body/div[2]/footer[1]/div[1]/div[1]/div[1]/div[2]/ul[1]/li[4]/a[1]",
+            "reasons": [
+                "is a <a> element",
+                "has cursor:pointer style"
+            ],
+            "role": ""
+        },
+        {
+            "tag": "a",
+            "id": "",
+            "class": "link",
+            "type": "",
+            "text": "Read More",
+            "xpath": "/html/body/div[2]/main[1]/section[3]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/article[1]/div[2]/a[1]",
+            "reasons": [
+                "is a <a> element",
+                "has cursor:pointer style"
+            ],
+            "role": ""
+        },
+        {
+            "tag": "a",
+            "id": "",
+            "class": "logo",
+            "type": "",
+            "text": "",
+            "xpath": "/html/body/div[2]/header[1]/div[1]/div[1]/a[1]",
+            "reasons": [
+                "is a <a> element",
+                "has cursor:pointer style"
+            ],
+            "role": ""
+        },
+        {
+            "tag": "a",
+            "id": "",
+            "class": "footer__link footer__link--has-children js-footer-link",
+            "type": "",
+            "text": "Careers",
+            "xpath": "/html/body/div[2]/footer[1]/div[1]/div[1]/div[1]/div[2]/a[1]",
+            "reasons": [
+                "is a <a> element",
+                "has cursor:pointer style"
+            ],
+            "role": ""
+        },
+        {
+            "tag": "button",
+            "id": "",
+            "class": "banner__scroll js-scroll-down",
+            "type": "button",
+            "text": "",
+            "xpath": "/html/body/div[2]/main[1]/section[1]/div[1]/button[1]",
+            "reasons": [
+                "is a <button> element",
+                "has cursor:pointer style"
+            ],
+            "role": ""
+        },
+        {
+            "tag": "a",
+            "id": "",
+            "class": "btn btn--outline",
+            "type": "",
+            "text": "",
+            "xpath": "//*[@id=\"19b1f41c-37a2-4f33-90cd-eab095f57efe\"]/div[1]/div[1]/div[1]/div[1]/a[1]",
+            "reasons": [
+                "is a <a> element",
+                "has button-like class",
+                "has cursor:pointer style"
+            ],
+            "role": ""
+        },
+        {
+            "tag": "a",
+            "id": "",
+            "class": "link",
+            "type": "",
+            "text": "",
+            "xpath": "/html/body/div[2]/main[1]/section[7]/div[1]/div[1]/div[1]/div[2]/a[6]",
+            "reasons": [
+                "is a <a> element",
+                "has cursor:pointer style"
+            ],
+            "role": ""
+        },
+        {
+            "tag": "a",
+            "id": "",
+            "class": "link",
+            "type": "",
+            "text": "",
+            "xpath": "/html/body/div[2]/main[1]/section[7]/div[1]/div[1]/div[1]/div[2]/a[1]",
+            "reasons": [
+                "is a <a> element",
+                "has cursor:pointer style"
+            ],
+            "role": ""
+        },
+        {
+            "tag": "button",
+            "id": "",
+            "class": "search__open-btn js-open-search",
+            "type": "button",
+            "text": "Open search form",
+            "xpath": "/html/body/div[2]/header[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/button[1]",
+            "reasons": [
+                "is a <button> element",
+                "has button-like class",
+                "has cursor:pointer style"
+            ],
+            "role": ""
+        },
+        {
+            "tag": "a",
+            "id": "",
+            "class": "footer__secondary-link",
+            "type": "",
+            "text": "Life at SSE",
+            "xpath": "/html/body/div[2]/footer[1]/div[1]/div[1]/div[1]/div[2]/ul[1]/li[2]/a[1]",
+            "reasons": [
+                "is a <a> element",
+                "has cursor:pointer style"
+            ],
+            "role": ""
+        },
+        {
+            "tag": "button",
+            "id": "",
+            "class": "footer__scroll-btn js-scroll-top",
+            "type": "button",
+            "text": "",
+            "xpath": "/html/body/div[2]/footer[1]/div[1]/div[1]/button[1]",
+            "reasons": [
+                "is a <button> element",
+                "has button-like class",
+                "has cursor:pointer style"
+            ],
+            "role": ""
+        },
+        {
+            "tag": "a",
+            "id": "",
+            "class": "main-nav__link js-main-nav-open-dropdown",
+            "type": "",
+            "text": "Investors",
+            "xpath": "/html/body/div[2]/header[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/nav[1]/ul[1]/li[4]/a[1]",
+            "reasons": [
+                "is a <a> element",
+                "has cursor:pointer style"
+            ],
+            "role": ""
+        },
+        {
+            "tag": "a",
+            "id": "",
+            "class": "main-nav__link js-main-nav-open-dropdown",
+            "type": "",
+            "text": "Our technologies",
+            "xpath": "/html/body/div[2]/header[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/nav[1]/ul[1]/li[3]/a[1]",
+            "reasons": [
+                "is a <a> element",
+                "has cursor:pointer style"
+            ],
+            "role": ""
+        },
+        {
+            "tag": "a",
+            "id": "",
+            "class": "footer__secondary-link",
+            "type": "",
+            "text": "Early Careers",
+            "xpath": "/html/body/div[2]/footer[1]/div[1]/div[1]/div[1]/div[2]/ul[1]/li[5]/a[1]",
+            "reasons": [
+                "is a <a> element",
+                "has cursor:pointer style"
+            ],
+            "role": ""
+        },
+        {
+            "tag": "a",
+            "id": "",
+            "class": "link",
+            "type": "",
+            "text": "Read More",
+            "xpath": "/html/body/div[2]/main[1]/section[3]/div[1]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/article[1]/div[2]/a[1]",
+            "reasons": [
+                "is a <a> element",
+                "has cursor:pointer style"
+            ],
+            "role": ""
+        },
+        {
+            "tag": "a",
+            "id": "",
+            "class": "link",
+            "type": "",
+            "text": "",
+            "xpath": "/html/body/div[2]/main[1]/section[7]/div[1]/div[1]/div[1]/div[2]/a[2]",
+            "reasons": [
+                "is a <a> element",
+                "has cursor:pointer style"
+            ],
+            "role": ""
+        },
+        {
+            "tag": "a",
+            "id": "",
+            "class": "copyright__link",
+            "type": "",
+            "text": "Sustainability",
+            "xpath": "/html/body/div[2]/footer[1]/div[2]/div[1]/div[1]/ul[1]/li[6]/a[1]",
+            "reasons": [
+                "is a <a> element",
+                "has cursor:pointer style"
+            ],
+            "role": ""
+        },
+        {
+            "tag": "a",
+            "id": "",
+            "class": "footer__secondary-link",
+            "type": "",
+            "text": "Thinking of applying?",
+            "xpath": "/html/body/div[2]/footer[1]/div[1]/div[1]/div[1]/div[2]/ul[1]/li[6]/a[1]",
+            "reasons": [
+                "is a <a> element",
+                "has cursor:pointer style"
+            ],
+            "role": ""
+        },
+        {
+            "tag": "a",
+            "id": "",
+            "class": "footer__secondary-link",
+            "type": "",
+            "text": "Modern Slavery Statement",
+            "xpath": "/html/body/div[2]/footer[1]/div[1]/div[1]/div[1]/div[1]/ul[1]/li[3]/a[1]",
+            "reasons": [
+                "is a <a> element",
+                "has cursor:pointer style"
+            ],
+            "role": ""
+        },
+        {
+            "tag": "a",
+            "id": "",
+            "class": "copyright__link js-open-cookie",
+            "type": "",
+            "text": "Cookie settings",
+            "xpath": "/html/body/div[2]/footer[1]/div[2]/div[1]/div[1]/ul[1]/li[7]/a[1]",
+            "reasons": [
+                "is a <a> element",
+                "has cursor:pointer style"
+            ],
+            "role": ""
+        },
+        {
+            "tag": "a",
+            "id": "",
+            "class": "footer__secondary-link",
+            "type": "",
+            "text": "Media Contacts",
+            "xpath": "/html/body/div[2]/footer[1]/div[1]/div[1]/div[1]/div[1]/ul[2]/li[2]/a[1]",
+            "reasons": [
+                "is a <a> element",
+                "has cursor:pointer style"
+            ],
+            "role": ""
+        },
+        {
+            "tag": "a",
+            "id": "",
+            "class": "main-nav__link js-main-nav-open-dropdown",
+            "type": "",
+            "text": "Home",
+            "xpath": "/html/body/div[2]/header[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/nav[1]/ul[1]/li[1]/a[1]",
+            "reasons": [
+                "is a <a> element",
+                "has cursor:pointer style"
+            ],
+            "role": ""
+        },
+        {
+            "tag": "li",
+            "id": "",
+            "class": "main-nav__item main-nav__has-children main-nav__item--active",
+            "type": "",
+            "text": "News and views",
+            "xpath": "/html/body/div[2]/header[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/nav[1]/ul[1]/li[6]",
+            "reasons": [
+                "has role=\"menuitem\"",
+                "has cursor:pointer style"
+            ],
+            "role": "menuitem"
+        },
+        {
+            "tag": "li",
+            "id": "",
+            "class": "main-nav__item",
+            "type": "",
+            "text": "Home",
+            "xpath": "/html/body/div[2]/header[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/nav[1]/ul[1]/li[1]",
+            "reasons": [
+                "has role=\"menuitem\"",
+                "has cursor:pointer style"
+            ],
+            "role": "menuitem"
+        },
+        {
+            "tag": "li",
+            "id": "",
+            "class": "main-nav__item main-nav__has-children main-nav__item--active",
+            "type": "",
+            "text": "About us",
+            "xpath": "/html/body/div[2]/header[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/nav[1]/ul[1]/li[2]",
+            "reasons": [
+                "has role=\"menuitem\"",
+                "has cursor:pointer style"
+            ],
+            "role": "menuitem"
+        },
+        {
+            "tag": "a",
+            "id": "",
+            "class": "link",
+            "type": "",
+            "text": "Read More",
+            "xpath": "/html/body/div[2]/main[1]/section[3]/div[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/article[1]/div[2]/a[1]",
+            "reasons": [
+                "is a <a> element",
+                "has cursor:pointer style"
+            ],
+            "role": ""
+        },
+        {
+            "tag": "a",
+            "id": "",
+            "class": "main-nav__link js-main-nav-open-dropdown",
+            "type": "",
+            "text": "News and views",
+            "xpath": "/html/body/div[2]/header[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/nav[1]/ul[1]/li[6]/a[1]",
+            "reasons": [
+                "is a <a> element",
+                "has cursor:pointer style"
+            ],
+            "role": ""
+        },
+        {
+            "tag": "a",
+            "id": "",
+            "class": "btn btn--outline",
+            "type": "",
+            "text": "",
+            "xpath": "//*[@id=\"89618f72-20bd-484b-b6cb-b33c0c65ad44\"]/div[1]/div[1]/div[1]/div[1]/a[1]",
+            "reasons": [
+                "is a <a> element",
+                "has button-like class",
+                "has cursor:pointer style"
+            ],
+            "role": ""
+        },
+        {
+            "tag": "a",
+            "id": "",
+            "class": "copyright__link",
+            "type": "",
+            "text": "Privacy notice",
+            "xpath": "/html/body/div[2]/footer[1]/div[2]/div[1]/div[1]/ul[1]/li[2]/a[1]",
+            "reasons": [
+                "is a <a> element",
+                "has cursor:pointer style"
+            ],
+            "role": ""
+        },
+        {
+            "tag": "a",
+            "id": "",
+            "class": "footer__link footer__link--has-children js-footer-link",
+            "type": "",
+            "text": "Sustainability",
+            "xpath": "/html/body/div[2]/footer[1]/div[1]/div[1]/div[1]/div[1]/a[1]",
+            "reasons": [
+                "is a <a> element",
+                "has cursor:pointer style"
+            ],
+            "role": ""
+        },
+        {
+            "tag": "a",
+            "id": "",
+            "class": "copyright__link",
+            "type": "",
+            "text": "Cookie notice",
+            "xpath": "/html/body/div[2]/footer[1]/div[2]/div[1]/div[1]/ul[1]/li[3]/a[1]",
+            "reasons": [
+                "is a <a> element",
+                "has cursor:pointer style"
+            ],
+            "role": ""
+        },
+        {
+            "tag": "a",
+            "id": "",
+            "class": "footer__secondary-link",
+            "type": "",
+            "text": "Specialisms",
+            "xpath": "/html/body/div[2]/footer[1]/div[1]/div[1]/div[1]/div[2]/ul[1]/li[3]/a[1]",
+            "reasons": [
+                "is a <a> element",
+                "has cursor:pointer style"
+            ],
+            "role": ""
+        }
+    ],
+    "missing_focusable_issues": [
+        {
+            "issue": "Interactive element not in tab order: <a> News and views (is a <a> element, has cursor:pointer style)",
+            "impact": "High",
+            "recommendation": "Make element keyboard accessible by adding tabindex='0' and appropriate keyboard event handlers."
+        },
+        {
+            "issue": "Interactive element not in tab order: <a> About us (is a <a> element, has button-like class, has cursor:pointer style)",
+            "impact": "High",
+            "recommendation": "Make element keyboard accessible by adding tabindex='0' and appropriate keyboard event handlers."
+        },
+        {
+            "issue": "Interactive element not in tab order: <li> Investors (has role=\"menuitem\", has cursor:pointer style)",
+            "impact": "Medium",
+            "recommendation": "Make element keyboard accessible by adding tabindex='0' and appropriate keyboard event handlers."
+        },
+        {
+            "issue": "Interactive element not in tab order: <a>  (is a <a> element, has cursor:pointer style)",
+            "impact": "High",
+            "recommendation": "Make element keyboard accessible by adding tabindex='0' and appropriate keyboard event handlers."
+        },
+        {
+            "issue": "Interactive element not in tab order: <a> About us (is a <a> element, has cursor:pointer style)",
+            "impact": "High",
+            "recommendation": "Make element keyboard accessible by adding tabindex='0' and appropriate keyboard event handlers."
+        },
+        {
+            "issue": "Interactive element not in tab order: <button> Previus slide. (is a <button> element, has button-like class, has cursor:pointer style)",
+            "impact": "High",
+            "recommendation": "Make element keyboard accessible by adding tabindex='0' and appropriate keyboard event handlers."
+        },
+        {
+            "issue": "Interactive element not in tab order: <a> REMIT (is a <a> element, has cursor:pointer style)",
+            "impact": "High",
+            "recommendation": "Make element keyboard accessible by adding tabindex='0' and appropriate keyboard event handlers."
+        },
+        {
+            "issue": "Interactive element not in tab order: <a>  (is a <a> element, has cursor:pointer style)",
+            "impact": "High",
+            "recommendation": "Make element keyboard accessible by adding tabindex='0' and appropriate keyboard event handlers."
+        },
+        {
+            "issue": "Interactive element not in tab order: <a>  (is a <a> element, has button-like class, has cursor:pointer style)",
+            "impact": "High",
+            "recommendation": "Make element keyboard accessible by adding tabindex='0' and appropriate keyboard event handlers."
+        },
+        {
+            "issue": "Interactive element not in tab order: <a> Our 2030 Goals (is a <a> element, has cursor:pointer style)",
+            "impact": "High",
+            "recommendation": "Make element keyboard accessible by adding tabindex='0' and appropriate keyboard event handlers."
+        },
+        {
+            "issue": "Interactive element not in tab order: <a> Potential suppliers (is a <a> element, has cursor:pointer style)",
+            "impact": "High",
+            "recommendation": "Make element keyboard accessible by adding tabindex='0' and appropriate keyboard event handlers."
+        },
+        {
+            "issue": "Interactive element not in tab order: <li> Careers (has role=\"menuitem\", has cursor:pointer style)",
+            "impact": "Medium",
+            "recommendation": "Make element keyboard accessible by adding tabindex='0' and appropriate keyboard event handlers."
+        },
+        {
+            "issue": "Interactive element not in tab order: <a>  (is a <a> element, has button-like class, has cursor:pointer style)",
+            "impact": "High",
+            "recommendation": "Make element keyboard accessible by adding tabindex='0' and appropriate keyboard event handlers."
+        },
+        {
+            "issue": "Interactive element not in tab order: <a> Contact us (is a <a> element, has cursor:pointer style)",
+            "impact": "High",
+            "recommendation": "Make element keyboard accessible by adding tabindex='0' and appropriate keyboard event handlers."
+        },
+        {
+            "issue": "Interactive element not in tab order: <a>  (is a <a> element, has button-like class, has cursor:pointer style)",
+            "impact": "High",
+            "recommendation": "Make element keyboard accessible by adding tabindex='0' and appropriate keyboard event handlers."
+        },
+        {
+            "issue": "Interactive element not in tab order: <a> Cookie notice (is a <a> element, has cursor:pointer style, has hover effect)",
+            "impact": "High",
+            "recommendation": "Make element keyboard accessible by adding tabindex='0' and appropriate keyboard event handlers."
+        },
+        {
+            "issue": "Interactive element not in tab order: <a>  (is a <a> element, has cursor:pointer style)",
+            "impact": "High",
+            "recommendation": "Make element keyboard accessible by adding tabindex='0' and appropriate keyboard event handlers."
+        },
+        {
+            "issue": "Interactive element not in tab order: <a> Detailed share price (is a <a> element, has cursor:pointer style)",
+            "impact": "High",
+            "recommendation": "Make element keyboard accessible by adding tabindex='0' and appropriate keyboard event handlers."
+        },
+        {
+            "issue": "Interactive element not in tab order: <li> Our technologies (has role=\"menuitem\", has cursor:pointer style)",
+            "impact": "Medium",
+            "recommendation": "Make element keyboard accessible by adding tabindex='0' and appropriate keyboard event handlers."
+        },
+        {
+            "issue": "Interactive element not in tab order: <a> Careers (is a <a> element, has cursor:pointer style)",
+            "impact": "High",
+            "recommendation": "Make element keyboard accessible by adding tabindex='0' and appropriate keyboard event handlers."
+        },
+        {
+            "issue": "Interactive element not in tab order: <a> Sustainability (is a <a> element, has cursor:pointer style)",
+            "impact": "High",
+            "recommendation": "Make element keyboard accessible by adding tabindex='0' and appropriate keyboard event handlers."
+        },
+        {
+            "issue": "Interactive element not in tab order: <a> Media bank (is a <a> element, has cursor:pointer style)",
+            "impact": "High",
+            "recommendation": "Make element keyboard accessible by adding tabindex='0' and appropriate keyboard event handlers."
+        },
+        {
+            "issue": "Interactive element not in tab order: <button> Next slide. (is a <button> element, has button-like class, has cursor:pointer style)",
+            "impact": "High",
+            "recommendation": "Make element keyboard accessible by adding tabindex='0' and appropriate keyboard event handlers."
+        },
+        {
+            "issue": "Interactive element not in tab order: <li> Sustainability (has role=\"menuitem\", has cursor:pointer style)",
+            "impact": "Medium",
+            "recommendation": "Make element keyboard accessible by adding tabindex='0' and appropriate keyboard event handlers."
+        },
+        {
+            "issue": "Interactive element not in tab order: <a> Read More (is a <a> element, has cursor:pointer style)",
+            "impact": "High",
+            "recommendation": "Make element keyboard accessible by adding tabindex='0' and appropriate keyboard event handlers."
+        },
+        {
+            "issue": "Interactive element not in tab order: <a>  (is a <a> element, has cursor:pointer style)",
+            "impact": "High",
+            "recommendation": "Make element keyboard accessible by adding tabindex='0' and appropriate keyboard event handlers."
+        },
+        {
+            "issue": "Interactive element not in tab order: <a> Sitemap (is a <a> element, has cursor:pointer style)",
+            "impact": "High",
+            "recommendation": "Make element keyboard accessible by adding tabindex='0' and appropriate keyboard event handlers."
+        },
+        {
+            "issue": "Interactive element not in tab order: <a> Inclusion (is a <a> element, has cursor:pointer style)",
+            "impact": "High",
+            "recommendation": "Make element keyboard accessible by adding tabindex='0' and appropriate keyboard event handlers."
+        },
+        {
+            "issue": "Interactive element not in tab order: <a> Read More (is a <a> element, has cursor:pointer style)",
+            "impact": "High",
+            "recommendation": "Make element keyboard accessible by adding tabindex='0' and appropriate keyboard event handlers."
+        },
+        {
+            "issue": "Interactive element not in tab order: <a>  (is a <a> element, has cursor:pointer style)",
+            "impact": "High",
+            "recommendation": "Make element keyboard accessible by adding tabindex='0' and appropriate keyboard event handlers."
+        },
+        {
+            "issue": "Interactive element not in tab order: <a> Careers (is a <a> element, has cursor:pointer style)",
+            "impact": "High",
+            "recommendation": "Make element keyboard accessible by adding tabindex='0' and appropriate keyboard event handlers."
+        },
+        {
+            "issue": "Interactive element not in tab order: <button>  (is a <button> element, has cursor:pointer style)",
+            "impact": "High",
+            "recommendation": "Make element keyboard accessible by adding tabindex='0' and appropriate keyboard event handlers."
+        },
+        {
+            "issue": "Interactive element not in tab order: <a>  (is a <a> element, has button-like class, has cursor:pointer style)",
+            "impact": "High",
+            "recommendation": "Make element keyboard accessible by adding tabindex='0' and appropriate keyboard event handlers."
+        },
+        {
+            "issue": "Interactive element not in tab order: <a>  (is a <a> element, has cursor:pointer style)",
+            "impact": "High",
+            "recommendation": "Make element keyboard accessible by adding tabindex='0' and appropriate keyboard event handlers."
+        },
+        {
+            "issue": "Interactive element not in tab order: <a>  (is a <a> element, has cursor:pointer style)",
+            "impact": "High",
+            "recommendation": "Make element keyboard accessible by adding tabindex='0' and appropriate keyboard event handlers."
+        },
+        {
+            "issue": "Interactive element not in tab order: <button> Open search form (is a <button> element, has button-like class, has cursor:pointer style)",
+            "impact": "High",
+            "recommendation": "Make element keyboard accessible by adding tabindex='0' and appropriate keyboard event handlers."
+        },
+        {
+            "issue": "Interactive element not in tab order: <a> Life at SSE (is a <a> element, has cursor:pointer style)",
+            "impact": "High",
+            "recommendation": "Make element keyboard accessible by adding tabindex='0' and appropriate keyboard event handlers."
+        },
+        {
+            "issue": "Interactive element not in tab order: <button>  (is a <button> element, has button-like class, has cursor:pointer style)",
+            "impact": "High",
+            "recommendation": "Make element keyboard accessible by adding tabindex='0' and appropriate keyboard event handlers."
+        },
+        {
+            "issue": "Interactive element not in tab order: <a> Investors (is a <a> element, has cursor:pointer style)",
+            "impact": "High",
+            "recommendation": "Make element keyboard accessible by adding tabindex='0' and appropriate keyboard event handlers."
+        },
+        {
+            "issue": "Interactive element not in tab order: <a> Our technologies (is a <a> element, has cursor:pointer style)",
+            "impact": "High",
+            "recommendation": "Make element keyboard accessible by adding tabindex='0' and appropriate keyboard event handlers."
+        },
+        {
+            "issue": "Interactive element not in tab order: <a> Early Careers (is a <a> element, has cursor:pointer style)",
+            "impact": "High",
+            "recommendation": "Make element keyboard accessible by adding tabindex='0' and appropriate keyboard event handlers."
+        },
+        {
+            "issue": "Interactive element not in tab order: <a> Read More (is a <a> element, has cursor:pointer style)",
+            "impact": "High",
+            "recommendation": "Make element keyboard accessible by adding tabindex='0' and appropriate keyboard event handlers."
+        },
+        {
+            "issue": "Interactive element not in tab order: <a>  (is a <a> element, has cursor:pointer style)",
+            "impact": "High",
+            "recommendation": "Make element keyboard accessible by adding tabindex='0' and appropriate keyboard event handlers."
+        },
+        {
+            "issue": "Interactive element not in tab order: <a> Sustainability (is a <a> element, has cursor:pointer style)",
+            "impact": "High",
+            "recommendation": "Make element keyboard accessible by adding tabindex='0' and appropriate keyboard event handlers."
+        },
+        {
+            "issue": "Interactive element not in tab order: <a> Thinking of applying? (is a <a> element, has cursor:pointer style)",
+            "impact": "High",
+            "recommendation": "Make element keyboard accessible by adding tabindex='0' and appropriate keyboard event handlers."
+        },
+        {
+            "issue": "Interactive element not in tab order: <a> Modern Slavery Statement (is a <a> element, has cursor:pointer style)",
+            "impact": "High",
+            "recommendation": "Make element keyboard accessible by adding tabindex='0' and appropriate keyboard event handlers."
+        },
+        {
+            "issue": "Interactive element not in tab order: <a> Cookie settings (is a <a> element, has cursor:pointer style)",
+            "impact": "High",
+            "recommendation": "Make element keyboard accessible by adding tabindex='0' and appropriate keyboard event handlers."
+        },
+        {
+            "issue": "Interactive element not in tab order: <a> Media Contacts (is a <a> element, has cursor:pointer style)",
+            "impact": "High",
+            "recommendation": "Make element keyboard accessible by adding tabindex='0' and appropriate keyboard event handlers."
+        },
+        {
+            "issue": "Interactive element not in tab order: <a> Home (is a <a> element, has cursor:pointer style)",
+            "impact": "High",
+            "recommendation": "Make element keyboard accessible by adding tabindex='0' and appropriate keyboard event handlers."
+        },
+        {
+            "issue": "Interactive element not in tab order: <li> News and views (has role=\"menuitem\", has cursor:pointer style)",
+            "impact": "Medium",
+            "recommendation": "Make element keyboard accessible by adding tabindex='0' and appropriate keyboard event handlers."
+        },
+        {
+            "issue": "Interactive element not in tab order: <li> Home (has role=\"menuitem\", has cursor:pointer style)",
+            "impact": "Medium",
+            "recommendation": "Make element keyboard accessible by adding tabindex='0' and appropriate keyboard event handlers."
+        },
+        {
+            "issue": "Interactive element not in tab order: <li> About us (has role=\"menuitem\", has cursor:pointer style)",
+            "impact": "Medium",
+            "recommendation": "Make element keyboard accessible by adding tabindex='0' and appropriate keyboard event handlers."
+        },
+        {
+            "issue": "Interactive element not in tab order: <a> Read More (is a <a> element, has cursor:pointer style)",
+            "impact": "High",
+            "recommendation": "Make element keyboard accessible by adding tabindex='0' and appropriate keyboard event handlers."
+        },
+        {
+            "issue": "Interactive element not in tab order: <a> News and views (is a <a> element, has cursor:pointer style)",
+            "impact": "High",
+            "recommendation": "Make element keyboard accessible by adding tabindex='0' and appropriate keyboard event handlers."
+        },
+        {
+            "issue": "Interactive element not in tab order: <a>  (is a <a> element, has button-like class, has cursor:pointer style)",
+            "impact": "High",
+            "recommendation": "Make element keyboard accessible by adding tabindex='0' and appropriate keyboard event handlers."
+        },
+        {
+            "issue": "Interactive element not in tab order: <a> Privacy notice (is a <a> element, has cursor:pointer style)",
+            "impact": "High",
+            "recommendation": "Make element keyboard accessible by adding tabindex='0' and appropriate keyboard event handlers."
+        },
+        {
+            "issue": "Interactive element not in tab order: <a> Sustainability (is a <a> element, has cursor:pointer style)",
+            "impact": "High",
+            "recommendation": "Make element keyboard accessible by adding tabindex='0' and appropriate keyboard event handlers."
+        },
+        {
+            "issue": "Interactive element not in tab order: <a> Cookie notice (is a <a> element, has cursor:pointer style)",
+            "impact": "High",
+            "recommendation": "Make element keyboard accessible by adding tabindex='0' and appropriate keyboard event handlers."
+        },
+        {
+            "issue": "Interactive element not in tab order: <a> Specialisms (is a <a> element, has cursor:pointer style)",
+            "impact": "High",
+            "recommendation": "Make element keyboard accessible by adding tabindex='0' and appropriate keyboard event handlers."
+        }
+    ],
+    "summary": {
+        "total_missing": 59,
+        "total_issues": 59
+    }
+}

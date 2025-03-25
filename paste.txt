@@ -1,0 +1,275 @@
+ def _extended_dropdown_test(self, timeout):
+        """
+        Comprehensive testing of dropdown components for accessibility.
+        
+        Args:
+            timeout: Maximum time to spend testing dropdowns
+        
+        Returns:
+            List of dropdown accessibility issues
+        """
+        dropdown_issues = []
+        
+        dropdown_selectors = [
+            "select",
+            ".dropdown",
+            "[role='combobox']",
+            "[role='listbox']",
+            "[aria-haspopup='listbox']",
+            "[aria-haspopup='menu']",
+            ".select",
+            "[data-toggle='dropdown']"
+        ]
+        
+        for selector in dropdown_selectors:
+            try:
+                dropdowns = self.driver.find_elements(By.CSS_SELECTOR, selector)
+                
+                for idx, dropdown in enumerate(dropdowns):
+                    dropdown_id = f"{selector}_{idx}"
+                    
+                    # Handle differently based on whether it's a native select or custom dropdown
+                    is_native_select = dropdown.tag_name.lower() == 'select'
+                    
+                    # Record initial state
+                    initial_state = {
+                        'type': 'native_select' if is_native_select else 'custom_dropdown',
+                        'expanded': dropdown.get_attribute('aria-expanded') == 'true' if not is_native_select else None,
+                        'selected_text': self._get_dropdown_selected_text(dropdown)
+                    }
+                    
+                    self.state_tracker.record_state('dropdown', dropdown_id, initial_state)
+                    
+                    # Test keyboard accessibility
+                    keyboard_issues = []
+                    
+                    if is_native_select:
+                        # Native select elements have built-in keyboard support
+                        # Test if they're actually usable
+                        try:
+                            dropdown.click()  # Focus the select
+                            time.sleep(0.2)
+                            
+                            # Send arrow down to change selection
+                            dropdown.send_keys(Keys.ARROW_DOWN)
+                            time.sleep(0.2)
+                            
+                            # Get new selected value
+                            new_text = self._get_dropdown_selected_text(dropdown)
+                            
+                            # Log the interaction
+                            self.state_tracker.log_interaction(
+                                'dropdown', 
+                                dropdown_id, 
+                                "arrow_down",
+                                {'before': initial_state['selected_text'], 'after': new_text}
+                            )
+                            
+                            # Record new state
+                            self.state_tracker.record_state('dropdown', dropdown_id, {
+                                'selected_text': new_text,
+                                'action': 'arrow_down'
+                            })
+                            
+                            # Check if selection changed
+                            if new_text == initial_state['selected_text']:
+                                dropdown_issues.append({
+                                    "type": "selection_change_failure",
+                                    "component_type": "dropdown",
+                                    "component_id": dropdown_id,
+                                    "details": "Arrow key doesn't change selection in native select",
+                                    "recommendation": "Ensure select elements respond to arrow keys"
+                                })
+                            
+                        except Exception as e:
+                            dropdown_issues.append({
+                                "type": "keyboard_interaction_error",
+                                "component_type": "dropdown",
+                                "component_id": dropdown_id,
+                                "details": f"Error testing keyboard interaction: {str(e)}"
+                            })
+                    
+                    else:
+                        # Custom dropdown - more complex testing needed
+                        # First, test opening the dropdown
+                        try:
+                            # Check initial expanded state
+                            was_expanded = dropdown.get_attribute('aria-expanded') == 'true'
+                            
+                            # Click to toggle
+                            dropdown.click()
+                            time.sleep(0.3)  # Wait for animation
+                            
+                            # Check if expanded state changed
+                            now_expanded = dropdown.get_attribute('aria-expanded') == 'true'
+                            
+                            # Log the interaction
+                            self.state_tracker.log_interaction(
+                                'dropdown', 
+                                dropdown_id, 
+                                "click",
+                                {'before_expanded': was_expanded, 'after_expanded': now_expanded}
+                            )
+                            
+                            # Record new state
+                            self.state_tracker.record_state('dropdown', dropdown_id, {
+                                'expanded': now_expanded,
+                                'action': 'click'
+                            })
+                            
+                            # If state didn't change, report an issue
+                            if was_expanded == now_expanded:
+                                dropdown_issues.append({
+                                    "type": "state_change_failure",
+                                    "component_type": "dropdown",
+                                    "component_id": dropdown_id,
+                                    "details": "Clicking dropdown doesn't toggle expanded state",
+                                    "recommendation": "Ensure dropdowns toggle their expanded state when clicked"
+                                })
+                            
+                            # If dropdown opened, test keyboard navigation within it
+                            if now_expanded:
+                                # Find dropdown options
+                                dropdown_list = self._find_dropdown_list(dropdown)
+                                if dropdown_list:
+                                    options = dropdown_list.find_elements(By.CSS_SELECTOR, 
+                                        "li, [role='option'], option, .dropdown-item")
+                                    
+                                    if options:
+                                        # Try to navigate with arrow keys
+                                        actions = ActionChains(self.driver)
+                                        actions.send_keys(Keys.ARROW_DOWN)
+                                        actions.perform()
+                                        time.sleep(0.2)
+                                        
+                                        # Try to select with Enter
+                                        actions = ActionChains(self.driver)
+                                        actions.send_keys(Keys.ENTER)
+                                        actions.perform()
+                                        time.sleep(0.2)
+                                        
+                                        # Check if dropdown closed after selection
+                                        still_expanded = dropdown.get_attribute('aria-expanded') == 'true'
+                                        if still_expanded:
+                                            dropdown_issues.append({
+                                                "type": "selection_behavior",
+                                                "component_type": "dropdown",
+                                                "component_id": dropdown_id,
+                                                "details": "Dropdown doesn't close after keyboard selection",
+                                                "recommendation": "Ensure dropdowns close after an option is selected with Enter"
+                                            })
+                                    else:
+                                        dropdown_issues.append({
+                                            "type": "missing_options",
+                                            "component_type": "dropdown",
+                                            "component_id": dropdown_id,
+                                            "details": "No options found in dropdown list",
+                                            "recommendation": "Ensure dropdown contains selectable options"
+                                        })
+                                
+                                # Close the dropdown if still open
+                                if dropdown.get_attribute('aria-expanded') == 'true':
+                                    try:
+                                        dropdown.click()
+                                        time.sleep(0.2)
+                                    except:
+                                        # Try Escape key to close
+                                        actions = ActionChains(self.driver)
+                                        actions.send_keys(Keys.ESCAPE)
+                                        actions.perform()
+                                        time.sleep(0.2)
+                        
+                        except Exception as e:
+                            dropdown_issues.append({
+                                "type": "interaction_error",
+                                "component_type": "dropdown",
+                                "component_id": dropdown_id,
+                                "details": f"Error testing dropdown interaction: {str(e)}"
+                            })
+                    
+                    # Check for proper ARIA attributes on custom dropdowns
+                    if not is_native_select:
+                        # Check for missing required attributes
+                        required_attrs = []
+                        
+                        if dropdown.get_attribute('role') == 'combobox':
+                            required_attrs = ['aria-expanded', 'aria-controls']
+                        elif dropdown.get_attribute('role') == 'listbox':
+                            required_attrs = ['aria-activedescendant']
+                        elif dropdown.get_attribute('aria-haspopup'):
+                            required_attrs = ['aria-expanded']
+                        
+                        missing_attrs = [attr for attr in required_attrs if not dropdown.get_attribute(attr)]
+                        
+                        if missing_attrs:
+                            dropdown_issues.append({
+                                "type": "missing_aria",
+                                "component_type": "dropdown",
+                                "component_id": dropdown_id,
+                                "details": f"Dropdown missing required ARIA attributes: {', '.join(missing_attrs)}",
+                                "recommendation": "Add missing ARIA attributes for screen reader support"
+                            })
+                        
+                        # Check if dropdown has a label
+                        if not (
+                            dropdown.get_attribute('aria-label') or
+                            dropdown.get_attribute('aria-labelledby') or
+                            self._has_associated_label(dropdown)
+                        ):
+                            dropdown_issues.append({
+                                "type": "missing_label",
+                                "component_type": "dropdown",
+                                "component_id": dropdown_id,
+                                "details": "Dropdown has no accessible label",
+                                "recommendation": "Add a visible label, aria-label, or aria-labelledby attribute"
+                            })
+            
+            except WebDriverException:
+                self.logger.warning(f"Could not find dropdowns with selector: {selector}")
+        
+        return dropdown_issuesdef _extended_tab_test(self, timeout):
+    """
+    Comprehensive testing of tab components for accessibility.
+    
+    Args:
+        timeout: Maximum time to spend testing tabs
+    
+    Returns:
+        List of tab accessibility issues
+    """
+    # Implementation of tab testing...
+
+# Helper methods
+def _has_associated_label(self, element):
+    """Check if an element has an associated label"""
+    # Implementation...
+
+# More helper methods...
+
+def run_advanced_dynamic_content_test(driver, timeout=15):
+    """
+    Convenience function to run advanced dynamic content accessibility tests.
+    
+    Args:
+        driver: Selenium WebDriver instance
+        timeout: Maximum time to spend testing each component type
+    
+    Returns:
+        Dict of test results for different component types
+    """
+    try:
+        tester = AdvancedDynamicContentTester(driver)
+        return tester.test_interactive_components(timeout)
+    except Exception as e:
+        logging.error(f"Error in advanced dynamic content testing: {str(e)}")
+        return {
+            "error": str(e),
+            "details": "Failed to complete advanced dynamic content testing",
+            "traceback": traceback.format_exc()
+        }
+
+# Configure logging
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s: %(message)s'
+)

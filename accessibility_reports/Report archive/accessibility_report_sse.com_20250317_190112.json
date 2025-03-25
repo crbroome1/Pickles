@@ -1,0 +1,15 @@
+{
+  "url": "http://sse.com",
+  "timestamp": "2025-03-17 19:01:06",
+  "summary": {
+    "critical_issues": 53,
+    "warnings": 25,
+    "passed_checks": 1,
+    "compliance_score": 0,
+    "total_checks": 8
+  },
+  "checks": {
+    "keyboard_navigation_sequence": {
+      "tab_sequence": [
+        {
+          "element": 

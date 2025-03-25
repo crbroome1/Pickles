@@ -1,0 +1,1579 @@
+{
+  "url": "https://sse.com",
+  "timestamp": "20250303_180310",
+  "browser": "firefox",
+  "tab_order_data": [
+    "1: a - ",
+    "2: a - Home",
+    "3: a - About us",
+    "4: a - About us",
+    "5: a - Our businesses",
+    "6: a - SSE Renewables",
+    "7: a - SSE Thermal",
+    "8: a - SSEN Transmission",
+    "9: a - SSEN Distribution",
+    "10: a - SSE Energy Solutions",
+    "11: a - SSE Airtricity",
+    "12: a - SSE Energy Markets",
+    "13: a - Leadership and Governance",
+    "14: a - Meet the board",
+    "15: a - Meet the GEC",
+    "16: a - Our heritage",
+    "17: a - Our culture",
+    "18: a - Our campaigns",
+    "19: a - UK campaign",
+    "20: a - Ireland campaign",
+    "21: a - Our technologies",
+    "22: a - Our technologies",
+    "23: a - Offshore wind",
+    "24: a - Onshore wind",
+    "25: a - Hydro",
+    "26: a - Solar",
+    "27: a - Battery storage",
+    "28: a - Thermal",
+    "29: a - Carbon capture and storage",
+    "30: a - Hydrogen",
+    "31: a - Transmission networks",
+    "32: a - Distribution networks",
+    "33: a - Investors",
+    "34: a - Investors",
+    "35: a - Annual Report 2024",
+    "36: a - The SSE investment case",
+    "37: a - Analysts",
+    "38: a - Reports and results",
+    "39: a - Regulatory news",
+    "40: a - Regulatory news alerts",
+    "41: a - Policy on market speculation",
+    "42: a - Financial calendar",
+    "43: a - PNG scam warning",
+    "44: a - Annual General Meeting 2024",
+    "45: a - Annual General Meeting 2023",
+    "46: a - Annual General Meeting 2022",
+    "47: a - Annual General Meeting 2021",
+    "48: a - Shareholder services",
+    "49: a - Share dealing",
+    "50: a - Ecommunications programme",
+    "51: a - Shareholder contacts",
+    "52: a - Share price information",
+    "53: a - Dividends and Scrip scheme",
+    "54: a - Multiple share accounts",
+    "55: a - Share repurchase programme",
+    "56: a - Useful information",
+    "57: a - Debt investors",
+    "58: a - Credit rating",
+    "59: a - Sustainability Financing Frame",
+    "60: a - EMTN programme",
+    "61: a - ADRs",
+    "62: a - Sustainability",
+    "63: a - Sustainability",
+    "64: a - Environment",
+    "65: a - Social",
+    "66: a - Targets and performance",
+    "67: a - Reporting",
+    "68: a - Partnerships and Memberships",
+    "69: a - Policies and assurances",
+    "70: a - Innovation",
+    "71: a - Just Transition",
+    "72: a - Powering Net Zero Pact",
+    "73: a - SSE at COP",
+    "74: a - News and views",
+    "75: a - News and views",
+    "76: a - Media contacts",
+    "77: a - Media bank",
+    "78: a - Careers",
+    "79: a - Careers",
+    "80: a - Life at SSE",
+    "81: a - Developing our People",
+    "82: a - Flexible Working",
+    "83: a - Employee benefits",
+    "84: a - Join our Team",
+    "85: a - Engineering and Technical",
+    "86: a - IT and Digital",
+    "87: a - Corporate",
+    "88: a - Inclusion",
+    "89: a - Early Careers",
+    "90: a - Apprenticeships and Trainees",
+    "91: a - Graduate Development",
+    "92: a - Progression Stories",
+    "93: a - Contact Recruitment",
+    "94: button - Open search form",
+    "95: input - [No text]",
+    "96: button - Type search here",
+    "97: button - Clear search",
+    "98: a - ",
+    "99: button - Close search form",
+    "100: a - Open search form",
+    "101: button - ",
+    "102: input - [No text]",
+    "103: button - Submit search",
+    "104: button - ",
+    "105: a - About us",
+    "106: button - Go to previous slide",
+    "107: button - Go to next slide",
+    "108: button - ",
+    "109: a - UK campaign",
+    "110: a - News and views",
+    "111: a - Read More",
+    "112: a - Read More",
+    "113: a - Read More",
+    "114: a - Read More",
+    "115: a - Read More",
+    "116: button - Next slide.",
+    "117: button - Previus slide.",
+    "118: a - Watch the webcast",
+    "119: a - Detailed share price",
+    "120: a - Careers",
+    "121: a - Sustainability",
+    "122: a - SSE Renewables",
+    "123: a - SSEN Distribution",
+    "124: a - SSEN Transmission",
+    "125: a - SSE Thermal",
+    "126: a - SSE Energy Solutions",
+    "127: a - SSE Airtricity",
+    "128: button - Back to top.",
+    "129: a - Sustainability",
+    "130: a - Overview",
+    "131: a - Our 2030 Goals",
+    "132: a - Modern Slavery Statement",
+    "133: a - News and views",
+    "134: a - Overview",
+    "135: a - Media Contacts",
+    "136: a - Media bank",
+    "137: a - Careers",
+    "138: a - Overview",
+    "139: a - Life at SSE",
+    "140: a - Specialisms",
+    "141: a - Inclusion",
+    "142: a - Early Careers",
+    "143: a - Thinking of applying?",
+    "144: button - Back to top",
+    "145: a - Contact us",
+    "146: a - Privacy notice",
+    "147: a - Cookie notice",
+    "148: a - Potential suppliers",
+    "149: a - Sitemap",
+    "150: a - Sustainability",
+    "151: a - Cookie settings",
+    "152: a - REMIT"
+  ],
+  "tab_order_details": [
+    {
+      "index": 1,
+      "type": "a",
+      "text": "",
+      "tabindex": null,
+      "class": [
+        "logo"
+      ]
+    },
+    {
+      "index": 2,
+      "type": "a",
+      "text": "Home",
+      "tabindex": null,
+      "class": [
+        "main-nav__link",
+        "js-main-nav-open-dropdown"
+      ]
+    },
+    {
+      "index": 3,
+      "type": "a",
+      "text": "About us",
+      "tabindex": null,
+      "class": [
+        "main-nav__link",
+        "js-main-nav-open-dropdown"
+      ]
+    },
+    {
+      "index": 4,
+      "type": "a",
+      "text": "About us",
+      "tabindex": null,
+      "class": [
+        "main-nav__secondary-link",
+        "main-nav__secondary-link--title"
+      ]
+    },
+    {
+      "index": 5,
+      "type": "a",
+      "text": "Our businesses",
+      "tabindex": null,
+      "class": [
+        "main-nav__secondary-link"
+      ]
+    },
+    {
+      "index": 6,
+      "type": "a",
+      "text": "SSE Renewables",
+      "tabindex": null,
+      "class": [
+        "main-nav__third-link"
+      ]
+    },
+    {
+      "index": 7,
+      "type": "a",
+      "text": "SSE Thermal",
+      "tabindex": null,
+      "class": [
+        "main-nav__third-link"
+      ]
+    },
+    {
+      "index": 8,
+      "type": "a",
+      "text": "SSEN Transmission",
+      "tabindex": null,
+      "class": [
+        "main-nav__third-link"
+      ]
+    },
+    {
+      "index": 9,
+      "type": "a",
+      "text": "SSEN Distribution",
+      "tabindex": null,
+      "class": [
+        "main-nav__third-link"
+      ]
+    },
+    {
+      "index": 10,
+      "type": "a",
+      "text": "SSE Energy Solutions",
+      "tabindex": null,
+      "class": [
+        "main-nav__third-link"
+      ]
+    },
+    {
+      "index": 11,
+      "type": "a",
+      "text": "SSE Airtricity",
+      "tabindex": null,
+      "class": [
+        "main-nav__third-link"
+      ]
+    },
+    {
+      "index": 12,
+      "type": "a",
+      "text": "SSE Energy Markets",
+      "tabindex": null,
+      "class": [
+        "main-nav__third-link"
+      ]
+    },
+    {
+      "index": 13,
+      "type": "a",
+      "text": "Leadership and Governance",
+      "tabindex": null,
+      "class": [
+        "main-nav__secondary-link"
+      ]
+    },
+    {
+      "index": 14,
+      "type": "a",
+      "text": "Meet the board",
+      "tabindex": null,
+      "class": [
+        "main-nav__third-link"
+      ]
+    },
+    {
+      "index": 15,
+      "type": "a",
+      "text": "Meet the GEC",
+      "tabindex": null,
+      "class": [
+        "main-nav__third-link"
+      ]
+    },
+    {
+      "index": 16,
+      "type": "a",
+      "text": "Our heritage",
+      "tabindex": null,
+      "class": [
+        "main-nav__secondary-link"
+      ]
+    },
+    {
+      "index": 17,
+      "type": "a",
+      "text": "Our culture",
+      "tabindex": null,
+      "class": [
+        "main-nav__secondary-link"
+      ]
+    },
+    {
+      "index": 18,
+      "type": "a",
+      "text": "Our campaigns",
+      "tabindex": null,
+      "class": [
+        "main-nav__secondary-link"
+      ]
+    },
+    {
+      "index": 19,
+      "type": "a",
+      "text": "UK campaign",
+      "tabindex": null,
+      "class": [
+        "main-nav__third-link"
+      ]
+    },
+    {
+      "index": 20,
+      "type": "a",
+      "text": "Ireland campaign",
+      "tabindex": null,
+      "class": [
+        "main-nav__third-link"
+      ]
+    },
+    {
+      "index": 21,
+      "type": "a",
+      "text": "Our technologies",
+      "tabindex": null,
+      "class": [
+        "main-nav__link",
+        "js-main-nav-open-dropdown"
+      ]
+    },
+    {
+      "index": 22,
+      "type": "a",
+      "text": "Our technologies",
+      "tabindex": null,
+      "class": [
+        "main-nav__secondary-link",
+        "main-nav__secondary-link--title"
+      ]
+    },
+    {
+      "index": 23,
+      "type": "a",
+      "text": "Offshore wind",
+      "tabindex": null,
+      "class": [
+        "main-nav__secondary-link"
+      ]
+    },
+    {
+      "index": 24,
+      "type": "a",
+      "text": "Onshore wind",
+      "tabindex": null,
+      "class": [
+        "main-nav__secondary-link"
+      ]
+    },
+    {
+      "index": 25,
+      "type": "a",
+      "text": "Hydro",
+      "tabindex": null,
+      "class": [
+        "main-nav__secondary-link"
+      ]
+    },
+    {
+      "index": 26,
+      "type": "a",
+      "text": "Solar",
+      "tabindex": null,
+      "class": [
+        "main-nav__secondary-link"
+      ]
+    },
+    {
+      "index": 27,
+      "type": "a",
+      "text": "Battery storage",
+      "tabindex": null,
+      "class": [
+        "main-nav__secondary-link"
+      ]
+    },
+    {
+      "index": 28,
+      "type": "a",
+      "text": "Thermal",
+      "tabindex": null,
+      "class": [
+        "main-nav__secondary-link"
+      ]
+    },
+    {
+      "index": 29,
+      "type": "a",
+      "text": "Carbon capture and storage",
+      "tabindex": null,
+      "class": [
+        "main-nav__secondary-link"
+      ]
+    },
+    {
+      "index": 30,
+      "type": "a",
+      "text": "Hydrogen",
+      "tabindex": null,
+      "class": [
+        "main-nav__secondary-link"
+      ]
+    },
+    {
+      "index": 31,
+      "type": "a",
+      "text": "Transmission networks",
+      "tabindex": null,
+      "class": [
+        "main-nav__secondary-link"
+      ]
+    },
+    {
+      "index": 32,
+      "type": "a",
+      "text": "Distribution networks",
+      "tabindex": null,
+      "class": [
+        "main-nav__secondary-link"
+      ]
+    },
+    {
+      "index": 33,
+      "type": "a",
+      "text": "Investors",
+      "tabindex": null,
+      "class": [
+        "main-nav__link",
+        "js-main-nav-open-dropdown"
+      ]
+    },
+    {
+      "index": 34,
+      "type": "a",
+      "text": "Investors",
+      "tabindex": null,
+      "class": [
+        "main-nav__secondary-link",
+        "main-nav__secondary-link--title"
+      ]
+    },
+    {
+      "index": 35,
+      "type": "a",
+      "text": "Annual Report 2024",
+      "tabindex": null,
+      "class": [
+        "main-nav__secondary-link"
+      ]
+    },
+    {
+      "index": 36,
+      "type": "a",
+      "text": "The SSE investment case",
+      "tabindex": null,
+      "class": [
+        "main-nav__secondary-link"
+      ]
+    },
+    {
+      "index": 37,
+      "type": "a",
+      "text": "Analysts",
+      "tabindex": null,
+      "class": [
+        "main-nav__third-link"
+      ]
+    },
+    {
+      "index": 38,
+      "type": "a",
+      "text": "Reports and results",
+      "tabindex": null,
+      "class": [
+        "main-nav__secondary-link"
+      ]
+    },
+    {
+      "index": 39,
+      "type": "a",
+      "text": "Regulatory news",
+      "tabindex": null,
+      "class": [
+        "main-nav__secondary-link"
+      ]
+    },
+    {
+      "index": 40,
+      "type": "a",
+      "text": "Regulatory news alerts",
+      "tabindex": null,
+      "class": [
+        "main-nav__third-link"
+      ]
+    },
+    {
+      "index": 41,
+      "type": "a",
+      "text": "Policy on market speculation",
+      "tabindex": null,
+      "class": [
+        "main-nav__third-link"
+      ]
+    },
+    {
+      "index": 42,
+      "type": "a",
+      "text": "Financial calendar",
+      "tabindex": null,
+      "class": [
+        "main-nav__secondary-link"
+      ]
+    },
+    {
+      "index": 43,
+      "type": "a",
+      "text": "PNG scam warning",
+      "tabindex": null,
+      "class": [
+        "main-nav__secondary-link"
+      ]
+    },
+    {
+      "index": 44,
+      "type": "a",
+      "text": "Annual General Meeting 2024",
+      "tabindex": null,
+      "class": [
+        "main-nav__secondary-link"
+      ]
+    },
+    {
+      "index": 45,
+      "type": "a",
+      "text": "Annual General Meeting 2023",
+      "tabindex": null,
+      "class": [
+        "main-nav__third-link"
+      ]
+    },
+    {
+      "index": 46,
+      "type": "a",
+      "text": "Annual General Meeting 2022",
+      "tabindex": null,
+      "class": [
+        "main-nav__third-link"
+      ]
+    },
+    {
+      "index": 47,
+      "type": "a",
+      "text": "Annual General Meeting 2021",
+      "tabindex": null,
+      "class": [
+        "main-nav__third-link"
+      ]
+    },
+    {
+      "index": 48,
+      "type": "a",
+      "text": "Shareholder services",
+      "tabindex": null,
+      "class": [
+        "main-nav__secondary-link"
+      ]
+    },
+    {
+      "index": 49,
+      "type": "a",
+      "text": "Share dealing",
+      "tabindex": null,
+      "class": [
+        "main-nav__third-link"
+      ]
+    },
+    {
+      "index": 50,
+      "type": "a",
+      "text": "Ecommunications programme",
+      "tabindex": null,
+      "class": [
+        "main-nav__third-link"
+      ]
+    },
+    {
+      "index": 51,
+      "type": "a",
+      "text": "Shareholder contacts",
+      "tabindex": null,
+      "class": [
+        "main-nav__third-link"
+      ]
+    },
+    {
+      "index": 52,
+      "type": "a",
+      "text": "Share price information",
+      "tabindex": null,
+      "class": [
+        "main-nav__third-link"
+      ]
+    },
+    {
+      "index": 53,
+      "type": "a",
+      "text": "Dividends and Scrip scheme",
+      "tabindex": null,
+      "class": [
+        "main-nav__third-link"
+      ]
+    },
+    {
+      "index": 54,
+      "type": "a",
+      "text": "Multiple share accounts",
+      "tabindex": null,
+      "class": [
+        "main-nav__third-link"
+      ]
+    },
+    {
+      "index": 55,
+      "type": "a",
+      "text": "Share repurchase programme",
+      "tabindex": null,
+      "class": [
+        "main-nav__third-link"
+      ]
+    },
+    {
+      "index": 56,
+      "type": "a",
+      "text": "Useful information",
+      "tabindex": null,
+      "class": [
+        "main-nav__third-link"
+      ]
+    },
+    {
+      "index": 57,
+      "type": "a",
+      "text": "Debt investors",
+      "tabindex": null,
+      "class": [
+        "main-nav__secondary-link"
+      ]
+    },
+    {
+      "index": 58,
+      "type": "a",
+      "text": "Credit rating",
+      "tabindex": null,
+      "class": [
+        "main-nav__third-link"
+      ]
+    },
+    {
+      "index": 59,
+      "type": "a",
+      "text": "Sustainability Financing Frame",
+      "tabindex": null,
+      "class": [
+        "main-nav__third-link"
+      ]
+    },
+    {
+      "index": 60,
+      "type": "a",
+      "text": "EMTN programme",
+      "tabindex": null,
+      "class": [
+        "main-nav__third-link"
+      ]
+    },
+    {
+      "index": 61,
+      "type": "a",
+      "text": "ADRs",
+      "tabindex": null,
+      "class": [
+        "main-nav__secondary-link"
+      ]
+    },
+    {
+      "index": 62,
+      "type": "a",
+      "text": "Sustainability",
+      "tabindex": null,
+      "class": [
+        "main-nav__link",
+        "js-main-nav-open-dropdown"
+      ]
+    },
+    {
+      "index": 63,
+      "type": "a",
+      "text": "Sustainability",
+      "tabindex": null,
+      "class": [
+        "main-nav__secondary-link",
+        "main-nav__secondary-link--title"
+      ]
+    },
+    {
+      "index": 64,
+      "type": "a",
+      "text": "Environment",
+      "tabindex": null,
+      "class": [
+        "main-nav__secondary-link"
+      ]
+    },
+    {
+      "index": 65,
+      "type": "a",
+      "text": "Social",
+      "tabindex": null,
+      "class": [
+        "main-nav__secondary-link"
+      ]
+    },
+    {
+      "index": 66,
+      "type": "a",
+      "text": "Targets and performance",
+      "tabindex": null,
+      "class": [
+        "main-nav__secondary-link"
+      ]
+    },
+    {
+      "index": 67,
+      "type": "a",
+      "text": "Reporting",
+      "tabindex": null,
+      "class": [
+        "main-nav__secondary-link"
+      ]
+    },
+    {
+      "index": 68,
+      "type": "a",
+      "text": "Partnerships and Memberships",
+      "tabindex": null,
+      "class": [
+        "main-nav__secondary-link"
+      ]
+    },
+    {
+      "index": 69,
+      "type": "a",
+      "text": "Policies and assurances",
+      "tabindex": null,
+      "class": [
+        "main-nav__secondary-link"
+      ]
+    },
+    {
+      "index": 70,
+      "type": "a",
+      "text": "Innovation",
+      "tabindex": null,
+      "class": [
+        "main-nav__secondary-link"
+      ]
+    },
+    {
+      "index": 71,
+      "type": "a",
+      "text": "Just Transition",
+      "tabindex": null,
+      "class": [
+        "main-nav__secondary-link"
+      ]
+    },
+    {
+      "index": 72,
+      "type": "a",
+      "text": "Powering Net Zero Pact",
+      "tabindex": null,
+      "class": [
+        "main-nav__secondary-link"
+      ]
+    },
+    {
+      "index": 73,
+      "type": "a",
+      "text": "SSE at COP",
+      "tabindex": null,
+      "class": [
+        "main-nav__secondary-link"
+      ]
+    },
+    {
+      "index": 74,
+      "type": "a",
+      "text": "News and views",
+      "tabindex": null,
+      "class": [
+        "main-nav__link",
+        "js-main-nav-open-dropdown"
+      ]
+    },
+    {
+      "index": 75,
+      "type": "a",
+      "text": "News and views",
+      "tabindex": null,
+      "class": [
+        "main-nav__secondary-link",
+        "main-nav__secondary-link--title"
+      ]
+    },
+    {
+      "index": 76,
+      "type": "a",
+      "text": "Media contacts",
+      "tabindex": null,
+      "class": [
+        "main-nav__secondary-link"
+      ]
+    },
+    {
+      "index": 77,
+      "type": "a",
+      "text": "Media bank",
+      "tabindex": null,
+      "class": [
+        "main-nav__secondary-link"
+      ]
+    },
+    {
+      "index": 78,
+      "type": "a",
+      "text": "Careers",
+      "tabindex": null,
+      "class": [
+        "main-nav__link",
+        "js-main-nav-open-dropdown"
+      ]
+    },
+    {
+      "index": 79,
+      "type": "a",
+      "text": "Careers",
+      "tabindex": null,
+      "class": [
+        "main-nav__secondary-link",
+        "main-nav__secondary-link--title"
+      ]
+    },
+    {
+      "index": 80,
+      "type": "a",
+      "text": "Life at SSE",
+      "tabindex": null,
+      "class": [
+        "main-nav__secondary-link"
+      ]
+    },
+    {
+      "index": 81,
+      "type": "a",
+      "text": "Developing our People",
+      "tabindex": null,
+      "class": [
+        "main-nav__third-link"
+      ]
+    },
+    {
+      "index": 82,
+      "type": "a",
+      "text": "Flexible Working",
+      "tabindex": null,
+      "class": [
+        "main-nav__third-link"
+      ]
+    },
+    {
+      "index": 83,
+      "type": "a",
+      "text": "Employee benefits",
+      "tabindex": null,
+      "class": [
+        "main-nav__third-link"
+      ]
+    },
+    {
+      "index": 84,
+      "type": "a",
+      "text": "Join our Team",
+      "tabindex": null,
+      "class": [
+        "main-nav__secondary-link"
+      ]
+    },
+    {
+      "index": 85,
+      "type": "a",
+      "text": "Engineering and Technical",
+      "tabindex": null,
+      "class": [
+        "main-nav__third-link"
+      ]
+    },
+    {
+      "index": 86,
+      "type": "a",
+      "text": "IT and Digital",
+      "tabindex": null,
+      "class": [
+        "main-nav__third-link"
+      ]
+    },
+    {
+      "index": 87,
+      "type": "a",
+      "text": "Corporate",
+      "tabindex": null,
+      "class": [
+        "main-nav__third-link"
+      ]
+    },
+    {
+      "index": 88,
+      "type": "a",
+      "text": "Inclusion",
+      "tabindex": null,
+      "class": [
+        "main-nav__secondary-link"
+      ]
+    },
+    {
+      "index": 89,
+      "type": "a",
+      "text": "Early Careers",
+      "tabindex": null,
+      "class": [
+        "main-nav__secondary-link"
+      ]
+    },
+    {
+      "index": 90,
+      "type": "a",
+      "text": "Apprenticeships and Trainees",
+      "tabindex": null,
+      "class": [
+        "main-nav__third-link"
+      ]
+    },
+    {
+      "index": 91,
+      "type": "a",
+      "text": "Graduate Development",
+      "tabindex": null,
+      "class": [
+        "main-nav__third-link"
+      ]
+    },
+    {
+      "index": 92,
+      "type": "a",
+      "text": "Progression Stories",
+      "tabindex": null,
+      "class": [
+        "main-nav__third-link"
+      ]
+    },
+    {
+      "index": 93,
+      "type": "a",
+      "text": "Contact Recruitment",
+      "tabindex": null,
+      "class": [
+        "main-nav__secondary-link"
+      ]
+    },
+    {
+      "index": 94,
+      "type": "button",
+      "text": "Open search form",
+      "tabindex": null,
+      "class": [
+        "search__open-btn",
+        "js-open-search"
+      ]
+    },
+    {
+      "index": 95,
+      "type": "input",
+      "text": "[No text]",
+      "tabindex": null,
+      "id": "Q",
+      "class": [
+        "search__input"
+      ]
+    },
+    {
+      "index": 96,
+      "type": "button",
+      "text": "Type search here",
+      "tabindex": null
+    },
+    {
+      "index": 97,
+      "type": "button",
+      "text": "Clear search",
+      "tabindex": null,
+      "class": [
+        "search__clear",
+        "js-clear-search"
+      ]
+    },
+    {
+      "index": 98,
+      "type": "a",
+      "text": "",
+      "tabindex": null,
+      "class": [
+        "search__logo"
+      ]
+    },
+    {
+      "index": 99,
+      "type": "button",
+      "text": "Close search form",
+      "tabindex": null,
+      "class": [
+        "search__close-btn",
+        "js-close-search"
+      ]
+    },
+    {
+      "index": 100,
+      "type": "a",
+      "text": "Open search form",
+      "tabindex": null,
+      "class": [
+        "button-mail"
+      ]
+    },
+    {
+      "index": 101,
+      "type": "button",
+      "text": "",
+      "tabindex": null,
+      "class": [
+        "nav-toggle",
+        "js-nav-toggle"
+      ]
+    },
+    {
+      "index": 102,
+      "type": "input",
+      "text": "[No text]",
+      "tabindex": null,
+      "id": "Q",
+      "class": [
+        "search__form-input"
+      ]
+    },
+    {
+      "index": 103,
+      "type": "button",
+      "text": "Submit search",
+      "tabindex": null,
+      "class": [
+        "search__form-submit"
+      ]
+    },
+    {
+      "index": 104,
+      "type": "button",
+      "text": "",
+      "tabindex": null,
+      "class": [
+        "nav-toggle",
+        "js-nav-toggle"
+      ]
+    },
+    {
+      "index": 105,
+      "type": "a",
+      "text": "About us",
+      "tabindex": null,
+      "class": [
+        "btn",
+        "btn--home"
+      ]
+    },
+    {
+      "index": 106,
+      "type": "button",
+      "text": "Go to previous slide",
+      "tabindex": null,
+      "class": [
+        "slider-banner__btn",
+        "slider-banner__btn--prev",
+        "js-out-prev"
+      ]
+    },
+    {
+      "index": 107,
+      "type": "button",
+      "text": "Go to next slide",
+      "tabindex": null,
+      "class": [
+        "slider-banner__btn",
+        "slider-banner__btn--next",
+        "js-out-next"
+      ]
+    },
+    {
+      "index": 108,
+      "type": "button",
+      "text": "",
+      "tabindex": null,
+      "class": [
+        "banner__scroll",
+        "js-scroll-down"
+      ]
+    },
+    {
+      "index": 109,
+      "type": "a",
+      "text": "UK campaign",
+      "tabindex": null,
+      "class": [
+        "btn",
+        "btn--outline"
+      ]
+    },
+    {
+      "index": 110,
+      "type": "a",
+      "text": "News and views",
+      "tabindex": null,
+      "class": [
+        "btn",
+        "btn--outline"
+      ]
+    },
+    {
+      "index": 111,
+      "type": "a",
+      "text": "Read More",
+      "tabindex": "0",
+      "class": [
+        "link"
+      ]
+    },
+    {
+      "index": 112,
+      "type": "a",
+      "text": "Read More",
+      "tabindex": "0",
+      "class": [
+        "link"
+      ]
+    },
+    {
+      "index": 113,
+      "type": "a",
+      "text": "Read More",
+      "tabindex": "0",
+      "class": [
+        "link"
+      ]
+    },
+    {
+      "index": 114,
+      "type": "a",
+      "text": "Read More",
+      "tabindex": "-1",
+      "class": [
+        "link"
+      ]
+    },
+    {
+      "index": 115,
+      "type": "a",
+      "text": "Read More",
+      "tabindex": "-1",
+      "class": [
+        "link"
+      ]
+    },
+    {
+      "index": 116,
+      "type": "button",
+      "text": "Next slide.",
+      "tabindex": null,
+      "class": [
+        "slider__btn",
+        "slider__btn--prev",
+        "js-out-prev",
+        "slick-arrow",
+        "slick-disabled"
+      ]
+    },
+    {
+      "index": 117,
+      "type": "button",
+      "text": "Previus slide.",
+      "tabindex": null,
+      "class": [
+        "slider__btn",
+        "slider__btn--next",
+        "js-out-next",
+        "slick-arrow"
+      ]
+    },
+    {
+      "index": 118,
+      "type": "a",
+      "text": "Watch the webcast",
+      "tabindex": null,
+      "class": [
+        "btn",
+        "btn--outline"
+      ]
+    },
+    {
+      "index": 119,
+      "type": "a",
+      "text": "Detailed share price",
+      "tabindex": null,
+      "class": [
+        "link"
+      ]
+    },
+    {
+      "index": 120,
+      "type": "a",
+      "text": "Careers",
+      "tabindex": null,
+      "class": [
+        "btn",
+        "btn--outline"
+      ]
+    },
+    {
+      "index": 121,
+      "type": "a",
+      "text": "Sustainability",
+      "tabindex": null,
+      "class": [
+        "btn",
+        "btn--outline"
+      ]
+    },
+    {
+      "index": 122,
+      "type": "a",
+      "text": "SSE Renewables",
+      "tabindex": null,
+      "class": [
+        "link"
+      ]
+    },
+    {
+      "index": 123,
+      "type": "a",
+      "text": "SSEN Distribution",
+      "tabindex": null,
+      "class": [
+        "link"
+      ]
+    },
+    {
+      "index": 124,
+      "type": "a",
+      "text": "SSEN Transmission",
+      "tabindex": null,
+      "class": [
+        "link"
+      ]
+    },
+    {
+      "index": 125,
+      "type": "a",
+      "text": "SSE Thermal",
+      "tabindex": null,
+      "class": [
+        "link"
+      ]
+    },
+    {
+      "index": 126,
+      "type": "a",
+      "text": "SSE Energy Solutions",
+      "tabindex": null,
+      "class": [
+        "link"
+      ]
+    },
+    {
+      "index": 127,
+      "type": "a",
+      "text": "SSE Airtricity",
+      "tabindex": null,
+      "class": [
+        "link"
+      ]
+    },
+    {
+      "index": 128,
+      "type": "button",
+      "text": "Back to top.",
+      "tabindex": null,
+      "class": [
+        "footer__scroll-btn",
+        "js-scroll-top"
+      ]
+    },
+    {
+      "index": 129,
+      "type": "a",
+      "text": "Sustainability",
+      "tabindex": null,
+      "class": [
+        "footer__link",
+        "footer__link--has-children",
+        "js-footer-link"
+      ]
+    },
+    {
+      "index": 130,
+      "type": "a",
+      "text": "Overview",
+      "tabindex": null,
+      "class": [
+        "footer__secondary-link"
+      ]
+    },
+    {
+      "index": 131,
+      "type": "a",
+      "text": "Our 2030 Goals",
+      "tabindex": null,
+      "class": [
+        "footer__secondary-link"
+      ]
+    },
+    {
+      "index": 132,
+      "type": "a",
+      "text": "Modern Slavery Statement",
+      "tabindex": null,
+      "class": [
+        "footer__secondary-link"
+      ]
+    },
+    {
+      "index": 133,
+      "type": "a",
+      "text": "News and views",
+      "tabindex": null,
+      "class": [
+        "footer__link",
+        "footer__link--has-children",
+        "js-footer-link"
+      ]
+    },
+    {
+      "index": 134,
+      "type": "a",
+      "text": "Overview",
+      "tabindex": null,
+      "class": [
+        "footer__secondary-link"
+      ]
+    },
+    {
+      "index": 135,
+      "type": "a",
+      "text": "Media Contacts",
+      "tabindex": null,
+      "class": [
+        "footer__secondary-link"
+      ]
+    },
+    {
+      "index": 136,
+      "type": "a",
+      "text": "Media bank",
+      "tabindex": null,
+      "class": [
+        "footer__secondary-link"
+      ]
+    },
+    {
+      "index": 137,
+      "type": "a",
+      "text": "Careers",
+      "tabindex": null,
+      "class": [
+        "footer__link",
+        "footer__link--has-children",
+        "js-footer-link"
+      ]
+    },
+    {
+      "index": 138,
+      "type": "a",
+      "text": "Overview",
+      "tabindex": null,
+      "class": [
+        "footer__secondary-link"
+      ]
+    },
+    {
+      "index": 139,
+      "type": "a",
+      "text": "Life at SSE",
+      "tabindex": null,
+      "class": [
+        "footer__secondary-link"
+      ]
+    },
+    {
+      "index": 140,
+      "type": "a",
+      "text": "Specialisms",
+      "tabindex": null,
+      "class": [
+        "footer__secondary-link"
+      ]
+    },
+    {
+      "index": 141,
+      "type": "a",
+      "text": "Inclusion",
+      "tabindex": null,
+      "class": [
+        "footer__secondary-link"
+      ]
+    },
+    {
+      "index": 142,
+      "type": "a",
+      "text": "Early Careers",
+      "tabindex": null,
+      "class": [
+        "footer__secondary-link"
+      ]
+    },
+    {
+      "index": 143,
+      "type": "a",
+      "text": "Thinking of applying?",
+      "tabindex": null,
+      "class": [
+        "footer__secondary-link"
+      ]
+    },
+    {
+      "index": 144,
+      "type": "button",
+      "text": "Back to top",
+      "tabindex": null,
+      "class": [
+        "footer__scroll-btn-mobile",
+        "js-scroll-top"
+      ]
+    },
+    {
+      "index": 145,
+      "type": "a",
+      "text": "Contact us",
+      "tabindex": null,
+      "class": [
+        "copyright__link"
+      ]
+    },
+    {
+      "index": 146,
+      "type": "a",
+      "text": "Privacy notice",
+      "tabindex": null,
+      "class": [
+        "copyright__link"
+      ]
+    },
+    {
+      "index": 147,
+      "type": "a",
+      "text": "Cookie notice",
+      "tabindex": null,
+      "class": [
+        "copyright__link"
+      ]
+    },
+    {
+      "index": 148,
+      "type": "a",
+      "text": "Potential suppliers",
+      "tabindex": null,
+      "class": [
+        "copyright__link"
+      ]
+    },
+    {
+      "index": 149,
+      "type": "a",
+      "text": "Sitemap",
+      "tabindex": null,
+      "class": [
+        "copyright__link"
+      ]
+    },
+    {
+      "index": 150,
+      "type": "a",
+      "text": "Sustainability",
+      "tabindex": null,
+      "class": [
+        "copyright__link"
+      ]
+    },
+    {
+      "index": 151,
+      "type": "a",
+      "text": "Cookie settings",
+      "tabindex": null,
+      "class": [
+        "copyright__link",
+        "js-open-cookie"
+      ]
+    },
+    {
+      "index": 152,
+      "type": "a",
+      "text": "REMIT",
+      "tabindex": null,
+      "class": [
+        "copyright__link"
+      ]
+    }
+  ],
+  "tab_order_issues": [
+    "Tab order issue: Element 111 (tabindex=0) comes before Element 112 (tabindex=0)",
+    "Tab order issue: Element 112 (tabindex=0) comes before Element 113 (tabindex=0)",
+    "Tab order issue: Element 113 (tabindex=0) comes before Element 114 (tabindex=-1)",
+    "Tab order issue: Element 114 (tabindex=-1) comes before Element 115 (tabindex=-1)"
+  ]
+}

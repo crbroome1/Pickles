@@ -1,0 +1,3550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Accessibility Report - http://sse.com</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f7f7f7;
+        }
+        
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        
+        .section {
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+            padding: 20px;
+        }
+        
+        .issue-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+        
+        .issue-count {
+            background-color: #e74c3c;
+            color: white;
+            padding: 3px 8px;
+            border-radius: 12px;
+            font-size: 14px;
+        }
+        
+        .issue-count.no-issues {
+            background-color: #2ecc71;
+        }
+        
+        /* CSS-only accordion styling */
+        .accordion {
+            margin-bottom: 10px;
+        }
+        
+        .accordion input[type="checkbox"] {
+            display: none;
+        }
+        
+        .accordion label {
+            background-color: #f8f9fa;
+            color: #444;
+            cursor: pointer;
+            padding: 12px 15px;
+            width: 100%;
+            display: block;
+            text-align: center;
+            border: none;
+            border-radius: 4px;
+            outline: none;
+            font-size: 16px;
+            transition: 0.3s;
+            margin-bottom: 5px;
+            position: relative;
+        }
+        
+        .accordion label:hover {
+            background-color: #e9ecef;
+        }
+        
+        .accordion label::after {
+            content: '+';
+            position: absolute;
+            right: 15px;
+            font-weight: bold;
+        }
+        
+        .accordion input:checked + label::after {
+            content: '-';
+        }
+        
+        .accordion-content {
+            background-color: #f9f9f9;
+            border-radius: 0 0 4px 4px;
+            overflow: hidden;
+            padding: 0;
+            max-height: 0;
+            transition: max-height 0.3s ease-out;
+        }
+        
+        .accordion input:checked ~ .accordion-content {
+            max-height: 9999px; /* Large value to accommodate any content */
+            padding: 18px;
+        }
+        
+        .issue-item {
+            margin-bottom: 20px;
+            padding: 15px;
+            border-left: 4px solid #e74c3c;
+            background-color: white;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+        }
+        
+        .issue-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+            font-size: 16px;
+        }
+        
+        .issue-details {
+            margin-bottom: 10px;
+        }
+        
+        .issue-recommendation {
+            font-style: italic;
+            color: #666;
+            margin-bottom: 15px;
+            padding-left: 10px;
+            border-left: 2px solid #3498db;
+        }
+        
+        .critical {
+            color: #e74c3c;
+        }
+        
+        .warning {
+            color: #f39c12;
+        }
+        
+        /* CSS-only element info panel */
+        .element-info-panel {
+            margin-top: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        
+        .element-info-panel input[type="checkbox"] {
+            display: none;
+        }
+        
+        .element-info-header {
+            background-color: #f1f1f1;
+            padding: 8px 12px;
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0;
+        }
+        
+        .element-info-header:hover {
+            background-color: #e5e5e5;
+        }
+        
+        .element-info-header::after {
+            content: '+';
+            position: relative;
+            font-weight: bold;
+        }
+        
+        .element-info-panel input:checked + .element-info-header::after {
+            content: '-';
+        }
+        
+        .element-info-content {
+            padding: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+            background-color: #fff;
+        }
+        
+        .element-info-panel input:checked ~ .element-info-content {
+            max-height: 2000px;
+            padding: 12px;
+        }
+        
+        .element-property {
+            margin-bottom: 8px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        .property-name {
+            font-weight: bold;
+            min-width: 120px;
+            color: #555;
+        }
+        
+        .property-value {
+            flex: 1;
+            word-break: break-word;
+            font-family: monospace;
+            background-color: #f8f9fa;
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+        
+        .selector-path {
+            font-family: monospace;
+            background-color: #f5f5f5;
+            padding: 8px;
+            border-radius: 4px;
+            margin-top: 5px;
+            word-break: break-all;
+            border: 1px solid #e0e0e0;
+        }
+        
+        .position-diagram {
+            width: 100%;
+            max-width: 300px;
+            height: 150px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            position: relative;
+            background-color: #f9f9f9;
+        }
+        
+        .element-box {
+            position: absolute;
+            background-color: rgba(52, 152, 219, 0.3);
+            border: 2px solid rgba(52, 152, 219, 0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10px;
+            font-family: monospace;
+            color: #333;
+        }
+        
+        .attribute-list {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 10px;
+        }
+        
+        .attribute-list th, .attribute-list td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        
+        .attribute-list th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+        
+        .attribute-list tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        
+        .tags-list {
+            margin-top: 10px;
+        }
+        
+        .tags-list span {
+            display: inline-block;
+            background-color: #3498db;
+            color: white;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-size: 12px;
+            margin-right: 5px;
+            margin-bottom: 5px;
+        }
+        
+        .wcag-tag {
+            background-color: #9b59b6;
+        }
+        
+        .severity-tag {
+            background-color: #e74c3c;
+        }
+        
+        .verification-section {
+            display: flex;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+        }
+        
+        .verification-checkbox {
+            margin-right: 15px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .verification-checkbox input {
+            margin-right: 5px;
+        }
+        
+        /* Export button */
+        .export-btn {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        
+        .export-btn:hover {
+            background-color: #2980b9;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+            color: #666;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="section">
+        <h1>Enhanced Accessibility Audit Report</h1>
+        <p><strong>URL:</strong> http://sse.com</p>
+        <p><strong>Date:</strong> 2025-03-17 18:33:42</p>
+        <p><strong>Elements Analyzed:</strong> Unknown</p>
+    </div>
+
+    <div class="section">
+        <div class="issue-header">
+            <h2>Keyboard Navigation Sequence</h2>
+            <span class="issue-count ">
+                1 Issue
+            </span>
+        </div>
+        
+        <div class="accordion">
+            <input type="checkbox" id="accordion-1" class="accordion-checkbox">
+            <label for="accordion-1">View Issues</label>
+            <div class="accordion-content">
+
+            <div class="issues-list">
+
+                <div class="issue-item">
+                    <div class="issue-title warning">Keyboard navigation barrier</div>
+                    <div class="issue-details">Tab sequence (4 elements) is much shorter than expected (212 potentially focusable elements)</div>
+                    <div class="issue-recommendation">Check for elements that should be focusable but aren't</div>
+                    <div class="tags-list">
+                        <span class="wcag-tag">WCAG 2.1.1</span>
+                        <span class="severity-tag">Warning</span>
+                    </div>
+
+                    <div class="verification-section">
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="verified-checkbox"> Verified
+                        </label>
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="fixed-checkbox"> Fixed
+                        </label>
+                    </div>
+                </div>
+
+            </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="issue-header">
+            <h2>ARIA Accessibility</h2>
+            <span class="issue-count ">
+                3 Issues
+            </span>
+        </div>
+        
+        <div class="accordion">
+            <input type="checkbox" id="accordion-2" class="accordion-checkbox">
+            <label for="accordion-2">View Issues</label>
+            <div class="accordion-content">
+
+            <div class="issues-list">
+
+                <div class="issue-item">
+                    <div class="issue-title critical">Hidden element contains focusable elements</div>
+                    <div class="issue-details">Element with aria-hidden='true' contains 3 focusable children</div>
+                    <div class="issue-recommendation">Remove focusable elements from aria-hidden containers or ensure they also have tabindex='-1'</div>
+                    <div class="tags-list">
+                        <span class="wcag-tag">WCAG 1.3.1</span>
+                        <span class="severity-tag">Critical</span>
+                    </div>
+
+                    <div class="verification-section">
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="verified-checkbox"> Verified
+                        </label>
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="fixed-checkbox"> Fixed
+                        </label>
+                    </div>
+                </div>
+
+                <div class="issue-item">
+                    <div class="issue-title critical">Hidden element contains focusable elements</div>
+                    <div class="issue-details">Element with aria-hidden='true' contains 1 focusable children</div>
+                    <div class="issue-recommendation">Remove focusable elements from aria-hidden containers or ensure they also have tabindex='-1'</div>
+                    <div class="tags-list">
+                        <span class="wcag-tag">WCAG 1.3.1</span>
+                        <span class="severity-tag">Critical</span>
+                    </div>
+
+                    <div class="verification-section">
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="verified-checkbox"> Verified
+                        </label>
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="fixed-checkbox"> Fixed
+                        </label>
+                    </div>
+                </div>
+
+                <div class="issue-item">
+                    <div class="issue-title critical">Hidden element contains focusable elements</div>
+                    <div class="issue-details">Element with aria-hidden='true' contains 1 focusable children</div>
+                    <div class="issue-recommendation">Remove focusable elements from aria-hidden containers or ensure they also have tabindex='-1'</div>
+                    <div class="tags-list">
+                        <span class="wcag-tag">WCAG 1.3.1</span>
+                        <span class="severity-tag">Critical</span>
+                    </div>
+
+                    <div class="verification-section">
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="verified-checkbox"> Verified
+                        </label>
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="fixed-checkbox"> Fixed
+                        </label>
+                    </div>
+                </div>
+
+            </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="issue-header">
+            <h2>Color Contrast</h2>
+            <span class="issue-count ">
+                50 Issues
+            </span>
+        </div>
+        
+        <div class="accordion">
+            <input type="checkbox" id="accordion-3" class="accordion-checkbox">
+            <label for="accordion-3">View Issues</label>
+            <div class="accordion-content">
+
+            <div class="issues-list">
+
+                <div class="issue-item">
+                    <div class="issue-title critical">Insufficient color contrast</div>
+                    <div class="issue-details">Contrast ratio: 1.00:1 (required: 3.0:1)</div>
+                    <div class="issue-recommendation">Increase contrast to at least 3.0:1</div>
+                    <div class="tags-list">
+                        <span class="wcag-tag">WCAG 1.4.3</span>
+                        <span class="severity-tag">Critical</span>
+                    </div>
+
+                    <div class="verification-section">
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="verified-checkbox"> Verified
+                        </label>
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="fixed-checkbox"> Fixed
+                        </label>
+                    </div>
+                </div>
+
+                <div class="issue-item">
+                    <div class="issue-title critical">Insufficient color contrast</div>
+                    <div class="issue-details">Contrast ratio: 1.00:1 (required: 3.0:1)</div>
+                    <div class="issue-recommendation">Increase contrast to at least 3.0:1</div>
+                    <div class="tags-list">
+                        <span class="wcag-tag">WCAG 1.4.3</span>
+                        <span class="severity-tag">Critical</span>
+                    </div>
+
+                    <div class="verification-section">
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="verified-checkbox"> Verified
+                        </label>
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="fixed-checkbox"> Fixed
+                        </label>
+                    </div>
+                </div>
+
+                <div class="issue-item">
+                    <div class="issue-title critical">Insufficient color contrast</div>
+                    <div class="issue-details">Contrast ratio: 1.00:1 (required: 3.0:1)</div>
+                    <div class="issue-recommendation">Increase contrast to at least 3.0:1</div>
+                    <div class="tags-list">
+                        <span class="wcag-tag">WCAG 1.4.3</span>
+                        <span class="severity-tag">Critical</span>
+                    </div>
+
+                    <div class="verification-section">
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="verified-checkbox"> Verified
+                        </label>
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="fixed-checkbox"> Fixed
+                        </label>
+                    </div>
+                </div>
+
+                <div class="issue-item">
+                    <div class="issue-title critical">Insufficient color contrast</div>
+                    <div class="issue-details">Contrast ratio: 1.00:1 (required: 3.0:1)</div>
+                    <div class="issue-recommendation">Increase contrast to at least 3.0:1</div>
+                    <div class="tags-list">
+                        <span class="wcag-tag">WCAG 1.4.3</span>
+                        <span class="severity-tag">Critical</span>
+                    </div>
+
+                    <div class="verification-section">
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="verified-checkbox"> Verified
+                        </label>
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="fixed-checkbox"> Fixed
+                        </label>
+                    </div>
+                </div>
+
+                <div class="issue-item">
+                    <div class="issue-title critical">Insufficient color contrast</div>
+                    <div class="issue-details">Contrast ratio: 1.00:1 (required: 3.0:1)</div>
+                    <div class="issue-recommendation">Increase contrast to at least 3.0:1</div>
+                    <div class="tags-list">
+                        <span class="wcag-tag">WCAG 1.4.3</span>
+                        <span class="severity-tag">Critical</span>
+                    </div>
+
+                    <div class="verification-section">
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="verified-checkbox"> Verified
+                        </label>
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="fixed-checkbox"> Fixed
+                        </label>
+                    </div>
+                </div>
+
+                <div class="issue-item">
+                    <div class="issue-title critical">Insufficient color contrast</div>
+                    <div class="issue-details">Contrast ratio: 1.00:1 (required: 3.0:1)</div>
+                    <div class="issue-recommendation">Increase contrast to at least 3.0:1</div>
+                    <div class="tags-list">
+                        <span class="wcag-tag">WCAG 1.4.3</span>
+                        <span class="severity-tag">Critical</span>
+                    </div>
+
+                    <div class="verification-section">
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="verified-checkbox"> Verified
+                        </label>
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="fixed-checkbox"> Fixed
+                        </label>
+                    </div>
+                </div>
+
+                <div class="issue-item">
+                    <div class="issue-title critical">Insufficient color contrast</div>
+                    <div class="issue-details">Contrast ratio: 1.00:1 (required: 3.0:1)</div>
+                    <div class="issue-recommendation">Increase contrast to at least 3.0:1</div>
+                    <div class="tags-list">
+                        <span class="wcag-tag">WCAG 1.4.3</span>
+                        <span class="severity-tag">Critical</span>
+                    </div>
+
+                    <div class="verification-section">
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="verified-checkbox"> Verified
+                        </label>
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="fixed-checkbox"> Fixed
+                        </label>
+                    </div>
+                </div>
+
+                <div class="issue-item">
+                    <div class="issue-title critical">Insufficient color contrast</div>
+                    <div class="issue-details">Contrast ratio: 1.00:1 (required: 4.5:1)</div>
+                    <div class="issue-recommendation">Increase contrast to at least 4.5:1</div>
+                    <div class="tags-list">
+                        <span class="wcag-tag">WCAG 1.4.3</span>
+                        <span class="severity-tag">Critical</span>
+                    </div>
+
+                    <div class="verification-section">
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="verified-checkbox"> Verified
+                        </label>
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="fixed-checkbox"> Fixed
+                        </label>
+                    </div>
+                </div>
+
+                <div class="issue-item">
+                    <div class="issue-title critical">Insufficient color contrast</div>
+                    <div class="issue-details">Contrast ratio: 1.00:1 (required: 4.5:1)</div>
+                    <div class="issue-recommendation">Increase contrast to at least 4.5:1</div>
+                    <div class="tags-list">
+                        <span class="wcag-tag">WCAG 1.4.3</span>
+                        <span class="severity-tag">Critical</span>
+                    </div>
+
+                    <div class="verification-section">
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="verified-checkbox"> Verified
+                        </label>
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="fixed-checkbox"> Fixed
+                        </label>
+                    </div>
+                </div>
+
+                <div class="issue-item">
+                    <div class="issue-title critical">Insufficient color contrast</div>
+                    <div class="issue-details">Contrast ratio: 1.00:1 (required: 4.5:1)</div>
+                    <div class="issue-recommendation">Increase contrast to at least 4.5:1</div>
+                    <div class="tags-list">
+                        <span class="wcag-tag">WCAG 1.4.3</span>
+                        <span class="severity-tag">Critical</span>
+                    </div>
+
+                    <div class="verification-section">
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="verified-checkbox"> Verified
+                        </label>
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="fixed-checkbox"> Fixed
+                        </label>
+                    </div>
+                </div>
+
+                <div class="issue-item">
+                    <div class="issue-title critical">Insufficient color contrast</div>
+                    <div class="issue-details">Contrast ratio: 1.00:1 (required: 4.5:1)</div>
+                    <div class="issue-recommendation">Increase contrast to at least 4.5:1</div>
+                    <div class="tags-list">
+                        <span class="wcag-tag">WCAG 1.4.3</span>
+                        <span class="severity-tag">Critical</span>
+                    </div>
+
+                    <div class="verification-section">
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="verified-checkbox"> Verified
+                        </label>
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="fixed-checkbox"> Fixed
+                        </label>
+                    </div>
+                </div>
+
+                <div class="issue-item">
+                    <div class="issue-title critical">Insufficient color contrast</div>
+                    <div class="issue-details">Contrast ratio: 1.00:1 (required: 4.5:1)</div>
+                    <div class="issue-recommendation">Increase contrast to at least 4.5:1</div>
+                    <div class="tags-list">
+                        <span class="wcag-tag">WCAG 1.4.3</span>
+                        <span class="severity-tag">Critical</span>
+                    </div>
+
+                    <div class="verification-section">
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="verified-checkbox"> Verified
+                        </label>
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="fixed-checkbox"> Fixed
+                        </label>
+                    </div>
+                </div>
+
+                <div class="issue-item">
+                    <div class="issue-title critical">Insufficient color contrast</div>
+                    <div class="issue-details">Contrast ratio: 1.00:1 (required: 4.5:1)</div>
+                    <div class="issue-recommendation">Increase contrast to at least 4.5:1</div>
+                    <div class="tags-list">
+                        <span class="wcag-tag">WCAG 1.4.3</span>
+                        <span class="severity-tag">Critical</span>
+                    </div>
+
+                    <div class="verification-section">
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="verified-checkbox"> Verified
+                        </label>
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="fixed-checkbox"> Fixed
+                        </label>
+                    </div>
+                </div>
+
+                <div class="issue-item">
+                    <div class="issue-title critical">Insufficient color contrast</div>
+                    <div class="issue-details">Contrast ratio: 1.00:1 (required: 4.5:1)</div>
+                    <div class="issue-recommendation">Increase contrast to at least 4.5:1</div>
+                    <div class="tags-list">
+                        <span class="wcag-tag">WCAG 1.4.3</span>
+                        <span class="severity-tag">Critical</span>
+                    </div>
+
+                    <div class="verification-section">
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="verified-checkbox"> Verified
+                        </label>
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="fixed-checkbox"> Fixed
+                        </label>
+                    </div>
+                </div>
+
+                <div class="issue-item">
+                    <div class="issue-title critical">Insufficient color contrast</div>
+                    <div class="issue-details">Contrast ratio: 1.00:1 (required: 4.5:1)</div>
+                    <div class="issue-recommendation">Increase contrast to at least 4.5:1</div>
+                    <div class="tags-list">
+                        <span class="wcag-tag">WCAG 1.4.3</span>
+                        <span class="severity-tag">Critical</span>
+                    </div>
+
+                    <div class="verification-section">
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="verified-checkbox"> Verified
+                        </label>
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="fixed-checkbox"> Fixed
+                        </label>
+                    </div>
+                </div>
+
+                <div class="issue-item">
+                    <div class="issue-title critical">Insufficient color contrast</div>
+                    <div class="issue-details">Contrast ratio: 3.50:1 (required: 4.5:1)</div>
+                    <div class="issue-recommendation">Increase contrast to at least 4.5:1</div>
+                    <div class="tags-list">
+                        <span class="wcag-tag">WCAG 1.4.3</span>
+                        <span class="severity-tag">Critical</span>
+                    </div>
+
+                    <div class="verification-section">
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="verified-checkbox"> Verified
+                        </label>
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="fixed-checkbox"> Fixed
+                        </label>
+                    </div>
+                </div>
+
+                <div class="issue-item">
+                    <div class="issue-title critical">Insufficient color contrast</div>
+                    <div class="issue-details">Contrast ratio: 1.00:1 (required: 4.5:1)</div>
+                    <div class="issue-recommendation">Increase contrast to at least 4.5:1</div>
+                    <div class="tags-list">
+                        <span class="wcag-tag">WCAG 1.4.3</span>
+                        <span class="severity-tag">Critical</span>
+                    </div>
+
+                    <div class="verification-section">
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="verified-checkbox"> Verified
+                        </label>
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="fixed-checkbox"> Fixed
+                        </label>
+                    </div>
+                </div>
+
+                <div class="issue-item">
+                    <div class="issue-title critical">Insufficient color contrast</div>
+                    <div class="issue-details">Contrast ratio: 3.50:1 (required: 4.5:1)</div>
+                    <div class="issue-recommendation">Increase contrast to at least 4.5:1</div>
+                    <div class="tags-list">
+                        <span class="wcag-tag">WCAG 1.4.3</span>
+                        <span class="severity-tag">Critical</span>
+                    </div>
+
+                    <div class="verification-section">
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="verified-checkbox"> Verified
+                        </label>
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="fixed-checkbox"> Fixed
+                        </label>
+                    </div>
+                </div>
+
+                <div class="issue-item">
+                    <div class="issue-title critical">Insufficient color contrast</div>
+                    <div class="issue-details">Contrast ratio: 1.00:1 (required: 4.5:1)</div>
+                    <div class="issue-recommendation">Increase contrast to at least 4.5:1</div>
+                    <div class="tags-list">
+                        <span class="wcag-tag">WCAG 1.4.3</span>
+                        <span class="severity-tag">Critical</span>
+                    </div>
+
+                    <div class="verification-section">
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="verified-checkbox"> Verified
+                        </label>
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="fixed-checkbox"> Fixed
+                        </label>
+                    </div>
+                </div>
+
+                <div class="issue-item">
+                    <div class="issue-title critical">Insufficient color contrast</div>
+                    <div class="issue-details">Contrast ratio: 3.50:1 (required: 4.5:1)</div>
+                    <div class="issue-recommendation">Increase contrast to at least 4.5:1</div>
+                    <div class="tags-list">
+                        <span class="wcag-tag">WCAG 1.4.3</span>
+                        <span class="severity-tag">Critical</span>
+                    </div>
+
+                    <div class="verification-section">
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="verified-checkbox"> Verified
+                        </label>
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="fixed-checkbox"> Fixed
+                        </label>
+                    </div>
+                </div>
+
+                <div class="issue-item">
+                    <div class="issue-title critical">Insufficient color contrast</div>
+                    <div class="issue-details">Contrast ratio: 1.00:1 (required: 4.5:1)</div>
+                    <div class="issue-recommendation">Increase contrast to at least 4.5:1</div>
+                    <div class="tags-list">
+                        <span class="wcag-tag">WCAG 1.4.3</span>
+                        <span class="severity-tag">Critical</span>
+                    </div>
+
+                    <div class="verification-section">
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="verified-checkbox"> Verified
+                        </label>
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="fixed-checkbox"> Fixed
+                        </label>
+                    </div>
+                </div>
+
+                <div class="issue-item">
+                    <div class="issue-title critical">Insufficient color contrast</div>
+                    <div class="issue-details">Contrast ratio: 3.50:1 (required: 4.5:1)</div>
+                    <div class="issue-recommendation">Increase contrast to at least 4.5:1</div>
+                    <div class="tags-list">
+                        <span class="wcag-tag">WCAG 1.4.3</span>
+                        <span class="severity-tag">Critical</span>
+                    </div>
+
+                    <div class="verification-section">
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="verified-checkbox"> Verified
+                        </label>
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="fixed-checkbox"> Fixed
+                        </label>
+                    </div>
+                </div>
+
+                <div class="issue-item">
+                    <div class="issue-title critical">Insufficient color contrast</div>
+                    <div class="issue-details">Contrast ratio: 1.68:1 (required: 4.5:1)</div>
+                    <div class="issue-recommendation">Increase contrast to at least 4.5:1</div>
+                    <div class="tags-list">
+                        <span class="wcag-tag">WCAG 1.4.3</span>
+                        <span class="severity-tag">Critical</span>
+                    </div>
+
+                    <div class="verification-section">
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="verified-checkbox"> Verified
+                        </label>
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="fixed-checkbox"> Fixed
+                        </label>
+                    </div>
+                </div>
+
+                <div class="issue-item">
+                    <div class="issue-title critical">Insufficient color contrast</div>
+                    <div class="issue-details">Contrast ratio: 1.68:1 (required: 4.5:1)</div>
+                    <div class="issue-recommendation">Increase contrast to at least 4.5:1</div>
+                    <div class="tags-list">
+                        <span class="wcag-tag">WCAG 1.4.3</span>
+                        <span class="severity-tag">Critical</span>
+                    </div>
+
+                    <div class="verification-section">
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="verified-checkbox"> Verified
+                        </label>
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="fixed-checkbox"> Fixed
+                        </label>
+                    </div>
+                </div>
+
+                <div class="issue-item">
+                    <div class="issue-title critical">Insufficient color contrast</div>
+                    <div class="issue-details">Contrast ratio: 1.68:1 (required: 4.5:1)</div>
+                    <div class="issue-recommendation">Increase contrast to at least 4.5:1</div>
+                    <div class="tags-list">
+                        <span class="wcag-tag">WCAG 1.4.3</span>
+                        <span class="severity-tag">Critical</span>
+                    </div>
+
+                    <div class="verification-section">
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="verified-checkbox"> Verified
+                        </label>
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="fixed-checkbox"> Fixed
+                        </label>
+                    </div>
+                </div>
+
+                <div class="issue-item">
+                    <div class="issue-title critical">Insufficient color contrast</div>
+                    <div class="issue-details">Contrast ratio: 1.50:1 (required: 4.5:1)</div>
+                    <div class="issue-recommendation">Increase contrast to at least 4.5:1</div>
+                    <div class="tags-list">
+                        <span class="wcag-tag">WCAG 1.4.3</span>
+                        <span class="severity-tag">Critical</span>
+                    </div>
+
+                    <div class="verification-section">
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="verified-checkbox"> Verified
+                        </label>
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="fixed-checkbox"> Fixed
+                        </label>
+                    </div>
+                </div>
+
+                <div class="issue-item">
+                    <div class="issue-title critical">Insufficient color contrast</div>
+                    <div class="issue-details">Contrast ratio: 1.68:1 (required: 3.0:1)</div>
+                    <div class="issue-recommendation">Increase contrast to at least 3.0:1</div>
+                    <div class="tags-list">
+                        <span class="wcag-tag">WCAG 1.4.3</span>
+                        <span class="severity-tag">Critical</span>
+                    </div>
+
+                    <div class="verification-section">
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="verified-checkbox"> Verified
+                        </label>
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="fixed-checkbox"> Fixed
+                        </label>
+                    </div>
+                </div>
+
+                <div class="issue-item">
+                    <div class="issue-title critical">Insufficient color contrast</div>
+                    <div class="issue-details">Contrast ratio: 1.69:1 (required: 4.5:1)</div>
+                    <div class="issue-recommendation">Increase contrast to at least 4.5:1</div>
+                    <div class="tags-list">
+                        <span class="wcag-tag">WCAG 1.4.3</span>
+                        <span class="severity-tag">Critical</span>
+                    </div>
+
+                    <div class="verification-section">
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="verified-checkbox"> Verified
+                        </label>
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="fixed-checkbox"> Fixed
+                        </label>
+                    </div>
+                </div>
+
+                <div class="issue-item">
+                    <div class="issue-title critical">Insufficient color contrast</div>
+                    <div class="issue-details">Contrast ratio: 1.00:1 (required: 4.5:1)</div>
+                    <div class="issue-recommendation">Increase contrast to at least 4.5:1</div>
+                    <div class="tags-list">
+                        <span class="wcag-tag">WCAG 1.4.3</span>
+                        <span class="severity-tag">Critical</span>
+                    </div>
+
+                    <div class="verification-section">
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="verified-checkbox"> Verified
+                        </label>
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="fixed-checkbox"> Fixed
+                        </label>
+                    </div>
+                </div>
+
+                <div class="issue-item">
+                    <div class="issue-title critical">Insufficient color contrast</div>
+                    <div class="issue-details">Contrast ratio: 1.00:1 (required: 4.5:1)</div>
+                    <div class="issue-recommendation">Increase contrast to at least 4.5:1</div>
+                    <div class="tags-list">
+                        <span class="wcag-tag">WCAG 1.4.3</span>
+                        <span class="severity-tag">Critical</span>
+                    </div>
+
+                    <div class="verification-section">
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="verified-checkbox"> Verified
+                        </label>
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="fixed-checkbox"> Fixed
+                        </label>
+                    </div>
+                </div>
+
+                <div class="issue-item">
+                    <div class="issue-title critical">Insufficient color contrast</div>
+                    <div class="issue-details">Contrast ratio: 1.00:1 (required: 4.5:1)</div>
+                    <div class="issue-recommendation">Increase contrast to at least 4.5:1</div>
+                    <div class="tags-list">
+                        <span class="wcag-tag">WCAG 1.4.3</span>
+                        <span class="severity-tag">Critical</span>
+                    </div>
+
+                    <div class="verification-section">
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="verified-checkbox"> Verified
+                        </label>
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="fixed-checkbox"> Fixed
+                        </label>
+                    </div>
+                </div>
+
+                <div class="issue-item">
+                    <div class="issue-title critical">Insufficient color contrast</div>
+                    <div class="issue-details">Contrast ratio: 1.00:1 (required: 4.5:1)</div>
+                    <div class="issue-recommendation">Increase contrast to at least 4.5:1</div>
+                    <div class="tags-list">
+                        <span class="wcag-tag">WCAG 1.4.3</span>
+                        <span class="severity-tag">Critical</span>
+                    </div>
+
+                    <div class="verification-section">
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="verified-checkbox"> Verified
+                        </label>
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="fixed-checkbox"> Fixed
+                        </label>
+                    </div>
+                </div>
+
+                <div class="issue-item">
+                    <div class="issue-title critical">Insufficient color contrast</div>
+                    <div class="issue-details">Contrast ratio: 1.00:1 (required: 4.5:1)</div>
+                    <div class="issue-recommendation">Increase contrast to at least 4.5:1</div>
+                    <div class="tags-list">
+                        <span class="wcag-tag">WCAG 1.4.3</span>
+                        <span class="severity-tag">Critical</span>
+                    </div>
+
+                    <div class="verification-section">
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="verified-checkbox"> Verified
+                        </label>
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="fixed-checkbox"> Fixed
+                        </label>
+                    </div>
+                </div>
+
+                <div class="issue-item">
+                    <div class="issue-title critical">Insufficient color contrast</div>
+                    <div class="issue-details">Contrast ratio: 1.00:1 (required: 4.5:1)</div>
+                    <div class="issue-recommendation">Increase contrast to at least 4.5:1</div>
+                    <div class="tags-list">
+                        <span class="wcag-tag">WCAG 1.4.3</span>
+                        <span class="severity-tag">Critical</span>
+                    </div>
+
+                    <div class="verification-section">
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="verified-checkbox"> Verified
+                        </label>
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="fixed-checkbox"> Fixed
+                        </label>
+                    </div>
+                </div>
+
+                <div class="issue-item">
+                    <div class="issue-title critical">Insufficient color contrast</div>
+                    <div class="issue-details">Contrast ratio: 1.00:1 (required: 4.5:1)</div>
+                    <div class="issue-recommendation">Increase contrast to at least 4.5:1</div>
+                    <div class="tags-list">
+                        <span class="wcag-tag">WCAG 1.4.3</span>
+                        <span class="severity-tag">Critical</span>
+                    </div>
+
+                    <div class="verification-section">
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="verified-checkbox"> Verified
+                        </label>
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="fixed-checkbox"> Fixed
+                        </label>
+                    </div>
+                </div>
+
+                <div class="issue-item">
+                    <div class="issue-title critical">Insufficient color contrast</div>
+                    <div class="issue-details">Contrast ratio: 1.00:1 (required: 4.5:1)</div>
+                    <div class="issue-recommendation">Increase contrast to at least 4.5:1</div>
+                    <div class="tags-list">
+                        <span class="wcag-tag">WCAG 1.4.3</span>
+                        <span class="severity-tag">Critical</span>
+                    </div>
+
+                    <div class="verification-section">
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="verified-checkbox"> Verified
+                        </label>
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="fixed-checkbox"> Fixed
+                        </label>
+                    </div>
+                </div>
+
+                <div class="issue-item">
+                    <div class="issue-title critical">Insufficient color contrast</div>
+                    <div class="issue-details">Contrast ratio: 1.00:1 (required: 4.5:1)</div>
+                    <div class="issue-recommendation">Increase contrast to at least 4.5:1</div>
+                    <div class="tags-list">
+                        <span class="wcag-tag">WCAG 1.4.3</span>
+                        <span class="severity-tag">Critical</span>
+                    </div>
+
+                    <div class="verification-section">
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="verified-checkbox"> Verified
+                        </label>
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="fixed-checkbox"> Fixed
+                        </label>
+                    </div>
+                </div>
+
+                <div class="issue-item">
+                    <div class="issue-title critical">Insufficient color contrast</div>
+                    <div class="issue-details">Contrast ratio: 1.00:1 (required: 4.5:1)</div>
+                    <div class="issue-recommendation">Increase contrast to at least 4.5:1</div>
+                    <div class="tags-list">
+                        <span class="wcag-tag">WCAG 1.4.3</span>
+                        <span class="severity-tag">Critical</span>
+                    </div>
+
+                    <div class="verification-section">
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="verified-checkbox"> Verified
+                        </label>
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="fixed-checkbox"> Fixed
+                        </label>
+                    </div>
+                </div>
+
+                <div class="issue-item">
+                    <div class="issue-title critical">Insufficient color contrast</div>
+                    <div class="issue-details">Contrast ratio: 1.00:1 (required: 4.5:1)</div>
+                    <div class="issue-recommendation">Increase contrast to at least 4.5:1</div>
+                    <div class="tags-list">
+                        <span class="wcag-tag">WCAG 1.4.3</span>
+                        <span class="severity-tag">Critical</span>
+                    </div>
+
+                    <div class="verification-section">
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="verified-checkbox"> Verified
+                        </label>
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="fixed-checkbox"> Fixed
+                        </label>
+                    </div>
+                </div>
+
+                <div class="issue-item">
+                    <div class="issue-title critical">Insufficient UI component contrast</div>
+                    <div class="issue-details">Contrast ratio: 1.00:1 (required: 3.0:1)</div>
+                    <div class="issue-recommendation">Increase component contrast to at least 3.0:1</div>
+                    <div class="tags-list">
+                        <span class="wcag-tag">WCAG 1.4.11</span>
+                        <span class="severity-tag">Critical</span>
+                    </div>
+
+                    <div class="verification-section">
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="verified-checkbox"> Verified
+                        </label>
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="fixed-checkbox"> Fixed
+                        </label>
+                    </div>
+                </div>
+
+                <div class="issue-item">
+                    <div class="issue-title critical">Insufficient UI component contrast</div>
+                    <div class="issue-details">Contrast ratio: 1.00:1 (required: 3.0:1)</div>
+                    <div class="issue-recommendation">Increase component contrast to at least 3.0:1</div>
+                    <div class="tags-list">
+                        <span class="wcag-tag">WCAG 1.4.11</span>
+                        <span class="severity-tag">Critical</span>
+                    </div>
+
+                    <div class="verification-section">
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="verified-checkbox"> Verified
+                        </label>
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="fixed-checkbox"> Fixed
+                        </label>
+                    </div>
+                </div>
+
+                <div class="issue-item">
+                    <div class="issue-title critical">Insufficient UI component contrast</div>
+                    <div class="issue-details">Contrast ratio: 1.00:1 (required: 3.0:1)</div>
+                    <div class="issue-recommendation">Increase component contrast to at least 3.0:1</div>
+                    <div class="tags-list">
+                        <span class="wcag-tag">WCAG 1.4.11</span>
+                        <span class="severity-tag">Critical</span>
+                    </div>
+
+                    <div class="verification-section">
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="verified-checkbox"> Verified
+                        </label>
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="fixed-checkbox"> Fixed
+                        </label>
+                    </div>
+                </div>
+
+                <div class="issue-item">
+                    <div class="issue-title critical">Insufficient UI component contrast</div>
+                    <div class="issue-details">Contrast ratio: 1.00:1 (required: 3.0:1)</div>
+                    <div class="issue-recommendation">Increase component contrast to at least 3.0:1</div>
+                    <div class="tags-list">
+                        <span class="wcag-tag">WCAG 1.4.11</span>
+                        <span class="severity-tag">Critical</span>
+                    </div>
+
+                    <div class="verification-section">
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="verified-checkbox"> Verified
+                        </label>
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="fixed-checkbox"> Fixed
+                        </label>
+                    </div>
+                </div>
+
+                <div class="issue-item">
+                    <div class="issue-title critical">Insufficient UI component contrast</div>
+                    <div class="issue-details">Contrast ratio: 1.00:1 (required: 3.0:1)</div>
+                    <div class="issue-recommendation">Increase component contrast to at least 3.0:1</div>
+                    <div class="tags-list">
+                        <span class="wcag-tag">WCAG 1.4.11</span>
+                        <span class="severity-tag">Critical</span>
+                    </div>
+
+                    <div class="verification-section">
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="verified-checkbox"> Verified
+                        </label>
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="fixed-checkbox"> Fixed
+                        </label>
+                    </div>
+                </div>
+
+                <div class="issue-item">
+                    <div class="issue-title critical">Insufficient UI component contrast</div>
+                    <div class="issue-details">Contrast ratio: 1.00:1 (required: 3.0:1)</div>
+                    <div class="issue-recommendation">Increase component contrast to at least 3.0:1</div>
+                    <div class="tags-list">
+                        <span class="wcag-tag">WCAG 1.4.11</span>
+                        <span class="severity-tag">Critical</span>
+                    </div>
+
+                    <div class="verification-section">
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="verified-checkbox"> Verified
+                        </label>
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="fixed-checkbox"> Fixed
+                        </label>
+                    </div>
+                </div>
+
+                <div class="issue-item">
+                    <div class="issue-title critical">Insufficient UI component contrast</div>
+                    <div class="issue-details">Contrast ratio: 1.00:1 (required: 3.0:1)</div>
+                    <div class="issue-recommendation">Increase component contrast to at least 3.0:1</div>
+                    <div class="tags-list">
+                        <span class="wcag-tag">WCAG 1.4.11</span>
+                        <span class="severity-tag">Critical</span>
+                    </div>
+
+                    <div class="verification-section">
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="verified-checkbox"> Verified
+                        </label>
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="fixed-checkbox"> Fixed
+                        </label>
+                    </div>
+                </div>
+
+                <div class="issue-item">
+                    <div class="issue-title critical">Insufficient UI component contrast</div>
+                    <div class="issue-details">Contrast ratio: 1.00:1 (required: 3.0:1)</div>
+                    <div class="issue-recommendation">Increase component contrast to at least 3.0:1</div>
+                    <div class="tags-list">
+                        <span class="wcag-tag">WCAG 1.4.11</span>
+                        <span class="severity-tag">Critical</span>
+                    </div>
+
+                    <div class="verification-section">
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="verified-checkbox"> Verified
+                        </label>
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="fixed-checkbox"> Fixed
+                        </label>
+                    </div>
+                </div>
+
+                <div class="issue-item">
+                    <div class="issue-title critical">Insufficient UI component contrast</div>
+                    <div class="issue-details">Contrast ratio: 1.68:1 (required: 3.0:1)</div>
+                    <div class="issue-recommendation">Increase component contrast to at least 3.0:1</div>
+                    <div class="tags-list">
+                        <span class="wcag-tag">WCAG 1.4.11</span>
+                        <span class="severity-tag">Critical</span>
+                    </div>
+
+                    <div class="verification-section">
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="verified-checkbox"> Verified
+                        </label>
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="fixed-checkbox"> Fixed
+                        </label>
+                    </div>
+                </div>
+
+                <div class="issue-item">
+                    <div class="issue-title critical">Insufficient UI component contrast</div>
+                    <div class="issue-details">Contrast ratio: 1.68:1 (required: 3.0:1)</div>
+                    <div class="issue-recommendation">Increase component contrast to at least 3.0:1</div>
+                    <div class="tags-list">
+                        <span class="wcag-tag">WCAG 1.4.11</span>
+                        <span class="severity-tag">Critical</span>
+                    </div>
+
+                    <div class="verification-section">
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="verified-checkbox"> Verified
+                        </label>
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="fixed-checkbox"> Fixed
+                        </label>
+                    </div>
+                </div>
+
+                <div class="issue-item">
+                    <div class="issue-title critical">Insufficient UI component contrast</div>
+                    <div class="issue-details">Contrast ratio: 1.68:1 (required: 3.0:1)</div>
+                    <div class="issue-recommendation">Increase component contrast to at least 3.0:1</div>
+                    <div class="tags-list">
+                        <span class="wcag-tag">WCAG 1.4.11</span>
+                        <span class="severity-tag">Critical</span>
+                    </div>
+
+                    <div class="verification-section">
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="verified-checkbox"> Verified
+                        </label>
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="fixed-checkbox"> Fixed
+                        </label>
+                    </div>
+                </div>
+
+            </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="issue-header">
+            <h2>Image Accessibility</h2>
+            <span class="issue-count ">
+                25 Issues
+            </span>
+        </div>
+        
+        <div class="accordion">
+            <input type="checkbox" id="accordion-4" class="accordion-checkbox">
+            <label for="accordion-4">View Issues</label>
+            <div class="accordion-content">
+
+            <div class="issues-list">
+
+                <div class="issue-item">
+                    <div class="issue-title warning">Potentially informative image has empty alt text</div>
+                    <div class="issue-details">Image appears to convey information but has empty alt text</div>
+                    <div class="issue-recommendation">Add descriptive alt text if the image conveys information</div>
+                    <div class="tags-list">
+                        <span class="wcag-tag">WCAG 1.1.1</span>
+                        <span class="severity-tag">Warning</span>
+                    </div>
+
+                    <div class="element-info-panel">
+                        <input type="checkbox" id="element-info-4-0" class="element-info-checkbox">
+                        <label class="element-info-header" for="element-info-4-0">
+                            Element Details: &lt;img&gt;
+                        </label>
+                        <div class="element-info-content">
+                            <!-- Basic Element Info -->
+                            <div class="element-property">
+                                <div class="property-name">Element Type:</div>
+                                <div class="property-value">&lt;img&gt;</div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">CSS Classes:</div>
+                                <div class="property-value">banner__small-img</div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">Source:</div>
+                                <div class="property-value">website-banner-desktop.png</div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">DOM Path:</div>
+                                <div class="property-value">body/div[2]/main[1]/section[1]/div[1]/div[1]/div[1]/div[1]/div[2]/picture[1]/img[1]</div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">CSS Selector:</div>
+                                <div class="selector-path">img.banner__small-img</div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">Position:</div>
+                                <div class="property-value">
+                                    x: 732.9000244140625px, y: 229.21665954589844px, width: 640.0999755859375px, height: 465.1000061035156px
+                                </div>
+                            </div>
+                            
+                            <!-- Visual position diagram -->
+                            <div class="position-diagram">
+                                <div class="element-box" style="
+                                    left: 117.99500122070313px;
+                                    top: 51.744999694824216px;
+                                    width: 64.00999755859375px;
+                                    height: 46.51000061035157px;
+                                ">
+                                    &lt;img&gt;
+                                </div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">Attributes:</div>
+                                <div class="property-value">
+                                    <table class="attribute-list">
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Value</th>
+                                        </tr>
+
+                                        <tr>
+                                            <td>alt</td>
+                                            <td></td>
+                                        </tr>
+
+                                    </table>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="verification-section">
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="verified-checkbox"> Verified
+                        </label>
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="fixed-checkbox"> Fixed
+                        </label>
+                    </div>
+                </div>
+
+                <div class="issue-item">
+                    <div class="issue-title warning">Potentially informative image has empty alt text</div>
+                    <div class="issue-details">Image appears to convey information but has empty alt text</div>
+                    <div class="issue-recommendation">Add descriptive alt text if the image conveys information</div>
+                    <div class="tags-list">
+                        <span class="wcag-tag">WCAG 1.1.1</span>
+                        <span class="severity-tag">Warning</span>
+                    </div>
+
+                    <div class="element-info-panel">
+                        <input type="checkbox" id="element-info-4-1" class="element-info-checkbox">
+                        <label class="element-info-header" for="element-info-4-1">
+                            Element Details: &lt;img&gt;
+                        </label>
+                        <div class="element-info-content">
+                            <!-- Basic Element Info -->
+                            <div class="element-property">
+                                <div class="property-name">Element Type:</div>
+                                <div class="property-value">&lt;img&gt;</div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">Source:</div>
+                                <div class="property-value">battery_storage_fareham.jpg</div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">DOM Path:</div>
+                                <div class="property-value">body/div[2]/main[1]/section[6]/div[1]/div[2]/img[1]</div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">CSS Selector:</div>
+                                <div class="selector-path">div.full-image__image > img:nth-child(1)</div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">Position:</div>
+                                <div class="property-value">
+                                    x: 17.0px, y: 4572.5px, width: 1332.0px, height: 887.3499755859375px
+                                </div>
+                            </div>
+                            
+                            <!-- Visual position diagram -->
+                            <div class="position-diagram">
+                                <div class="element-box" style="
+                                    left: 112.4725295360365px;
+                                    top: 50.0px;
+                                    width: 75.05494092792699px;
+                                    height: 50.0px;
+                                ">
+                                    &lt;img&gt;
+                                </div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">Attributes:</div>
+                                <div class="property-value">
+                                    <table class="attribute-list">
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Value</th>
+                                        </tr>
+
+                                        <tr>
+                                            <td>alt</td>
+                                            <td></td>
+                                        </tr>
+
+                                    </table>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="verification-section">
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="verified-checkbox"> Verified
+                        </label>
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="fixed-checkbox"> Fixed
+                        </label>
+                    </div>
+                </div>
+
+                <div class="issue-item">
+                    <div class="issue-title warning">Icon lacks text alternative</div>
+                    <div class="issue-details">Icon has no accessible name and is not hidden from screen readers</div>
+                    <div class="issue-recommendation">Add aria-label or make decorative with aria-hidden='true'</div>
+                    <div class="tags-list">
+                        <span class="wcag-tag">WCAG 1.1.1</span>
+                        <span class="severity-tag">Warning</span>
+                    </div>
+
+                    <div class="element-info-panel">
+                        <input type="checkbox" id="element-info-4-2" class="element-info-checkbox">
+                        <label class="element-info-header" for="element-info-4-2">
+                            Element Details: &lt;span&gt;
+                        </label>
+                        <div class="element-info-content">
+                            <!-- Basic Element Info -->
+                            <div class="element-property">
+                                <div class="property-name">Element Type:</div>
+                                <div class="property-value">&lt;span&gt;</div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">CSS Classes:</div>
+                                <div class="property-value">arrow icon font-ico-chevron-down main-nav__secondary-arrow</div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">DOM Path:</div>
+                                <div class="property-value">body/div[2]/header[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/nav[1]/ul[1]/li[2]/div[1]/ul[1]/li[2]/div[1]/span[1]</div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">CSS Selector:</div>
+                                <div class="selector-path">span.arrow</div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">Position:</div>
+                                <div class="property-value">
+                                    x: 0.0px, y: 0.0px, width: 100px, height: 50px
+                                </div>
+                            </div>
+                            
+                            <!-- Visual position diagram -->
+                            <div class="position-diagram">
+                                <div class="element-box" style="
+                                    left: 145.0px;
+                                    top: 70.0px;
+                                    width: 10px;
+                                    height: 10px;
+                                ">
+                                    &lt;span&gt;
+                                </div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">Attributes:</div>
+                                <div class="property-value">
+                                    <table class="attribute-list">
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Value</th>
+                                        </tr>
+
+                                    </table>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="verification-section">
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="verified-checkbox"> Verified
+                        </label>
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="fixed-checkbox"> Fixed
+                        </label>
+                    </div>
+                </div>
+
+                <div class="issue-item">
+                    <div class="issue-title warning">Icon lacks text alternative</div>
+                    <div class="issue-details">Icon has no accessible name and is not hidden from screen readers</div>
+                    <div class="issue-recommendation">Add aria-label or make decorative with aria-hidden='true'</div>
+                    <div class="tags-list">
+                        <span class="wcag-tag">WCAG 1.1.1</span>
+                        <span class="severity-tag">Warning</span>
+                    </div>
+
+                    <div class="element-info-panel">
+                        <input type="checkbox" id="element-info-4-3" class="element-info-checkbox">
+                        <label class="element-info-header" for="element-info-4-3">
+                            Element Details: &lt;span&gt;
+                        </label>
+                        <div class="element-info-content">
+                            <!-- Basic Element Info -->
+                            <div class="element-property">
+                                <div class="property-name">Element Type:</div>
+                                <div class="property-value">&lt;span&gt;</div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">CSS Classes:</div>
+                                <div class="property-value">arrow icon font-ico-chevron-down main-nav__secondary-arrow</div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">DOM Path:</div>
+                                <div class="property-value">body/div[2]/header[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/nav[1]/ul[1]/li[2]/div[1]/ul[1]/li[3]/div[1]/span[1]</div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">CSS Selector:</div>
+                                <div class="selector-path">span.arrow</div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">Position:</div>
+                                <div class="property-value">
+                                    x: 0.0px, y: 0.0px, width: 100px, height: 50px
+                                </div>
+                            </div>
+                            
+                            <!-- Visual position diagram -->
+                            <div class="position-diagram">
+                                <div class="element-box" style="
+                                    left: 145.0px;
+                                    top: 70.0px;
+                                    width: 10px;
+                                    height: 10px;
+                                ">
+                                    &lt;span&gt;
+                                </div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">Attributes:</div>
+                                <div class="property-value">
+                                    <table class="attribute-list">
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Value</th>
+                                        </tr>
+
+                                    </table>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="verification-section">
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="verified-checkbox"> Verified
+                        </label>
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="fixed-checkbox"> Fixed
+                        </label>
+                    </div>
+                </div>
+
+                <div class="issue-item">
+                    <div class="issue-title warning">Icon lacks text alternative</div>
+                    <div class="issue-details">Icon has no accessible name and is not hidden from screen readers</div>
+                    <div class="issue-recommendation">Add aria-label or make decorative with aria-hidden='true'</div>
+                    <div class="tags-list">
+                        <span class="wcag-tag">WCAG 1.1.1</span>
+                        <span class="severity-tag">Warning</span>
+                    </div>
+
+                    <div class="element-info-panel">
+                        <input type="checkbox" id="element-info-4-4" class="element-info-checkbox">
+                        <label class="element-info-header" for="element-info-4-4">
+                            Element Details: &lt;span&gt;
+                        </label>
+                        <div class="element-info-content">
+                            <!-- Basic Element Info -->
+                            <div class="element-property">
+                                <div class="property-name">Element Type:</div>
+                                <div class="property-value">&lt;span&gt;</div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">CSS Classes:</div>
+                                <div class="property-value">arrow icon font-ico-chevron-down main-nav__secondary-arrow</div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">DOM Path:</div>
+                                <div class="property-value">body/div[2]/header[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/nav[1]/ul[1]/li[2]/div[1]/ul[1]/li[6]/div[1]/span[1]</div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">CSS Selector:</div>
+                                <div class="selector-path">span.arrow</div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">Position:</div>
+                                <div class="property-value">
+                                    x: 0.0px, y: 0.0px, width: 100px, height: 50px
+                                </div>
+                            </div>
+                            
+                            <!-- Visual position diagram -->
+                            <div class="position-diagram">
+                                <div class="element-box" style="
+                                    left: 145.0px;
+                                    top: 70.0px;
+                                    width: 10px;
+                                    height: 10px;
+                                ">
+                                    &lt;span&gt;
+                                </div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">Attributes:</div>
+                                <div class="property-value">
+                                    <table class="attribute-list">
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Value</th>
+                                        </tr>
+
+                                    </table>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="verification-section">
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="verified-checkbox"> Verified
+                        </label>
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="fixed-checkbox"> Fixed
+                        </label>
+                    </div>
+                </div>
+
+                <div class="issue-item">
+                    <div class="issue-title warning">Icon lacks text alternative</div>
+                    <div class="issue-details">Icon has no accessible name and is not hidden from screen readers</div>
+                    <div class="issue-recommendation">Add aria-label or make decorative with aria-hidden='true'</div>
+                    <div class="tags-list">
+                        <span class="wcag-tag">WCAG 1.1.1</span>
+                        <span class="severity-tag">Warning</span>
+                    </div>
+
+                    <div class="element-info-panel">
+                        <input type="checkbox" id="element-info-4-5" class="element-info-checkbox">
+                        <label class="element-info-header" for="element-info-4-5">
+                            Element Details: &lt;span&gt;
+                        </label>
+                        <div class="element-info-content">
+                            <!-- Basic Element Info -->
+                            <div class="element-property">
+                                <div class="property-name">Element Type:</div>
+                                <div class="property-value">&lt;span&gt;</div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">CSS Classes:</div>
+                                <div class="property-value">arrow icon font-ico-chevron-down main-nav__secondary-arrow</div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">DOM Path:</div>
+                                <div class="property-value">body/div[2]/header[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/nav[1]/ul[1]/li[4]/div[1]/ul[1]/li[3]/div[1]/span[1]</div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">CSS Selector:</div>
+                                <div class="selector-path">span.arrow</div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">Position:</div>
+                                <div class="property-value">
+                                    x: 0.0px, y: 0.0px, width: 100px, height: 50px
+                                </div>
+                            </div>
+                            
+                            <!-- Visual position diagram -->
+                            <div class="position-diagram">
+                                <div class="element-box" style="
+                                    left: 145.0px;
+                                    top: 70.0px;
+                                    width: 10px;
+                                    height: 10px;
+                                ">
+                                    &lt;span&gt;
+                                </div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">Attributes:</div>
+                                <div class="property-value">
+                                    <table class="attribute-list">
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Value</th>
+                                        </tr>
+
+                                    </table>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="verification-section">
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="verified-checkbox"> Verified
+                        </label>
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="fixed-checkbox"> Fixed
+                        </label>
+                    </div>
+                </div>
+
+                <div class="issue-item">
+                    <div class="issue-title warning">Icon lacks text alternative</div>
+                    <div class="issue-details">Icon has no accessible name and is not hidden from screen readers</div>
+                    <div class="issue-recommendation">Add aria-label or make decorative with aria-hidden='true'</div>
+                    <div class="tags-list">
+                        <span class="wcag-tag">WCAG 1.1.1</span>
+                        <span class="severity-tag">Warning</span>
+                    </div>
+
+                    <div class="element-info-panel">
+                        <input type="checkbox" id="element-info-4-6" class="element-info-checkbox">
+                        <label class="element-info-header" for="element-info-4-6">
+                            Element Details: &lt;span&gt;
+                        </label>
+                        <div class="element-info-content">
+                            <!-- Basic Element Info -->
+                            <div class="element-property">
+                                <div class="property-name">Element Type:</div>
+                                <div class="property-value">&lt;span&gt;</div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">CSS Classes:</div>
+                                <div class="property-value">arrow icon font-ico-chevron-down main-nav__secondary-arrow</div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">DOM Path:</div>
+                                <div class="property-value">body/div[2]/header[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/nav[1]/ul[1]/li[4]/div[1]/ul[1]/li[5]/div[1]/span[1]</div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">CSS Selector:</div>
+                                <div class="selector-path">span.arrow</div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">Position:</div>
+                                <div class="property-value">
+                                    x: 0.0px, y: 0.0px, width: 100px, height: 50px
+                                </div>
+                            </div>
+                            
+                            <!-- Visual position diagram -->
+                            <div class="position-diagram">
+                                <div class="element-box" style="
+                                    left: 145.0px;
+                                    top: 70.0px;
+                                    width: 10px;
+                                    height: 10px;
+                                ">
+                                    &lt;span&gt;
+                                </div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">Attributes:</div>
+                                <div class="property-value">
+                                    <table class="attribute-list">
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Value</th>
+                                        </tr>
+
+                                    </table>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="verification-section">
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="verified-checkbox"> Verified
+                        </label>
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="fixed-checkbox"> Fixed
+                        </label>
+                    </div>
+                </div>
+
+                <div class="issue-item">
+                    <div class="issue-title warning">Icon lacks text alternative</div>
+                    <div class="issue-details">Icon has no accessible name and is not hidden from screen readers</div>
+                    <div class="issue-recommendation">Add aria-label or make decorative with aria-hidden='true'</div>
+                    <div class="tags-list">
+                        <span class="wcag-tag">WCAG 1.1.1</span>
+                        <span class="severity-tag">Warning</span>
+                    </div>
+
+                    <div class="element-info-panel">
+                        <input type="checkbox" id="element-info-4-7" class="element-info-checkbox">
+                        <label class="element-info-header" for="element-info-4-7">
+                            Element Details: &lt;span&gt;
+                        </label>
+                        <div class="element-info-content">
+                            <!-- Basic Element Info -->
+                            <div class="element-property">
+                                <div class="property-name">Element Type:</div>
+                                <div class="property-value">&lt;span&gt;</div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">CSS Classes:</div>
+                                <div class="property-value">arrow icon font-ico-chevron-down main-nav__secondary-arrow</div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">DOM Path:</div>
+                                <div class="property-value">body/div[2]/header[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/nav[1]/ul[1]/li[4]/div[1]/ul[1]/li[8]/div[1]/span[1]</div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">CSS Selector:</div>
+                                <div class="selector-path">span.arrow</div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">Position:</div>
+                                <div class="property-value">
+                                    x: 0.0px, y: 0.0px, width: 100px, height: 50px
+                                </div>
+                            </div>
+                            
+                            <!-- Visual position diagram -->
+                            <div class="position-diagram">
+                                <div class="element-box" style="
+                                    left: 145.0px;
+                                    top: 70.0px;
+                                    width: 10px;
+                                    height: 10px;
+                                ">
+                                    &lt;span&gt;
+                                </div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">Attributes:</div>
+                                <div class="property-value">
+                                    <table class="attribute-list">
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Value</th>
+                                        </tr>
+
+                                    </table>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="verification-section">
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="verified-checkbox"> Verified
+                        </label>
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="fixed-checkbox"> Fixed
+                        </label>
+                    </div>
+                </div>
+
+                <div class="issue-item">
+                    <div class="issue-title warning">Icon lacks text alternative</div>
+                    <div class="issue-details">Icon has no accessible name and is not hidden from screen readers</div>
+                    <div class="issue-recommendation">Add aria-label or make decorative with aria-hidden='true'</div>
+                    <div class="tags-list">
+                        <span class="wcag-tag">WCAG 1.1.1</span>
+                        <span class="severity-tag">Warning</span>
+                    </div>
+
+                    <div class="element-info-panel">
+                        <input type="checkbox" id="element-info-4-8" class="element-info-checkbox">
+                        <label class="element-info-header" for="element-info-4-8">
+                            Element Details: &lt;span&gt;
+                        </label>
+                        <div class="element-info-content">
+                            <!-- Basic Element Info -->
+                            <div class="element-property">
+                                <div class="property-name">Element Type:</div>
+                                <div class="property-value">&lt;span&gt;</div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">CSS Classes:</div>
+                                <div class="property-value">arrow icon font-ico-chevron-down main-nav__secondary-arrow</div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">DOM Path:</div>
+                                <div class="property-value">body/div[2]/header[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/nav[1]/ul[1]/li[4]/div[1]/ul[1]/li[9]/div[1]/span[1]</div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">CSS Selector:</div>
+                                <div class="selector-path">span.arrow</div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">Position:</div>
+                                <div class="property-value">
+                                    x: 0.0px, y: 0.0px, width: 100px, height: 50px
+                                </div>
+                            </div>
+                            
+                            <!-- Visual position diagram -->
+                            <div class="position-diagram">
+                                <div class="element-box" style="
+                                    left: 145.0px;
+                                    top: 70.0px;
+                                    width: 10px;
+                                    height: 10px;
+                                ">
+                                    &lt;span&gt;
+                                </div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">Attributes:</div>
+                                <div class="property-value">
+                                    <table class="attribute-list">
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Value</th>
+                                        </tr>
+
+                                    </table>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="verification-section">
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="verified-checkbox"> Verified
+                        </label>
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="fixed-checkbox"> Fixed
+                        </label>
+                    </div>
+                </div>
+
+                <div class="issue-item">
+                    <div class="issue-title warning">Icon lacks text alternative</div>
+                    <div class="issue-details">Icon has no accessible name and is not hidden from screen readers</div>
+                    <div class="issue-recommendation">Add aria-label or make decorative with aria-hidden='true'</div>
+                    <div class="tags-list">
+                        <span class="wcag-tag">WCAG 1.1.1</span>
+                        <span class="severity-tag">Warning</span>
+                    </div>
+
+                    <div class="element-info-panel">
+                        <input type="checkbox" id="element-info-4-9" class="element-info-checkbox">
+                        <label class="element-info-header" for="element-info-4-9">
+                            Element Details: &lt;span&gt;
+                        </label>
+                        <div class="element-info-content">
+                            <!-- Basic Element Info -->
+                            <div class="element-property">
+                                <div class="property-name">Element Type:</div>
+                                <div class="property-value">&lt;span&gt;</div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">CSS Classes:</div>
+                                <div class="property-value">arrow icon font-ico-chevron-down main-nav__secondary-arrow</div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">DOM Path:</div>
+                                <div class="property-value">body/div[2]/header[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/nav[1]/ul[1]/li[4]/div[1]/ul[1]/li[10]/div[1]/span[1]</div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">CSS Selector:</div>
+                                <div class="selector-path">span.arrow</div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">Position:</div>
+                                <div class="property-value">
+                                    x: 0.0px, y: 0.0px, width: 100px, height: 50px
+                                </div>
+                            </div>
+                            
+                            <!-- Visual position diagram -->
+                            <div class="position-diagram">
+                                <div class="element-box" style="
+                                    left: 145.0px;
+                                    top: 70.0px;
+                                    width: 10px;
+                                    height: 10px;
+                                ">
+                                    &lt;span&gt;
+                                </div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">Attributes:</div>
+                                <div class="property-value">
+                                    <table class="attribute-list">
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Value</th>
+                                        </tr>
+
+                                    </table>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="verification-section">
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="verified-checkbox"> Verified
+                        </label>
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="fixed-checkbox"> Fixed
+                        </label>
+                    </div>
+                </div>
+
+                <div class="issue-item">
+                    <div class="issue-title warning">Icon lacks text alternative</div>
+                    <div class="issue-details">Icon has no accessible name and is not hidden from screen readers</div>
+                    <div class="issue-recommendation">Add aria-label or make decorative with aria-hidden='true'</div>
+                    <div class="tags-list">
+                        <span class="wcag-tag">WCAG 1.1.1</span>
+                        <span class="severity-tag">Warning</span>
+                    </div>
+
+                    <div class="element-info-panel">
+                        <input type="checkbox" id="element-info-4-10" class="element-info-checkbox">
+                        <label class="element-info-header" for="element-info-4-10">
+                            Element Details: &lt;span&gt;
+                        </label>
+                        <div class="element-info-content">
+                            <!-- Basic Element Info -->
+                            <div class="element-property">
+                                <div class="property-name">Element Type:</div>
+                                <div class="property-value">&lt;span&gt;</div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">CSS Classes:</div>
+                                <div class="property-value">arrow icon font-ico-chevron-down main-nav__secondary-arrow</div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">DOM Path:</div>
+                                <div class="property-value">body/div[2]/header[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/nav[1]/ul[1]/li[7]/div[1]/ul[1]/li[2]/div[1]/span[1]</div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">CSS Selector:</div>
+                                <div class="selector-path">span.arrow</div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">Position:</div>
+                                <div class="property-value">
+                                    x: 0.0px, y: 0.0px, width: 100px, height: 50px
+                                </div>
+                            </div>
+                            
+                            <!-- Visual position diagram -->
+                            <div class="position-diagram">
+                                <div class="element-box" style="
+                                    left: 145.0px;
+                                    top: 70.0px;
+                                    width: 10px;
+                                    height: 10px;
+                                ">
+                                    &lt;span&gt;
+                                </div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">Attributes:</div>
+                                <div class="property-value">
+                                    <table class="attribute-list">
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Value</th>
+                                        </tr>
+
+                                    </table>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="verification-section">
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="verified-checkbox"> Verified
+                        </label>
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="fixed-checkbox"> Fixed
+                        </label>
+                    </div>
+                </div>
+
+                <div class="issue-item">
+                    <div class="issue-title warning">Icon lacks text alternative</div>
+                    <div class="issue-details">Icon has no accessible name and is not hidden from screen readers</div>
+                    <div class="issue-recommendation">Add aria-label or make decorative with aria-hidden='true'</div>
+                    <div class="tags-list">
+                        <span class="wcag-tag">WCAG 1.1.1</span>
+                        <span class="severity-tag">Warning</span>
+                    </div>
+
+                    <div class="element-info-panel">
+                        <input type="checkbox" id="element-info-4-11" class="element-info-checkbox">
+                        <label class="element-info-header" for="element-info-4-11">
+                            Element Details: &lt;span&gt;
+                        </label>
+                        <div class="element-info-content">
+                            <!-- Basic Element Info -->
+                            <div class="element-property">
+                                <div class="property-name">Element Type:</div>
+                                <div class="property-value">&lt;span&gt;</div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">CSS Classes:</div>
+                                <div class="property-value">arrow icon font-ico-chevron-down main-nav__secondary-arrow</div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">DOM Path:</div>
+                                <div class="property-value">body/div[2]/header[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/nav[1]/ul[1]/li[7]/div[1]/ul[1]/li[3]/div[1]/span[1]</div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">CSS Selector:</div>
+                                <div class="selector-path">span.arrow</div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">Position:</div>
+                                <div class="property-value">
+                                    x: 0.0px, y: 0.0px, width: 100px, height: 50px
+                                </div>
+                            </div>
+                            
+                            <!-- Visual position diagram -->
+                            <div class="position-diagram">
+                                <div class="element-box" style="
+                                    left: 145.0px;
+                                    top: 70.0px;
+                                    width: 10px;
+                                    height: 10px;
+                                ">
+                                    &lt;span&gt;
+                                </div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">Attributes:</div>
+                                <div class="property-value">
+                                    <table class="attribute-list">
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Value</th>
+                                        </tr>
+
+                                    </table>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="verification-section">
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="verified-checkbox"> Verified
+                        </label>
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="fixed-checkbox"> Fixed
+                        </label>
+                    </div>
+                </div>
+
+                <div class="issue-item">
+                    <div class="issue-title warning">Icon lacks text alternative</div>
+                    <div class="issue-details">Icon has no accessible name and is not hidden from screen readers</div>
+                    <div class="issue-recommendation">Add aria-label or make decorative with aria-hidden='true'</div>
+                    <div class="tags-list">
+                        <span class="wcag-tag">WCAG 1.1.1</span>
+                        <span class="severity-tag">Warning</span>
+                    </div>
+
+                    <div class="element-info-panel">
+                        <input type="checkbox" id="element-info-4-12" class="element-info-checkbox">
+                        <label class="element-info-header" for="element-info-4-12">
+                            Element Details: &lt;span&gt;
+                        </label>
+                        <div class="element-info-content">
+                            <!-- Basic Element Info -->
+                            <div class="element-property">
+                                <div class="property-name">Element Type:</div>
+                                <div class="property-value">&lt;span&gt;</div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">CSS Classes:</div>
+                                <div class="property-value">arrow icon font-ico-chevron-down main-nav__secondary-arrow</div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">DOM Path:</div>
+                                <div class="property-value">body/div[2]/header[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/nav[1]/ul[1]/li[7]/div[1]/ul[1]/li[5]/div[1]/span[1]</div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">CSS Selector:</div>
+                                <div class="selector-path">span.arrow</div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">Position:</div>
+                                <div class="property-value">
+                                    x: 0.0px, y: 0.0px, width: 100px, height: 50px
+                                </div>
+                            </div>
+                            
+                            <!-- Visual position diagram -->
+                            <div class="position-diagram">
+                                <div class="element-box" style="
+                                    left: 145.0px;
+                                    top: 70.0px;
+                                    width: 10px;
+                                    height: 10px;
+                                ">
+                                    &lt;span&gt;
+                                </div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">Attributes:</div>
+                                <div class="property-value">
+                                    <table class="attribute-list">
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Value</th>
+                                        </tr>
+
+                                    </table>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="verification-section">
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="verified-checkbox"> Verified
+                        </label>
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="fixed-checkbox"> Fixed
+                        </label>
+                    </div>
+                </div>
+
+                <div class="issue-item">
+                    <div class="issue-title warning">Decorative icon not hidden from screen readers</div>
+                    <div class="issue-details">Icon inside a labeled element should be hidden from screen readers</div>
+                    <div class="issue-recommendation">Add aria-hidden='true' to the icon element</div>
+                    <div class="tags-list">
+                        <span class="wcag-tag">WCAG 1.1.1</span>
+                        <span class="severity-tag">Warning</span>
+                    </div>
+
+                    <div class="element-info-panel">
+                        <input type="checkbox" id="element-info-4-13" class="element-info-checkbox">
+                        <label class="element-info-header" for="element-info-4-13">
+                            Element Details: &lt;span&gt;
+                        </label>
+                        <div class="element-info-content">
+                            <!-- Basic Element Info -->
+                            <div class="element-property">
+                                <div class="property-name">Element Type:</div>
+                                <div class="property-value">&lt;span&gt;</div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">CSS Classes:</div>
+                                <div class="property-value">icon font-ico-close</div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">DOM Path:</div>
+                                <div class="property-value">body/div[2]/header[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/button[1]/span[2]</div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">CSS Selector:</div>
+                                <div class="selector-path">span.icon</div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">Position:</div>
+                                <div class="property-value">
+                                    x: 0.0px, y: 0.0px, width: 100px, height: 50px
+                                </div>
+                            </div>
+                            
+                            <!-- Visual position diagram -->
+                            <div class="position-diagram">
+                                <div class="element-box" style="
+                                    left: 145.0px;
+                                    top: 70.0px;
+                                    width: 10px;
+                                    height: 10px;
+                                ">
+                                    &lt;span&gt;
+                                </div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">Attributes:</div>
+                                <div class="property-value">
+                                    <table class="attribute-list">
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Value</th>
+                                        </tr>
+
+                                    </table>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="verification-section">
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="verified-checkbox"> Verified
+                        </label>
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="fixed-checkbox"> Fixed
+                        </label>
+                    </div>
+                </div>
+
+                <div class="issue-item">
+                    <div class="issue-title warning">Icon lacks text alternative</div>
+                    <div class="issue-details">Icon has no accessible name and is not hidden from screen readers</div>
+                    <div class="issue-recommendation">Add aria-label or make decorative with aria-hidden='true'</div>
+                    <div class="tags-list">
+                        <span class="wcag-tag">WCAG 1.1.1</span>
+                        <span class="severity-tag">Warning</span>
+                    </div>
+
+                    <div class="element-info-panel">
+                        <input type="checkbox" id="element-info-4-14" class="element-info-checkbox">
+                        <label class="element-info-header" for="element-info-4-14">
+                            Element Details: &lt;span&gt;
+                        </label>
+                        <div class="element-info-content">
+                            <!-- Basic Element Info -->
+                            <div class="element-property">
+                                <div class="property-name">Element Type:</div>
+                                <div class="property-value">&lt;span&gt;</div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">CSS Classes:</div>
+                                <div class="property-value">icon font-ico-close</div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">DOM Path:</div>
+                                <div class="property-value">body/div[2]/header[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/button[1]/span[1]</div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">CSS Selector:</div>
+                                <div class="selector-path">span.icon</div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">Position:</div>
+                                <div class="property-value">
+                                    x: 0.0px, y: 0.0px, width: 100px, height: 50px
+                                </div>
+                            </div>
+                            
+                            <!-- Visual position diagram -->
+                            <div class="position-diagram">
+                                <div class="element-box" style="
+                                    left: 145.0px;
+                                    top: 70.0px;
+                                    width: 10px;
+                                    height: 10px;
+                                ">
+                                    &lt;span&gt;
+                                </div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">Attributes:</div>
+                                <div class="property-value">
+                                    <table class="attribute-list">
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Value</th>
+                                        </tr>
+
+                                    </table>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="verification-section">
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="verified-checkbox"> Verified
+                        </label>
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="fixed-checkbox"> Fixed
+                        </label>
+                    </div>
+                </div>
+
+                <div class="issue-item">
+                    <div class="issue-title warning">Icon lacks text alternative</div>
+                    <div class="issue-details">Icon has no accessible name and is not hidden from screen readers</div>
+                    <div class="issue-recommendation">Add aria-label or make decorative with aria-hidden='true'</div>
+                    <div class="tags-list">
+                        <span class="wcag-tag">WCAG 1.1.1</span>
+                        <span class="severity-tag">Warning</span>
+                    </div>
+
+                    <div class="element-info-panel">
+                        <input type="checkbox" id="element-info-4-15" class="element-info-checkbox">
+                        <label class="element-info-header" for="element-info-4-15">
+                            Element Details: &lt;span&gt;
+                        </label>
+                        <div class="element-info-content">
+                            <!-- Basic Element Info -->
+                            <div class="element-property">
+                                <div class="property-name">Element Type:</div>
+                                <div class="property-value">&lt;span&gt;</div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">CSS Classes:</div>
+                                <div class="property-value">icon font-ico-mail</div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">DOM Path:</div>
+                                <div class="property-value">body/div[2]/header[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/a[2]/span[1]</div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">CSS Selector:</div>
+                                <div class="selector-path">span.icon</div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">Position:</div>
+                                <div class="property-value">
+                                    x: 0.0px, y: 0.0px, width: 100px, height: 50px
+                                </div>
+                            </div>
+                            
+                            <!-- Visual position diagram -->
+                            <div class="position-diagram">
+                                <div class="element-box" style="
+                                    left: 145.0px;
+                                    top: 70.0px;
+                                    width: 10px;
+                                    height: 10px;
+                                ">
+                                    &lt;span&gt;
+                                </div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">Attributes:</div>
+                                <div class="property-value">
+                                    <table class="attribute-list">
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Value</th>
+                                        </tr>
+
+                                    </table>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="verification-section">
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="verified-checkbox"> Verified
+                        </label>
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="fixed-checkbox"> Fixed
+                        </label>
+                    </div>
+                </div>
+
+                <div class="issue-item">
+                    <div class="issue-title warning">Icon lacks text alternative</div>
+                    <div class="issue-details">Icon has no accessible name and is not hidden from screen readers</div>
+                    <div class="issue-recommendation">Add aria-label or make decorative with aria-hidden='true'</div>
+                    <div class="tags-list">
+                        <span class="wcag-tag">WCAG 1.1.1</span>
+                        <span class="severity-tag">Warning</span>
+                    </div>
+
+                    <div class="element-info-panel">
+                        <input type="checkbox" id="element-info-4-16" class="element-info-checkbox">
+                        <label class="element-info-header" for="element-info-4-16">
+                            Element Details: &lt;span&gt;
+                        </label>
+                        <div class="element-info-content">
+                            <!-- Basic Element Info -->
+                            <div class="element-property">
+                                <div class="property-name">Element Type:</div>
+                                <div class="property-value">&lt;span&gt;</div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">CSS Classes:</div>
+                                <div class="property-value">nav-toggle__menu icon font-ico-hamburger</div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">DOM Path:</div>
+                                <div class="property-value">body/div[2]/header[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/button[2]/span[1]</div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">CSS Selector:</div>
+                                <div class="selector-path">span.nav-toggle__menu</div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">Position:</div>
+                                <div class="property-value">
+                                    x: 0.0px, y: 0.0px, width: 100px, height: 50px
+                                </div>
+                            </div>
+                            
+                            <!-- Visual position diagram -->
+                            <div class="position-diagram">
+                                <div class="element-box" style="
+                                    left: 145.0px;
+                                    top: 70.0px;
+                                    width: 10px;
+                                    height: 10px;
+                                ">
+                                    &lt;span&gt;
+                                </div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">Attributes:</div>
+                                <div class="property-value">
+                                    <table class="attribute-list">
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Value</th>
+                                        </tr>
+
+                                    </table>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="verification-section">
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="verified-checkbox"> Verified
+                        </label>
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="fixed-checkbox"> Fixed
+                        </label>
+                    </div>
+                </div>
+
+                <div class="issue-item">
+                    <div class="issue-title warning">Icon lacks text alternative</div>
+                    <div class="issue-details">Icon has no accessible name and is not hidden from screen readers</div>
+                    <div class="issue-recommendation">Add aria-label or make decorative with aria-hidden='true'</div>
+                    <div class="tags-list">
+                        <span class="wcag-tag">WCAG 1.1.1</span>
+                        <span class="severity-tag">Warning</span>
+                    </div>
+
+                    <div class="element-info-panel">
+                        <input type="checkbox" id="element-info-4-17" class="element-info-checkbox">
+                        <label class="element-info-header" for="element-info-4-17">
+                            Element Details: &lt;span&gt;
+                        </label>
+                        <div class="element-info-content">
+                            <!-- Basic Element Info -->
+                            <div class="element-property">
+                                <div class="property-name">Element Type:</div>
+                                <div class="property-value">&lt;span&gt;</div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">CSS Classes:</div>
+                                <div class="property-value">nav-toggle__menu-close icon font-ico-close</div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">DOM Path:</div>
+                                <div class="property-value">body/div[2]/header[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/button[2]/span[2]</div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">CSS Selector:</div>
+                                <div class="selector-path">span.nav-toggle__menu-close</div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">Position:</div>
+                                <div class="property-value">
+                                    x: 0.0px, y: 0.0px, width: 100px, height: 50px
+                                </div>
+                            </div>
+                            
+                            <!-- Visual position diagram -->
+                            <div class="position-diagram">
+                                <div class="element-box" style="
+                                    left: 145.0px;
+                                    top: 70.0px;
+                                    width: 10px;
+                                    height: 10px;
+                                ">
+                                    &lt;span&gt;
+                                </div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">Attributes:</div>
+                                <div class="property-value">
+                                    <table class="attribute-list">
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Value</th>
+                                        </tr>
+
+                                    </table>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="verification-section">
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="verified-checkbox"> Verified
+                        </label>
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="fixed-checkbox"> Fixed
+                        </label>
+                    </div>
+                </div>
+
+                <div class="issue-item">
+                    <div class="issue-title warning">Icon lacks text alternative</div>
+                    <div class="issue-details">Icon has no accessible name and is not hidden from screen readers</div>
+                    <div class="issue-recommendation">Add aria-label or make decorative with aria-hidden='true'</div>
+                    <div class="tags-list">
+                        <span class="wcag-tag">WCAG 1.1.1</span>
+                        <span class="severity-tag">Warning</span>
+                    </div>
+
+                    <div class="element-info-panel">
+                        <input type="checkbox" id="element-info-4-18" class="element-info-checkbox">
+                        <label class="element-info-header" for="element-info-4-18">
+                            Element Details: &lt;span&gt;
+                        </label>
+                        <div class="element-info-content">
+                            <!-- Basic Element Info -->
+                            <div class="element-property">
+                                <div class="property-name">Element Type:</div>
+                                <div class="property-value">&lt;span&gt;</div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">CSS Classes:</div>
+                                <div class="property-value">icon font-ico-search</div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">DOM Path:</div>
+                                <div class="property-value">body/div[2]/header[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/form[1]/div[1]/button[1]/span[1]</div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">CSS Selector:</div>
+                                <div class="selector-path">span.icon</div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">Position:</div>
+                                <div class="property-value">
+                                    x: 0.0px, y: 0.0px, width: 100px, height: 50px
+                                </div>
+                            </div>
+                            
+                            <!-- Visual position diagram -->
+                            <div class="position-diagram">
+                                <div class="element-box" style="
+                                    left: 145.0px;
+                                    top: 70.0px;
+                                    width: 10px;
+                                    height: 10px;
+                                ">
+                                    &lt;span&gt;
+                                </div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">Attributes:</div>
+                                <div class="property-value">
+                                    <table class="attribute-list">
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Value</th>
+                                        </tr>
+
+                                    </table>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="verification-section">
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="verified-checkbox"> Verified
+                        </label>
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="fixed-checkbox"> Fixed
+                        </label>
+                    </div>
+                </div>
+
+                <div class="issue-item">
+                    <div class="issue-title warning">Icon lacks text alternative</div>
+                    <div class="issue-details">Icon has no accessible name and is not hidden from screen readers</div>
+                    <div class="issue-recommendation">Add aria-label or make decorative with aria-hidden='true'</div>
+                    <div class="tags-list">
+                        <span class="wcag-tag">WCAG 1.1.1</span>
+                        <span class="severity-tag">Warning</span>
+                    </div>
+
+                    <div class="element-info-panel">
+                        <input type="checkbox" id="element-info-4-19" class="element-info-checkbox">
+                        <label class="element-info-header" for="element-info-4-19">
+                            Element Details: &lt;span&gt;
+                        </label>
+                        <div class="element-info-content">
+                            <!-- Basic Element Info -->
+                            <div class="element-property">
+                                <div class="property-name">Element Type:</div>
+                                <div class="property-value">&lt;span&gt;</div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">CSS Classes:</div>
+                                <div class="property-value">nav-toggle__menu icon font-ico-hamburger</div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">DOM Path:</div>
+                                <div class="property-value">body/div[2]/header[1]/button[1]/span[1]</div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">CSS Selector:</div>
+                                <div class="selector-path">span.nav-toggle__menu</div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">Position:</div>
+                                <div class="property-value">
+                                    x: 0.0px, y: 0.0px, width: 100px, height: 50px
+                                </div>
+                            </div>
+                            
+                            <!-- Visual position diagram -->
+                            <div class="position-diagram">
+                                <div class="element-box" style="
+                                    left: 145.0px;
+                                    top: 70.0px;
+                                    width: 10px;
+                                    height: 10px;
+                                ">
+                                    &lt;span&gt;
+                                </div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">Attributes:</div>
+                                <div class="property-value">
+                                    <table class="attribute-list">
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Value</th>
+                                        </tr>
+
+                                    </table>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="verification-section">
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="verified-checkbox"> Verified
+                        </label>
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="fixed-checkbox"> Fixed
+                        </label>
+                    </div>
+                </div>
+
+                <div class="issue-item">
+                    <div class="issue-title warning">Icon lacks text alternative</div>
+                    <div class="issue-details">Icon has no accessible name and is not hidden from screen readers</div>
+                    <div class="issue-recommendation">Add aria-label or make decorative with aria-hidden='true'</div>
+                    <div class="tags-list">
+                        <span class="wcag-tag">WCAG 1.1.1</span>
+                        <span class="severity-tag">Warning</span>
+                    </div>
+
+                    <div class="element-info-panel">
+                        <input type="checkbox" id="element-info-4-20" class="element-info-checkbox">
+                        <label class="element-info-header" for="element-info-4-20">
+                            Element Details: &lt;span&gt;
+                        </label>
+                        <div class="element-info-content">
+                            <!-- Basic Element Info -->
+                            <div class="element-property">
+                                <div class="property-name">Element Type:</div>
+                                <div class="property-value">&lt;span&gt;</div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">CSS Classes:</div>
+                                <div class="property-value">nav-toggle__menu-close icon font-ico-close</div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">DOM Path:</div>
+                                <div class="property-value">body/div[2]/header[1]/button[1]/span[2]</div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">CSS Selector:</div>
+                                <div class="selector-path">span.nav-toggle__menu-close</div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">Position:</div>
+                                <div class="property-value">
+                                    x: 0.0px, y: 0.0px, width: 100px, height: 50px
+                                </div>
+                            </div>
+                            
+                            <!-- Visual position diagram -->
+                            <div class="position-diagram">
+                                <div class="element-box" style="
+                                    left: 145.0px;
+                                    top: 70.0px;
+                                    width: 10px;
+                                    height: 10px;
+                                ">
+                                    &lt;span&gt;
+                                </div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">Attributes:</div>
+                                <div class="property-value">
+                                    <table class="attribute-list">
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Value</th>
+                                        </tr>
+
+                                    </table>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="verification-section">
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="verified-checkbox"> Verified
+                        </label>
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="fixed-checkbox"> Fixed
+                        </label>
+                    </div>
+                </div>
+
+                <div class="issue-item">
+                    <div class="issue-title warning">Icon lacks text alternative</div>
+                    <div class="issue-details">Icon has no accessible name and is not hidden from screen readers</div>
+                    <div class="issue-recommendation">Add aria-label or make decorative with aria-hidden='true'</div>
+                    <div class="tags-list">
+                        <span class="wcag-tag">WCAG 1.1.1</span>
+                        <span class="severity-tag">Warning</span>
+                    </div>
+
+                    <div class="element-info-panel">
+                        <input type="checkbox" id="element-info-4-21" class="element-info-checkbox">
+                        <label class="element-info-header" for="element-info-4-21">
+                            Element Details: &lt;span&gt;
+                        </label>
+                        <div class="element-info-content">
+                            <!-- Basic Element Info -->
+                            <div class="element-property">
+                                <div class="property-name">Element Type:</div>
+                                <div class="property-value">&lt;span&gt;</div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">CSS Classes:</div>
+                                <div class="property-value">banner__scroll-icon banner__scroll-icon--first icon font-ico-arrow</div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">DOM Path:</div>
+                                <div class="property-value">body/div[2]/main[1]/section[1]/div[1]/button[1]/span[1]</div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">CSS Selector:</div>
+                                <div class="selector-path">span.banner__scroll-icon</div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">Position:</div>
+                                <div class="property-value">
+                                    x: 26.0px, y: 656.0px, width: 20.0px, height: 20.0px
+                                </div>
+                            </div>
+                            
+                            <!-- Visual position diagram -->
+                            <div class="position-diagram">
+                                <div class="element-box" style="
+                                    left: 145.0px;
+                                    top: 70.0px;
+                                    width: 10px;
+                                    height: 10px;
+                                ">
+                                    &lt;span&gt;
+                                </div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">Attributes:</div>
+                                <div class="property-value">
+                                    <table class="attribute-list">
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Value</th>
+                                        </tr>
+
+                                    </table>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="verification-section">
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="verified-checkbox"> Verified
+                        </label>
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="fixed-checkbox"> Fixed
+                        </label>
+                    </div>
+                </div>
+
+                <div class="issue-item">
+                    <div class="issue-title warning">Icon lacks text alternative</div>
+                    <div class="issue-details">Icon has no accessible name and is not hidden from screen readers</div>
+                    <div class="issue-recommendation">Add aria-label or make decorative with aria-hidden='true'</div>
+                    <div class="tags-list">
+                        <span class="wcag-tag">WCAG 1.1.1</span>
+                        <span class="severity-tag">Warning</span>
+                    </div>
+
+                    <div class="element-info-panel">
+                        <input type="checkbox" id="element-info-4-22" class="element-info-checkbox">
+                        <label class="element-info-header" for="element-info-4-22">
+                            Element Details: &lt;span&gt;
+                        </label>
+                        <div class="element-info-content">
+                            <!-- Basic Element Info -->
+                            <div class="element-property">
+                                <div class="property-name">Element Type:</div>
+                                <div class="property-value">&lt;span&gt;</div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">CSS Classes:</div>
+                                <div class="property-value">banner__scroll-icon banner__scroll-icon--second icon font-ico-arrow</div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">DOM Path:</div>
+                                <div class="property-value">body/div[2]/main[1]/section[1]/div[1]/button[1]/span[2]</div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">CSS Selector:</div>
+                                <div class="selector-path">span.banner__scroll-icon</div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">Position:</div>
+                                <div class="property-value">
+                                    x: 26.0px, y: 695.0px, width: 20.0px, height: 20.0px
+                                </div>
+                            </div>
+                            
+                            <!-- Visual position diagram -->
+                            <div class="position-diagram">
+                                <div class="element-box" style="
+                                    left: 145.0px;
+                                    top: 70.0px;
+                                    width: 10px;
+                                    height: 10px;
+                                ">
+                                    &lt;span&gt;
+                                </div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">Attributes:</div>
+                                <div class="property-value">
+                                    <table class="attribute-list">
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Value</th>
+                                        </tr>
+
+                                    </table>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="verification-section">
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="verified-checkbox"> Verified
+                        </label>
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="fixed-checkbox"> Fixed
+                        </label>
+                    </div>
+                </div>
+
+                <div class="issue-item">
+                    <div class="issue-title warning">Icon lacks text alternative</div>
+                    <div class="issue-details">Icon has no accessible name and is not hidden from screen readers</div>
+                    <div class="issue-recommendation">Add aria-label or make decorative with aria-hidden='true'</div>
+                    <div class="tags-list">
+                        <span class="wcag-tag">WCAG 1.1.1</span>
+                        <span class="severity-tag">Warning</span>
+                    </div>
+
+                    <div class="element-info-panel">
+                        <input type="checkbox" id="element-info-4-23" class="element-info-checkbox">
+                        <label class="element-info-header" for="element-info-4-23">
+                            Element Details: &lt;span&gt;
+                        </label>
+                        <div class="element-info-content">
+                            <!-- Basic Element Info -->
+                            <div class="element-property">
+                                <div class="property-name">Element Type:</div>
+                                <div class="property-value">&lt;span&gt;</div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">CSS Classes:</div>
+                                <div class="property-value">icon font-ico-arrow-top</div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">DOM Path:</div>
+                                <div class="property-value">body/div[2]/footer[1]/div[1]/div[1]/button[1]/span[2]</div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">CSS Selector:</div>
+                                <div class="selector-path">span.icon</div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">Position:</div>
+                                <div class="property-value">
+                                    x: 1319.9833984375px, y: 536.0px, width: 14.050003051757812px, height: 16.0px
+                                </div>
+                            </div>
+                            
+                            <!-- Visual position diagram -->
+                            <div class="position-diagram">
+                                <div class="element-box" style="
+                                    left: 145.0px;
+                                    top: 70.0px;
+                                    width: 10px;
+                                    height: 10px;
+                                ">
+                                    &lt;span&gt;
+                                </div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">Attributes:</div>
+                                <div class="property-value">
+                                    <table class="attribute-list">
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Value</th>
+                                        </tr>
+
+                                    </table>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="verification-section">
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="verified-checkbox"> Verified
+                        </label>
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="fixed-checkbox"> Fixed
+                        </label>
+                    </div>
+                </div>
+
+                <div class="issue-item">
+                    <div class="issue-title warning">Decorative icon not hidden from screen readers</div>
+                    <div class="issue-details">Icon inside a labeled element should be hidden from screen readers</div>
+                    <div class="issue-recommendation">Add aria-hidden='true' to the icon element</div>
+                    <div class="tags-list">
+                        <span class="wcag-tag">WCAG 1.1.1</span>
+                        <span class="severity-tag">Warning</span>
+                    </div>
+
+                    <div class="element-info-panel">
+                        <input type="checkbox" id="element-info-4-24" class="element-info-checkbox">
+                        <label class="element-info-header" for="element-info-4-24">
+                            Element Details: &lt;span&gt;
+                        </label>
+                        <div class="element-info-content">
+                            <!-- Basic Element Info -->
+                            <div class="element-property">
+                                <div class="property-name">Element Type:</div>
+                                <div class="property-value">&lt;span&gt;</div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">CSS Classes:</div>
+                                <div class="property-value">icon font-ico-extern</div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">DOM Path:</div>
+                                <div class="property-value">body/div[2]/footer[1]/div[2]/div[1]/div[1]/ul[1]/li[8]/a[1]/span[1]</div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">CSS Selector:</div>
+                                <div class="selector-path">span.icon</div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">Position:</div>
+                                <div class="property-value">
+                                    x: 597.2833251953125px, y: 6841.85009765625px, width: 13.0px, height: 13.0px
+                                </div>
+                            </div>
+                            
+                            <!-- Visual position diagram -->
+                            <div class="position-diagram">
+                                <div class="element-box" style="
+                                    left: 145.0px;
+                                    top: 70.0px;
+                                    width: 10px;
+                                    height: 10px;
+                                ">
+                                    &lt;span&gt;
+                                </div>
+                            </div>
+
+                            <div class="element-property">
+                                <div class="property-name">Attributes:</div>
+                                <div class="property-value">
+                                    <table class="attribute-list">
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Value</th>
+                                        </tr>
+
+                                    </table>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="verification-section">
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="verified-checkbox"> Verified
+                        </label>
+                        <label class="verification-checkbox">
+                            <input type="checkbox" class="fixed-checkbox"> Fixed
+                        </label>
+                    </div>
+                </div>
+
+            </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Export Options</h2>
+        <button class="export-btn" onclick="exportToCsv()">Export Issues to CSV</button>
+    </div>
+    
+    <footer>
+        <p>Generated by Accessibility Checker on 2025-03-17 18:33:42</p>
+    </footer>
+    
+    <script>
+        // CSV Export Function - only JavaScript needed
+        function exportToCsv() {
+            // Collect all issues
+            var issues = [];
+            var issueItems = document.querySelectorAll('.issue-item');
+            
+            issueItems.forEach(function(item) {
+                var checkType = item.closest('.section').querySelector('h2').textContent;
+                var title = item.querySelector('.issue-title').textContent;
+                var details = item.querySelector('.issue-details').textContent;
+                var recommendation = item.querySelector('.issue-recommendation').textContent;
+                var verified = item.querySelector('.verified-checkbox').checked ? 'Yes' : 'No';
+                var fixed = item.querySelector('.fixed-checkbox').checked ? 'Yes' : 'No';
+                
+                issues.push([
+                    checkType,
+                    title,
+                    details,
+                    recommendation,
+                    verified,
+                    fixed
+                ]);
+            });
+            
+            // Create CSV content
+            var csvContent = "Check Type,Issue,Details,Recommendation,Verified,Fixed\n";
+            
+            issues.forEach(function(issue) {
+                // Properly escape CSV fields
+                var formattedIssue = issue.map(function(field) {
+                    // Escape quotes and wrap in quotes if contains comma
+                    var escaped = String(field).replace(/"/g, '""');
+                    if (escaped.includes(',')) {
+                        escaped = '"' + escaped + '"';
+                    }
+                    return escaped;
+                });
+                
+                csvContent += formattedIssue.join(',') + "\n";
+            });
+            
+            // Create download link
+            var encodedUri = 'data:text/csv;charset=utf-8,' + encodeURIComponent(csvContent);
+            var link = document.createElement('a');
+            link.setAttribute('href', encodedUri);
+            link.setAttribute('download', 'accessibility_issues_20250317_183342.csv');
+            
+            // Trigger download
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+    </script>
+</body>
+</html>

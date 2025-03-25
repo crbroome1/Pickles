@@ -1,0 +1,20 @@
+Analyzing dependencies of accessibility_checker.py...
+
+Dependency Tree for accessibility_checker.py
+===========================================
+
+Pickles/
+└── accessibility_checker.py
+├── accessibility_modules/
+│   └── __init__.py
+│   └── aria_checker.py
+│   └── color_contrast.py
+│   ├── component_tests/
+│   │   └── slider_tester.py
+│   └── dynamic_content_tester.py
+│   └── focusable_elements.py
+│   └── image_checker.py
+│   └── report_generator.py
+│   └── tab_order_checker.py
+
+Generated on: 2025-03-22 21:45:56

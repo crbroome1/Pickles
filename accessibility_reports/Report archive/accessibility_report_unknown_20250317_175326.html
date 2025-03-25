@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessibility Report - http:\\sse.com</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f7fa;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px;
+            border-radius: 5px 5px 0 0;
+            margin-bottom: 20px;
+        }
+        
+        h1, h2, h3, h4 {
+            margin-top: 0;
+        }
+        
+        .report-meta {
+            margin-top: 10px;
+            font-size: 14px;
+        }
+        
+        .section {
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+            padding: 20px;
+        }
+        
+        .critical {
+            color: #e74c3c;
+        }
+        
+        .warning {
+            color: #f39c12;
+        }
+        
+        /* CSS-only accordion style */
+        .accordion-container {
+            margin-top: 10px;
+        }
+        
+        .accordion-container input {
+            display: none;
+        }
+        
+        .accordion-container label {
+            background-color: #f1f1f1;
+            color: #444;
+            cursor: pointer;
+            padding: 10px 15px;
+            width: 100%;
+            display: block;
+            text-align: center;
+            border: none;
+            outline: none;
+            font-size: 16px;
+            border-radius: 5px;
+            position: relative;
+        }
+        
+        .accordion-container label:hover {
+            background-color: #ddd;
+        }
+        
+        .accordion-container label::after {
+            content: '+';
+            position: absolute;
+            right: 15px;
+            font-weight: bold;
+        }
+        
+        .accordion-container input:checked + label::after {
+            content: '-';
+        }
+        
+        .accordion-content {
+            padding: 0;
+            max-height: 0;
+            overflow: hidden;
+            background-color: #f9f9f9;
+            transition: max-height 0.3s ease-out, padding 0.3s ease;
+        }
+        
+        .accordion-container input:checked ~ .accordion-content {
+            max-height: 1000px;
+            padding: 15px;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+            color: #666;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Accessibility Audit Report</h1>
+            <div class="report-meta">
+                <div><strong>URL:</strong> http:\\sse.com</div>
+                <div><strong>Date:</strong> 2025-03-17 17:53:20</div>
+                <div><strong>Duration:</strong> 5.56 seconds</div>
+            </div>
+        </header>
+        
+        <div class="section">
+            <h2>Summary</h2>
+            <p><strong class="critical">Critical Issues:</strong> 53</p>
+            <p><strong class="warning">Warnings:</strong> 26</p>
+            <p><strong>Passed Checks:</strong> 1</p>
+            <p><strong>Compliance Score:</strong> 0</p>
+        </div>
+
+        <div class="section">
+            <h2>Accessibility Issues</h2>
+    
+            <div class="accordion-container">
+                <input type="checkbox" id="check-0">
+                <label for="check-0">Keyboard Navigation Sequence</label>
+                <div class="accordion-content">
+        
+                    <div style="margin-bottom: 15px;">
+                        <h3>Potential keyboard navigation barriers <span style="color: #3498db; font-size: 14px;">(1)</span></h3>
+                        <div class="accordion-container">
+                            <input type="checkbox" id="issue-0-0">
+                            <label for="issue-0-0">View Details</label>
+                            <div class="accordion-content">
+                                <ul>
+            
+                                    <li>
+                                        <p>Tab sequence (4 elements) is much shorter than expected (212 potentially focusable elements)</p>
+                
+                                    </li>
+                
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+            
+                </div>
+            </div>
+        
+            <div class="accordion-container">
+                <input type="checkbox" id="check-1">
+                <label for="check-1">Aria Accessibility</label>
+                <div class="accordion-content">
+        
+                    <div style="margin-bottom: 15px;">
+                        <h3>Hidden element contains focusable elements <span style="color: #3498db; font-size: 14px;">(3)</span></h3>
+                        <div class="accordion-container">
+                            <input type="checkbox" id="issue-1-0">
+                            <label for="issue-1-0">View Details</label>
+                            <div class="accordion-content">
+                                <ul>
+            
+                                    <li>
+                                        <p>Element with aria-hidden='true' contains 3 focusable children</p>
+                
+                                    </li>
+                
+                                    <li>
+                                        <p>Element with aria-hidden='true' contains 1 focusable children</p>
+                
+                                    </li>
+                
+                                    <li>
+                                        <p>Element with aria-hidden='true' contains 1 focusable children</p>
+                
+                                    </li>
+                
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+            
+                </div>
+            </div>
+        
+            <div class="accordion-container">
+                <input type="checkbox" id="check-2">
+                <label for="check-2">Color Contrast</label>
+                <div class="accordion-content">
+        
+                    <div style="margin-bottom: 15px;">
+                        <h3>Insufficient color contrast <span style="color: #3498db; font-size: 14px;">(39)</span></h3>
+                        <div class="accordion-container">
+                            <input type="checkbox" id="issue-2-0">
+                            <label for="issue-2-0">View Details</label>
+                            <div class="accordion-content">
+                                <ul>
+            
+                                    <li>
+                                        <p>Contrast ratio: 1.00:1 (required: 3.0:1)</p>
+                
+                                    </li>
+                
+                                    <li>
+                                        <p>Contrast ratio: 1.00:1 (required: 3.0:1)</p>
+                
+                                    </li>
+                
+                                    <li>
+                                        <p>Contrast ratio: 1.00:1 (required: 3.0:1)</p>
+                
+                                    </li>
+                
+                                    <li>
+                                        <p>Contrast ratio: 1.00:1 (required: 3.0:1)</p>
+                
+                                    </li>
+                
+                                    <li>
+                                        <p>Contrast ratio: 1.00:1 (required: 3.0:1)</p>
+                
+                                    </li>
+                
+                                    <li>
+                                        <p>Contrast ratio: 1.00:1 (required: 3.0:1)</p>
+                
+                                    </li>
+                
+                                    <li>
+                                        <p>Contrast ratio: 1.00:1 (required: 3.0:1)</p>
+                
+                                    </li>
+                
+                                    <li>
+                                        <p>Contrast ratio: 1.00:1 (required: 4.5:1)</p>
+                
+                                    </li>
+                
+                                    <li>
+                                        <p>Contrast ratio: 1.00:1 (required: 4.5:1)</p>
+                
+                                    </li>
+                
+                                    <li>
+                                        <p>Contrast ratio: 1.00:1 (required: 4.5:1)</p>
+                
+                                    </li>
+                
+                                    <li>
+                                        <p>Contrast ratio: 1.00:1 (required: 4.5:1)</p>
+                
+                                    </li>
+                
+                                    <li>
+                                        <p>Contrast ratio: 1.00:1 (required: 4.5:1)</p>
+                
+                                    </li>
+                
+                                    <li>
+                                        <p>Contrast ratio: 1.00:1 (required: 4.5:1)</p>
+                
+                                    </li>
+                
+                                    <li>
+                                        <p>Contrast ratio: 1.00:1 (required: 4.5:1)</p>
+                
+                                    </li>
+                
+                                    <li>
+                                        <p>Contrast ratio: 1.00:1 (required: 4.5:1)</p>
+                
+                                    </li>
+                
+                                    <li>
+                                        <p>Contrast ratio: 3.50:1 (required: 4.5:1)</p>
+                
+                                    </li>
+                
+                                    <li>
+                                        <p>Contrast ratio: 1.00:1 (required: 4.5:1)</p>
+                
+                                    </li>
+                
+                                    <li>
+                                        <p>Contrast ratio: 3.50:1 (required: 4.5:1)</p>
+                
+                                    </li>
+                
+                                    <li>
+                                        <p>Contrast ratio: 1.00:1 (required: 4.5:1)</p>
+                
+                                    </li>
+                
+                                    <li>
+                                        <p>Contrast ratio: 3.50:1 (required: 4.5:1)</p>
+                
+                                    </li>
+                
+                                    <li>
+                                        <p>Contrast ratio: 1.00:1 (required: 4.5:1)</p>
+                
+                                    </li>
+                
+                                    <li>
+                                        <p>Contrast ratio: 3.50:1 (required: 4.5:1)</p>
+                
+                                    </li>
+                
+                                    <li>
+                                        <p>Contrast ratio: 1.68:1 (required: 4.5:1)</p>
+                
+                                    </li>
+                
+                                    <li>
+                                        <p>Contrast ratio: 1.68:1 (required: 4.5:1)</p>
+                
+                                    </li>
+                
+                                    <li>
+                                        <p>Contrast ratio: 1.68:1 (required: 4.5:1)</p>
+                
+                                    </li>
+                
+                                    <li>
+                                        <p>Contrast ratio: 1.50:1 (required: 4.5:1)</p>
+                
+                                    </li>
+                
+                                    <li>
+                                        <p>Contrast ratio: 1.68:1 (required: 3.0:1)</p>
+                
+                                    </li>
+                
+                                    <li>
+                                        <p>Contrast ratio: 1.69:1 (required: 4.5:1)</p>
+                
+                                    </li>
+                
+                                    <li>
+                                        <p>Contrast ratio: 1.00:1 (required: 4.5:1)</p>
+                
+                                    </li>
+                
+                                    <li>
+                                        <p>Contrast ratio: 1.00:1 (required: 4.5:1)</p>
+                
+                                    </li>
+                
+                                    <li>
+                                        <p>Contrast ratio: 1.00:1 (required: 4.5:1)</p>
+                
+                                    </li>
+                
+                                    <li>
+                                        <p>Contrast ratio: 1.00:1 (required: 4.5:1)</p>
+                
+                                    </li>
+                
+                                    <li>
+                                        <p>Contrast ratio: 1.00:1 (required: 4.5:1)</p>
+                
+                                    </li>
+                
+                                    <li>
+                                        <p>Contrast ratio: 1.00:1 (required: 4.5:1)</p>
+                
+                                    </li>
+                
+                                    <li>
+                                        <p>Contrast ratio: 1.00:1 (required: 4.5:1)</p>
+                
+                                    </li>
+                
+                                    <li>
+                                        <p>Contrast ratio: 1.00:1 (required: 4.5:1)</p>
+                
+                                    </li>
+                
+                                    <li>
+                                        <p>Contrast ratio: 1.00:1 (required: 4.5:1)</p>
+                
+                                    </li>
+                
+                                    <li>
+                                        <p>Contrast ratio: 1.00:1 (required: 4.5:1)</p>
+                
+                                    </li>
+                
+                                    <li>
+                                        <p>Contrast ratio: 1.00:1 (required: 4.5:1)</p>
+                
+                                    </li>
+                
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div style="margin-bottom: 15px;">
+                        <h3>Insufficient UI component contrast <span style="color: #3498db; font-size: 14px;">(11)</span></h3>
+                        <div class="accordion-container">
+                            <input type="checkbox" id="issue-2-1">
+                            <label for="issue-2-1">View Details</label>
+                            <div class="accordion-content">
+                                <ul>
+            
+                                    <li>
+                                        <p>Contrast ratio: 1.00:1 (required: 3.0:1)</p>
+                
+                                    </li>
+                
+                                    <li>
+                                        <p>Contrast ratio: 1.00:1 (required: 3.0:1)</p>
+                
+                                    </li>
+                
+                                    <li>
+                                        <p>Contrast ratio: 1.00:1 (required: 3.0:1)</p>
+                
+                                    </li>
+                
+                                    <li>
+                                        <p>Contrast ratio: 1.00:1 (required: 3.0:1)</p>
+                
+                                    </li>
+                
+                                    <li>
+                                        <p>Contrast ratio: 1.00:1 (required: 3.0:1)</p>
+                
+                                    </li>
+                
+                                    <li>
+                                        <p>Contrast ratio: 1.00:1 (required: 3.0:1)</p>
+                
+                                    </li>
+                
+                                    <li>
+                                        <p>Contrast ratio: 1.00:1 (required: 3.0:1)</p>
+                
+                                    </li>
+                
+                                    <li>
+                                        <p>Contrast ratio: 1.00:1 (required: 3.0:1)</p>
+                
+                                    </li>
+                
+                                    <li>
+                                        <p>Contrast ratio: 1.68:1 (required: 3.0:1)</p>
+                
+                                    </li>
+                
+                                    <li>
+                                        <p>Contrast ratio: 1.68:1 (required: 3.0:1)</p>
+                
+                                    </li>
+                
+                                    <li>
+                                        <p>Contrast ratio: 1.68:1 (required: 3.0:1)</p>
+                
+                                    </li>
+                
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+            
+                </div>
+            </div>
+        
+            <div class="accordion-container">
+                <input type="checkbox" id="check-3">
+                <label for="check-3">Image Accessibility</label>
+                <div class="accordion-content">
+        
+                    <div style="margin-bottom: 15px;">
+                        <h3>Potentially informative image has empty alt text <span style="color: #3498db; font-size: 14px;">(2)</span></h3>
+                        <div class="accordion-container">
+                            <input type="checkbox" id="issue-3-0">
+                            <label for="issue-3-0">View Details</label>
+                            <div class="accordion-content">
+                                <ul>
+            
+                                    <li>
+                                        <p>Image appears to convey information but has empty alt text</p>
+                
+                                        <div style="background-color: #f8f8f8; padding: 10px; margin: 10px 0; border-radius: 4px; font-family: monospace; font-size: 13px;">
+                    
+                                            <p><strong>Element:</strong> &lt;img&gt;</p>
+                    
+                                            <p><strong>Class:</strong> banner__small-img</p>
+                        
+                                            <p><strong>Source:</strong> website-banner-desktop.png</p>
+                        
+                                            <p><strong>CSS Selector:</strong> img.banner__small-img</p>
+                        
+                                        </div>
+                    
+                                    </li>
+                
+                                    <li>
+                                        <p>Image appears to convey information but has empty alt text</p>
+                
+                                        <div style="background-color: #f8f8f8; padding: 10px; margin: 10px 0; border-radius: 4px; font-family: monospace; font-size: 13px;">
+                    
+                                            <p><strong>Element:</strong> &lt;img&gt;</p>
+                    
+                                            <p><strong>Source:</strong> battery_storage_fareham.jpg</p>
+                        
+                                            <p><strong>CSS Selector:</strong> div.full-image__image > img:nth-child(1)</p>
+                        
+                                        </div>
+                    
+                                    </li>
+                
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div style="margin-bottom: 15px;">
+                        <h3>Icon lacks text alternative <span style="color: #3498db; font-size: 14px;">(21)</span></h3>
+                        <div class="accordion-container">
+                            <input type="checkbox" id="issue-3-1">
+                            <label for="issue-3-1">View Details</label>
+                            <div class="accordion-content">
+                                <ul>
+            
+                                    <li>
+                                        <p>Icon has no accessible name and is not hidden from screen readers</p>
+                
+                                        <div style="background-color: #f8f8f8; padding: 10px; margin: 10px 0; border-radius: 4px; font-family: monospace; font-size: 13px;">
+                    
+                                            <p><strong>Element:</strong> &lt;span&gt;</p>
+                    
+                                            <p><strong>Class:</strong> arrow icon font-ico-chevron-down main-nav__secondary-arrow</p>
+                        
+                                            <p><strong>CSS Selector:</strong> span.arrow</p>
+                        
+                                        </div>
+                    
+                                    </li>
+                
+                                    <li>
+                                        <p>Icon has no accessible name and is not hidden from screen readers</p>
+                
+                                        <div style="background-color: #f8f8f8; padding: 10px; margin: 10px 0; border-radius: 4px; font-family: monospace; font-size: 13px;">
+                    
+                                            <p><strong>Element:</strong> &lt;span&gt;</p>
+                    
+                                            <p><strong>Class:</strong> arrow icon font-ico-chevron-down main-nav__secondary-arrow</p>
+                        
+                                            <p><strong>CSS Selector:</strong> span.arrow</p>
+                        
+                                        </div>
+                    
+                                    </li>
+                
+                                    <li>
+                                        <p>Icon has no accessible name and is not hidden from screen readers</p>
+                
+                                        <div style="background-color: #f8f8f8; padding: 10px; margin: 10px 0; border-radius: 4px; font-family: monospace; font-size: 13px;">
+                    
+                                            <p><strong>Element:</strong> &lt;span&gt;</p>
+                    
+                                            <p><strong>Class:</strong> arrow icon font-ico-chevron-down main-nav__secondary-arrow</p>
+                        
+                                            <p><strong>CSS Selector:</strong> span.arrow</p>
+                        
+                                        </div>
+                    
+                                    </li>
+                
+                                    <li>
+                                        <p>Icon has no accessible name and is not hidden from screen readers</p>
+                
+                                        <div style="background-color: #f8f8f8; padding: 10px; margin: 10px 0; border-radius: 4px; font-family: monospace; font-size: 13px;">
+                    
+                                            <p><strong>Element:</strong> &lt;span&gt;</p>
+                    
+                                            <p><strong>Class:</strong> arrow icon font-ico-chevron-down main-nav__secondary-arrow</p>
+                        
+                                            <p><strong>CSS Selector:</strong> span.arrow</p>
+                        
+                                        </div>
+                    
+                                    </li>
+                
+                                    <li>
+                                        <p>Icon has no accessible name and is not hidden from screen readers</p>
+                
+                                        <div style="background-color: #f8f8f8; padding: 10px; margin: 10px 0; border-radius: 4px; font-family: monospace; font-size: 13px;">
+                    
+                                            <p><strong>Element:</strong> &lt;span&gt;</p>
+                    
+                                            <p><strong>Class:</strong> arrow icon font-ico-chevron-down main-nav__secondary-arrow</p>
+                        
+                                            <p><strong>CSS Selector:</strong> span.arrow</p>
+                        
+                                        </div>
+                    
+                                    </li>
+                
+                                    <li>
+                                        <p>Icon has no accessible name and is not hidden from screen readers</p>
+                
+                                        <div style="background-color: #f8f8f8; padding: 10px; margin: 10px 0; border-radius: 4px; font-family: monospace; font-size: 13px;">
+                    
+                                            <p><strong>Element:</strong> &lt;span&gt;</p>
+                    
+                                            <p><strong>Class:</strong> arrow icon font-ico-chevron-down main-nav__secondary-arrow</p>
+                        
+                                            <p><strong>CSS Selector:</strong> span.arrow</p>
+                        
+                                        </div>
+                    
+                                    </li>
+                
+                                    <li>
+                                        <p>Icon has no accessible name and is not hidden from screen readers</p>
+                
+                                        <div style="background-color: #f8f8f8; padding: 10px; margin: 10px 0; border-radius: 4px; font-family: monospace; font-size: 13px;">
+                    
+                                            <p><strong>Element:</strong> &lt;span&gt;</p>
+                    
+                                            <p><strong>Class:</strong> arrow icon font-ico-chevron-down main-nav__secondary-arrow</p>
+                        
+                                            <p><strong>CSS Selector:</strong> span.arrow</p>
+                        
+                                        </div>
+                    
+                                    </li>
+                
+                                    <li>
+                                        <p>Icon has no accessible name and is not hidden from screen readers</p>
+                
+                                        <div style="background-color: #f8f8f8; padding: 10px; margin: 10px 0; border-radius: 4px; font-family: monospace; font-size: 13px;">
+                    
+                                            <p><strong>Element:</strong> &lt;span&gt;</p>
+                    
+                                            <p><strong>Class:</strong> arrow icon font-ico-chevron-down main-nav__secondary-arrow</p>
+                        
+                                            <p><strong>CSS Selector:</strong> span.arrow</p>
+                        
+                                        </div>
+                    
+                                    </li>
+                
+                                    <li>
+                                        <p>Icon has no accessible name and is not hidden from screen readers</p>
+                
+                                        <div style="background-color: #f8f8f8; padding: 10px; margin: 10px 0; border-radius: 4px; font-family: monospace; font-size: 13px;">
+                    
+                                            <p><strong>Element:</strong> &lt;span&gt;</p>
+                    
+                                            <p><strong>Class:</strong> arrow icon font-ico-chevron-down main-nav__secondary-arrow</p>
+                        
+                                            <p><strong>CSS Selector:</strong> span.arrow</p>
+                        
+                                        </div>
+                    
+                                    </li>
+                
+                                    <li>
+                                        <p>Icon has no accessible name and is not hidden from screen readers</p>
+                
+                                        <div style="background-color: #f8f8f8; padding: 10px; margin: 10px 0; border-radius: 4px; font-family: monospace; font-size: 13px;">
+                    
+                                            <p><strong>Element:</strong> &lt;span&gt;</p>
+                    
+                                            <p><strong>Class:</strong> arrow icon font-ico-chevron-down main-nav__secondary-arrow</p>
+                        
+                                            <p><strong>CSS Selector:</strong> span.arrow</p>
+                        
+                                        </div>
+                    
+                                    </li>
+                
+                                    <li>
+                                        <p>Icon has no accessible name and is not hidden from screen readers</p>
+                
+                                        <div style="background-color: #f8f8f8; padding: 10px; margin: 10px 0; border-radius: 4px; font-family: monospace; font-size: 13px;">
+                    
+                                            <p><strong>Element:</strong> &lt;span&gt;</p>
+                    
+                                            <p><strong>Class:</strong> arrow icon font-ico-chevron-down main-nav__secondary-arrow</p>
+                        
+                                            <p><strong>CSS Selector:</strong> span.arrow</p>
+                        
+                                        </div>
+                    
+                                    </li>
+                
+                                    <li>
+                                        <p>Icon has no accessible name and is not hidden from screen readers</p>
+                
+                                        <div style="background-color: #f8f8f8; padding: 10px; margin: 10px 0; border-radius: 4px; font-family: monospace; font-size: 13px;">
+                    
+                                            <p><strong>Element:</strong> &lt;span&gt;</p>
+                    
+                                            <p><strong>Class:</strong> icon font-ico-close</p>
+                        
+                                            <p><strong>CSS Selector:</strong> span.icon</p>
+                        
+                                        </div>
+                    
+                                    </li>
+                
+                                    <li>
+                                        <p>Icon has no accessible name and is not hidden from screen readers</p>
+                
+                                        <div style="background-color: #f8f8f8; padding: 10px; margin: 10px 0; border-radius: 4px; font-family: monospace; font-size: 13px;">
+                    
+                                            <p><strong>Element:</strong> &lt;span&gt;</p>
+                    
+                                            <p><strong>Class:</strong> icon font-ico-mail</p>
+                        
+                                            <p><strong>CSS Selector:</strong> span.icon</p>
+                        
+                                        </div>
+                    
+                                    </li>
+                
+                                    <li>
+                                        <p>Icon has no accessible name and is not hidden from screen readers</p>
+                
+                                        <div style="background-color: #f8f8f8; padding: 10px; margin: 10px 0; border-radius: 4px; font-family: monospace; font-size: 13px;">
+                    
+                                            <p><strong>Element:</strong> &lt;span&gt;</p>
+                    
+                                            <p><strong>Class:</strong> nav-toggle__menu icon font-ico-hamburger</p>
+                        
+                                            <p><strong>CSS Selector:</strong> span.nav-toggle__menu</p>
+                        
+                                        </div>
+                    
+                                    </li>
+                
+                                    <li>
+                                        <p>Icon has no accessible name and is not hidden from screen readers</p>
+                
+                                        <div style="background-color: #f8f8f8; padding: 10px; margin: 10px 0; border-radius: 4px; font-family: monospace; font-size: 13px;">
+                    
+                                            <p><strong>Element:</strong> &lt;span&gt;</p>
+                    
+                                            <p><strong>Class:</strong> nav-toggle__menu-close icon font-ico-close</p>
+                        
+                                            <p><strong>CSS Selector:</strong> span.nav-toggle__menu-close</p>
+                        
+                                        </div>
+                    
+                                    </li>
+                
+                                    <li>
+                                        <p>Icon has no accessible name and is not hidden from screen readers</p>
+                
+                                        <div style="background-color: #f8f8f8; padding: 10px; margin: 10px 0; border-radius: 4px; font-family: monospace; font-size: 13px;">
+                    
+                                            <p><strong>Element:</strong> &lt;span&gt;</p>
+                    
+                                            <p><strong>Class:</strong> icon font-ico-search</p>
+                        
+                                            <p><strong>CSS Selector:</strong> span.icon</p>
+                        
+                                        </div>
+                    
+                                    </li>
+                
+                                    <li>
+                                        <p>Icon has no accessible name and is not hidden from screen readers</p>
+                
+                                        <div style="background-color: #f8f8f8; padding: 10px; margin: 10px 0; border-radius: 4px; font-family: monospace; font-size: 13px;">
+                    
+                                            <p><strong>Element:</strong> &lt;span&gt;</p>
+                    
+                                            <p><strong>Class:</strong> nav-toggle__menu icon font-ico-hamburger</p>
+                        
+                                            <p><strong>CSS Selector:</strong> span.nav-toggle__menu</p>
+                        
+                                        </div>
+                    
+                                    </li>
+                
+                                    <li>
+                                        <p>Icon has no accessible name and is not hidden from screen readers</p>
+                
+                                        <div style="background-color: #f8f8f8; padding: 10px; margin: 10px 0; border-radius: 4px; font-family: monospace; font-size: 13px;">
+                    
+                                            <p><strong>Element:</strong> &lt;span&gt;</p>
+                    
+                                            <p><strong>Class:</strong> nav-toggle__menu-close icon font-ico-close</p>
+                        
+                                            <p><strong>CSS Selector:</strong> span.nav-toggle__menu-close</p>
+                        
+                                        </div>
+                    
+                                    </li>
+                
+                                    <li>
+                                        <p>Icon has no accessible name and is not hidden from screen readers</p>
+                
+                                        <div style="background-color: #f8f8f8; padding: 10px; margin: 10px 0; border-radius: 4px; font-family: monospace; font-size: 13px;">
+                    
+                                            <p><strong>Element:</strong> &lt;span&gt;</p>
+                    
+                                            <p><strong>Class:</strong> banner__scroll-icon banner__scroll-icon--first icon font-ico-arrow</p>
+                        
+                                            <p><strong>CSS Selector:</strong> span.banner__scroll-icon</p>
+                        
+                                        </div>
+                    
+                                    </li>
+                
+                                    <li>
+                                        <p>Icon has no accessible name and is not hidden from screen readers</p>
+                
+                                        <div style="background-color: #f8f8f8; padding: 10px; margin: 10px 0; border-radius: 4px; font-family: monospace; font-size: 13px;">
+                    
+                                            <p><strong>Element:</strong> &lt;span&gt;</p>
+                    
+                                            <p><strong>Class:</strong> banner__scroll-icon banner__scroll-icon--second icon font-ico-arrow</p>
+                        
+                                            <p><strong>CSS Selector:</strong> span.banner__scroll-icon</p>
+                        
+                                        </div>
+                    
+                                    </li>
+                
+                                    <li>
+                                        <p>Icon has no accessible name and is not hidden from screen readers</p>
+                
+                                        <div style="background-color: #f8f8f8; padding: 10px; margin: 10px 0; border-radius: 4px; font-family: monospace; font-size: 13px;">
+                    
+                                            <p><strong>Element:</strong> &lt;span&gt;</p>
+                    
+                                            <p><strong>Class:</strong> icon font-ico-arrow-top</p>
+                        
+                                            <p><strong>CSS Selector:</strong> span.icon</p>
+                        
+                                        </div>
+                    
+                                    </li>
+                
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div style="margin-bottom: 15px;">
+                        <h3>Decorative icon not hidden from screen readers <span style="color: #3498db; font-size: 14px;">(2)</span></h3>
+                        <div class="accordion-container">
+                            <input type="checkbox" id="issue-3-2">
+                            <label for="issue-3-2">View Details</label>
+                            <div class="accordion-content">
+                                <ul>
+            
+                                    <li>
+                                        <p>Icon inside a labeled element should be hidden from screen readers</p>
+                
+                                        <div style="background-color: #f8f8f8; padding: 10px; margin: 10px 0; border-radius: 4px; font-family: monospace; font-size: 13px;">
+                    
+                                            <p><strong>Element:</strong> &lt;span&gt;</p>
+                    
+                                            <p><strong>Class:</strong> icon font-ico-close</p>
+                        
+                                            <p><strong>CSS Selector:</strong> span.icon</p>
+                        
+                                        </div>
+                    
+                                    </li>
+                
+                                    <li>
+                                        <p>Icon inside a labeled element should be hidden from screen readers</p>
+                
+                                        <div style="background-color: #f8f8f8; padding: 10px; margin: 10px 0; border-radius: 4px; font-family: monospace; font-size: 13px;">
+                    
+                                            <p><strong>Element:</strong> &lt;span&gt;</p>
+                    
+                                            <p><strong>Class:</strong> icon font-ico-extern</p>
+                        
+                                            <p><strong>CSS Selector:</strong> span.icon</p>
+                        
+                                        </div>
+                    
+                                    </li>
+                
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+            
+                </div>
+            </div>
+        
+        </div>
+    
+        <footer>
+            <p>Generated by Accessibility Checker on 2025-03-17 17:53:26</p>
+        </footer>
+    </div>
+</body>
+</html>

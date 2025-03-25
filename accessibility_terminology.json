@@ -1,0 +1,18 @@
+{
+  "technical_terms": {
+    "interactive element not in tab order": {
+      "preferred": "Keyboard navigation barrier",
+      "explanation": "Elements that appear interactive but cannot be accessed via keyboard"
+    },
+    "tab order issue": {
+      "preferred": "Inconsistent keyboard navigation sequence",
+      "explanation": "Elements that disrupt the expected keyboard navigation flow"
+    }
+  },
+  "impact_categories": [
+    "Screen Reader Accessibility",
+    "Keyboard Navigation",
+    "Visual Focus",
+    "Interactive Element Accessibility"
+  ]
+}

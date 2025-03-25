@@ -1,0 +1,79 @@
+Python Files Structure
+=====================
+
+Pickles/
+├── accessibility_checker-Copy1.py
+├── accessibility_checker.py     # Main script
+├── create_terminology.py
+├── create_terminology_file.py
+├── debug_accessibility.py
+├── directory_structure_generator.py
+├── script_extract.py
+├── .ipynb_checkpoints/
+│   ├── accessibility_checker-Copy1-checkpoint.py
+│   ├── accessibility_checker-checkpoint.py
+│   ├── create_terminology-checkpoint.py
+│   ├── create_terminology_file-checkpoint.py
+│   ├── debug_accessibility-checkpoint.py
+│   ├── directory_structure_generator-checkpoint.py
+│   └── script_extract-checkpoint.py
+├── Markdowns/
+│   └── .ipynb_checkpoints/
+├── accessibility_modules/
+│   ├── __init__.py
+│   ├── aria_checker.py
+│   ├── color_contrast.py
+│   ├── dynamic_content_tester.py
+│   ├── focus_order_checker.py
+│   ├── focusable_elements.py
+│   ├── html_report_generator.py
+│   ├── image_checker.py
+│   ├── report_generator.py
+│   ├── simple_html_report_generator.py
+│   ├── tab_order_checker.py
+│   ├── terminology_validator.py
+│   ├── .ipynb_checkpoints/
+│   │   ├── __init__-checkpoint.py
+│   │   ├── aria_checker-checkpoint.py
+│   │   ├── color_contrast-checkpoint.py
+│   │   ├── dynamic_content_tester-checkpoint.py
+│   │   ├── focus_order_checker-checkpoint.py
+│   │   ├── focusable_elements-checkpoint.py
+│   │   ├── html_report_generator-checkpoint.py
+│   │   ├── image_checker-checkpoint.py
+│   │   ├── report_generator-checkpoint.py
+│   │   ├── simple_html_report_generator-checkpoint.py
+│   │   ├── tab_order_checker-checkpoint.py
+│   │   └── terminology_validator-checkpoint.py
+│   └── component_tests/
+│       ├── __init__.py
+│       ├── slider_tester.py
+│       └── .ipynb_checkpoints/
+│           ├── __init__-checkpoint.py
+│           └── slider_tester-checkpoint.py
+├── accessibility_reports/
+│   ├── .ipynb_checkpoints/
+│   ├── accessibility_report_http/
+│   └── metadata/
+│       └── .ipynb_checkpoints/
+├── archive/
+│   ├── accessibility_checker.py     # Main script
+│   ├── accessibility_checker_starter.py
+│   ├── config.py
+│   ├── convert_notebooks.py
+│   ├── data_loader.py
+│   ├── enhanced_report_generator.py
+│   ├── generate_accessibility_report.py
+│   ├── missing_focusable_elements.py
+│   ├── non_text_content_checker.py
+│   └── .ipynb_checkpoints/
+│       ├── accessibility_checker-checkpoint.py
+│       ├── accessibility_checker_starter-checkpoint.py
+│       ├── config-checkpoint.py
+│       ├── convert_notebooks-checkpoint.py
+│       └── data_loader-checkpoint.py
+├── logs/
+└── reports/
+    └── .ipynb_checkpoints/
+
+Generated on: 2025-03-22 21:31:04

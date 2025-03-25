@@ -1,0 +1,24 @@
+accessibility_checker/
+│
+├── accessibility_checker.py     # Main script
+├── requirements.txt             # Dependencies
+├── script_extract.py            # Tool for extracting and organizing code
+├── create_terminology.py        # Create terminology JSON files
+├── create_terminology_file.py   # Create terminology JSON files (alternative)
+├── accessibility_terminology.json # Standardized terminology mappings
+│
+└── accessibility_modules/       # Module directory
+    ├── __init__.py              # Makes the directory a package
+    ├── tab_order_checker.py     # Tab order checking functionality
+    ├── focus_order_checker.py   # Enhanced focus order testing
+    ├── focusable_elements.py    # Missing focusable elements detection
+    ├── aria_checker.py          # ARIA and keyboard accessibility checks
+    ├── image_checker.py         # Image accessibility checks
+    ├── color_contrast.py        # Color contrast analysis (to be implemented)
+    ├── form_checker.py          # Form accessibility checks (to be implemented)
+    ├── landmark_checker.py      # Landmark and structure checks (to be implemented)
+    ├── terminology_validator.py # Ensures consistent accessibility terminology
+    ├── report_generator.py      # Main report generation coordinator
+    ├── html_report_generator.py # Professional HTML report generator
+    ├── simple_html_report_generator.py # Simpler HTML report generator
+    └── test_accordion.py        # Test script for report accordions
